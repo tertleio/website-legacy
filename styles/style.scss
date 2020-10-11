@@ -1,0 +1,141 @@
+@import './_base.scss';
+
+* {
+    // outline: 1px solid red;
+}
+
+// Frame init
+.wrap {
+    width: 100%;
+    padding: 0 35px;
+    background: $color-bg;
+} .flex-container {
+    max-width: 1100px;
+    display: flex;
+    padding: 8% 0;
+    margin: 0 auto;
+}
+
+// Header
+.wrap.header {
+    position: fixed;
+    z-index: 9999.
+}
+header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 !important;
+    nav {
+        ul {
+            display: inline-flex;
+            align-items: center;
+           li {
+            padding: 0.3rem 1.3rem;
+                a {
+                    color: $color-text !important; // fix this
+                    a:hover {
+                        color: $color-primary !important; // fix this
+                        text-decoration: none !important; // fix this
+                    }
+                }
+            }
+        } 
+        .btn {
+            margin-left: 1.2rem;
+        }
+    }
+}
+#hero {
+    padding: 0;
+    z-index: -999;
+    &.flex-container {
+        // background: blue;
+        justify-content: space-between;
+        height: 600px;
+    }
+    background:url('../img/bg-pattern.png') no-repeat bottom left;
+    .flex-1 {
+        flex: 1;
+        width: 100%;
+        padding-right: 50px;
+    }
+    .flex-2 {
+        flex: 1;
+        img {
+            float: right;
+        }
+    }
+}
+
+#how-it-works, #faq {
+    background: #fff url('/img/bg-shadow.png') no-repeat top center;
+    position: relative;
+}
+
+#how-it-works .flex-container, #faq .flex-container {
+    position: relative;
+    ::before { // fix before/after to be responsive on dynamic height of content
+        content: '';
+        background: url('/img/seperator-left.png') no-repeat center left;
+        height: 250px;
+        width: 25px;
+        top: 30%;
+        left: -30%;
+        position: absolute;
+    } ::after {
+        content: '';
+        background: url('/img/seperator-left.png') no-repeat center left; // fix img right.png
+        height: 250px;
+        width: 25px;
+        top: 30%;
+        right: -30%;
+        position: absolute;
+    }
+    max-width: 25rem;
+    flex-wrap: wrap;
+    h2 {
+        text-align: center;
+    }
+    .flex {
+        margin-bottom: 30px;
+    }
+     .flex-0 {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+     
+}
+
+#footer .flex-container {
+    justify-content: start;
+    border-top: 1px solid $color-grey1;
+    padding: 35px 0;
+    img {
+        margin-left: 3px;
+    }
+}
+main {
+    padding-top: 130px;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        padding: 10px 0;
+    }
+    nav {
+        display: none;
+    }
+    .flex-container {
+        flex-wrap: wrap;
+        padding: 30% 0;
+        overflow: hidden;
+    }
+    .flex {
+        max-width: 100%;
+    }
+    #hero.flex-container{
+        .flex-2 {
+            margin-top: 50px;
+        }
+    }
+}

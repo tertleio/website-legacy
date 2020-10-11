@@ -1,0 +1,355 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+*/
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html, p {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  font-style: normal;
+  color: #707070;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #37352E;
+  margin-bottom: 1rem;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 2.3rem;
+  color: #1477FF;
+  margin-bottom: 1.2rem;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1.6rem;
+  color: #707070;
+  line-height: 2.4rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7rem;
+}
+
+.bold {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+a, a:visited {
+  color: #1477FF;
+}
+
+a:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #1477FF;
+  text-decoration: underline;
+}
+
+.btn {
+  border: 1px solid #1477FF;
+  background: #1477FF;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.8rem 2rem;
+}
+
+.btn:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn.btn-primary {
+  color: #ffffff;
+  background: #1477FF;
+}
+
+.btn.btn-secondary {
+  background: none;
+  padding: 0.8rem 1.3rem;
+}
+
+.sign-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #EEEEEE;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  width: 80%;
+  margin-top: 25px;
+  position: relative;
+}
+
+.sign-up .btn {
+  position: absolute;
+  right: 10px;
+}
+
+.text-field {
+  background: #EEEEEE;
+  border: none;
+  padding: 11px 15px;
+  border-radius: 0.25rem;
+  background: none;
+  font-family: proxima-nova, sans-serif;
+  font-size: 1rem;
+  margin-right: 2px;
+}
+
+.wrap {
+  width: 100%;
+  padding: 0 35px;
+  background: #ffffff;
+}
+
+.flex-container {
+  max-width: 1100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8% 0;
+  margin: 0 auto;
+}
+
+.wrap.header {
+  position: fixed;
+  z-index: 999;
+}
+
+header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999;
+  padding: 30px 0 !important;
+}
+
+header nav ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li {
+  padding: 0.3rem 1.3rem;
+}
+
+header nav ul li a {
+  color: #707070 !important;
+}
+
+header nav ul li a a:hover {
+  color: #1477FF !important;
+  text-decoration: none !important;
+}
+
+header nav .btn {
+  margin-left: 1.2rem;
+}
+
+#hero {
+  padding: 0;
+  z-index: -999;
+  background: url("../img/bg-pattern.png") no-repeat bottom left;
+}
+
+#hero.flex-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 600px;
+}
+
+#hero .flex-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  padding-right: 50px;
+}
+
+#hero .flex-2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#hero .flex-2 img {
+  float: right;
+}
+
+#how-it-works, #faq {
+  background: #fff url("/img/bg-shadow.png") no-repeat top center;
+  position: relative;
+}
+
+#how-it-works .flex-container, #faq .flex-container {
+  position: relative;
+  max-width: 25rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#how-it-works .flex-container ::before, #faq .flex-container ::before {
+  content: '';
+  background: url("/img/seperator-left.png") no-repeat center left;
+  height: 250px;
+  width: 25px;
+  top: 30%;
+  left: -30%;
+  position: absolute;
+}
+
+#how-it-works .flex-container ::after, #faq .flex-container ::after {
+  content: '';
+  background: url("/img/seperator-left.png") no-repeat center left;
+  height: 250px;
+  width: 25px;
+  top: 30%;
+  right: -30%;
+  position: absolute;
+}
+
+#how-it-works .flex-container h2, #faq .flex-container h2 {
+  text-align: center;
+}
+
+#how-it-works .flex-container .flex, #faq .flex-container .flex {
+  margin-bottom: 30px;
+}
+
+#how-it-works .flex-container .flex-0, #faq .flex-container .flex-0 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#footer .flex-container {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  border-top: 1px solid #EEEEEE;
+  padding: 35px 0;
+}
+
+#footer .flex-container img {
+  margin-left: 3px;
+}
+
+main {
+  padding-top: 130px;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    padding: 10px 0;
+  }
+  nav {
+    display: none;
+  }
+  .flex-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 30% 0;
+    overflow: hidden;
+  }
+  .flex {
+    max-width: 100%;
+  }
+  #hero.flex-container .flex-2 {
+    margin-top: 50px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
