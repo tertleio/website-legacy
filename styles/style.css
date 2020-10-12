@@ -221,7 +221,7 @@ header nav ul li {
   padding: 0.3rem 1.3rem;
 }
 
-header nav ul li a {
+header nav ul li a:link, header nav ul li a:visited {
   color: #707070;
   text-decoration: none;
 }

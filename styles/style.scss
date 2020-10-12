@@ -32,8 +32,10 @@ header {
            li {
             padding: 0.3rem 1.3rem;
                 a {
-                    color: $color-text;
-                    text-decoration: none;
+                    &:link, &:visited {
+                        color: $color-text;
+                        text-decoration: none;
+                    }
                     a:hover {
                         color: $color-primary; 
                     }
