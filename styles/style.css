@@ -67,9 +67,9 @@ table {
 body, html, p {
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
-  font-size: 1rem;
   font-style: normal;
   color: #707070;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -111,14 +111,13 @@ p {
   font-style: normal;
 }
 
-a, a:visited {
+a:link, a:visited {
   color: #1477FF;
 }
 
 a:hover {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  color: #1477FF;
   text-decoration: underline;
 }
 
@@ -159,7 +158,6 @@ a:hover {
   background: #EEEEEE;
   border-radius: 0.25rem;
   padding: 0.5rem;
-  width: 80%;
   margin-top: 25px;
   position: relative;
 }
@@ -187,17 +185,17 @@ a:hover {
 }
 
 .flex-container {
-  max-width: 1100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1100px;
   padding: 8% 0;
   margin: 0 auto;
 }
 
 .wrap.header {
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
 }
 
 header {
@@ -207,7 +205,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 9999;
   padding: 30px 0 !important;
 }
 
@@ -225,12 +222,12 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #707070 !important;
+  color: #707070;
+  text-decoration: none;
 }
 
 header nav ul li a a:hover {
-  color: #1477FF !important;
-  text-decoration: none !important;
+  color: #1477FF;
 }
 
 header nav .btn {
@@ -243,29 +240,29 @@ header nav .btn {
   background: url("../img/bg-pattern.png") no-repeat bottom left;
 }
 
+#hero .hero-img-mb {
+  display: none;
+}
+
+#hero .sign-up {
+  max-width: 80%;
+}
+
 #hero.flex-container {
+  max-height: 700px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 600px;
 }
 
 #hero .flex-1 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  width: 100%;
-  padding-right: 50px;
+  min-width: 40%;
+  max-width: 50%;
+  margin-right: 5%;
 }
 
 #hero .flex-2 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-#hero .flex-2 img {
-  float: right;
+  max-width: 40%;
 }
 
 #how-it-works, #faq {
@@ -274,10 +271,21 @@ header nav .btn {
 }
 
 #how-it-works .flex-container, #faq .flex-container {
-  position: relative;
-  max-width: 25rem;
+  max-width: 500px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
+}
+
+#how-it-works .flex-container .flex, #faq .flex-container .flex {
+  margin-bottom: 30px;
+}
+
+#how-it-works .flex-container .flex-0, #faq .flex-container .flex-0 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
 }
 
 #how-it-works .flex-container ::before, #faq .flex-container ::before {
@@ -300,22 +308,6 @@ header nav .btn {
   position: absolute;
 }
 
-#how-it-works .flex-container h2, #faq .flex-container h2 {
-  text-align: center;
-}
-
-#how-it-works .flex-container .flex, #faq .flex-container .flex {
-  margin-bottom: 30px;
-}
-
-#how-it-works .flex-container .flex-0, #faq .flex-container .flex-0 {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 #footer .flex-container {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -332,24 +324,49 @@ main {
   padding-top: 130px;
 }
 
-@media screen and (max-width: 767px) {
-  header {
-    padding: 10px 0;
+@media screen and (max-width: 800px) {
+  nav * {
+    background: #1477FF;
+    border: 1px solid red;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  nav {
-    display: none;
+  nav * li {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  nav * li a {
+    color: #fff;
   }
   .flex-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 30% 0;
     overflow: hidden;
   }
-  .flex {
+  #hero .sign-up {
     max-width: 100%;
   }
-  #hero.flex-container .flex-2 {
-    margin-top: 50px;
+  #hero .hero-img-mb {
+    display: block;
+  }
+  #hero .hero-img {
+    display: none;
+  }
+  #hero.flex-container {
+    max-height: 1000px;
+    width: 100%;
+  }
+  #hero.flex-container img {
+    width: 100%;
+  }
+  #hero .flex {
+    max-width: 100%;
+    min-width: 100%;
+    padding-top: 8%;
+  }
+  #how-it-works .flex-container ::before, #how-it-works .flex-container ::after, #faq .flex-container ::before, #faq .flex-container ::after {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

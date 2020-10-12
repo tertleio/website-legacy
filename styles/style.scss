@@ -1,7 +1,7 @@
 @import './_base.scss';
 
 * {
-    // outline: 1px solid red;
+     // outline: 1px solid red;
 }
 
 // Frame init
@@ -9,9 +9,9 @@
     width: 100%;
     padding: 0 35px;
     background: $color-bg;
-} .flex-container {
-    max-width: 1100px;
+} .flex-container { 
     display: flex;
+    max-width: 1100px;
     padding: 8% 0;
     margin: 0 auto;
 }
@@ -19,12 +19,12 @@
 // Header
 .wrap.header {
     position: fixed;
-    z-index: 9999.
+    z-index: 9999;
 }
 header {
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0 !important;
+    padding: 30px 0 !important; // fix
     nav {
         ul {
             display: inline-flex;
@@ -32,10 +32,10 @@ header {
            li {
             padding: 0.3rem 1.3rem;
                 a {
-                    color: $color-text !important; // fix this
+                    color: $color-text;
+                    text-decoration: none;
                     a:hover {
-                        color: $color-primary !important; // fix this
-                        text-decoration: none !important; // fix this
+                        color: $color-primary; 
                     }
                 }
             }
@@ -48,22 +48,26 @@ header {
 #hero {
     padding: 0;
     z-index: -999;
+    .hero-img-mb {
+        display: none;
+    }
+    .sign-up {
+        max-width: 80%;
+    }
     &.flex-container {
-        // background: blue;
+        max-height: 700px;
         justify-content: space-between;
-        height: 600px;
     }
-    background:url('../img/bg-pattern.png') no-repeat bottom left;
-    .flex-1 {
-        flex: 1;
-        width: 100%;
-        padding-right: 50px;
-    }
-    .flex-2 {
-        flex: 1;
-        img {
-            float: right;
-        }
+    background: url('../img/bg-pattern.png') no-repeat bottom left;
+    .flex {
+
+    } .flex-1 {
+        min-width: 40%;
+        max-width: 50%;
+        margin-right: 5%;
+    } .flex-2 {
+        max-width: 40%;
+
     }
 }
 
@@ -73,6 +77,14 @@ header {
 }
 
 #how-it-works .flex-container, #faq .flex-container {
+    max-width: 500px;
+    flex-wrap: wrap;
+    .flex {
+        margin-bottom: 30px;
+    } .flex-0 {
+        flex: 1;
+        text-align: center;
+    }
     position: relative;
     ::before { // fix before/after to be responsive on dynamic height of content
         content: '';
@@ -91,19 +103,6 @@ header {
         right: -30%;
         position: absolute;
     }
-    max-width: 25rem;
-    flex-wrap: wrap;
-    h2 {
-        text-align: center;
-    }
-    .flex {
-        margin-bottom: 30px;
-    }
-     .flex-0 {
-        flex-basis: 100%;
-        justify-content: center;
-    }
-     
 }
 
 #footer .flex-container {
@@ -118,24 +117,50 @@ main {
     padding-top: 130px;
 }
 
-@media screen and (max-width: 767px) {
-    header {
-        padding: 10px 0;
+@media screen and (max-width: 800px) {
+ // MOBILE NAV
+    nav * {
+        background: $color-primary;
+        border: 1px solid red;
+        flex-wrap: wrap;
+        li {
+        flex-wrap: wrap;
+        width: 100%;
+        } li a {
+            color: #fff;
+        }
     }
-    nav {
-        display: none;
-    }
+    
     .flex-container {
         flex-wrap: wrap;
-        padding: 30% 0;
         overflow: hidden;
     }
-    .flex {
-        max-width: 100%;
+    #hero {
+        .sign-up {
+            max-width: 100%;
+        }
+        .hero-img-mb {
+            display: block;
+        }
+        .hero-img {
+            display: none;
+        }
+        &.flex-container {
+            max-height: 1000px;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        } .flex {
+            max-width: 100%;
+            min-width: 100%;
+            padding-top: 8%;
+
+        }
     }
-    #hero.flex-container{
-        .flex-2 {
-            margin-top: 50px;
+    #how-it-works .flex-container, #faq .flex-container {
+        ::before, ::after {
+            display: none;
         }
     }
 }
