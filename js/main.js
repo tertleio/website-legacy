@@ -1,15 +1,21 @@
-// Turns header/nav secondary CTA into primary CTA when scrolled
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 500) {
-        document.getElementById('nav-btn').style.cssText = 'background: #1477FF; color: white !important; transition: 0.5s;';
-    } else {
-        document.getElementById('nav-btn').style = 'transition: 0.5s'; // add transition to all css
-    }
-});
+// --RE-WRITE THIS ABOMINATION
 
 const header = document.getElementById('header');
 const logo = document.getElementById('logo');
 const navBtn = document.getElementById('nav-btn');
+const navLink = document.querySelectorAll('nav a');
+
+
+// Turns header/nav secondary CTA into primary CTA when scrolled
+window.addEventListener('scroll', () => {
+    if (!responsiveChanges()) {
+        if (window.pageYOffset > 500) {
+            navBtn.className='btn btn-primary';
+        } else {
+            navBtn.className= 'btn btn-secondary'; // add transition to all css
+            }
+    }
+});
 
 
 // RESPONSIVE LOGO
@@ -17,8 +23,9 @@ function responsiveChanges() {
     let width = window.innerWidth;
     
     if (width < 800) {
-        logo.src='./img/logo-short-dark.svg';
-    
+        if (header.className == 'wrap') {
+            logo.src='./img/logo-short-dark.svg';
+        }
         navBtn.className='btn btn-secondary burger';
         navBtn.innerHTML='Menu';
         return true;
@@ -29,44 +36,35 @@ function responsiveChanges() {
         return false;
     }
 } 
-// window.onresize = responsiveChanges;
-window.addEventListener('resize', responsiveChanges);
-navBtn.addEventListener('click', navMenu);
 
-// MOBILE NAV MENU < WRWRITE AS FUNCTION AND CALL IT ON ONE BELOW
-/*
-navBtn.addEventListener('click', () => {
-    if (header.className == 'wrap' && responsiveChanges()) {
-        header.className='wrap menu';
-        navBtn.innerHTML='close';
-        logo.src='./img/logo-short-light.svg';
-    } else if (header.className == 'wrap menu' ) {
-        header.className='wrap';
-        logo.src='./img/logo-short-dark.svg';
-        navBtn.innerHTML='Menu';
-    }
-});
-*/
 function navMenu () {
-    if (header.className == 'wrap' && responsiveChanges()) {
-        header.className='wrap menu';
-        navBtn.innerHTML='close';
+    if (responsiveChanges()) {
         logo.src='./img/logo-short-light.svg';
-    } else {
-        header.className='wrap';
-        logo.src='./img/logo-short-dark.svg';
-        navBtn.innerHTML='Menu';
+        if (header.className == 'wrap') {
+            header.className='wrap menu';
+            navBtn.innerHTML='close';
+            logo.src='./img/logo-short-light.svg';
+        } else {
+            header.className='wrap';
+            logo.src='./img/logo-short-dark.svg';
+            navBtn.innerHTML='Menu';
+        }
     }
 }
 
-// CLOSE MENU WHEN CLICKING AN ANCHOR LINK
-const navLink = document.getElementsByClassName('hello')[0];
+// window.onresize = responsiveChanges;
+window.addEventListener('load', responsiveChanges);
+window.addEventListener('resize', responsiveChanges);
+navBtn.addEventListener('click', navMenu);
 
+// CLOSE MENU WHEN CLICKING AN ANCHOR LINK --fix duplicate functions
 
-navLink.addEventListener('click', () => {
-    console.log('nav link clicked');
-    responsiveChanges();
+navLink[0].addEventListener('click', () => {
     navMenu();
 });
 
-console.log(navLink);
+navLink[1].addEventListener('click', () => { 
+    navMenu();
+});
+
+// --END OF ABONIATION
