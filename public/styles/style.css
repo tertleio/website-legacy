@@ -173,7 +173,6 @@ a:hover {
   color: #707070;
   border: none;
   width: 100%;
-  margin-bottom: 0.8rem;
   border-radius: 0.25rem;
   font-size: 1rem;
   padding: 11px 15px;
@@ -202,6 +201,10 @@ a:hover {
   width: 100%;
   height: 100%;
   z-index: 9999999;
+}
+
+.modal .form {
+  margin-bottom: 0.7rem;
 }
 
 .modal .dual-left {

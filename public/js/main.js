@@ -1,12 +1,12 @@
 // import { getInputs } from './utils.js';
 
-// Links
-const url = '/signup-submit'
+// API
+const signupSubmitUrl = '/signup-submit'
+const emailSubmitUrl = '/email-submit'
 
-// DOMS - Initial email
-const getInputs = () => {
+// DOMS - Get form values and return object
+const getFormInputs = () => {
 // DOMS - Signup form
-    const emailInit = signupInit.querySelector('.text-field').value;
     const email = document.getElementById('email').value;
     const firstName = document.getElementById('first_name').value;
     const lastName = document.getElementById('last_name').value;
@@ -15,7 +15,6 @@ const getInputs = () => {
     const lookingFor = document.getElementById('looking_for').value;
     
     return {
-        email: email, 
         firstName: firstName, 
         lastName: lastName,
         postcode: postcode,
@@ -24,48 +23,50 @@ const getInputs = () => {
     }
 };
 
-const getEmail = () => {
-    const emailInit = signupInit.querySelector('.text-field').value;
-    return emailInit;
-};
-
-// Open signup form
-const modal = document.querySelector('.modal'); // --get dom
-const signupInit = document.getElementById('signup-init');
-const signupInitBtn = signupInit.querySelector('.btn.btn-primary');
-signupInitBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    document.getElementById('email').value = getEmail();
-
-    if (modal.style.display === 'none') {
-        modal.style.display = 'block';
-    } // 
-});
-
-// Close signup form and submit email only
-const closeModal = document.getElementById('close');
-closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-    // 0. if they close the window without submitting, send request to store email
-    // 0. Backend: if already registered - do not save
-});
-
-// Submit form (0. form validation)
-const signupForm = document.getElementById('signup-form');
-signupForm.addEventListener('submit', async (submit) => {
-    submit.preventDefault();
-    const sendData = getInputs();
+// Post Submit
+const submitData = async (data, url) => {
     try {
         const response = await fetch(url, { 
             method: 'POST', 
-            headers: {'Content-type': 'applicaion/json'},
-            body: JSON.stringify(sendData) 
+            headers: {'Content-type': 'application/json' },
+            body: JSON.stringify(data) 
         })
         if (response.ok) {
             const jsonResponse = await response.json();
             console.log(jsonResponse);
         }
     } catch (err) {
-        console.log(err)
+        console.log(err);
     }
+};
+
+const getEmail = () => {
+    const email = document.querySelector('#signup-init input').value;
+    submitData({ email: email }, emailSubmitUrl);
+    return email;
+};
+
+// Submit initial email and open form
+const modal = document.querySelector('.modal'); // --target modal
+const signupInitBtn = document.querySelector('#signup-init .btn.btn-primary'); // --target btn
+signupInitBtn.addEventListener('click', (e) => {
+    document.getElementById('email').value = getEmail(); // --dispay initial email and submit
+    if (modal.style.display === 'none') {
+        modal.style.display = 'block';
+    } 
+    e.preventDefault();
+});
+
+// Close signup form
+const closeModal = document.getElementById('close');
+closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Submit form (0. form validation)
+const signupForm = document.getElementById('signup-form');
+signupForm.addEventListener('submit', async (submit) => {
+    submit.preventDefault();
+    const formData = getFormInputs();
+    submitData(formData, signupSubmitUrl);
 });
