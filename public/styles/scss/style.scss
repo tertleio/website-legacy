@@ -1,0 +1,229 @@
+@import './_base.scss';
+
+* {
+     // outline: 1px solid red;
+}
+
+// Frame init
+.wrap {
+    width: 100%;
+    padding: 0 35px; // padding width of all elements
+    background: $color-bg;
+} .flex-container { 
+    display: flex;
+    max-width: 1100px;
+    padding: 8% 0; // padding top/bottom of all
+    margin: 0 auto;
+}
+
+// Header
+#header.wrap {
+    position: fixed;
+    z-index: 9999;
+    header {
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+        nav {
+            ul {
+                display: inline-flex;
+                align-items: center;
+            li {
+                padding: 0.3rem 1.3rem;
+                    a {
+                        &:link, &:visited {
+                            color: $color-text;
+                            text-decoration: none;
+                        }
+                        &:hover {
+                            color: $color-primary;
+                        }
+                    }
+                }
+            } 
+            .btn {
+                margin-left: 1.2rem;
+            }
+        }
+    }
+}
+#hero {
+    padding: 0;
+    z-index: -999;
+    .hero-img-mb {
+        display: none;
+    }
+    .sign-up {
+        max-width: 80%;
+    }
+    &.flex-container {
+        max-height: 700px;
+        justify-content: space-between;
+    }
+    background: url('../img/bg-pattern.png') no-repeat bottom left;
+    .flex {
+
+    } .flex-1 {
+        min-width: 40%;
+        max-width: 50%;
+        margin-right: 5%;
+    } .flex-2 {
+        max-width: 40%;
+
+    }
+}
+
+#how-it-works, #faq {
+    background: #fff url('/img/bg-shadow.png') no-repeat top center;
+    position: relative;
+}
+
+#how-it-works .flex-container, #faq .flex-container {
+    max-width: 500px;
+    flex-wrap: wrap;
+    .flex {
+        margin-bottom: 30px;
+    } .flex-0 {
+        flex: 1;
+        text-align: center;
+    }
+    position: relative;
+    ::before { // fix before/after to be responsive on dynamic height of content
+        content: '';
+        background: url('/img/seperator-left.png') no-repeat center left;
+        height: 250px;
+        width: 25px;
+        top: 30%;
+        left: -30%;
+        position: absolute;
+    } ::after {
+        content: '';
+        background: url('/img/seperator-left.png') no-repeat center left; // fix img right.png
+        height: 250px;
+        width: 25px;
+        top: 30%;
+        right: -30%;
+        position: absolute;
+    }
+}
+
+#footer .flex-container {
+    justify-content: start;
+    border-top: 1px solid $color-grey1;
+    padding: 35px 0;
+    img {
+        margin-left: 3px;
+    }
+}
+main {
+    padding-top: 130px;
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        padding-top: 60px;
+    }
+// MOBILE NAV
+.wrap {
+    padding: 0 1.7rem;
+}
+ #header.wrap {
+    header {
+        padding: 6% 0% !important;
+    }
+    .burger {
+        background: url('/img/burger.svg') no-repeat center right;
+        padding-right: 25px;
+        border: 0;
+    }
+    nav li {
+        display: none;
+    }
+    .logo-dark {
+        display: none;
+    } .logo-short-light {
+        display: block;
+    }
+ }
+
+ // JS MOBILE HIDE/DISPLAY NAV
+    #header.wrap.menu {
+        background: $color-primary;
+        header {
+            padding: 30px 0 !important; // fix
+            justify-content: flex-start;
+            position: relative;
+            img {
+                flex-direction: row;
+            }
+            nav {
+                order: 2;
+                margin-top: 10%;
+                width: 100%;
+                padding-top: 0.9rem;
+                border-top: 1px solid $color-bg;
+                ul {
+                    width: inherit;
+                    flex-wrap: wrap;
+                    li {
+                        display: block;
+                        font-size: 1.5rem;
+                        width: inherit;
+                        padding: 1.5rem 0rem;
+                        
+                            a {
+                                &:link, &:visited {
+                                    color: $color-bg;
+                                    text-decoration: none;
+                                }
+                            }
+                    }
+                } 
+            } .burger {
+                background: url('/img/close.svg') no-repeat right 20px center;
+                color: $color-bg;
+                border: 1px solid white !important;
+                padding-right: 50px;
+                border: 0;
+                z-index: 99999;
+                position: absolute;
+                top: 30px;
+                right: 0;
+                content: 'Close';
+            }
+        }
+    }
+    
+    .flex-container {
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    #hero {
+        .sign-up {
+            max-width: 100%;
+        }
+        .hero-img-mb {
+            display: block;
+        }
+        .hero-img {
+            display: none;
+        }
+        &.flex-container {
+            max-height: 1000px;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        } .flex {
+            max-width: 100%;
+            min-width: 100%;
+            padding-top: 8%;
+
+        }
+    }
+    #how-it-works .flex-container, #faq .flex-container {
+        ::before, ::after {
+            display: none;
+        }
+    }
+}
