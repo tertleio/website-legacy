@@ -18,6 +18,7 @@ app.use(express.static('public'));
 // Adds initial email to emails.json
 app.post('/email-submit', (req, res) => {
     let dataReq = req.body;
+    res.status(200).send(req.body);
     
     fs.readFile('./emails.json', 'utf8', (err, data) => {
         if (err) return console.log(err);
@@ -37,13 +38,13 @@ app.post('/email-submit', (req, res) => {
 });
 
 // Adds form signup submission to CSV
-app.post('/signup-submit', (req, res, next) => { 
+app.post('/signup-submit', (req, res) => { 
     let data = req.body;
+    res.status(200).send(req.body);
     // save to csv
     data = json2Csv(data, { fields: ["email", "firstName", "lastName", "postcode", "skillset", "lookingFor"] });
     fs.appendFileSync('./signups.csv', data, { 'flags': 'a+' },(err) => {
         if (err) return console.log(err);
-        else res.status(200).send();
     });
 });
 

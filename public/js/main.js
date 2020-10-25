@@ -1,44 +1,8 @@
-// import { getInputs } from './utils.js';
+import { getFormInputs, submitData } from './utils.js';
 
-// API
-const signupSubmitUrl = '/signup-submit'
-const emailSubmitUrl = '/email-submit'
-
-// DOMS - Get form values and return object
-const getFormInputs = () => {
-// DOMS - Signup form
-    const email = document.getElementById('email').value;
-    const firstName = document.getElementById('first_name').value;
-    const lastName = document.getElementById('last_name').value;
-    const postcode = document.getElementById('postcode').value;
-    const skillset = document.getElementById('skillset').value;
-    const lookingFor = document.getElementById('looking_for').value;
-    
-    return {
-        firstName: firstName, 
-        lastName: lastName,
-        postcode: postcode,
-        skillset: skillset,
-        lookingFor: lookingFor
-    }
-};
-
-// Post Submit
-const submitData = async (data, url) => {
-    try {
-        const response = await fetch(url, { 
-            method: 'POST', 
-            headers: {'Content-type': 'application/json' },
-            body: JSON.stringify(data) 
-        })
-        if (response.ok) {
-            const jsonResponse = await response.json();
-            console.log(jsonResponse);
-        }
-    } catch (err) {
-        console.log(err);
-    }
-};
+// Urls
+const signupSubmitUrl = '/signup-submit';
+const emailSubmitUrl = '/email-submit';
 
 const getEmail = () => {
     const email = document.querySelector('#signup-init input').value;
@@ -63,9 +27,9 @@ closeModal.addEventListener('click', () => {
     modal.style.display = 'none';
 });
 
-// Submit form (0. form validation)
+// Submit form
 const signupForm = document.getElementById('signup-form');
-signupForm.addEventListener('submit', async (submit) => {
+signupForm.addEventListener('submit', (submit) => {
     submit.preventDefault();
     const formData = getFormInputs();
     submitData(formData, signupSubmitUrl);
