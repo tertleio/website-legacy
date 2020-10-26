@@ -1,3 +1,4 @@
+// DOM
 const header = document.getElementById('header');
 const logo = document.getElementById('logo');
 const navBtn = document.getElementById('nav-btn');
@@ -7,14 +8,13 @@ const navLink = document.querySelectorAll('nav a');
 // Turns header/nav secondary CTA into primary CTA when scrolled
 window.addEventListener('scroll', () => {
     if (!responsiveChanges()) {
-        if (window.pageYOffset > 500) {
+        if (window.pageYOffset > 500 && header.className == 'wrap') {
             navBtn.className='btn btn-primary';
         } else {
             navBtn.className= 'btn btn-secondary'; // add transition to all css
             }
     }
 });
-
 
 // RESPONSIVE LOGOS
 function responsiveChanges() {
@@ -57,7 +57,6 @@ window.addEventListener('resize', responsiveChanges);
 navBtn.addEventListener('click', navMenu);
 
 // CLOSE MENU WHEN CLICKING AN ANCHOR LINK --fix duplicate functions
-
 navLink[0].addEventListener('click', () => {
     navMenu();
 });
