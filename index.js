@@ -36,7 +36,7 @@ app.post('/email-submit', (req, res) => {
         }
     });
 });
-console.log('test');
+
 // Adds form signup submission to CSV
 app.post('/signup-submit', (req, res) => { 
     let data = req.body;
