@@ -61,6 +61,6 @@ navLink[0].addEventListener('click', () => {
     navMenu();
 });
 
-navLink[1].addEventListener('click', () => { 
+navLink[1].addEventListener('click', () => {
     navMenu();
 });

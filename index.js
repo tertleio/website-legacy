@@ -18,6 +18,7 @@ app.use(express.static('public'));
 // Adds initial email to emails.json
 app.post('/email-submit', (req, res) => {
     let dataReq = req.body;
+    console.log('Email form submit received...');
     res.status(200).send(req.body);
     
     fs.readFile('./emails.json', 'utf8', (err, data) => {
