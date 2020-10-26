@@ -4,7 +4,7 @@
   "description": "Marketing page",
   "main": "index.js",
   "scripts": {
-    "start": "index.js",
+    "start": "node index.js",
     "test": "test"
   },
   "repository": {
