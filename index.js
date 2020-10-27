@@ -18,10 +18,9 @@ app.use(express.static('public'));
 // Adds initial email to emails.json
 app.post('/email-submit', (req, res) => {
     let dataReq = req.body;
-    console.log('Email form submit received...');
     res.status(200).send(req.body);
     
-    fs.readFile('./emails.json', 'utf8', (err, data) => {
+    fs.readFile('./db/emails.json', 'utf8', (err, data) => {
         if (err) return console.log(err);
         // (!) Check if email already exists and return failed
         else {
@@ -44,7 +43,7 @@ app.post('/signup-submit', (req, res) => {
     res.status(200).send(req.body);
     // save to csv
     data = json2Csv(data, { fields: ["email", "firstName", "lastName", "postcode", "skillset", "lookingFor"] });
-    fs.appendFileSync('./signups.csv', data, { 'flags': 'a+' },(err) => {
+    fs.appendFileSync('./db/signups.csv', data, { 'flags': 'a+' },(err) => {
         if (err) return console.log(err);
     });
 });

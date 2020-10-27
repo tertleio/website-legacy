@@ -18,11 +18,12 @@ $color-bg: #ffffff;
 $color-grey1: #EEEEEE;
 
 // Typography
-body, html, p {
+body, html {
     font-family: proxima-nova, sans-serif; // proxima regular
     font-weight: 400;
     font-style: normal;
     color: $color-text;
+    height: 100%;
     scroll-behavior: smooth;
 }
 
@@ -84,77 +85,4 @@ a:link, a:visited {
     &.btn-secondary {
         background: none;
     }
-}
-
-// Forms
-.sign-up {
-    display: flex;
-    justify-content: space-between;
-    background: $color-grey1;
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    margin-top: 25px;
-    position: relative;
-    .btn {
-        position: absolute;
-        right: 10px;
-    }
-}
-.form {
-    &::placeholder {
-        color: $color-text;
-    }
-    background: $color-grey1;
-    font-family: proxima-nova, sans-serif;
-    color: $color-text;
-    border: none;
-    width: 100%;
-    border-radius: 0.25rem;
-    font-size: 1rem;
-    padding: 11px 15px;
-    &.text-field {
-        
-    } 
-}
-
-.modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999999;
-    .form {
-        margin-bottom: 0.7rem;
-    }
-    .dual-left {
-        float: left;
-        width: 48%;
-    }
-    .dual-right {
-        float: right;
-        width: 48%;
-    }
-    .submit {
-        float: right;
-    }
-    .modal-content {
-        position: absolute;
-        border-radius: 1rem;
-        color: $color-bg;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 5%;
-        max-width: 800px;
-        background: $color-bg;
-        border: 1px solid $color-grey1;
-        box-shadow:
-        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-        0 12.5px 10px rgba(0, 0, 0, 0.06),
-        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 100px 80px rgba(0, 0, 0, 0.12)
-        }
 }

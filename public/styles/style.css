@@ -64,11 +64,12 @@ table {
           box-sizing: border-box;
 }
 
-body, html, p {
+body, html {
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #707070;
+  height: 100%;
   scroll-behavior: smooth;
 }
 

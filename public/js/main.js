@@ -4,8 +4,6 @@ import { getFormInputs, submitData } from './utils.js';
 const signupSubmitUrl = '/signup-submit';
 const emailSubmitUrl = '/email-submit';
 
-console.log('something!');
-
 const getEmail = () => {
     const email = document.querySelector('#signup-init input').value;
     submitData({ email: email }, emailSubmitUrl);
