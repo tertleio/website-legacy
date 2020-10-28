@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="12.285" height="12.285" viewBox="0 0 12.285 12.285"><g transform="translate(-1266.752 -67.921)"><path d="M1160.143,65.255l9.378,9.457" transform="translate(108.063 4.08)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/><path d="M0,0,9.378,9.457" transform="translate(1277.623 69.374) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="25.075" height="25.151" viewBox="0 0 25.075 25.151">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="_Icon_Close" data-name="[Icon] Close" transform="translate(1.414 1.414)">
+    <path id="Path_1392" data-name="Path 1392" class="cls-1" d="M824.36,211.34l22.247,22.252" transform="translate(-824.36 -211.34)"/>
+    <path id="Path_1393" data-name="Path 1393" class="cls-1" d="M824.4,233.663l22.19-22.258" transform="translate(-824.36 -211.34)"/>
+  </g>
+</svg>

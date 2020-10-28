@@ -1,6 +1,5 @@
-// Forms
+// SIGNUP INIT
 .sign-up {
-    display: flex;
     justify-content: space-between;
     background: $color-grey1;
     border-radius: 0.25rem;
@@ -12,7 +11,8 @@
         right: 10px;
     }
 }
-.form {
+
+.text-field2 {
     &::placeholder {
         color: $color-text;
     }
@@ -24,49 +24,94 @@
     border-radius: 0.25rem;
     font-size: 1rem;
     padding: 11px 15px;
-    &.text-field {
-        
-    } 
 }
 
+.text-field {
+    &::placeholder {
+        color: $color-text;
+    }
+    font-family: proxima-nova, sans-serif;
+    color: $color-text;
+    border: 0;
+    border-bottom: 2px solid $color-grey1;
+    width: 100%;
+    margin-top: 0.1rem;
+    font-size: 1rem;
+    padding: 11px 0;
+}
+
+// SIGNUP MODAL
+#titlebar {
+    display: flex;
+    background: $color-primary;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 5% 0 10%;
+    border-radius: 1.2rem 1.2rem 0 0;
+    h3 {
+        color: $color-white;
+    }
+}
+
+.close {
+    background: url('../img/close-thin.svg') no-repeat center center;
+    background-size: 875;
+    width: 2.5em;
+    height: 2.5em;
+}
 .modal {
-    position: fixed;
+    position: fixed; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 9999999;
-    .form {
-        margin-bottom: 0.7rem;
-    }
-    .dual-left {
-        float: left;
-        width: 48%;
-    }
-    .dual-right {
-        float: right;
-        width: 48%;
-    }
-    .submit {
-        float: right;
-    }
-    .modal-content {
+    z-index: 99999;
+    .modal-container {
         position: absolute;
-        border-radius: 1rem;
-        color: $color-bg;
-        top: 50%;
+        border-radius: 1.2rem;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 5%;
-        max-width: 800px;
         background: $color-bg;
-        border: 1px solid $color-grey1;
-        box-shadow:
+        box-shadow: 
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 6.7px 5.3px rgba(0, 0, 0, 0.048),
         0 12.5px 10px rgba(0, 0, 0, 0.06),
         0 22.3px 17.9px rgba(0, 0, 0, 0.072),
         0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-        0 100px 80px rgba(0, 0, 0, 0.12)
+        0 100px 80px rgba(0, 0, 0, 0.12);
+    }
+    .flex-container {
+        input {
+            outline: none;
         }
+        display: flex;
+        flex-basis: 100%;
+        height: 100%;
+        justify-content: space-around;
+        padding: 10% 10%;
+        align-content: space-around;
+    } 
+    .flex-col {
+        flex-basis: 100%;
+        flex-direction: column;
+        .flex-item {
+            padding: 4% 0;
+        } 
+    }
+
+    .flex-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .flex-item {
+            padding: 4% 0;
+            flex: 0 46%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal-cover .modal-container { width: 90%; }
 }

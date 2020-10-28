@@ -14,32 +14,78 @@
     <link rel="stylesheet" href="./styles/style.css" />
     
 </head>
-<div class="modal" style="display: block;">
-    <div class="modal-content">
-        <button id="close" style="color: black">Close Window</button>
-        <h2>Sign-Up</h2>
-        <p>To help us find the right match, we’d like to know a little more about you</p>
-        <form id="signup-form">
-            <input id="email" class="form text-field" type="text" placeholder="Your email" value="" />
-            <input id="first_name" class="form text-field dual-left" type="text" placeholder="First name" value="" />
-            <input id="last_name" class="form text-field dual-right" type="text" placeholder="Last name" value="" />
-            <input id="postcode" class="form text-field" type="text" placeholder="Postcode" method="Postcode" value="" />
-            <select id="skillset" name="test" class="form" placeholder="I am a..." value="" /">
-                <option value="Default">I am a...</option>
-                <option value="Designer/Researcher">Designer/Researcher</option>
-                <option value="Software Developer">Software Developer</option>
-                <option value="Other">Other...</option>
-            </select>
-            <select id="looking_for" name="test" class="form" placeholder="Looking for a..." value="">
-                <option value="Default">Looking for a...</option>
-                <option value="Software Developer">Software Developer</option>
-                <option value="Designer/Researcher">Designer/Researcher</option>
-                <option value="Other">Other...</option>
-            </select>
-            <button class="btn btn-primary submit" type="submit" method="POST">Submit</button>
-        </form>
-    </div>`
-</div>
+`
+
+
+    <div class="modal" style="display: hidden;">
+        <div class="modal-container">
+            <div id="titlebar">
+                    <h3>Sign-Up</h3>
+                    <button id="close-modal" class="close" style="color: black" title="Close"></button>
+            </div>
+            
+            <div class="flex-container">
+                <form id="signup-form">                
+                <div class="flex-row header">
+                    <p>To help us find the right match, we’d like to know a little more about you</p>
+                </div>
+                
+                <div class="flex-col">
+                    <div class="flex-item 1">
+                        <label for="email">Your Email</label>
+                        <input id="email" name="email" class="text-field" type="text" placeholder="Your email" value="" />
+                    </div>
+                </div>
+
+                <div class="flex-row">
+                    <div class="flex-item 2">
+                        <label for="first-name">First Name</label>
+                        <input id="first-name" name="first_name" class="text-field" type="text" placeholder="E.g: John" value="" />
+                    </div>
+                    <div class="flex-item 3">
+                        <label for="last-name">Last Name</label>
+                        <input id="last-name" name="last-name" class="text-field" type="text" placeholder="E.g: Smith" value="" />
+                    </div>
+                </div>
+                <div class="flex-col">
+                    <div class="flex-item 4">
+                        <label for="postcode">Postcode</label>
+                        <input id="postcode" class="text-field" type="text" placeholder="Postcode" method="Postcode" value="" />
+                    </div>
+                </div>
+                <div class="flex-row">
+                    <div class="flex-item 5">
+                        <label for="skillset">I am a...</label>
+                        <select id="skillset" name="test" class="text-field" placeholder="I am a..." value="" /">
+                            <option value="Default">Your skillet</option>
+                            <option value="Designer/Researcher">Designer/Researcher</option>
+                            <option value="Software Developer">Software Developer</option>
+                            <option value="Other">Other...</option>
+                        </select>
+                    </div>
+                    <div class="flex-item 6">
+                        <label for="looking-for">Looking for...</label>
+                        <select id="looking-for" name="test" class="text-field" placeholder="Looking for a..." value="">
+                            <option value="Default">Thei skillet</option>
+                            <option value="Software Developer">Software Developer</option>
+                            <option value="Designer/Researcher">Designer/Researcher</option>
+                            <option value="Other">Other...</option>
+                        </select>
+                    </div>
+
+                    <div class="flex flex-7">
+                        <button class="btn btn-primary submit" type="submit" method="POST">Submit</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
 <body>
     <div id="header" class="wrap">
         <header class=  "flex-container">
@@ -62,7 +108,7 @@
 
                     <div class="sign-up">
                         <form id="signup-init">
-                            <input class="form text-field" type="email" name="EMAIL" placeholder="Your email.." value=""></input>
+                            <input class="form text-field2" type="email" name="EMAIL" placeholder="Your email.." value=""></input>
                             <button type="submit" class="btn btn-primary">JOIN WAITLIST</button>
                         </form>
                     </div>

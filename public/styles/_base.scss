@@ -15,6 +15,7 @@ $color-primary: #1477FF;
 $color-secondary: #37352E;
 $color-text: #707070;
 $color-bg: #ffffff;
+$color-white: #ffffff;
 $color-grey1: #EEEEEE;
 
 // Typography
@@ -27,28 +28,37 @@ body, html {
     scroll-behavior: smooth;
 }
 
+button { 
+    background: none;
+    border: 0;
+}
+
 // $large-font: 50px <-- fix typography
-h1, h2, h3 {
+h1, h2, h3, h5, label {
     font-family: 'Poppins', sans-serif;
     color: $color-secondary;
-    margin-bottom: 1rem;
     line-height: 1.5em;
 } h1 {
-    font-size: 3.5rem;
+    font-size: 3.5em;
     line-height: 1.2em;
 } h2 {
-    font-size: 2.3rem;
+    font-size: 2.3em;
     color: $color-primary;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.2em;
 } h3 {
     font-size: 1.2em;
 } h4 {
-    font-size: 1.6rem;
+    font-size: 1.6em;
     color: $color-text;
-    line-height: 2.4rem;
-} p {
-    margin-bottom: 1.5rem;
-    line-height: 1.7rem;
+    line-height: 2.4em;
+} h5 {
+    font-size: 0.9em;
+    color: $color-text;
+} label { font-size: 0.9em; color: $color-text; }111 // --same as h5
+
+p {
+    margin-bottom: 1.5em;
+    line-height: 1.7em;
 } .bold {
     font-family: proxima-nova, sans-serif; // proxima bold
     font-weight: 700;

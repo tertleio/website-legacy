@@ -22,7 +22,7 @@ signupInitBtn.addEventListener('click', (e) => {
 });
 
 // Close signup form
-const closeModal = document.getElementById('close');
+const closeModal = document.getElementById('close-modal');
 closeModal.addEventListener('click', () => {
     modal.style.display = 'none';
 });
