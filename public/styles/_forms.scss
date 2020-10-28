@@ -113,5 +113,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .modal-cover .modal-container { width: 90%; }
+    .flex-container .flex-item { flex: 0 100%; }
+    .modal .modal-container { width: 90%; }
 }

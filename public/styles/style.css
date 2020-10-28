@@ -332,7 +332,12 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .modal-cover .modal-container {
+  .flex-container .flex-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 100%;
+            flex: 0 100%;
+  }
+  .modal .modal-container {
     width: 90%;
   }
 }
