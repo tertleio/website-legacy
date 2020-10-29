@@ -78,7 +78,7 @@ button {
   border: 0;
 }
 
-h1, h2, h3, h5, label {
+h1, h2, h3, h5, h6, label {
   font-family: 'Poppins', sans-serif;
   color: #37352E;
   line-height: 1.5em;
@@ -110,15 +110,20 @@ h5 {
   color: #707070;
 }
 
+h6 {
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
 label {
   font-size: 0.9em;
   color: #707070;
 }
 
-111
 p {
+  font-size: 1.1rem;
   margin-bottom: 1.5em;
-  line-height: 1.7em;
+  line-height: 1.8em;
 }
 
 .bold {
@@ -180,7 +185,7 @@ a:hover {
   right: 10px;
 }
 
-.text-field2 {
+.field2 {
   background: #EEEEEE;
   font-family: proxima-nova, sans-serif;
   color: #707070;
@@ -191,23 +196,23 @@ a:hover {
   padding: 11px 15px;
 }
 
-.text-field2::-webkit-input-placeholder {
+.field2::-webkit-input-placeholder {
   color: #707070;
 }
 
-.text-field2:-ms-input-placeholder {
+.field2:-ms-input-placeholder {
   color: #707070;
 }
 
-.text-field2::-ms-input-placeholder {
+.field2::-ms-input-placeholder {
   color: #707070;
 }
 
-.text-field2::placeholder {
+.field2::placeholder {
   color: #707070;
 }
 
-.text-field {
+.field {
   font-family: proxima-nova, sans-serif;
   color: #707070;
   border: 0;
@@ -218,23 +223,92 @@ a:hover {
   padding: 11px 0;
 }
 
-.text-field::-webkit-input-placeholder {
-  color: #707070;
+.field::-webkit-input-placeholder {
+  color: #B2B2B2;
 }
 
-.text-field:-ms-input-placeholder {
-  color: #707070;
+.field:-ms-input-placeholder {
+  color: #B2B2B2;
 }
 
-.text-field::-ms-input-placeholder {
-  color: #707070;
+.field::-ms-input-placeholder {
+  color: #B2B2B2;
 }
 
-.text-field::placeholder {
-  color: #707070;
+.field::placeholder {
+  color: #B2B2B2;
 }
 
-#titlebar {
+.field.focused {
+  border-bottom: 1px solid #FF9B00;
+  background: url("../img/focused.svg") no-repeat center right;
+}
+
+.field.valid {
+  border-bottom: 1px solid #AAC930;
+  background: url("../img/valid.svg") no-repeat center right;
+}
+
+.field.invalid {
+  border-bottom: 1px solid #EB3333;
+  background: url("../img/invalid.svg") no-repeat center right;
+}
+
+.field.dropdown {
+  color: #B2B2B2;
+  background: none;
+}
+
+#skillset, #looking-for {
+  background: none;
+}
+
+.close {
+  background: url("../img/close-thin.svg") no-repeat center center;
+  background-size: 875;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+p.info {
+  text-indent: 33px;
+  background: url("../img/i.svg") no-repeat top 0.3em left;
+  background-size: 1.1em;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+}
+
+.modal .modal-container {
+  position: absolute;
+  border-radius: 0rem 0 1.2rem 1.2rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #ffffff;
+  -webkit-box-shadow: 0px 39px 90px #000000E3;
+          box-shadow: 0px 39px 90px #000000E3;
+  /*
+        box-shadow: 
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+        */
+}
+
+.modal #titlebar {
+  margin-top: -63px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,51 +321,45 @@ a:hover {
           align-items: center;
   height: 4rem;
   padding: 0 5% 0 10%;
-  border-radius: 1.2rem 1.2rem 0 0;
-}
-
-#titlebar h3 {
-  color: #ffffff;
-}
-
-.close {
-  background: url("../img/close-thin.svg") no-repeat center center;
-  background-size: 875;
-  width: 2.5em;
-  height: 2.5em;
-}
-
-.modal {
-  position: fixed;
+  border-radius: 1.2rem 1.2em 0 0;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  z-index: 99999;
 }
 
-.modal .modal-container {
-  position: absolute;
-  border-radius: 1.2rem;
-  top: 45%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+.modal #titlebar h6 {
+  color: #ffffff;
+}
+
+.modal #modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: red;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4% 10% 5% 10%;
   background: #ffffff;
-  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  border-radius: 0 0 1.2rem 1.2em;
+  left: 0;
+  bottom: 0;
 }
 
 .modal .flex-container {
+  overflow-y: auto;
+  max-height: calc(90vh - 210px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  height: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 10% 10%;
+  padding: 5% 10%;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
 }
@@ -333,12 +401,13 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .flex-container .flex-item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 100%;
-            flex: 0 100%;
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 100% !important;
+            flex: 0 100% !important;
+    height: 80% !important;
   }
   .modal .modal-container {
-    width: 90%;
+    width: 95%;
   }
 }
 
@@ -430,7 +499,7 @@ a:hover {
 }
 
 #how-it-works, #faq {
-  background: #fff url("/img/bg-shadow.png") no-repeat top center;
+  background: #fff url("../img/bg-shadow.png") no-repeat top center;
   position: relative;
 }
 
@@ -454,7 +523,7 @@ a:hover {
 
 #how-it-works .flex-container ::before, #faq .flex-container ::before {
   content: '';
-  background: url("/img/seperator-left.png") no-repeat center left;
+  background: url("../img/separator-left.png") no-repeat center left;
   height: 250px;
   width: 25px;
   top: 30%;
@@ -464,7 +533,7 @@ a:hover {
 
 #how-it-works .flex-container ::after, #faq .flex-container ::after {
   content: '';
-  background: url("/img/seperator-left.png") no-repeat center left;
+  background: url("../img/separator-left.png") no-repeat center left;
   height: 250px;
   width: 25px;
   top: 30%;
@@ -565,8 +634,6 @@ main {
     content: 'Close';
   }
   .flex-container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     overflow: hidden;
   }
   #hero .sign-up {

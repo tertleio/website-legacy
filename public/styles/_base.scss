@@ -17,6 +17,11 @@ $color-text: #707070;
 $color-bg: #ffffff;
 $color-white: #ffffff;
 $color-grey1: #EEEEEE;
+$color-grey2: #B2B2B2;
+
+$color-orange: #FF9B00;
+$color-green: #AAC930;
+$color-red: #EB3333; 
 
 // Typography
 body, html {
@@ -34,7 +39,7 @@ button {
 }
 
 // $large-font: 50px <-- fix typography
-h1, h2, h3, h5, label {
+h1, h2, h3, h5, h6, label {
     font-family: 'Poppins', sans-serif;
     color: $color-secondary;
     line-height: 1.5em;
@@ -54,11 +59,15 @@ h1, h2, h3, h5, label {
 } h5 {
     font-size: 0.9em;
     color: $color-text;
-} label { font-size: 0.9em; color: $color-text; }111 // --same as h5
+} h6 {
+    font-size: 1.5em;
+    color: $color-white;
+} label { font-size: 0.9em; color: $color-text; } // --same as h5
 
 p {
+    font-size: 1.1rem;
     margin-bottom: 1.5em;
-    line-height: 1.7em;
+    line-height: 1.8em;
 } .bold {
     font-family: proxima-nova, sans-serif; // proxima bold
     font-weight: 700;

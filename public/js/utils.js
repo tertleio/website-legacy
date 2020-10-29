@@ -1,11 +1,11 @@
 // DOMS - Get form values and return object
 const getFormInputs = () => {
         const email = document.getElementById('email').value;
-        const firstName = document.getElementById('first_name').value;
-        const lastName = document.getElementById('last_name').value;
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
         const postcode = document.getElementById('postcode').value;
         const skillset = document.getElementById('skillset').value;
-        const lookingFor = document.getElementById('looking_for').value;
+        const lookingFor = document.getElementById('looking-for').value;
         
         return {
             firstName: firstName, 

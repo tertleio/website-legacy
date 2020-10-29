@@ -7,8 +7,9 @@
     <title>FounderFinder</title>
     
     <!-- imports -->
-    <script src="./js/main.js" type="module" defer></script>
-    <script src="./js/nav.js" type="module" defer></script>
+    <script defer src="./js/main.js" type="module"></script>
+    <script src="./js/nav.js" type="module"></script>
+    <script defer src="./js/validation.js" type="module"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/ram2xxa.css">
     <link rel="stylesheet" href="./styles/style.css" />
@@ -16,66 +17,77 @@
 </head>
 `
 
-
-    <div class="modal" style="display: hidden;">
+    <div class="modal" style="display: hidden;">   
         <div class="modal-container">
             <div id="titlebar">
-                    <h3>Sign-Up</h3>
+                    <h6>Sign-Up</h6>
                     <button id="close-modal" class="close" style="color: black" title="Close"></button>
             </div>
             
             <div class="flex-container">
                 <form id="signup-form">                
                 <div class="flex-row header">
-                    <p>To help us find the right match, we’d like to know a little more about you</p>
+                    <p class="info">To help us find the right match, we’d like to know a little more about you</p>
                 </div>
                 
                 <div class="flex-col">
-                    <div class="flex-item 1">
+                    <div class="flex-item">
                         <label for="email">Your Email</label>
-                        <input id="email" name="email" class="text-field" type="text" placeholder="Your email" value="" />
+                        <input id="email" name="email" class="field" type="text" placeholder="E.g: email@domain.com" value="" />
                     </div>
+                    
                 </div>
 
                 <div class="flex-row">
-                    <div class="flex-item 2">
+                    <div class="flex-item">
                         <label for="first-name">First Name</label>
-                        <input id="first-name" name="first_name" class="text-field" type="text" placeholder="E.g: John" value="" />
+                        <input id="first-name" name="first-name" class="field" type="text" placeholder="E.g: John" value="" />
                     </div>
-                    <div class="flex-item 3">
+                    <div class="flex-item">
                         <label for="last-name">Last Name</label>
-                        <input id="last-name" name="last-name" class="text-field" type="text" placeholder="E.g: Smith" value="" />
+                        <input id="last-name" name="last-name" class="field" type="text" placeholder="E.g: Smith" value="" />
                     </div>
                 </div>
-                <div class="flex-col">
-                    <div class="flex-item 4">
-                        <label for="postcode">Postcode</label>
-                        <input id="postcode" class="text-field" type="text" placeholder="Postcode" method="Postcode" value="" />
-                    </div>
-                </div>
-                <div class="flex-row">
-                    <div class="flex-item 5">
-                        <label for="skillset">I am a...</label>
-                        <select id="skillset" name="test" class="text-field" placeholder="I am a..." value="" /">
-                            <option value="Default">Your skillet</option>
-                            <option value="Designer/Researcher">Designer/Researcher</option>
-                            <option value="Software Developer">Software Developer</option>
-                            <option value="Other">Other...</option>
-                        </select>
-                    </div>
-                    <div class="flex-item 6">
-                        <label for="looking-for">Looking for...</label>
-                        <select id="looking-for" name="test" class="text-field" placeholder="Looking for a..." value="">
-                            <option value="Default">Thei skillet</option>
-                            <option value="Software Developer">Software Developer</option>
-                            <option value="Designer/Researcher">Designer/Researcher</option>
-                            <option value="Other">Other...</option>
-                        </select>
-                    </div>
 
-                    <div class="flex flex-7">
-                        <button class="btn btn-primary submit" type="submit" method="POST">Submit</button>
+                <div class="flex-col">
+                    <div class="flex-item">
+                        <label for="postcode">Postcode</label>
+                        <input id="postcode" class="field" type="text" placeholder="Zip/Postcode " method="Postcode" value="" />
                     </div>
+                </div>
+
+                <div class="flex-row">
+                    <div class="flex-item">
+                        <label for="skillset">I am a...</label>
+                        <select id="skillset" name="skillset" class="field dropdown" placeholder="I am a..." value="" /">
+                            <option value="Default">Your skillset...</option>
+                            <option value="Designer/Researcher">Designer/Researcher</option>
+                            <option value="Software Developer">Software Developer</option>
+                            <option value="Other">Other...</option>
+                        </select>
+                    </div>
+                    <div class="flex-item">
+                        <label for="looking-for">Looking for...</label>
+                        <select id="looking-for" name="looking-for" class="field dropdown" placeholder="Looking for a..." value="">
+                            <option value="Default">Their skillset...</option>
+                            <option value="Software Developer">Software Developer</option>
+                            <option value="Designer/Researcher">Designer/Researcher</option>
+                            <option value="Other">Other...</option>
+                        </select>
+                    </div>
+                </div>
+                
+
+                <div class="flex-col">
+                    <div class="flex-item">
+                        <label for="postcode">Your LinkedIn Url</label>
+                        <input id="linkedin" class="field" type="text" placeholder="https://linkedin.com/in/" method="Postcode" value="https://linkedin.com/in/" />
+                    </div>
+                </div>
+            </div>
+
+                <div id="modal-footer">
+                    <button class="btn btn-primary submit" type="submit" method="POST">Submit</button>
                 </div>
                 </form>
             </div>
@@ -108,7 +120,7 @@
 
                     <div class="sign-up">
                         <form id="signup-init">
-                            <input class="form text-field2" type="email" name="EMAIL" placeholder="Your email.." value=""></input>
+                            <input class="field2" type="email" name="EMAIL" placeholder="Your email.." value="" required></input>
                             <button type="submit" class="btn btn-primary">JOIN WAITLIST</button>
                         </form>
                     </div>
