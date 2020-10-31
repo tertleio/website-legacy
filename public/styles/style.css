@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -78,7 +79,7 @@ button {
   border: 0;
 }
 
-h1, h2, h3, h5, h6, label {
+h1, h2, h3, h5, h6 {
   font-family: 'Poppins', sans-serif;
   color: #37352E;
   line-height: 1.5em;
@@ -113,11 +114,6 @@ h5 {
 h6 {
   font-size: 1.5em;
   color: #ffffff;
-}
-
-label {
-  font-size: 0.9em;
-  color: #707070;
 }
 
 p {
@@ -162,7 +158,7 @@ a:hover {
 
 .btn.btn-primary {
   color: #ffffff;
-  background: #1477FF;
+  b€ackground: #1477FF;
 }
 
 .btn.btn-secondary {
@@ -218,25 +214,44 @@ a:hover {
   border: 0;
   border-bottom: 2px solid #EEEEEE;
   width: 100%;
-  margin-top: 0.1rem;
   font-size: 1rem;
   padding: 11px 0;
 }
 
+.field + label {
+  position: absolute;
+  left: 0;
+  bottom: 34px;
+  font-size: 0.9em;
+  -webkit-transition: all 0.05s;
+  transition: all 0.05s;
+  font-style: normal;
+  color: #707070;
+}
+
+.field:focus + label, .field:not(:placeholder-shown) + label {
+  position: absolute;
+  -webkit-transform: translateY(-1.8em);
+          transform: translateY(-1.8em);
+  -webkit-transition: all 0.05s;
+  transition: all 0.05s;
+  font-weight: 700;
+}
+
 .field::-webkit-input-placeholder {
-  color: #B2B2B2;
+  color: transparent;
 }
 
 .field:-ms-input-placeholder {
-  color: #B2B2B2;
+  color: transparent;
 }
 
 .field::-ms-input-placeholder {
-  color: #B2B2B2;
+  color: transparent;
 }
 
 .field::placeholder {
-  color: #B2B2B2;
+  color: transparent;
 }
 
 .field.focused {
@@ -254,15 +269,21 @@ a:hover {
   background: url("../img/invalid.svg") no-repeat center right;
 }
 
-.field.dropdown {
-  color: #B2B2B2;
-  background: none;
+.field.dropdown + label {
+  bottom: 8px;
+  font-weight: normal;
 }
 
 #skillset, #looking-for {
   background: none;
 }
 
+/* // Had problems with this default css refocusing when js render field invalid
+input:focus, input.valid:focus, input.not-valid:focus {
+    border-bottom: 1px solid $color-orange;
+    background: url('../img/focused.svg') no-repeat center right;
+}
+*/
 .close {
   background: url("../img/close-thin.svg") no-repeat center center;
   background-size: 875;
@@ -320,7 +341,7 @@ p.info {
       -ms-flex-align: center;
           align-items: center;
   height: 4rem;
-  padding: 0 5% 0 10%;
+  padding: 0 5% 0 5%;
   border-radius: 1.2rem 1.2em 0 0;
   left: 0;
   top: 0;
@@ -378,6 +399,7 @@ p.info {
 }
 
 .modal .flex-col .flex-item {
+  position: relative;
   padding: 4% 0;
 }
 
@@ -393,6 +415,7 @@ p.info {
 }
 
 .modal .flex-row .flex-item {
+  position: relative;
   padding: 4% 0;
   -webkit-box-flex: 0;
       -ms-flex: 0 46%;

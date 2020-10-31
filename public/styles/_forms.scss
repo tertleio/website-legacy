@@ -26,21 +26,36 @@
     padding: 11px 15px;
 }
 
+
 .field {
-    &::placeholder {
-        color: $color-grey2;
-    }
     font-family: proxima-nova, sans-serif;
     color: $color-text;
     border: 0;
     border-bottom: 2px solid $color-grey1;
     width: 100%;
-    margin-top: 0.1rem;
     font-size: 1rem;
     padding: 11px 0;
+    & + label {
+        position: absolute;
+        left: 0;
+        bottom: 34px;
+        font-size: 0.9em;
+        transition: all 0.05s;
+        font-style: normal;
+        color: $color-text; // create variable for the styling
+    }
+    &:focus + label, &:not(:placeholder-shown) + label { // --check that placeholder is not active to maintain poisiton if user has input
+        position: absolute;
+        transform: translateY(-1.8em);
+        transition: all 0.05s;
+        font-weight: 700
+    }
+    &::placeholder {
+        color: transparent;
+    }
     &.focused {
-        border-bottom: 1px solid $color-orange;
-        background: url('../img/focused.svg') no-repeat center right;
+    border-bottom: 1px solid $color-orange;
+    background: url('../img/focused.svg') no-repeat center right;
     }
     &.valid {
         border-bottom: 1px solid $color-green;
@@ -50,14 +65,22 @@
         border-bottom: 1px solid $color-red;
         background: url('../img/invalid.svg') no-repeat center right;
     }
-    &.dropdown {
-        color: $color-grey2;
-        background: none;
+    &.dropdown + label { // (!) need to have 'Your/Their skillset' display after menu
+        bottom: 8px;
+        font-weight: normal;
     }
 }
+
 #skillset, #looking-for {
     background: none; // removes validation icons from js injection
+};  
+
+/* // Had problems with this default css refocusing when js render field invalid
+input:focus, input.valid:focus, input.not-valid:focus {
+    border-bottom: 1px solid $color-orange;
+    background: url('../img/focused.svg') no-repeat center right;
 }
+*/
 
 // SIGNUP MODAL
 
@@ -107,7 +130,7 @@ p.info {
         justify-content: space-between;
         align-items: center;
         height: 4rem;
-        padding: 0 5% 0 10%;
+        padding: 0 5% 0 5%;
         border-radius: 1.2rem 1.2em 0 0;
         left: 0;
         top: 0;
@@ -143,6 +166,7 @@ p.info {
             flex-basis: 100%;
             flex-direction: column;
             .flex-item {
+                position: relative; // --to position labels relative to this
                 padding: 4% 0;
             } 
         }
@@ -152,6 +176,7 @@ p.info {
             justify-content: space-between;
             flex-wrap: wrap;
             .flex-item {
+                position: relative; // --to position labels relative to this
                 padding: 4% 0;
                 flex: 0 46%;
             }

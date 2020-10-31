@@ -39,7 +39,7 @@ button {
 }
 
 // $large-font: 50px <-- fix typography
-h1, h2, h3, h5, h6, label {
+h1, h2, h3, h5, h6 {
     font-family: 'Poppins', sans-serif;
     color: $color-secondary;
     line-height: 1.5em;
@@ -62,7 +62,7 @@ h1, h2, h3, h5, h6, label {
 } h6 {
     font-size: 1.5em;
     color: $color-white;
-} label { font-size: 0.9em; color: $color-text; } // --same as h5
+} 
 
 p {
     font-size: 1.1rem;
@@ -99,7 +99,7 @@ a:link, a:visited {
 }
     &.btn-primary {
         color: $color-bg;
-        background: $color-primary;
+        b€ackground: $color-primary;
     }
     &.btn-secondary {
         background: none;

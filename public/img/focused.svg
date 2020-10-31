@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3"><circle cx="1.5" cy="1.5" r="1.5" fill="#ff9b00"/><circle cx="1.5" cy="1.5" r="1.5" transform="translate(5)" fill="#ff9b00"/><circle cx="1.5" cy="1.5" r="1.5" transform="translate(10)" fill="#ff9b00"/></svg>
+
+<svg id="_Icon_Await" data-name="[Icon] Await" xmlns="http://www.w3.org/2000/svg" width="13" height="3" viewBox="0 0 13 3">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff9b00;
+      }
+    </style>
+  </defs>
+  <circle id="circle2" data-name="Ellipse 22" class="cls-1" cx="1.5" cy="1.5" r="1.5"/>
+  <circle id="circle2" data-name="Ellipse 23" class="cls-1" cx="1.5" cy="1.5" r="1.5" transform="translate(5)"/>
+  <circle id="circl3" data-name="Ellipse 24" class="cls-1" cx="1.5" cy="1.5" r="1.5" transform="translate(10)"/>
+</svg>
