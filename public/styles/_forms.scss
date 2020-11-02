@@ -86,7 +86,7 @@ body {
     &.invalid {
         border-bottom: 1px  solid $color-red;
         background: url('../img/invalid.svg') no-repeat center right;
-        background-size: 0.8em;
+        background-size: 1em;
         
     }
     &.dropdown + label { // (!) need to have 'Your/Their skillset' display after menu

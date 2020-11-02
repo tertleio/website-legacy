@@ -290,7 +290,7 @@ select {
 .field.invalid {
   border-bottom: 1px solid #EB3333;
   background: url("../img/invalid.svg") no-repeat center right;
-  background-size: 0.8em;
+  background-size: 1em;
 }
 
 .field.dropdown + label {
