@@ -7,17 +7,14 @@
     <title>FounderFinder</title>
     
     <!-- imports -->
-    <!-- <script defer src="./js/main.js" type="module"></script> -->
-    <!-- <script src="./js/nav.js" type="module"></script> -->
+    <script defer src="./js/main.js" type="module"></script>
     <script defer src="./js/validation.js" type="module"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/ram2xxa.css">
     <link rel="stylesheet" href="./styles/style.css" />
     
 </head>
-`
-
-    <div class="modal" style="display: hidden;">   
+    <div class="modal" style="display: block;">   
         <div class="modal-container">
             <div id="titlebar">
                     <h6>Sign-Up</h6>
@@ -25,7 +22,7 @@
             </div>
             
             <div class="flex-container">
-                <form id="signup-form">                
+                <form autocomplete="off" id="signup-form">                
                     <div class="flex-row header">
                         <p class="info">To help us find the right match, we’d like to know a little more about you</p>
                     </div>
@@ -40,7 +37,7 @@
 
                     <div class="flex-row">
                         <div class="flex-item">
-                            <input id="first-name" name="first-name" class="field" placeholder="Something" type="text" value=""/>
+                            <input id="first-name" name="first-name" class="field" placeholder="Something3" type="text" value="" />
                             <label for="first-name">First Name</label>
                         </div>
                         <div class="flex-item">
@@ -51,42 +48,56 @@
 
                     <div class="flex-col">
                         <div class="flex-item">
-                            <input id="postcode" class="field" type="text" placeholder="Something" />
-                            <label for="postcode  method="Postcode" value="" />Postcode</label>
+                            <input id="postcode" class="field" type="text" placeholder="Something2" />
+                            <label for="postcode"  method="Postcode" value=""/>Postcode</label>
                            
                         </div>
                 </div>
 
-                    <div class="flex-row">
-                        <div class="flex-item">
-                            <select id="skillset" class="field dropdown" name="skillset" placeholder="something" value="Default">
-                                <option  value=""></option>
-                                <option value="Designer/Researcher">Designer/Researcher</option>
+                    <div id="skillset-wrapper" class="flex-col select">
+                        <div class="flex-item select">
+                            <select  id="skillset" class="field dropdown" name="skillset" placeholder="something" value="">
+                                <option value=""></option>
+                                <option class="selections"  value="Designer/Researcher">Designer/Researcher</option>
                                 <option value="Software Developer">Software Developer</option>
-                                <option value="Other">Other...</option>
+                                <option value="Other skillset">Other...</option>
                             </select>
                             <label for="skillset">I am a...</label>
                         </div>
-                        <div class="flex-item">
-                            <select id="looking-for" class="field dropdown" name="looking-for" value="Default">
+                        <div style="display: none" class="flex-item other">
+                             <input id="skillset-other" class="field inactive" type="text" placeholder="Other" />
+                        </div>
+                        
+                    </div>
+
+                    <div id="lookingfor-wrapper" class="flex-col select">
+                        <div class="flex-item select">
+                            <select id="looking-for" class="field dropdown" name="looking-for" value="" />
                                 <option  value=""></option>
                                 <option value="Software Developer">Software Developer</option>
                                 <option value="Designer/Researcher">Designer/Researcher</option>
-                                <option value="Other">Other...</option>
+                                <option value="Looking for other">Other...</option>
                             </select>
                             <label for="looking-for">Looking for a...</label>
                         </div>
+                        
+                        <div style="display: none" class="flex-item other two">
+                            <input id="looking-for-other" class="field inactive" type="text" placeholder="Other" />
+
+                        </div>
+                
                     </div>
                     
 
                     <div class="flex-col">
                         <div class="flex-item">
-                            <input id="linkedin" class="field text" type="text" placeholder="Somethinglol" value="" />
-                            <label for="linkedin">Your LinkedIn Url</label>
+                            <input id="linkedin" class="field" type="text" placeholder="Somethinglol" value="" />
+                            <label for="linkedin">Your LinkedIn Url (optional)<label>
                         </div>
                     </div>
             </div> <!-- /flex-container (scrollable) -->
                     <div id="modal-footer">
+                        <div  class="validation-feedback" style="opacity: 0;">Please fill in the required fields  marked with ' X '</div>
                         <button class="btn btn-primary submit" type="submit" method="POST">Submit</button>
                     </div>
                 </form> 
@@ -118,8 +129,8 @@
                     <h4>Get matched with likeminded tech startup fanatics and change the world, together.</h4>
 
                     <div class="sign-up">
-                        <form id="signup-init">
-                            <input class="field2" type="email" name="EMAIL" placeholder="Your email.." value="" required></input>
+                        <form autocomplete="off" id="signup-init">
+                            <input class="field2" type="email" name="EMAIL" placeholder="Your email.." value="" required />
                             <button type="submit" class="btn btn-primary">JOIN WAITLIST</button>
                         </form>
                     </div>
@@ -181,7 +192,7 @@
     <div id="footer" class="wrap">
         <footer class="flex-container">
             <div class="flex flex-1">
-                © Branchworks 2020 <img src="./img/heart.svg">
+                © FounderFinder 2020 <img src="./img/heart.svg">
             </div>
         </footer>
     </div>
