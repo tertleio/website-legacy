@@ -8,27 +8,15 @@ const getFormInputs = () => {
         const lookingFor = document.getElementById('looking-for').value;
         const linkedIn = document.getElementById('linkedin').value;
         return {
-            email,
-            firstName,
-            lastName,
-            postcode, 
-            linkedIn, 
-            skillset, 
-            lookingFor
+            email: email,
+            firstName: firstName,
+            lastName: lastName,
+            postcode: postcode,
+            skillset: skillset,
+            lookingFor: lookingFor,
+            linkedIn: linkedIn
         }
-        /*
-        return {
-            email: email.value,
-            firstName: firstName.value,
-            lastName: lastName.value,
-            postcode: postcode.value,
-            linkedIn: linkedIn.value,
-            skillset: skillset.value,
-            lookingFor: lookingFor.value,
-        }
-        */
     };
-    
 // Post something
 const submitData = async (data, url) => {
     try {
@@ -39,8 +27,8 @@ const submitData = async (data, url) => {
         })
         if (response.ok) {
             const jsonResponse = await response.json();
-            return console.log('Submission successful');
-            
+            console.log(jsonResponse);  
+            return jsonResponse;
         }
     } catch (err) {
         console.log(err);

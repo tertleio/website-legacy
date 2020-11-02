@@ -68,9 +68,7 @@ selectFields.forEach(selectField => {
     }); 
 })
 
-// Form
-// 0. Chek fields are valid
-// 0. Submit data or Display error
+// Check All Valid & Submit Form
 const signupForm = document.getElementById('signup-form');
 const renderFeedback = document.querySelector('.validation-feedback');
 signupForm.addEventListener('submit', (e) => {
@@ -78,8 +76,9 @@ signupForm.addEventListener('submit', (e) => {
     if (checkAllValid(signupForm) > 0) {
         renderFeedback.style = 'opacity: 1';
     } else {
+        console.log(getFormInputs());
         renderFeedback.style = 'color: green';
+        submitData(getFormInputs(), signupSubmitUrl);
         renderFeedback.innerHTML = 'Success!';
-        console.log('submit data here');
     }
 });

@@ -29,7 +29,7 @@ app.post('/email-submit', (req, res) => {
             
             const jsonContent = JSON.stringify(file);
 
-            fs.writeFile('./emails.json', jsonContent,'utf8', (err) => {
+            fs.writeFile('./db/emails.json', jsonContent,'utf8', (err) => {
                 if (err) return console.log(err);
                 else res.status(200).send()
             });
@@ -40,10 +40,11 @@ app.post('/email-submit', (req, res) => {
 // Adds form signup submission to CSV
 app.post('/signup-submit', (req, res) => { 
     let data = req.body;
+    console.log(req.body)
     res.status(200).send(req.body);
     // save to csv
-    data = json2Csv(data, { fields: ["email", "firstName", "lastName", "postcode", "skillset", "lookingFor"] });
-    fs.appendFileSync('./db/signups.csv', data, { 'flags': 'a+' },(err) => {
+    data = json2Csv(data, { fields: ["email", "firstName", "lastName", "postcode", "skillset", "lookingFor", "linkedIn"] });
+    fs.appendFileSync('./db/signups.csv', data, { 'flags': 'a+' }, (err) => {
         if (err) return console.log(err);
     });
 });

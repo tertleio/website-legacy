@@ -42,11 +42,8 @@ const checkAllValid = (form) => {
      formVar.forEach(i => {
         // (!) do this better - needs to be compatible with  'other fields ->  active
         if ((i.value == '' || i.value == 'undefined') && i.className !== 'field inactive' && i.id !== 'linkedin')  {
-            console.log(i);
             invalidCount++
         }
-
-        // if the other fields are not active
      });
     return invalidCount;
 };
