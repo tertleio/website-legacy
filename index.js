@@ -1,54 +1,58 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+const pool = require('./db');
+const { response } = require('express');
+const { exit } = require('process');
+
+/*
 const process = require('process');
 const fs = require('fs');
-const bodyParser = require('body-parser');
 const csv2Json = require('csvtojson');
 const json2Csv = require('json2csv').parse;
+*/
 
+// MIDDLEWARE
+app.use(cors());  // --cross communication between db and backend
+app.use(express.json()); // --parses req.body to json
+app.use(express.static('public')); // --serves up public front-end as static pages
 
-
-// Middleware
-app.use(bodyParser.json()); // 
-
-// Start static server
-app.use(express.static('public'));
-
-
-// Adds initial email to emails.json
-app.post('/email-submit', (req, res) => {
-    let dataReq = req.body;
-    res.status(200).send(req.body);
-    
-    fs.readFile('./db/emails.json', 'utf8', (err, data) => {
-        if (err) return console.log(err);
-        // (!) Check if email already exists and return failed
-        else {
-            const file = JSON.parse(data);
-            file.emails.push(dataReq);
-            
-            const jsonContent = JSON.stringify(file);
-
-            fs.writeFile('./db/emails.json', jsonContent,'utf8', (err) => {
-                if (err) return console.log(err);
-                else res.status(200).send()
-            });
-        }
-    });
+// ROUTES
+app.post('/email-submit', async (req, res) => {
+    try {
+        const { email } = await req.body;
+        const getEmails = await pool.query(`SELECT email FROM signups`);
+        getEmails.rows.forEach(i => { // --check for duplicate email
+            if (i.email === email) {
+                res.status(409).send();
+            }
+        })
+        const newEmail = pool.query(
+            `INSERT INTO signups (email) VALUES($1) RETURNING *`, [email]
+            );
+        res.status(200).send(email);
+    } catch (error) {
+        console.error(error.message)
+    }
 });
 
-// Adds form signup submission to CSV
-app.post('/signup-submit', (req, res) => { 
-    let data = req.body;
-    console.log(req.body)
-    res.status(200).send(req.body);
-    // save to csv
-    data = json2Csv(data, { fields: ["email", "firstName", "lastName", "postcode", "skillset", "lookingFor", "linkedIn"] });
-    fs.appendFileSync('./db/signups.csv', data, { 'flags': 'a+' }, (err) => {
-        if (err) return console.log(err);
-    });
+app.post('/signup-submit', async (req, res) => {
+   try {
+       const {  email, firstName, lastName, postcode, skillset, lookingFor, linkedin } = req.body; 
+            const newForm = await pool.query(`
+            UPDATE signups
+            SET first_name = $1, last_name = $2, postcode = $3, skillset = $4, looking_for = $5, linkedin = $6 
+            WHERE email = $7`,
+            [firstName, lastName, postcode, skillset, lookingFor, linkedin, email]
+        );  
+   } catch (error) {
+       console.error(error.message);
+   } 
+    res.send(req.body)
 });
 
+
+// START SERVER LISTENER 
 const PORT = process.env.PORT || 2000;
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}...`);

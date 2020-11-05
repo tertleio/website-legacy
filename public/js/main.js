@@ -1,4 +1,4 @@
-import { getFormInputs, submitData, getEmail } from './requests.js';
+import { getFormInputs, submitData } from './requests.js';
 import { checkAllValid } from './validation.js';
 
 // URLS -------------------
@@ -11,7 +11,9 @@ const signupInitBtn = document.querySelector('#signup-init .btn.btn-primary');
 // Open
 signupInitBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    document.getElementById('email').value = getEmail(); // --dispay initial email and submit
+    const email = document.querySelector('#signup-init input').value;
+    document.getElementById('email').value = email;  // --dispay initial email on form
+    submitData({ email: email }, emailSubmitUrl); // --post email
 
     if (modal.style.display === 'none') {
         modal.style.display = 'block';
