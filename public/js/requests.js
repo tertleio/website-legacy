@@ -4,9 +4,16 @@ const getFormInputs = () => {
         const firstName = document.getElementById('first-name').value;
         const lastName = document.getElementById('last-name').value;
         const postcode = document.getElementById('postcode').value;
-        const skillset = document.getElementById('skillset').value;
-        const lookingFor = document.getElementById('looking-for').value;
         const linkedin = document.getElementById('linkedin').value;
+        
+        let skillset = document.getElementById('skillset').value;
+        let lookingFor = document.getElementById('looking-for').value;
+        let lookingForOther = document.getElementById('looking-for-other').value;
+        let skillsetOther = document.getElementById('skillset-other').value;
+        
+        if (skillsetOther.length > 0) skillset = skillsetOther;
+        if (lookingForOther.length > 0) lookingFor = lookingForOther;
+        
         return {
             email: email,
             firstName: firstName,

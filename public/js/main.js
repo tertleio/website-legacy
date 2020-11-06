@@ -52,10 +52,12 @@ selectFields.forEach(selectField => {
     selectField.addEventListener('change', (e) => {
         if (selectField.value == 'Other skillset') {
             skillsetWrapper.className = 'flex-row';
+            document.getElementById('looking-for-other').value = '';
             newDiv.style = 'display: block';
             newField.focus();
         } else if (selectField.value == 'Looking for other') {
             lookingForWrapper.className = 'flex-row';
+            document.getElementById('looking-for-other').value = '';
             newDiv2.style = 'display: block';
             newField2.focus();
         } else if (selectField.value !== 'Other skillset' && selectField.name == 'looking-for' ){
@@ -64,6 +66,7 @@ selectFields.forEach(selectField => {
             newDiv2.style = 'display: none';
         } else {
             skillsetWrapper.className = 'flex-col';
+            document.getElementById('skillset-other').value = '';
             newDiv.firstElementChild.className = 'field inactive';
             newDiv.style = 'display: none'; // (!) inject 'other field?
         }

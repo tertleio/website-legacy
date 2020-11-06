@@ -2,8 +2,6 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const pool = require('./db');
-const { response } = require('express');
-const { exit } = require('process');
 
 /*
 const process = require('process');
