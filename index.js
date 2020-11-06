@@ -19,16 +19,15 @@ app.use(express.static('public')); // --serves up public front-end as static pag
 app.post('/email-submit', async (req, res) => {
     try {
         const { email } = await req.body;
-        const getEmails = await pool.query(`SELECT email FROM signups`);
-        getEmails.rows.forEach(i => { // --check for duplicate email
-            if (i.email === email) {
-                res.status(409).send();
-            }
-        })
-        const newEmail = pool.query(
-            `INSERT INTO signups (email) VALUES($1) RETURNING *`, [email]
-            );
-        res.status(200).send(email);
+        const isExists = await pool.query(`SELECT COUNT(*) FROM signups WHERE email = $1`, [email]);
+        if (isExists.rowCount > 0) {
+            res.status(409).send(req.body);
+        } else {
+            const newEmail = pool.query(
+                `INSERT INTO signups (email) VALUES($1) RETURNING *`, [email]
+                );
+            res.status(200).send(email)
+        }
     } catch (error) {
         console.error(error.message)
     }
@@ -36,7 +35,7 @@ app.post('/email-submit', async (req, res) => {
 
 app.post('/signup-submit', async (req, res) => {
    try {
-       const {  email, firstName, lastName, postcode, skillset, lookingFor, linkedin } = req.body; 
+       const { email, firstName, lastName, postcode, skillset, lookingFor, linkedin } = req.body; 
             const newForm = await pool.query(`
             UPDATE signups
             SET first_name = $1, last_name = $2, postcode = $3, skillset = $4, looking_for = $5, linkedin = $6 
