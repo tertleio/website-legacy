@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const pool = require('./db');
-
 /*
 const process = require('process');
 const fs = require('fs');
@@ -10,28 +9,40 @@ const csv2Json = require('csvtojson');
 const json2Csv = require('json2csv').parse;
 */
 
+
 // MIDDLEWARE
 app.use(cors());  // --cross communication between db and backend
 app.use(express.json()); // --parses req.body to json
 app.use(express.static('public')); // --serves up public front-end as static pages
 
+
+// (!) Create checkConflict function that can be used globally
+const checkExists = async (table, colVal, rowVal) => {
+    const doesExist = await pool.query(`
+    SELECT COUNT(*)
+    FROM ${table} 
+    WHERE ${colVal} = '${rowVal}'`);
+
+    if (doesExist.rows[0].count == 0) return false;
+    else return true;
+};
+
 // ROUTES
 app.post('/email-submit', async (req, res) => {
     try {
         const { email } = await req.body;
-        const isExists = await pool.query(`SELECT COUNT(*) FROM signups WHERE email = $1`, [email]);
-        if (isExists.rowCount > 0) {
-            res.status(409).send(req.body);
-        } else {
-            const newEmail = pool.query(
-                `INSERT INTO signups (email) VALUES($1) RETURNING *`, [email]
-                );
-            res.status(200).send(email)
+        const doesExist = await checkExists('signups', 'email', email);
+        if (doesExist) res.status(409).send();
+        else {
+            const newEmail = await pool.query(`
+                INSERT INTO signups (email) VALUES($1) RETURNING *`, [email]);
+                res.status(200).send(newEmail);
         }
     } catch (error) {
-        console.error(error.message)
+        console.error(error);
     }
 });
+
 
 app.post('/signup-submit', async (req, res) => {
    try {
