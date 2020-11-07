@@ -21,16 +21,20 @@
 #header.wrap {
     position: fixed;
     z-index: 9999;
+    #logo {
+        width: 9em;
+    }
     header {
         justify-content: space-between;
         align-items: center;
-        padding: 30px 0;
+        padding: 1em 0;
         nav {
             ul {
                 display: inline-flex;
                 align-items: center;
             li {
                 padding: 0.3rem 1.3rem;
+                font-size: 1.1em;
                     a {
                         &:link, &:visited {
                             color: $color-text;
@@ -48,11 +52,21 @@
         }
     }
 }
+
 #hero {
     padding: 0; 
-    z-index: -999;
+    z-index: -999;;
+    h4 {
+        margin-top: 1em;
+    }
     .hero-img-mb {
         display: none;
+    }
+    .emoji{
+        width: 1em; // (!) rem inherit? adjust size depending on text size?/div 
+        vertical-align: bottom;
+        padding-bottom: 0.14em;
+        margin-left: 0.1em;
     }
     .sign-up {
         max-width: 80%;
@@ -66,8 +80,8 @@
 
     } .flex-1 {
         min-width: 40%;
-        max-width: 50%;
-        margin-right: 5%;
+        max-width: 45%;
+        margin-right: 3em;
     } .flex-2 {
         max-width: 40%;
 
@@ -77,13 +91,16 @@
 #how-it-works, #faq {
     background: #fff url('../img/bg-shadow.png') no-repeat top center;
     position: relative;
+    h2 {
+        margin-bottom: 1em;
+    }
 }
 
 #how-it-works .flex-container, #faq .flex-container {
     max-width: 500px;
     flex-wrap: wrap;
     .flex {
-        margin-bottom: 30px;
+        margin-bottom: 1.5em;
     } .flex-0 {
         flex: 1;
         text-align: center;
@@ -124,18 +141,21 @@ main {
 // MOBILE ------------------------------------------------------------------
 
 @media screen and (max-width: 768px) {
+    :root {
+        font-size: 13px;
+    }
+    h2 {
+        float: left;
+    }
     main {
         padding-top: 60px;
     }
     
 // nav?
-.wrap {
-    padding: 0 1.7rem;
+.wrap { 
+    padding: 0 1.7rem; // padding on  all wrappers
 }
  #header.wrap {
-    header {
-        padding: 6% 0% !important;
-    }
     .burger {
         background: url('/img/burger.svg') no-repeat center right;
         padding-right: 25px;
@@ -215,9 +235,6 @@ main {
         &.flex-container {
             max-height: 1000px;
             width: 100%;
-            img {
-                width: 100%;
-            }
         } .flex {
             max-width: 100%;
             min-width: 100%;
@@ -226,6 +243,7 @@ main {
         }
     }
     #how-it-works .flex-container, #faq .flex-container {
+        padding: 6em 0;
         ::before, ::after {
             display: none;
         }

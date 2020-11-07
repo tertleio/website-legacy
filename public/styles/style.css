@@ -79,7 +79,7 @@ button {
 
 h1, h2, h3, h5, h6 {
   font-family: 'Poppins', sans-serif;
-  color: #37352E;
+  color: #000;
   line-height: 1.5em;
 }
 
@@ -90,18 +90,18 @@ h1 {
 
 h2 {
   font-size: 2.3em;
-  color: #1477FF;
-  margin-bottom: 1.2em;
+  color: #000;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.3em;
+  margin-bottom: 1em;
 }
 
 h4 {
   font-size: 1.6em;
   color: #707070;
-  line-height: 2.4em;
+  line-height: 1.6em;
 }
 
 h5 {
@@ -127,7 +127,7 @@ p {
 }
 
 a:link, a:visited {
-  color: #1477FF;
+  color: #3582B9;
 }
 
 a:hover {
@@ -137,7 +137,6 @@ a:hover {
 }
 
 .btn {
-  border: 1px solid #1477FF;
   border-radius: 0.25rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -155,11 +154,14 @@ a:hover {
 }
 
 .btn.btn-primary {
+  border: 1px solid #94BB77;
   color: #ffffff;
-  background: #1477FF;
+  background: #94BB77;
 }
 
 .btn.btn-secondary {
+  border: 1px solid #94BB77;
+  color: #94BB77;
   background: none;
 }
 
@@ -171,7 +173,7 @@ a:hover {
   border-radius: 0.25rem;
   padding: 0.5rem;
   outline: 0;
-  margin-top: 25px;
+  margin-top: 3.5em;
   position: relative;
 }
 
@@ -282,7 +284,7 @@ select {
 }
 
 .field.valid {
-  border-bottom: 1px solid #AAC930;
+  border-bottom: 1px solid #94BB77;
   background: url("../img/valid.svg") no-repeat center right;
   background-size: 0.8em;
 }
@@ -355,7 +357,7 @@ p.info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #1477FF;
+  background: #000;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -476,6 +478,10 @@ p.info {
   z-index: 9999;
 }
 
+#header.wrap #logo {
+  width: 9em;
+}
+
 #header.wrap header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -483,7 +489,7 @@ p.info {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 0;
+  padding: 1em 0;
 }
 
 #header.wrap header nav ul {
@@ -497,6 +503,7 @@ p.info {
 
 #header.wrap header nav ul li {
   padding: 0.3rem 1.3rem;
+  font-size: 1.1em;
 }
 
 #header.wrap header nav ul li a:link, #header.wrap header nav ul li a:visited {
@@ -505,7 +512,7 @@ p.info {
 }
 
 #header.wrap header nav ul li a:hover {
-  color: #1477FF;
+  color: #94BB77;
 }
 
 #header.wrap header nav .btn {
@@ -518,8 +525,19 @@ p.info {
   background: url("../img/bg-pattern.png") no-repeat bottom left;
 }
 
+#hero h4 {
+  margin-top: 1em;
+}
+
 #hero .hero-img-mb {
   display: none;
+}
+
+#hero .emoji {
+  width: 1em;
+  vertical-align: bottom;
+  padding-bottom: 0.14em;
+  margin-left: 0.1em;
 }
 
 #hero .sign-up {
@@ -535,8 +553,8 @@ p.info {
 
 #hero .flex-1 {
   min-width: 40%;
-  max-width: 50%;
-  margin-right: 5%;
+  max-width: 45%;
+  margin-right: 3em;
 }
 
 #hero .flex-2 {
@@ -548,6 +566,10 @@ p.info {
   position: relative;
 }
 
+#how-it-works h2, #faq h2 {
+  margin-bottom: 1em;
+}
+
 #how-it-works .flex-container, #faq .flex-container {
   max-width: 500px;
   -ms-flex-wrap: wrap;
@@ -556,7 +578,7 @@ p.info {
 }
 
 #how-it-works .flex-container .flex, #faq .flex-container .flex {
-  margin-bottom: 30px;
+  margin-bottom: 1.5em;
 }
 
 #how-it-works .flex-container .flex-0, #faq .flex-container .flex-0 {
@@ -603,14 +625,17 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    font-size: 13px;
+  }
+  h2 {
+    float: left;
+  }
   main {
     padding-top: 60px;
   }
   .wrap {
     padding: 0 1.7rem;
-  }
-  #header.wrap header {
-    padding: 6% 0% !important;
   }
   #header.wrap .burger {
     background: url("/img/burger.svg") no-repeat center right;
@@ -627,7 +652,7 @@ main {
     display: block;
   }
   #header.wrap.menu {
-    background: #1477FF;
+    background: #94BB77;
   }
   #header.wrap.menu header {
     padding: 30px 0 !important;
@@ -694,13 +719,13 @@ main {
     max-height: 1000px;
     width: 100%;
   }
-  #hero.flex-container img {
-    width: 100%;
-  }
   #hero .flex {
     max-width: 100%;
     min-width: 100%;
     padding-top: 8%;
+  }
+  #how-it-works .flex-container, #faq .flex-container {
+    padding: 6em 0;
   }
   #how-it-works .flex-container ::before, #how-it-works .flex-container ::after, #faq .flex-container ::before, #faq .flex-container ::after {
     display: none;

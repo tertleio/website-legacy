@@ -11,8 +11,8 @@
 }
 
 // Colors
-$color-primary: #1477FF;
-$color-secondary: #37352E;
+$color-primary: #94BB77;
+$color-secondary: #000;
 $color-text: #707070;
 $color-bg: #ffffff;
 $color-white: #ffffff;
@@ -20,8 +20,9 @@ $color-grey1: #EEEEEE;
 $color-grey2: #B2B2B2;
 
 $color-orange: #FF9B00;
-$color-green: #AAC930;
+$color-green:  #94BB77;
 $color-red: #EB3333; 
+$color-blue: #3582B9;
 
 // Typography
 body, html {
@@ -47,14 +48,14 @@ h1, h2, h3, h5, h6 {
     line-height: 1.2em;
 } h2 {
     font-size: 2.3em;
-    color: $color-primary;
-    margin-bottom: 1.2em;
+    color: $color-secondary;
 } h3 {
-    font-size: 1.2em;
+    font-size: 1.3em;
+    margin-bottom: 1em;
 } h4 {
     font-size: 1.6em;
     color: $color-text;
-    line-height: 2.4em;
+    line-height: 1.6em;
 } h5 {
     font-size: 0.9em;
     color: $color-text;
@@ -76,14 +77,13 @@ p {
 
 // Buttons & Links
 a:link, a:visited {
-    color: $color-primary;
+    color: $color-blue;
 }   a:hover {
     transition: all 0.5s;
     text-decoration: underline;
 }
 
 .btn {
-    border: 1px solid $color-primary;
     border-radius: 0.25rem;
     transition: all 0.5s;
     text-transform: uppercase;
@@ -97,10 +97,14 @@ a:link, a:visited {
     cursor: pointer;
 }
     &.btn-primary {
+        border: 1px solid $color-primary;
         color: $color-bg;
         background: $color-primary;
     }
     &.btn-secondary {
+        border: 1px solid $color-primary;
+        // border: 1px solid $color-grey2;
+        color: $color-primary;
         background: none;
     }
 }
