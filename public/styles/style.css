@@ -553,8 +553,8 @@ p.info {
 
 #hero .flex-1 {
   min-width: 40%;
-  max-width: 45%;
-  margin-right: 3em;
+  max-width: 50%;
+  padding-right: 2em;
 }
 
 #hero .flex-2 {
@@ -624,7 +624,7 @@ main {
   padding-top: 130px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
   :root {
     font-size: 13px;
   }
@@ -709,19 +709,11 @@ main {
   #hero .sign-up {
     max-width: 100%;
   }
-  #hero .hero-img-mb {
-    display: block;
-  }
-  #hero .hero-img {
-    display: none;
-  }
   #hero.flex-container {
-    max-height: 1000px;
     width: 100%;
   }
   #hero .flex {
     max-width: 100%;
-    min-width: 100%;
     padding-top: 8%;
   }
   #how-it-works .flex-container, #faq .flex-container {
