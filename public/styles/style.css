@@ -267,7 +267,6 @@ select {
 }
 
 .field:focus + label, .field:not(:placeholder-shown) + label {
-  color: #B2B2B2;
   position: absolute;
   font-size: 0.7em;
   -webkit-transform: translateY(-1.75em);
@@ -308,6 +307,12 @@ input:focus, input.valid:focus, input.not-valid:focus {
     background: url('../img/focused.svg') no-repeat center right;
 }
 */
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 .close {
   background: url("../img/close-thin.svg") no-repeat center center;
   background-size: 875;
@@ -396,7 +401,8 @@ p.info {
 
 .modal #modal-footer .validation-feedback {
   color: red;
-  font-size: 0.7em;
+  font-size: 0.8em;
+  line-height: 1.5em;
 }
 
 .modal .flex-container {

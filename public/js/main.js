@@ -18,10 +18,11 @@ signupInitBtn.addEventListener('click', (e) => {
     if (modal.style.display === 'none') {
         modal.style.display = 'block';
     }
-
+    /*
     const scrollY = document.body.style.top; // --prevent backdrop page scroll
     document.body.style.top = `-${window.scrollY}px`;
     document.body.style.position = 'fixed'; 
+    */
     // Close
 }); const closeModal = document.getElementById('close-modal'); // Open
         closeModal.addEventListener('click', (e) => {
@@ -76,14 +77,27 @@ selectFields.forEach(selectField => {
 // Check All Valid & Submit Form
 const signupForm = document.getElementById('signup-form');
 const renderFeedback = document.querySelector('.validation-feedback');
-signupForm.addEventListener('submit', (e) => {
+signupForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (checkAllValid(signupForm) > 0) {
         renderFeedback.style = 'opacity: 1';
     } else {
         console.log(getFormInputs());
-        renderFeedback.style = 'color: green';
-        submitData(getFormInputs(), signupSubmitUrl);
-        renderFeedback.innerHTML = 'Success!';
+        renderFeedback.style = 'color: orange';
+        renderFeedback.innerHTML = 'Sending... :|`';
+        const response  = await submitData(getFormInputs(), signupSubmitUrl);
+        if (response.ok){
+            renderFeedback.style = 'display: none';
+            document.getElementById('modal-footer').style = 'display: none;'
+            document.getElementById('signup-body').style = 'display: none;';
+            signupForm.firstElementChild.firstElementChild.innerHTML = 'Sweet! We got it. We\'ll let you know when we\'re ready to ship.'
+            // signupForm.firstElementChild.firstElementChild. = 'Sweet! We got it. We\'ll let you know when we\'re ready to ship.'
+
+        } else {
+            renderFeedback.style = 'color: red';
+            renderFeedback.innerHTML = 'Darn :( There was a problem on our end... Give it another shot.`';
+            console.log(response);
+        }
     }
 });
+

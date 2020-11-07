@@ -9,8 +9,7 @@ const checkValid = (fieldValue) => {
 
 
 // Live field validation feedback 
-let fields = document.querySelectorAll('input, select, textarea');
-fields[0].className = 'field valid'; // --form email validated from initial email input
+let fields = document.querySelectorAll('input, select, textarea');// --form email validated from initial email input
 fields.forEach((field) => {
     if (field.className !== 'field2') { // (!) Targetting field style 2 - do this better
         field.addEventListener('focus', () => {

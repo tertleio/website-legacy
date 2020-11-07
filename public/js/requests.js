@@ -33,7 +33,7 @@ const submitData = async (data, url) => {
             body: JSON.stringify(data)
         })
         if (response.ok) {
-            return console.log(response);
+            return response;
         }
     } catch (err) {
         console.log(err);

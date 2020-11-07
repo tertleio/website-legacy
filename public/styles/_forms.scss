@@ -59,7 +59,6 @@ body {
         transition: all 0.05s;
         color: $color-text;
     } &:focus + label, &:not(:placeholder-shown) + label { // --valid/focused position
-        color: #B2B2B2;
         position: absolute;
         font-size: 0.7em;
         transform: translateY(-1.75em);
@@ -103,7 +102,11 @@ input:focus, input.valid:focus, input.not-valid:focus {
     background: url('../img/focused.svg') no-repeat center right;
 }
 */
-
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
 // SIGNUP MODAL
 .close {
     background: url('../img/close-thin.svg') no-repeat center center;
@@ -172,7 +175,8 @@ p.info {
         bottom: 0;
         .validation-feedback {
             color: red;
-            font-size: 0.7em;
+            font-size: 0.8em;
+            line-height: 1.5em;
         }
     }
     .flex-container {

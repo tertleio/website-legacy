@@ -21,15 +21,15 @@
             </div>
             
             <div class="flex-container">
-                <form autocomplete="off" id="signup-form">                
+                <form autofill="off" id="signup-form">                
                     <div class="flex-row header">
                         <p class="info">To help us find the right match, we’d like to know a little more about you</p>
                     </div>
-                    
+                <div id="signup-body">
                     <div class="flex-col">
                         <div class="flex-item">
-                            <input id="email" name="email" class="field" placeholder="Something" [type="text"]:disabled value="" />
-                            <label for="email">Your Email</label>
+                            <input id="email" name="email" class="field disabled valid" placeholder="joe@domain.com" type="text" value="" tabindex="-1"/>
+                            <label class='disabled'for="email">Your Email</label>
                         </div>
                         
                     </div>
@@ -99,6 +99,7 @@
                         <div  class="validation-feedback" style="opacity: 0;">Please fill in the required fields  marked with ' X '</div>
                         <button class="btn btn-primary submit" type="submit" method="POST">Submit</button>
                     </div>
+                </div> <!-- end of form body, (!) fix dom order later -->
                 </form> 
         </div> <!-- /modal-container -->
     </div> <!-- /modal -->
@@ -110,7 +111,7 @@
 <body>
     <div id="header" class="wrap">
         <header class=  "flex-container">
-            <img id="logo" src="./img/logo-dark.svg" alt="Finder Founder logo" title="FounderFinder logo"/>
+            <img id="logo" src="./img/logo-dark.svg" alt=""Tertle logo " title="Tertle says hi"/>
                 <nav>
                     <ul>
                         <li><a class="hello" href="#how-it-works">How It Works</a></li>
