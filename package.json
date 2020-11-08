@@ -3,26 +3,27 @@
   "version": "1.0.0",
   "description": "Marketing page",
   "main": "index.js",
+  "engines": {
+    "node": "14.14.0",
+    "npm": "6.14.8"
+  },
   "scripts": {
     "start": "node index.js",
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryanconnaughton/founderfinder.git"
+    "url": "git+https://github.com/tertletech/tertle.git"
   },
-  "keywords": [
-    "founderfinder",
-    "landing",
-    "page"
-  ],
+  "keywords": [],
   "author": "Ryan Connaughton",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ryanconnaughton/founderfinder/issues"
+    "url": "https://github.com/tertletech/tertle/issues"
   },
-  "homepage": "https://github.com/ryanconnaughton/founderfinder#readme",
+  "homepage": "https://github.com/tertletech/tertle#readme",
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "nodemon": "^2.0.6"
   },
   "dependencies": {

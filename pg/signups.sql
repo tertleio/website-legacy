@@ -1,4 +1,4 @@
-CREATE DATABASE founderfinder;
+CREATE DATABASE tertle;
 
 CREATE TABLE signups (
     signup_id BIGSERIAL NOT NULL PRIMARY KEY,

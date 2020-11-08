@@ -2,19 +2,28 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const pool = require('./db');
+const { resolveSoa } = require('dns');
 /*
+const path = require('path);
 const process = require('process');
 const fs = require('fs');
 const csv2Json = require('csvtojson');
 const json2Csv = require('json2csv').parse;
 */
 
-
 // MIDDLEWARE
 app.use(cors());  // --cross communication between db and backend
 app.use(express.json()); // --parses req.body to json
 app.use(express.static('public')); // --serves up public front-end as static pages
 
+
+/* *If need to run build folder (process.ENV returns production or undefined)
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'client/build'))); // --serves up public front-end as static pages
+};
+*/
+
+console.log(process.env.NODE_ENV);
 
 // (!) Create checkConflict function that can be used globally
 const checkExists = async (table, colVal, rowVal) => {
