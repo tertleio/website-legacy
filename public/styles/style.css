@@ -94,8 +94,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1.3em;
-  margin-bottom: 1em;
+  font-size: 1.2em;
+  color: #000;
 }
 
 h4 {
@@ -115,7 +115,7 @@ h6 {
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.05em;
   margin-bottom: 1.5em;
   line-height: 1.8em;
 }
@@ -471,6 +471,7 @@ p.info {
 }
 
 .container {
+  padding: 6em 0;
   max-width: 1150px;
   margin: 0 auto;
 }
@@ -534,7 +535,7 @@ p.info {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: url("../img/bg-pattern.png") no-repeat bottom right;
-  height: 600px;
+  height: 700px;
 }
 
 #hero .emoji {
@@ -576,28 +577,33 @@ p.info {
 }
 
 #how-it-works h2, #faq h2 {
-  margin-bottom: 1em;
+  width: 100%;
+  margin-bottom: 1.5em;
 }
 
-#how-it-works .flex-container, #faq .flex-container {
+#how-it-works h3, #faq h3 {
+  margin-bottom: 0.5em;
+}
+
+#how-it-works .container, #faq .container {
   max-width: 500px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
 }
 
-#how-it-works .flex-container .flex, #faq .flex-container .flex {
-  margin-bottom: 1.5em;
+#how-it-works .container .flex, #faq .container .flex {
+  margin-bottom: 3em;
 }
 
-#how-it-works .flex-container .flex-0, #faq .flex-container .flex-0 {
+#how-it-works .container .flex-0, #faq .container .flex-0 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: center;
 }
 
-#how-it-works .flex-container ::before, #faq .flex-container ::before {
+#how-it-works .container ::before, #faq .container ::before {
   content: '';
   background: url("../img/separator-left.png") no-repeat center left;
   height: 250px;
@@ -607,7 +613,7 @@ p.info {
   position: absolute;
 }
 
-#how-it-works .flex-container ::after, #faq .flex-container ::after {
+#how-it-works .container ::after, #faq .container ::after {
   content: '';
   background: url("../img/separator-left.png") no-repeat center left;
   height: 250px;
@@ -617,19 +623,19 @@ p.info {
   position: absolute;
 }
 
-#footer {
+#footer .container {
   -ms-flex-line-pack: start;
       align-content: flex-start;
   border-top: 1px solid #EEEEEE;
-  padding: 35px 0;
+  padding: 3em 0;
 }
 
-#footer img {
+#footer .container img {
   margin-left: 3px;
 }
 
 main {
-  padding-top: 130px;
+  padding-top: 2em;
 }
 
 @media screen and (max-width: 700px) {
@@ -639,11 +645,11 @@ main {
   h2 {
     float: left;
   }
-  main {
-    padding-top: 25%;
-  }
   .wrap {
     padding: 0 2.5em;
+  }
+  #header.wrap {
+    padding: 0 1.5em;
   }
   #header.wrap .burger {
     background: url("/img/burger.svg") no-repeat center right;
@@ -659,62 +665,60 @@ main {
   #header.wrap .logo-short-light {
     display: block;
   }
-  #header.wrap.menu {
-    background: #60964F;
-  }
-  #header.wrap.menu header {
-    padding: 30px 0 !important;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
+  /*
+ // JS MOBILE HIDE/DISPLAY NAV
+    #header.wrap.menu {
+        background: $color-primary;
+        header {
+            padding: 30px 0 !important; // fix
             justify-content: flex-start;
-    position: relative;
-  }
-  #header.wrap.menu header img {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  #header.wrap.menu header nav {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin-top: 10%;
-    width: 100%;
-    padding-top: 0.9rem;
-    border-top: 1px solid #ffffff;
-  }
-  #header.wrap.menu header nav ul {
-    width: inherit;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  #header.wrap.menu header nav ul li {
-    display: block;
-    font-size: 1.5rem;
-    width: inherit;
-    padding: 1.5rem 0rem;
-  }
-  #header.wrap.menu header nav ul li a:link, #header.wrap.menu header nav ul li a:visited {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  #header.wrap.menu header .burger {
-    background: url("/img/close.svg") no-repeat right 20px center;
-    color: #ffffff;
-    border: 1px solid white !important;
-    padding-right: 50px;
-    border: 0;
-    z-index: 99999;
-    position: absolute;
-    top: 30px;
-    right: 0;
-    content: 'Close';
-  }
-  .flex-container {
+            position: relative;
+            img {
+                flex-direction: row;
+            }
+            nav {
+                order: 2;
+                margin-top: 10%;
+                width: 100%;
+                padding-top: 0.9rem;
+                border-top: 1px solid $color-bg;
+                ul {
+                    width: inherit;
+                    flex-wrap: wrap;
+                    li {
+                        display: block;
+                        font-size: 1.5rem;
+                        width: inherit;
+                        padding: 1.5rem 0rem;
+                        
+                            a {
+                                &:link, &:visited {
+                                    color: $color-bg;
+                                    text-decoration: none;
+                                }
+                            }
+                    }
+                } 
+            } .burger {
+                background: url('/img/close.svg') no-repeat right 20px center;
+                color: $color-bg;
+                border: 1px solid white !important;
+                padding-right: 50px;
+                border: 0;
+                z-index: 99999;
+                position: absolute;
+                top: 30px;
+                right: 0;
+                content: 'Close';
+            }
+        }
+    }
+   */
+  .container {
     overflow: hidden;
   }
   #hero {
+    height: inherit;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -724,17 +728,17 @@ main {
   #hero .hero-img {
     display: none;
   }
-  #hero.flex-container {
-    width: 100%;
-  }
   #hero .flex {
     max-width: 100%;
     padding-top: 8%;
   }
-  #how-it-works .flex-container, #faq .flex-container {
-    padding: 6em 0;
+  #how-it-works, #faq {
+    background-size: 200%;
   }
-  #how-it-works .flex-container ::before, #how-it-works .flex-container ::after, #faq .flex-container ::before, #faq .flex-container ::after {
+  #how-it-works h2, #faq h2 {
+    text-align: left;
+  }
+  #how-it-works ::before, #how-it-works ::after, #faq ::before, #faq ::after {
     display: none;
   }
 }

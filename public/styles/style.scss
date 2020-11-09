@@ -2,7 +2,7 @@
 @import './_forms.scss';
 
 * {
-//     outline: 1px solid red;
+   //  outline: 1px solid red;
 }
 
 // Frame init
@@ -11,7 +11,8 @@
     padding: 0 4em; // padding width of all elements
     background: $color-bg;
 } .container { 
-    max-width: 1150px; // padding top/bottom of all
+    padding: 6em 0; // padding top/bottom of all
+    max-width: 1150px;
     margin: 0 auto;
 }
 
@@ -54,7 +55,7 @@
     z-index: -999;
     justify-content: space-between;
     background: url('../img/bg-pattern.png') no-repeat bottom right;
-    height: 600px;
+    height: 700px;
     .emoji {
         width: 1em; // (!) rem inherit? adjust size depending on text size?/div 
         vertical-align: bottom;
@@ -86,15 +87,19 @@
     background: #fff url('../img/bg-shadow.png') no-repeat top center;
     position: relative;
     h2 {
-        margin-bottom: 1em;
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+    h3 {
+        margin-bottom: 0.5em;
     }
 }
 
-#how-it-works .flex-container, #faq .flex-container {
+#how-it-works .container, #faq .container {
     max-width: 500px;
     flex-wrap: wrap;
     .flex {
-        margin-bottom: 1.5em;
+        margin-bottom: 3em;
     } .flex-0 {
         flex: 1;
         text-align: center;
@@ -119,16 +124,16 @@
     }
 }
 
-#footer{
+#footer .container{
     align-content: flex-start;;
     border-top: 1px solid $color-grey1;
-    padding: 35px 0;
+    padding: 3em 0;
     img {
         margin-left: 3px;
     }
 }
 main {
-    padding-top: 130px;
+    padding-top: 2em;
 }
 
 @import './_responsive.scss';
