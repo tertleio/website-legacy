@@ -268,7 +268,7 @@ select {
 
 .field:focus + label, .field:not(:placeholder-shown) + label {
   position: absolute;
-  bottom: 1.5em;
+  bottom: 1.6em;
   font-size: 0.7em;
   -webkit-transform: translateY(-1.75em);
           transform: translateY(-1.75em);

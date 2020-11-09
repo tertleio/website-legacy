@@ -60,7 +60,7 @@ body {
         color: $color-text;
     } &:focus + label, &:not(:placeholder-shown) + label { // --valid/focused position
         position: absolute;
-        bottom: 1.5em;
+        bottom: 1.6em;
         font-size: 0.7em;
         transform: translateY(-1.75em);
         transition: all 0.05s;
