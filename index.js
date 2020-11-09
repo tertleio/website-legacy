@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const pool = require('./db');
-const { resolveSoa } = require('dns');
+// const { resolveSoa } = require('dns');
 /*
 const path = require('path);
 const process = require('process');
@@ -22,8 +22,6 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, 'client/build'))); // --serves up public front-end as static pages
 };
 */
-
-console.log(process.env.NODE_ENV);
 
 // (!) Create checkConflict function that can be used globally
 const checkExists = async (table, colVal, rowVal) => {
