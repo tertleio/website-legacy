@@ -178,8 +178,8 @@ a:hover {
 
 .sign-up .btn {
   position: absolute;
-  right: 2%;
-  top: 14%;
+  right: 6px;
+  top: 6px;
 }
 
 body {
@@ -601,6 +601,12 @@ p.info {
       -ms-flex: 1;
           flex: 1;
   text-align: center;
+}
+
+#how-it-works .container .flex-3 img, #faq .container .flex-3 img {
+  width: 3em;
+  margin-right: 1em;
+  padding-top: 10px;
 }
 
 #how-it-works .container ::before, #faq .container ::before {
