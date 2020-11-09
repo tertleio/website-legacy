@@ -9,7 +9,7 @@
     .btn {
         position: absolute;
         right: 6px;
-        top: 6px;
+        top: 4px;
     }
 }
 body {
@@ -169,7 +169,7 @@ p.info {
         background: red;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 1em 0 0 0;
+        padding: 1.5em 0 0 0;
         background: $color-bg;
         border-radius: 0 0 1.2rem 1.2em;
         left: 0;

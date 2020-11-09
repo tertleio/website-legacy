@@ -179,7 +179,7 @@ a:hover {
 .sign-up .btn {
   position: absolute;
   right: 6px;
-  top: 6px;
+  top: 4px;
 }
 
 body {
@@ -393,7 +393,7 @@ p.info {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 1em 0 0 0;
+  padding: 1.5em 0 0 0;
   background: #ffffff;
   border-radius: 0 0 1.2rem 1.2em;
   left: 0;
