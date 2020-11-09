@@ -1,5 +1,8 @@
 import { getFormInputs, submitData } from './requests.js';
 import { checkAllValid } from './validation.js';
+import nav from './nav.js';
+
+nav();
 
 // URLS -------------------
 const signupSubmitUrl = '/signup-submit';

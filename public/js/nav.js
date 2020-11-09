@@ -6,16 +6,19 @@ const navLink = document.querySelectorAll('nav a');
 
 
 // Turns header/nav secondary CTA into primary CTA when scrolled
-window.addEventListener('scroll', () => {
-    if (!responsiveChanges()) {
+const nav = () => {
+    window.addEventListener('scroll', () => {
         if (window.pageYOffset > 500 && header.className == 'wrap') {
             navBtn.className='btn btn-primary';
         } else {
             navBtn.className= 'btn btn-secondary'; // add transition to all css
             }
-    }
-});
+    });
+}
 
+export default nav;
+
+/*
 // RESPONSIVE LOGOS
 function responsiveChanges() {
     let width = window.innerWidth;
@@ -64,3 +67,4 @@ navLink[0].addEventListener('click', () => {
 navLink[1].addEventListener('click', () => {
     navMenu();
 });
+*/
