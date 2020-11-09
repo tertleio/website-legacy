@@ -27,7 +27,7 @@ body {
     width: 100%;
     border-radius: 0.25rem;
     font-size: 1rem;
-    padding: 11px 15px;
+    padding: 10px 15px;
 }
 
 // resets weird padding but not padding /  rendering of select options
@@ -47,19 +47,20 @@ body {
     border-bottom: 1px solid #D7D7D7;
     width: 100%;
     font-size: 1rem;
-    padding: 11px 0;
+    padding: 0.5em 0;
      &::placeholder {
         color: transparent; 
     }
     & + label { // --start position
         position: absolute;
         left: 0;
-        bottom: 20px;
+        bottom: 1.4em;
         font-size: 0.9em;
         transition: all 0.05s;
         color: $color-text;
     } &:focus + label, &:not(:placeholder-shown) + label { // --valid/focused position
         position: absolute;
+        bottom: 1.5em;
         font-size: 0.7em;
         transform: translateY(-1.75em);
         transition: all 0.05s;
@@ -148,7 +149,7 @@ p.info {
         */
     }
     #titlebar {
-        margin-top: -63px;
+        margin-top: -3.9em;
         display: flex;
         background: $color-secondary;
         justify-content: space-between;
@@ -168,7 +169,7 @@ p.info {
         background: red;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 4% 10% 5% 10%;
+        padding: 1em 0 0 0;
         background: $color-bg;
         border-radius: 0 0 1.2rem 1.2em;
         left: 0;
@@ -176,10 +177,11 @@ p.info {
         .validation-feedback {
             color: red;
             font-size: 0.8em;
+            margin-right: 1em;
             line-height: 1.5em;
         }
     }
-    .flex-container {
+    .container {
         input {
             outline: none;
         }

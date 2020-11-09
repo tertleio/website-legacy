@@ -195,7 +195,7 @@ body {
   width: 100%;
   border-radius: 0.25rem;
   font-size: 1rem;
-  padding: 11px 15px;
+  padding: 10px 15px;
 }
 
 .field2::-webkit-input-placeholder {
@@ -231,7 +231,7 @@ select {
   border-bottom: 1px solid #D7D7D7;
   width: 100%;
   font-size: 1rem;
-  padding: 11px 0;
+  padding: 0.5em 0;
   /*
     &:focus, &:focus.valid, &:focus.invalid {
         background: url('../img/focused-anim.gif') no-repeat bottom  15px right;
@@ -259,7 +259,7 @@ select {
 .field + label {
   position: absolute;
   left: 0;
-  bottom: 20px;
+  bottom: 1.4em;
   font-size: 0.9em;
   -webkit-transition: all 0.05s;
   transition: all 0.05s;
@@ -268,6 +268,7 @@ select {
 
 .field:focus + label, .field:not(:placeholder-shown) + label {
   position: absolute;
+  bottom: 1.5em;
   font-size: 0.7em;
   -webkit-transform: translateY(-1.75em);
           transform: translateY(-1.75em);
@@ -358,7 +359,7 @@ p.info {
 }
 
 .modal #titlebar {
-  margin-top: -63px;
+  margin-top: -3.9em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,7 +393,7 @@ p.info {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 4% 10% 5% 10%;
+  padding: 1em 0 0 0;
   background: #ffffff;
   border-radius: 0 0 1.2rem 1.2em;
   left: 0;
@@ -402,10 +403,11 @@ p.info {
 .modal #modal-footer .validation-feedback {
   color: red;
   font-size: 0.8em;
+  margin-right: 1em;
   line-height: 1.5em;
 }
 
-.modal .flex-container {
+.modal .container {
   overflow-y: auto;
   max-height: calc(90vh - 210px);
   display: -webkit-box;
@@ -420,7 +422,7 @@ p.info {
       align-content: space-around;
 }
 
-.modal .flex-container input {
+.modal .container input {
   outline: none;
 }
 
