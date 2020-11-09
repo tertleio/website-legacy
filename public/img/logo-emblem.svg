@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="355.705" height="355.705" viewBox="0 0 355.705 355.705">
+  <g id="emblem" transform="translate(9234.705 48)">
+    <g id="Group_544" data-name="Group 544" transform="translate(-10967 -1486)">
+      <g id="Group_542" data-name="Group 542" transform="translate(10968 1479)">
+        <path id="Path_1468" data-name="Path 1468" d="M177.853,0A177.853,177.853,0,1,1,0,177.853,177.853,177.853,0,0,1,177.853,0Z" transform="translate(-9235.705 -41)"/>
+        <path id="Path_1460" data-name="Path 1460" d="M152.355,0A152.355,152.355,0,1,1,0,152.355,152.355,152.355,0,0,1,152.355,0Z" transform="translate(-9210.705 -16)" fill="#fff"/>
+        <g id="Group_537" data-name="Group 537" transform="translate(-9213.354 41.844)">
+          <path id="Path_1409" data-name="Path 1409" d="M625.517-5269.977s44.55-6.358,64.932-36.111,3.141-118.853,81.53-119.01,99.47,57.813,95.244,106.33-95.244,58.661-95.244,58.661-33.877,77.13-71.233,75.869c-1.838-.953-3.65-2-5.654-3.245-12.2-7.6-23.3-15.712-28.293-21.865C639.69-5232.078,625.517-5269.977,625.517-5269.977Z" transform="translate(-623.843 5425.098)" fill="#fff" stroke="#000" stroke-linejoin="bevel" stroke-width="25"/>
+          <path id="Path_1410" data-name="Path 1410" d="M884.356-5253.89s-44.085,5.077-49.77-25.918" transform="translate(-668.944 5392.402)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="21"/>
+          <ellipse id="Ellipse_28" data-name="Ellipse 28" cx="16.5" cy="15" rx="16.5" ry="15" transform="translate(140.353 42.156)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,9 +1,4 @@
 // MOBILE ------------------------------------------------------------------
-@media screen and (max-width: 915px) {
-    #hero {
-        display: block;
-    }
-}
 @media screen and (max-width: 700px) {
     :root {
         font-size: 13px;
@@ -11,13 +6,13 @@
     h2 {
         float: left;
     }
-    main {
-        padding-top: 60px;
-    }
     
+    main {
+        padding-top: 25%;
+    }
 // nav?
 .wrap { 
-    padding: 0 1.7rem; // padding on  all wrappers
+    padding: 0 2.5em; // padding on  all wrappers
 }
  #header.wrap {
     .burger {
@@ -87,10 +82,12 @@
         overflow: hidden;
     }
     #hero {
+        flex-wrap: wrap;
         .sign-up {
             max-width: 100%;
         }
         .hero-img {
+            display: none;
         }
         &.flex-container {
             width: 100%;

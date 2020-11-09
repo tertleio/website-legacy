@@ -3,13 +3,13 @@
     justify-content: space-between;
     background: $color-grey1;
     border-radius: 0.25rem;
-    padding: 0.5rem;
+    padding: 0.4em;
     outline: 0;
-    margin-top: 3.5em;
     position: relative;
     .btn {
         position: absolute;
-        right: 10px;
+        right: 2%;
+        top: 14%;
     }
 }
 body {
