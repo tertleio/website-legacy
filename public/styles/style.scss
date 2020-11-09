@@ -1,19 +1,18 @@
 @import './_base.scss';
 @import './_forms.scss';
+@import './_responsive.scss';
 
 * {
-     // outline: 1px solid red;
+//     outline: 1px solid red;
 }
 
 // Frame init
 .wrap {
     width: 100%;
-    padding: 0 35px; // padding width of all elements
+    padding: 0 4em; // padding width of all elements
     background: $color-bg;
-} .flex-container { 
-    display: flex;
-    max-width: 1100px;
-    padding: 8% 0; // padding top/bottom of all
+} .container { 
+    max-width: 1200px; // padding top/bottom of all
     margin: 0 auto;
 }
 
@@ -25,66 +24,62 @@
         width: 9em;
     }
     header {
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1em 0;
-        nav {
-            ul {
-                display: inline-flex;
-                align-items: center;
-            li {
-                padding: 0.3rem 1.3rem;
-                font-size: 1.1em;
-                    a {
-                        &:link, &:visited {
-                            color: $color-text;
-                            text-decoration: none;
-                        }
-                        &:hover {
-                            color: $color-primary;
-                        }
-                    }
-                }
-            } 
-            .btn {
-                margin-left: 1.2rem;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    } ul {
+        display: inline-flex;
+        align-items: center;
+    } li {
+        padding: 0.3rem 1.3rem;
+        font-size: 1.1em;
+        a {
+            &:link, &:visited {
+                color: $color-text;
+                text-decoration: none;
+            }
+            &:hover {
+                color: $color-primary;
             }
         }
+    } 
+    .btn {
+        margin-left: 1em;
     }
 }
 
 #hero {
-    padding: 0; 
+    display: flex;
     z-index: -999;
-    h4 {
-        margin-top: 1em;
-    }
-    .hero-img-mb {
-        display: none;
-    }
-    .emoji{
+    justify-content: space-between;
+    background: url('../img/bg-pattern.png') no-repeat bottom right;
+    height: 600px;
+    align-items: flex-start;
+    .emoji {
         width: 1em; // (!) rem inherit? adjust size depending on text size?/div 
         vertical-align: bottom;
         padding-bottom: 0.14em;
         margin-left: 0.1em;
     }
-    .sign-up {
-        max-width: 80%;
+    h4 {
+        margin-top: 1em;
     }
-    &.flex-container {
-        max-height: 700px;
-        justify-content: space-between;
+    .hero-img {
+        width: 450px;
     }
-    background: url('../img/bg-pattern.png') no-repeat bottom left;
     .flex {
 
     } .flex-1 {
-        min-width: 40%;
-        max-width: 50%;
-        padding-right: 2em;
+        flex-shrink: 0;
+        flex-basis: 500px;
     } .flex-2 {
-        max-width: 40%;
-
+        flex-shrink: 5;
+        margin-left: 3em;
+    } 
+    .sign-up {
+        width: 420px;
     }
 }
 
@@ -135,111 +130,4 @@
 }
 main {
     padding-top: 130px;
-}
-
-
-// MOBILE ------------------------------------------------------------------
-
-@media screen and (max-width: 700px) {
-    :root {
-        font-size: 13px;
-    }
-    h2 {
-        float: left;
-    }
-    main {
-        padding-top: 60px;
-    }
-    
-// nav?
-.wrap { 
-    padding: 0 1.7rem; // padding on  all wrappers
-}
- #header.wrap {
-    .burger {
-        background: url('/img/burger.svg') no-repeat center right;
-        padding-right: 25px;
-        border: 0;
-    }
-    nav li {
-        display: none;
-    }
-    .logo-dark {
-        display: none;
-    } .logo-short-light {
-        display: block;
-    }
- }
-
- // JS MOBILE HIDE/DISPLAY NAV
-    #header.wrap.menu {
-        background: $color-primary;
-        header {
-            padding: 30px 0 !important; // fix
-            justify-content: flex-start;
-            position: relative;
-            img {
-                flex-direction: row;
-            }
-            nav {
-                order: 2;
-                margin-top: 10%;
-                width: 100%;
-                padding-top: 0.9rem;
-                border-top: 1px solid $color-bg;
-                ul {
-                    width: inherit;
-                    flex-wrap: wrap;
-                    li {
-                        display: block;
-                        font-size: 1.5rem;
-                        width: inherit;
-                        padding: 1.5rem 0rem;
-                        
-                            a {
-                                &:link, &:visited {
-                                    color: $color-bg;
-                                    text-decoration: none;
-                                }
-                            }
-                    }
-                } 
-            } .burger {
-                background: url('/img/close.svg') no-repeat right 20px center;
-                color: $color-bg;
-                border: 1px solid white !important;
-                padding-right: 50px;
-                border: 0;
-                z-index: 99999;
-                position: absolute;
-                top: 30px;
-                right: 0;
-                content: 'Close';
-            }
-        }
-    }
-    
-    .flex-container {
-        overflow: hidden;
-    }
-    #hero {
-        .sign-up {
-            max-width: 100%;
-        }
-        .hero-img {
-        }
-        &.flex-container {
-            width: 100%;
-        } .flex {
-            max-width: 100%;
-            padding-top: 8%;
-        } .flex-1 {
-        }
-    }
-    #how-it-works .flex-container, #faq .flex-container {
-        padding: 6em 0;
-        ::before, ::after {
-            display: none;
-        }
-    }
 }

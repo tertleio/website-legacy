@@ -101,7 +101,7 @@ h3 {
 h4 {
   font-size: 1.6em;
   color: #707070;
-  line-height: 1.6em;
+  line-height: 1.55em;
 }
 
 h5 {
@@ -464,170 +464,10 @@ p.info {
   }
 }
 
-.wrap {
-  width: 100%;
-  padding: 0 35px;
-  background: #ffffff;
-}
-
-.flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 1100px;
-  padding: 8% 0;
-  margin: 0 auto;
-}
-
-#header.wrap {
-  position: fixed;
-  z-index: 9999;
-}
-
-#header.wrap #logo {
-  width: 9em;
-}
-
-#header.wrap header {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1em 0;
-}
-
-#header.wrap header nav ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#header.wrap header nav ul li {
-  padding: 0.3rem 1.3rem;
-  font-size: 1.1em;
-}
-
-#header.wrap header nav ul li a:link, #header.wrap header nav ul li a:visited {
-  color: #707070;
-  text-decoration: none;
-}
-
-#header.wrap header nav ul li a:hover {
-  color: #60964F;
-}
-
-#header.wrap header nav .btn {
-  margin-left: 1.2rem;
-}
-
-#hero {
-  padding: 0;
-  z-index: -999;
-  background: url("../img/bg-pattern.png") no-repeat bottom left;
-}
-
-#hero h4 {
-  margin-top: 1em;
-}
-
-#hero .hero-img-mb {
-  display: none;
-}
-
-#hero .emoji {
-  width: 1em;
-  vertical-align: bottom;
-  padding-bottom: 0.14em;
-  margin-left: 0.1em;
-}
-
-#hero .sign-up {
-  max-width: 80%;
-}
-
-#hero.flex-container {
-  max-height: 700px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#hero .flex-1 {
-  min-width: 40%;
-  max-width: 50%;
-  padding-right: 2em;
-}
-
-#hero .flex-2 {
-  max-width: 40%;
-}
-
-#how-it-works, #faq {
-  background: #fff url("../img/bg-shadow.png") no-repeat top center;
-  position: relative;
-}
-
-#how-it-works h2, #faq h2 {
-  margin-bottom: 1em;
-}
-
-#how-it-works .flex-container, #faq .flex-container {
-  max-width: 500px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  position: relative;
-}
-
-#how-it-works .flex-container .flex, #faq .flex-container .flex {
-  margin-bottom: 1.5em;
-}
-
-#how-it-works .flex-container .flex-0, #faq .flex-container .flex-0 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  text-align: center;
-}
-
-#how-it-works .flex-container ::before, #faq .flex-container ::before {
-  content: '';
-  background: url("../img/separator-left.png") no-repeat center left;
-  height: 250px;
-  width: 25px;
-  top: 30%;
-  left: -30%;
-  position: absolute;
-}
-
-#how-it-works .flex-container ::after, #faq .flex-container ::after {
-  content: '';
-  background: url("../img/separator-left.png") no-repeat center left;
-  height: 250px;
-  width: 25px;
-  top: 30%;
-  right: -30%;
-  position: absolute;
-}
-
-#footer .flex-container {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  border-top: 1px solid #EEEEEE;
-  padding: 35px 0;
-}
-
-#footer .flex-container img {
-  margin-left: 3px;
-}
-
-main {
-  padding-top: 130px;
+@media screen and (max-width: 915px) {
+  #hero {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -728,5 +568,176 @@ main {
   #how-it-works .flex-container ::before, #how-it-works .flex-container ::after, #faq .flex-container ::before, #faq .flex-container ::after {
     display: none;
   }
+}
+
+.wrap {
+  width: 100%;
+  padding: 0 4em;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#header.wrap {
+  position: fixed;
+  z-index: 9999;
+}
+
+#header.wrap #logo {
+  width: 9em;
+}
+
+#header.wrap header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#header.wrap ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header.wrap li {
+  padding: 0.3rem 1.3rem;
+  font-size: 1.1em;
+}
+
+#header.wrap li a:link, #header.wrap li a:visited {
+  color: #707070;
+  text-decoration: none;
+}
+
+#header.wrap li a:hover {
+  color: #60964F;
+}
+
+#header.wrap .btn {
+  margin-left: 1em;
+}
+
+#hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: -999;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: url("../img/bg-pattern.png") no-repeat bottom right;
+  height: 600px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#hero .emoji {
+  width: 1em;
+  vertical-align: bottom;
+  padding-bottom: 0.14em;
+  margin-left: 0.1em;
+}
+
+#hero h4 {
+  margin-top: 1em;
+}
+
+#hero .hero-img {
+  width: 450px;
+}
+
+#hero .flex-1 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 500px;
+      flex-basis: 500px;
+}
+
+#hero .flex-2 {
+  -ms-flex-negative: 5;
+      flex-shrink: 5;
+  margin-left: 3em;
+}
+
+#hero .sign-up {
+  width: 420px;
+}
+
+#how-it-works, #faq {
+  background: #fff url("../img/bg-shadow.png") no-repeat top center;
+  position: relative;
+}
+
+#how-it-works h2, #faq h2 {
+  margin-bottom: 1em;
+}
+
+#how-it-works .flex-container, #faq .flex-container {
+  max-width: 500px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+#how-it-works .flex-container .flex, #faq .flex-container .flex {
+  margin-bottom: 1.5em;
+}
+
+#how-it-works .flex-container .flex-0, #faq .flex-container .flex-0 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+#how-it-works .flex-container ::before, #faq .flex-container ::before {
+  content: '';
+  background: url("../img/separator-left.png") no-repeat center left;
+  height: 250px;
+  width: 25px;
+  top: 30%;
+  left: -30%;
+  position: absolute;
+}
+
+#how-it-works .flex-container ::after, #faq .flex-container ::after {
+  content: '';
+  background: url("../img/separator-left.png") no-repeat center left;
+  height: 250px;
+  width: 25px;
+  top: 30%;
+  right: -30%;
+  position: absolute;
+}
+
+#footer .flex-container {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  border-top: 1px solid #EEEEEE;
+  padding: 35px 0;
+}
+
+#footer .flex-container img {
+  margin-left: 3px;
+}
+
+main {
+  padding-top: 130px;
 }
 /*# sourceMappingURL=style.css.map */
