@@ -23,7 +23,7 @@ connectionString: process.env.DATABASE_URL // --heroku psql addon expectation
 };
 
 const pool = new Pool(
-  process.env.NODE_ENV === 'production' ?  prodConifg : devConfig
+  process.env.NODE_ENV === 'production' ?  prodConfig : devConfig
 )
 
 module.exports = pool;
