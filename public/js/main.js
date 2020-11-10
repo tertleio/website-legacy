@@ -98,7 +98,6 @@ signupForm.addEventListener('submit', async (e) => {
     if (checkAllValid(signupForm) > 0) {
         renderFeedback.style = 'opacity: 1';
     } else {
-        console.log(getFormInputs());
         renderFeedback.style = 'color: orange';
         renderFeedback.innerHTML = 'Sending... :|`';
         const response  = await submitData(getFormInputs(), signupSubmitUrl);
@@ -112,7 +111,6 @@ signupForm.addEventListener('submit', async (e) => {
         } else {
             renderFeedback.style = 'color: red';
             renderFeedback.innerHTML = 'Darn :( There was a problem on our end... Give it another shot.`';
-            console.log(response);
         }
     }
 });
