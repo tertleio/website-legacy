@@ -165,36 +165,37 @@ a:hover {
   background: none;
 }
 
+body {
+  outline: none;
+}
+
 .sign-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   background: #EEEEEE;
-  border-radius: 0.25rem;
+  border-radius: 0.35em;
   padding: 0.4em;
   outline: 0;
-  position: relative;
-}
-
-.sign-up .btn {
-  position: absolute;
-  right: 6px;
-  top: 4px;
-}
-
-body {
-  outline: none;
 }
 
 .field2 {
   background: #EEEEEE;
   font-family: proxima-nova, sans-serif;
   color: #707070;
-  border: none;
+  border: 1px solid #EEEEEE;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 0.5em;
   outline: 0;
-  width: 100%;
   border-radius: 0.25rem;
-  font-size: 1rem;
+  font-size: 1em;
   padding: 10px 15px;
 }
 
@@ -570,7 +571,7 @@ p.info {
 
 #hero .sign-up {
   margin-top: 3.5em;
-  width: 420px;
+  width: 450px;
 }
 
 #how-it-works, #faq {
@@ -731,7 +732,7 @@ main {
         flex-wrap: wrap;
   }
   #hero .sign-up {
-    max-width: 100%;
+    max-width: 90%;
   }
   #hero .hero-img {
     display: none;

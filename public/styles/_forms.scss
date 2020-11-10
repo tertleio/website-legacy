@@ -1,20 +1,18 @@
-// SIGNUP INIT
-.sign-up {
-    justify-content: space-between;
-    background: $color-grey1;
-    border-radius: 0.25rem;
-    padding: 0.4em;
-    outline: 0;
-    position: relative;
-    .btn {
-        position: absolute;
-        right: 6px;
-        top: 4px;
-    }
-}
 body {
     outline: none;
 }
+
+// SIGNUP INIT
+.sign-up {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background: $color-grey1;
+    border-radius: 0.35em;
+    padding: 0.4em;
+    outline: 0;
+}
+
 .field2 {
     &::placeholder {
         color: $color-text;
@@ -22,11 +20,12 @@ body {
     background: $color-grey1;
     font-family: proxima-nova, sans-serif;
     color: $color-text;
-    border: none;
+    border: 1px solid $color-grey1;
+    flex: 1;
+    margin-right: 0.5em;
     outline: 0;
-    width: 100%;
     border-radius: 0.25rem;
-    font-size: 1rem;
+    font-size: 1em;
     padding: 10px 15px;
 }
 
