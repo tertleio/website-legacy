@@ -1,15 +1,22 @@
 body {
     outline: none;
 }
-
 // SIGNUP INIT
+.ctaNav {
+    & .btn {
+        border-radius: 0 0.25em 0.25em 0;
+    }
+    & .sign-up {
+        padding: 0;
+    }
+}
 .sign-up {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     background: $color-grey1;
     border-radius: 0.3em;
-    padding: 0.45em;
+    padding: 0.35em;
     outline: 0;
 }
 
@@ -26,7 +33,7 @@ body {
     outline: 0;
     border-radius: 0.25rem;
     font-size: 1em;
-    padding: 10px 15px;
+    padding: 0.75em  1em;
 }
 
 // resets weird padding but not padding /  rendering of select options
@@ -35,7 +42,7 @@ body {
     -moz-appearance : none;
     border:solid 1px #555;
     border-radius:3px;
-    padding:5px;
+    padding: 5px;
     outline: none;
     background: url('../img/dropdown.svg') no-repeat bottom 1.1em right 0.2em !important;
  }

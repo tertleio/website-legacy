@@ -8,9 +8,11 @@ nav();
 const signupSubmitUrl = '/signup-submit';
 const emailSubmitUrl = '/email-submit';
 
+
 // MODAL ------------
 const modal = document.querySelector('.modal');
 const signupInitBtn = document.querySelector('#signup-init .btn.btn-primary'); 
+
 // Open
 signupInitBtn.addEventListener('click', async (e) => {
     e.preventDefault();
@@ -42,6 +44,15 @@ signupInitBtn.addEventListener('click', async (e) => {
         e.preventDefault();
     }); 
 
+// Signup Header Button
+const ctaNav = document.getElementById('nav-btn');
+ctaNav.addEventListener('click', (e) => {
+   ctaNav.style.display = 'none';
+   document.querySelector('.ctaNav').style = 'display: block;'
+   if (window.innerWidth < 700) {
+    document.getElementById('logo').style = 'display: none;';
+   }
+});
 
 // Select ->  Other field
 const selectFields = document.querySelectorAll('select');  // --get doms (!) cleanup

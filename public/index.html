@@ -32,7 +32,7 @@
                     <div class="flex-col">
                         <div class="flex-item">
                             <input id="email" name="email" class="field disabled valid" placeholder="joe@domain.com" type="text" value="" tabindex="-1"/>
-                            <label class='disabled'for="email">Your Email</label>
+                            <label class='disabled' for="email">Your Email</label>
                         </div>
                         
                     </div>
@@ -119,6 +119,12 @@
                     <ul>
                         <li><a class="hello" href="#how-it-works">How It Works</a></li>
                         <li><a class="hello" href="#faq">FAQ</a></li>
+                        <form style ="display: none;" id="signup-init" class="ctaNav">
+                            <div class="sign-up">
+                                <input class="field2" type="email" name="EMAIL" placeholder="Your email.." value="" required />
+                                <button type="submit" class="btn btn-primary">JOIN WAITLIST</button>
+                            </div>
+                        </form>
                         <a id="nav-btn" class="btn btn-secondary" href="#">Join Waitlist</a>
                     </ul>
                 </nav>
@@ -135,7 +141,7 @@
 
                     <form id="signup-init">
                         <div class="sign-up">
-                            <input class="field2" type="email" name="EMAIL" placeholder="Your email.." value="" required/>
+                            <input class="field2" type="email" name="EMAIL" placeholder="Your email.." value="" required />
                             <button type="submit" class="btn btn-primary">JOIN WAITLIST</button>
                         </div>
                     </form>

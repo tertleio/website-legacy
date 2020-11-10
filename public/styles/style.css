@@ -169,6 +169,14 @@ body {
   outline: none;
 }
 
+.ctaNav .btn {
+  border-radius: 0 0.25em 0.25em 0;
+}
+
+.ctaNav .sign-up {
+  padding: 0;
+}
+
 .sign-up {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,7 +188,7 @@ body {
       flex-wrap: nowrap;
   background: #EEEEEE;
   border-radius: 0.3em;
-  padding: 0.45em;
+  padding: 0.35em;
   outline: 0;
 }
 
@@ -196,7 +204,7 @@ body {
   outline: 0;
   border-radius: 0.25rem;
   font-size: 1em;
-  padding: 10px 15px;
+  padding: 0.75em  1em;
 }
 
 .field2::-webkit-input-placeholder {
@@ -657,72 +665,12 @@ main {
   .wrap {
     padding: 0 2.5em;
   }
-  #header.wrap {
+  #header {
     padding: 0 1.5em;
   }
-  #header.wrap .burger {
-    background: url("/img/burger.svg") no-repeat center right;
-    padding-right: 25px;
-    border: 0;
-  }
-  #header.wrap nav li {
+  #header nav li {
     display: none;
   }
-  #header.wrap .logo-dark {
-    display: none;
-  }
-  #header.wrap .logo-short-light {
-    display: block;
-  }
-  /*
- // JS MOBILE HIDE/DISPLAY NAV
-    #header.wrap.menu {
-        background: $color-primary;
-        header {
-            padding: 30px 0 !important; // fix
-            justify-content: flex-start;
-            position: relative;
-            img {
-                flex-direction: row;
-            }
-            nav {
-                order: 2;
-                margin-top: 10%;
-                width: 100%;
-                padding-top: 0.9rem;
-                border-top: 1px solid $color-bg;
-                ul {
-                    width: inherit;
-                    flex-wrap: wrap;
-                    li {
-                        display: block;
-                        font-size: 1.5rem;
-                        width: inherit;
-                        padding: 1.5rem 0rem;
-                        
-                            a {
-                                &:link, &:visited {
-                                    color: $color-bg;
-                                    text-decoration: none;
-                                }
-                            }
-                    }
-                } 
-            } .burger {
-                background: url('/img/close.svg') no-repeat right 20px center;
-                color: $color-bg;
-                border: 1px solid white !important;
-                padding-right: 50px;
-                border: 0;
-                z-index: 99999;
-                position: absolute;
-                top: 30px;
-                right: 0;
-                content: 'Close';
-            }
-        }
-    }
-   */
   .container {
     overflow: hidden;
   }
@@ -732,7 +680,7 @@ main {
         flex-wrap: wrap;
   }
   #hero .sign-up {
-    max-width: 90%;
+    max-width: 100%;
   }
   #hero .hero-img {
     display: none;
@@ -749,6 +697,12 @@ main {
   }
   #how-it-works ::before, #how-it-works ::after, #faq ::before, #faq ::after {
     display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :root {
+    font-size: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
