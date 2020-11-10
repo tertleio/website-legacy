@@ -94,7 +94,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.21em;
   color: #000;
 }
 
@@ -593,7 +593,7 @@ p.info {
 }
 
 #how-it-works h3, #faq h3 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
 }
 
 #how-it-works .container, #faq .container {
