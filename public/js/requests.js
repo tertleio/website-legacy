@@ -31,9 +31,11 @@ const submitData = async (data, url) => {
             method: 'POST', 
             headers: { 'Content-type': 'application/json' },
             body: JSON.stringify(data)
-        })
+        });
         if (response.ok) {
             return response;
+        } else {
+            return response.status
         }
     } catch (err) {
         console.log(err);

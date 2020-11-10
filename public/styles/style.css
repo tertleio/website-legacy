@@ -179,8 +179,8 @@ body {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   background: #EEEEEE;
-  border-radius: 0.35em;
-  padding: 0.4em;
+  border-radius: 0.3em;
+  padding: 0.45em;
   outline: 0;
 }
 
@@ -485,7 +485,7 @@ p.info {
 }
 
 #header.wrap #logo {
-  width: 8.5em;
+  width: 8em;
 }
 
 #header.wrap header {
@@ -513,7 +513,7 @@ p.info {
 
 #header.wrap li {
   padding: 0.3rem 1.3rem;
-  font-size: 1.1em;
+  font-size: 1.05em;
 }
 
 #header.wrap li a:link, #header.wrap li a:visited {

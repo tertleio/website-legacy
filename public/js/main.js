@@ -12,20 +12,24 @@ const emailSubmitUrl = '/email-submit';
 const modal = document.querySelector('.modal');
 const signupInitBtn = document.querySelector('#signup-init .btn.btn-primary'); 
 // Open
-signupInitBtn.addEventListener('click', (e) => {
+signupInitBtn.addEventListener('click', async (e) => {
     e.preventDefault();
     const email = document.querySelector('#signup-init input').value;
-    document.getElementById('email').value = email;  // --dispay initial email on form
-    submitData({ email: email }, emailSubmitUrl); // --post email
-
-    if (modal.style.display === 'none') {
-        modal.style.display = 'block';
+    if (email == '' || email.indexOf('@') == -1) {
+        alert('Please enter a valid email')
+    } else {
+        const response = await submitData({ email: email }, emailSubmitUrl); // --post email
+        if (response.ok) {
+            document.getElementById('email').value = email;  // --dispay initial email on form
+            modal.style.display = 'block';
+        } else {
+            if (response === 409) {
+                alert('Looks like this email has already been registered.');
+            } else {
+                alert('Sorry, looks like there was a probem on our end.')
+            }
+        }
     }
-    /*
-    const scrollY = document.body.style.top; // --prevent backdrop page scroll
-    document.body.style.top = `-${window.scrollY}px`;
-    document.body.style.position = 'fixed'; 
-    */
     // Close
 }); const closeModal = document.getElementById('close-modal'); // Open
         closeModal.addEventListener('click', (e) => {
@@ -36,9 +40,7 @@ signupInitBtn.addEventListener('click', (e) => {
         document.body.style.top = '';
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
         e.preventDefault();
-        
     }); 
-
 
 
 // Select ->  Other field

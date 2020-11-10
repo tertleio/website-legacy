@@ -21,7 +21,7 @@
     position: fixed;
     z-index: 9999;
     #logo {
-        width: 8.5em;
+        width: 8em;
     }
     header {
         display: flex;
@@ -34,7 +34,7 @@
         align-items: center;
     } li {
         padding: 0.3rem 1.3rem;
-        font-size: 1.1em;
+        font-size: 1.05em;
         a {
             &:link, &:visited {
                 color: $color-text;
