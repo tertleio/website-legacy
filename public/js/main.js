@@ -4,7 +4,7 @@ import nav from './nav.js';
 
 nav();
 
-// URLS -------------------
+// URLS ---------------------------------------------------------
 const signupSubmitUrl = '/signup-submit';
 const emailSubmitUrl = '/email-submit';
 
@@ -13,7 +13,7 @@ const modal = document.querySelector('.modal');
 const emailCta = document.querySelectorAll('.signup-init')
 
 
-// EMAIL ---------------------------------------------------------
+// EMAIL  ---------------------------------------------------------
 // Validate & Submit Email
 const submitEmail = async (emailVal) => {
     if (emailVal == '' || emailVal.indexOf('@') == -1) {
@@ -22,7 +22,7 @@ const submitEmail = async (emailVal) => {
         const response = await submitData({ email: emailVal }, emailSubmitUrl); // --post email
         if (response.ok) {
             document.getElementById('email').value = emailVal;  // --dispay initial email on form
-            modal.style.display = 'block';
+            openModal(emailVal);
         } else {
             if (response === 409) {
                 alert('Looks like this email has already been registered.');
@@ -37,9 +37,8 @@ const submitEmail = async (emailVal) => {
 emailCta.forEach(i => {
     i.addEventListener('submit', (e) => {
         e.preventDefault();
-        const inputValue = i.querySelector('input').value;
-        submitEmail(inputValue);
-        openModal(inputValue); // --insert submitted email into signup form/
+        const inputVal = i.querySelector('input').value;
+        submitEmail(inputVal);
     })
 });
 
