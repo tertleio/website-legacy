@@ -8,16 +8,12 @@ nav();
 const signupSubmitUrl = '/signup-submit';
 const emailSubmitUrl = '/email-submit';
 
-
 // DOMS
 const modal = document.querySelector('.modal');
 const emailCta = document.querySelectorAll('.signup-init')
 
-// 1. Submit email fn
-// 2. Open navInit
-// 3. Open/close modal
-// 4. Submit form
 
+// EMAIL ---------------------------------------------------------
 // Validate & Submit Email
 const submitEmail = async (emailVal) => {
     if (emailVal == '' || emailVal.indexOf('@') == -1) {
@@ -61,7 +57,7 @@ closeModal.addEventListener('click', (e) => {
 
 }); 
     
-// Signup Nav  Button
+// Nav signup button expand
 const ctaNav = document.getElementById('nav-btn'); // --select nav btn
 ctaNav.addEventListener('click', (e) => {
    ctaNav.style.display = 'none';
@@ -71,6 +67,8 @@ ctaNav.addEventListener('click', (e) => {
    }
 });
 
+
+// FORM ----------------------------------------------------------
 // Select ->  Other field
 const selectFields = document.querySelectorAll('select');  // --get doms (!) cleanup
 
