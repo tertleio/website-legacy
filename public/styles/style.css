@@ -169,11 +169,11 @@ body {
   outline: none;
 }
 
-.ctaNav .btn {
+#nav-init .btn {
   border-radius: 0 0.25em 0.25em 0;
 }
 
-.ctaNav .sign-up {
+#nav-init .sign-up {
   padding: 0;
 }
 

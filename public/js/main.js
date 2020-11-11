@@ -9,20 +9,23 @@ const signupSubmitUrl = '/signup-submit';
 const emailSubmitUrl = '/email-submit';
 
 
-// MODAL ------------
+// DOMS
 const modal = document.querySelector('.modal');
-const signupInitBtn = document.querySelector('#signup-init .btn.btn-primary'); 
+const emailCta = document.querySelectorAll('.signup-init')
 
-// Open
-signupInitBtn.addEventListener('click', async (e) => {
-    e.preventDefault();
-    const email = document.querySelector('#signup-init input').value;
-    if (email == '' || email.indexOf('@') == -1) {
+// 1. Submit email fn
+// 2. Open navInit
+// 3. Open/close modal
+// 4. Submit form
+
+// Validate & Submit Email
+const submitEmail = async (emailVal) => {
+    if (emailVal == '' || emailVal.indexOf('@') == -1) {
         alert('Please enter a valid email')
     } else {
-        const response = await submitData({ email: email }, emailSubmitUrl); // --post email
+        const response = await submitData({ email: emailVal }, emailSubmitUrl); // --post email
         if (response.ok) {
-            document.getElementById('email').value = email;  // --dispay initial email on form
+            document.getElementById('email').value = emailVal;  // --dispay initial email on form
             modal.style.display = 'block';
         } else {
             if (response === 409) {
@@ -32,23 +35,37 @@ signupInitBtn.addEventListener('click', async (e) => {
             }
         }
     }
-    // Close
-}); const closeModal = document.getElementById('close-modal'); // Open
-        closeModal.addEventListener('click', (e) => {
-        modal.style.display = 'none';
-    
-        const scrollY = document.body.style.top; // --return to  previous position on page
-        document.body.style.position = '';
-        document.body.style.top = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
-        e.preventDefault();
-    }); 
+};
 
-// Signup Header Button
-const ctaNav = document.getElementById('nav-btn');
+// Email Submit Listeners
+emailCta.forEach(i => {
+    i.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const inputValue = i.querySelector('input').value;
+        submitEmail(inputValue);
+        openModal(inputValue); // --insert submitted email into signup form/
+    })
+});
+
+// Open modal
+const email = document.getElementById('email');
+const openModal = (inputValue) => {
+    email.value = inputValue;
+    modal.style.display = 'block';
+};
+
+// Close form
+const closeModal = document.getElementById('close-modal'); // Open
+closeModal.addEventListener('click', (e) => {
+    modal.style.display = 'none';
+
+}); 
+    
+// Signup Nav  Button
+const ctaNav = document.getElementById('nav-btn'); // --select nav btn
 ctaNav.addEventListener('click', (e) => {
    ctaNav.style.display = 'none';
-   document.querySelector('.ctaNav').style = 'display: block;'
+   document.getElementById('nav-init').style = 'display: block;'
    if (window.innerWidth < 700) {
     document.getElementById('logo').style = 'display: none;';
    }
