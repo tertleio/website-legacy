@@ -99,7 +99,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.55em;
+  font-size: 1.45em;
   color: #707070;
   line-height: 1.55em;
 }
@@ -567,8 +567,8 @@ p.info {
 #hero .flex-1 {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  -ms-flex-preferred-size: 500px;
-      flex-basis: 500px;
+  -ms-flex-preferred-size: 550px;
+      flex-basis: 550px;
 }
 
 #hero .flex-2 {
