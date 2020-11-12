@@ -19,9 +19,12 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
+  background-clip: padding-box;
   font: inherit;
   vertical-align: baseline;
   text-decoration: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /* HTML5 display-role reset for older browsers
@@ -167,18 +170,6 @@ a:hover {
 
 body {
   outline: none;
-}
-
-body input {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-body input[type=text] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 #nav-init .btn {

@@ -1,14 +1,5 @@
-body { //reset
+body {
     outline: none;
-    input { // reset ios etc.
-        outline: none;
-        box-shadow: none;
-    }
-    input[type=text] {    // reset
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-    }       
 }
 // SIGNUP INIT
 #nav-init {
@@ -196,7 +187,7 @@ p.info {
             line-height: 1.5em;
         }
     }
-    .container { 
+    .container {
         overflow-y: auto; 
         max-height: calc(90vh - 210px); // --adds scroll height
         display: flex;

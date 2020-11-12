@@ -20,9 +20,11 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+	background-clip: padding-box; // ios padding shadow
 	font: inherit;
 	vertical-align: baseline;
 	text-decoration: none;
+	box-shadow: none;
 }
 /* HTML5 display-role reset for older browsers
 article, aside, details, figcaption, figure, 
