@@ -57,10 +57,10 @@
     background: url('../img/bg-pattern.png') no-repeat bottom right;
     height: 700px;
     .emoji {
-        width: 1em; // (!) rem inherit? adjust size depending on text size?/div 
-        vertical-align: bottom;
-        padding-bottom: 0.14em;
-        margin-left: 0.1em;
+        width: 0.9em; // (!) rem inherit? adjust size depending on text size?/div 
+        vertical-align: top;
+        padding-top: 0.2em;
+        margin-left: 0.4rem;
     }
     h4 {
         margin-top: 1em;

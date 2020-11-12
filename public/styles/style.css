@@ -99,7 +99,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.6em;
+  font-size: 1.55em;
   color: #707070;
   line-height: 1.55em;
 }
@@ -550,10 +550,10 @@ p.info {
 }
 
 #hero .emoji {
-  width: 1em;
-  vertical-align: bottom;
-  padding-bottom: 0.14em;
-  margin-left: 0.1em;
+  width: 0.9em;
+  vertical-align: top;
+  padding-top: 0.2em;
+  margin-left: 0.4rem;
 }
 
 #hero h4 {

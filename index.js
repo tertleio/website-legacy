@@ -22,7 +22,6 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, 'client/build'))); // --serves up public front-end as static pages
 };
 */
-console.log(process.env);
 // (!) Create checkConflict function that can be used globally
 const checkExists = async (table, colVal, rowVal) => {
     const doesExist = await pool.query(`
