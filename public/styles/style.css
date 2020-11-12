@@ -28,9 +28,9 @@ time, mark, audio, video {
 }
 
 textarea, input[type=text], input[type=range], input, input:matches([type=password], [type=search]) {
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /* HTML5 display-role reset for older browsers
