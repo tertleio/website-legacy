@@ -433,6 +433,9 @@ p.info {
 
 .modal .container input {
   outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
 }
 
 .modal .flex-col {

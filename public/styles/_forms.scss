@@ -188,8 +188,10 @@ p.info {
         }
     }
     .container {
-        input {
+        input { // reset ios etc.
             outline: none;
+            box-shadow: none;
+            border: none;
         }
         overflow-y: auto; 
         max-height: calc(90vh - 210px); // --adds scroll height
