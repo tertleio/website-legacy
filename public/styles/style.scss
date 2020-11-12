@@ -57,10 +57,16 @@
     background: url('../img/bg-pattern.png') no-repeat bottom right;
     height: 700px;
     .emoji {
-        width: 0.9em; // (!) rem inherit? adjust size depending on text size?/div 
-        vertical-align: top;
-        padding-top: 0.2em;
-        margin-left: 0.4rem;
+        width: 1.1rem; // (!) rem inherit? adjust size depending on text size?/div 
+        vertical-align: center;
+        margin-right: 0.4em;
+        margin-left: 0.5em;
+        &.right {
+            vertical-align: bottom;
+            width: 1em;
+            padding-top: 0.15em;
+            margin-left: 0.15em;
+        }
     }
     h4 {
         margin-top: 1em;
@@ -72,7 +78,7 @@
 
     } .flex-1 {
         flex-shrink: 0;
-        flex-basis: 550px;
+        flex-basis: 700px;
     } .flex-2 {
         flex-shrink: 5;
         margin-left: 3em;

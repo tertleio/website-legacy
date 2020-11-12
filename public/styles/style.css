@@ -84,8 +84,8 @@ h1, h2, h3, h5, h6 {
 }
 
 h1 {
-  font-size: 3.7em;
-  line-height: 1.15em;
+  font-size: 3.9em;
+  line-height: 1.2em;
 }
 
 h2 {
@@ -550,10 +550,17 @@ p.info {
 }
 
 #hero .emoji {
-  width: 0.9em;
-  vertical-align: top;
-  padding-top: 0.2em;
-  margin-left: 0.4rem;
+  width: 1.1rem;
+  vertical-align: center;
+  margin-right: 0.4em;
+  margin-left: 0.5em;
+}
+
+#hero .emoji.right {
+  vertical-align: bottom;
+  width: 1em;
+  padding-top: 0.15em;
+  margin-left: 0.15em;
 }
 
 #hero h4 {
@@ -567,8 +574,8 @@ p.info {
 #hero .flex-1 {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  -ms-flex-preferred-size: 550px;
-      flex-basis: 550px;
+  -ms-flex-preferred-size: 700px;
+      flex-basis: 700px;
 }
 
 #hero .flex-2 {
