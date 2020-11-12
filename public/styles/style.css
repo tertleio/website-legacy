@@ -169,6 +169,18 @@ body {
   outline: none;
 }
 
+body input {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 #nav-init .btn {
   border-radius: 0 0.25em 0.25em 0;
 }
@@ -429,12 +441,6 @@ p.info {
   padding: 5% 10%;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
-}
-
-.modal .container input {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 .modal .flex-col {
