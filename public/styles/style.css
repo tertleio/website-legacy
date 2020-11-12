@@ -84,7 +84,7 @@ h1, h2, h3, h5, h6 {
 }
 
 h1 {
-  font-size: 3.9em;
+  font-size: 4em;
   line-height: 1.2em;
 }
 
@@ -550,21 +550,38 @@ p.info {
 }
 
 #hero .emoji {
-  width: 1.1rem;
-  vertical-align: center;
-  margin-right: 0.4em;
-  margin-left: 0.5em;
-}
-
-#hero .emoji.right {
+  width: 0.8em;
   vertical-align: bottom;
-  width: 1em;
-  padding-top: 0.15em;
-  margin-left: 0.15em;
+  margin-left: 0.3em;
+  padding-bottom: 0.2em;
 }
 
 #hero h4 {
   margin-top: 1em;
+}
+
+#hero ul {
+  margin-left: 0.3em;
+  margin-top: 1.2em;
+  font-size: 1.5em;
+  color: #707070;
+  line-height: 1.2em;
+}
+
+#hero li {
+  list-style-position: outside;
+  margin-bottom: 0.35em;
+  padding-left: 1.3em;
+}
+
+#hero li.no {
+  background: url("../img/emoji/no.png") no-repeat center left;
+  background-size: 0.8em;
+}
+
+#hero li.yes {
+  background: url("../img/emoji/celebrate.png") no-repeat center left;
+  background-size: 0.9em;
 }
 
 #hero .hero-img {
@@ -662,12 +679,27 @@ main {
   padding-top: 2em;
 }
 
+.mb {
+  display: none;
+}
+
 @media screen and (max-width: 700px) {
   :root {
     font-size: 13px;
   }
   h2 {
     float: left;
+  }
+  .dt {
+    display: none;
+  }
+  .mb {
+    display: block;
+  }
+  .mb li {
+    padding-left: 0 !important;
+    padding-bottom: 0.3em;
+    line-height: 1.3em;
   }
   .wrap {
     padding: 0 2.5em;

@@ -57,19 +57,31 @@
     background: url('../img/bg-pattern.png') no-repeat bottom right;
     height: 700px;
     .emoji {
-        width: 1.1rem; // (!) rem inherit? adjust size depending on text size?/div 
-        vertical-align: center;
-        margin-right: 0.4em;
-        margin-left: 0.5em;
-        &.right {
-            vertical-align: bottom;
-            width: 1em;
-            padding-top: 0.15em;
-            margin-left: 0.15em;
-        }
+        width: 0.8em; // (!) rem inherit? adjust size depending on text size?/div 
+        vertical-align: bottom;
+        margin-left: 0.3em;
+        padding-bottom: 0.2em;
     }
     h4 {
         margin-top: 1em;
+    }
+    ul {
+        margin-left: 0.3em;
+        margin-top: 1.2em;
+        font-size: 1.5em;
+        color: $color-text;
+        line-height: 1.2em;
+    } li {
+        list-style-position: outside;
+        margin-bottom: 0.35em;
+        padding-left: 1.3em;
+        &.no {
+            background: url('../img/emoji/no.png') no-repeat center left;
+            background-size: 0.8em;
+        } &.yes {
+            background: url('../img/emoji/celebrate.png') no-repeat center left;
+            background-size: 0.9em;
+        }
     }
     .hero-img {
         width: 400px;
@@ -148,4 +160,7 @@ main {
     padding-top: 2em;
 }
 
+.mb {
+    display: none;
+}
 @import './_responsive.scss';

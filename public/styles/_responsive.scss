@@ -5,6 +5,16 @@
     h2 {
         float: left;
     }
+    .dt {
+        display: none;
+    } .mb {
+        li {  // --hero ul li's
+            padding-left: 0 !important;
+            padding-bottom: 0.3em;
+            line-height: 1.3em;
+        }
+        display: block;
+    }
     
 // nav
 .wrap { 
