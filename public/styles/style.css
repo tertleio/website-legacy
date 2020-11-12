@@ -683,7 +683,7 @@ main {
   display: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   :root {
     font-size: 13px;
   }
@@ -696,13 +696,16 @@ main {
   .mb {
     display: block;
   }
+  .mb ul {
+    width: 90%;
+  }
   .mb li {
     padding-left: 0 !important;
     padding-bottom: 0.3em;
     line-height: 1.3em;
   }
   .wrap {
-    padding: 0 2.2em;
+    padding: 0 2em;
   }
   #header {
     padding: 0 1.5em;
