@@ -1,4 +1,4 @@
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
     :root {
         font-size: 13px;
     }
@@ -18,7 +18,7 @@
     
 // nav
 .wrap { 
-    padding: 0 2.5em; // padding on  all wrappers
+    padding: 0 2.2em; // padding on  all wrappers
 }
  #header {
      padding: 0 1.5em;
@@ -57,6 +57,6 @@
 
 @media screen and (max-width: 320px) {
     :root {
-        font-size: 10px;
+        font-size: 11px;
     }
 }
