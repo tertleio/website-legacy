@@ -27,6 +27,12 @@ time, mark, audio, video {
           box-shadow: none;
 }
 
+textarea, input[type=text], input[type=range], input, input:matches([type=password], [type=search]) {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
 /* HTML5 display-role reset for older browsers
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -432,6 +438,12 @@ p.info {
   padding: 5% 10%;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
+}
+
+.modal .container input {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .modal .flex-col {
