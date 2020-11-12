@@ -46,7 +46,7 @@ h1, h2, h3, h5, h6 {
     line-height: 1.5em;
 } h1 {
     font-size: 3.5em;
-    line-height: 1.2em;
+    line-height: 1.15em;
 } h2 {
     font-size: 2.3em;
     color: $color-secondary;
@@ -54,9 +54,9 @@ h1, h2, h3, h5, h6 {
     font-size: 1.21em;
     color: $color-secondary;
 } h4 {
-    font-size: 1.45em;
+    font-size: 1.4em;
     color: $color-text;
-    line-height: 1.55em;
+    line-height: 1.5em;
 } h5 {
     font-size: 0.9em;
     color: $color-text;
@@ -68,7 +68,7 @@ h1, h2, h3, h5, h6 {
 p {
     font-size: 1.05em;
     margin-bottom: 1.5em;
-    line-height: 1.8em;
+    line-height: 1.7em;
 } .bold {
     font-family: proxima-nova, sans-serif; // proxima bold
     font-weight: 700;
