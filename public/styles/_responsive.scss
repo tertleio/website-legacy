@@ -32,18 +32,24 @@
         overflow: hidden;
     }
     #hero {
+        &.container {
+            overflow: hidden;
+            padding-bottom: 0;
+        }
         height: inherit;
         flex-wrap: wrap;
         .sign-up {
             max-width: 100%;
         }
         .hero-img {
-            display: none;
+            width: 100%;
         }
          .flex {
             max-width: 100%;
             padding-top: 8%;
-        } 
+        } .flex-2 {
+            margin-left: 0;
+        }
     }
     #how-it-works, #faq {
         background-size: 200%;

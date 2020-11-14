@@ -732,15 +732,22 @@ main {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  #hero.container {
+    overflow: hidden;
+    padding-bottom: 0;
+  }
   #hero .sign-up {
     max-width: 100%;
   }
   #hero .hero-img {
-    display: none;
+    width: 100%;
   }
   #hero .flex {
     max-width: 100%;
     padding-top: 8%;
+  }
+  #hero .flex-2 {
+    margin-left: 0;
   }
   #how-it-works, #faq {
     background-size: 200%;
