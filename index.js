@@ -13,7 +13,7 @@ const json2Csv = require('json2csv').parse;
 
 // Serve dynamic crawling
 app.get('/robots.txt', (req, res) => {
-    if (env.HEROKU_ENV === 'staging') {
+    if (process.env.HEROKU_ENV === 'staging') {
         res.send('*\nDisallow: /');
     } else {
         res.send('*\nAllow: /');
