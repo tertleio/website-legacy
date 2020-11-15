@@ -123,9 +123,11 @@ input:focus, input.valid:focus, input.not-valid:focus {
 }
 
 p.info {
-    text-indent: 33px;
+    text-indent: 2em;
     background: url('../img/i.svg') no-repeat top 0.30em left;
     background-size: 1.1em;
+    font-size: 1.2em;
+
 }
 
 .modal-open {
@@ -142,6 +144,7 @@ p.info {
     .modal-container { // --scrollable area
         position: absolute;
         border-radius: 0rem 0 1.2rem 1.2rem;
+        max-width: 600px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -179,9 +182,9 @@ p.info {
         background: red;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 1.5em 0;
         background: $color-bg;
         border-radius: 0 0 1.2rem 1.2em;
+        margin-bottom: 2em;
         left: 0;
         bottom: 0; 
         .validation-feedback {
@@ -200,7 +203,7 @@ p.info {
         max-height: calc(90vh - 210px); // --adds scroll height
         display: flex;
         flex-basis: 100%;
-        padding: 5% 10%;
+        padding: 2em 3em 0 3em;
         }
         .flex-col {
             flex-basis: 100%;

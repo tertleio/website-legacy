@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     
 </head>
-    <div class="modal" style="display: none;">   
+    <div class="modal" style="display: block;">   
         <div class="modal-container">
             <div id="titlebar">
                     <h6>Sign-Up</h6>
@@ -48,17 +48,16 @@
             </div>
             
             <div class="container">
-                <form autofill="off" id="signup-form">                
+                <form id="signup-form">                
                     <div class="flex-row header">
-                        <p class="info">To help us find you the right match, we’d like to know a little more about you.</p>
+                        <p class="info">To help us find you the right match, we need to know a little more about you.</p>
                     </div>
                 <div id="signup-body">
-                    <div class="flex-col">
+                    <div class="flex-col" style="display: none;"> <!-- Hiding for now, bugging db submission on autofill -->
                         <div class="flex-item">
                             <input id="email" name="email" class="field disabled valid" placeholder="joe@domain.com" type="text" value="" tabindex="-1"/>
                             <label class='disabled' for="email">Your Email</label>
                         </div>
-                        
                     </div>
 
                     <div class="flex-row">
