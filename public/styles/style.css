@@ -490,6 +490,7 @@ p.info {
   width: 100%;
   padding: 0 4em;
   background: #ffffff;
+  overflow: hidden;
 }
 
 .container {
@@ -612,7 +613,7 @@ p.info {
 }
 
 #hero .sign-up {
-  margin-top: 3.5em;
+  margin: 3.5em 0;
   width: 450px;
 }
 
@@ -740,6 +741,7 @@ main {
   }
   #hero .sign-up {
     max-width: 100%;
+    margin-bottom: 0;
   }
   #hero .hero-img {
     width: 100%;
