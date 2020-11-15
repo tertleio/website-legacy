@@ -1,8 +1,11 @@
 import { getFormInputs, submitData } from './requests.js';
 import { checkAllValid } from './validation.js';
 import nav from './nav.js';
+import smoothscroll from 'smoothscroll-polyfill';
 
 nav();
+smoothscroll.polyfill();
+
 
 // URLS ---------------------------------------------------------
 const signupSubmitUrl = '/signup-submit';
