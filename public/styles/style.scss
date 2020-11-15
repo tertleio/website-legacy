@@ -52,10 +52,9 @@
 
 #hero {
     display: flex;
-    z-index: -999;
     justify-content: space-between;
     background: url('../img/bg-pattern.png') no-repeat bottom right;
-    height: 700px;
+    padding-bottom: 0;
     .emoji {
         width: 0.8em; // (!) rem inherit? adjust size depending on text size?/div 
         vertical-align: bottom;
@@ -84,7 +83,7 @@
         }
     }
     .hero-img {
-        width: 400px;
+        margin-bottom: -2px;
     }
     .flex {
 
@@ -103,21 +102,23 @@
 
 #how-it-works, #faq {
     background: #fff url('../img/bg-shadow.png') no-repeat top center;
-    position: relative;
+    display: block;
     h2 {
         width: 100%;
-        margin-bottom: 1.5em;
+        margin-bottom: 1em;
     }
     h3 {
         margin-bottom: 0.6em;
     }
 }
 
+
 #how-it-works .container, #faq .container {
+    display: flex;
     max-width: 500px;
     flex-wrap: wrap;
     .flex {
-        margin-bottom: 3em;
+        margin-bottom: 2em;
     } .flex-0 {
         flex: 1;
         text-align: center;
@@ -148,7 +149,7 @@
     }
 }
 
-#footer .container{
+#footer .container {
     align-content: flex-start;;
     border-top: 1px solid $color-grey1;
     padding: 3em 0;

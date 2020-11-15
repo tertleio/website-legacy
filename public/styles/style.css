@@ -552,12 +552,11 @@ p.info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: -999;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: url("../img/bg-pattern.png") no-repeat bottom right;
-  height: 700px;
+  padding-bottom: 0;
 }
 
 #hero .emoji {
@@ -596,7 +595,7 @@ p.info {
 }
 
 #hero .hero-img {
-  width: 400px;
+  margin-bottom: -2px;
 }
 
 #hero .flex-1 {
@@ -619,12 +618,12 @@ p.info {
 
 #how-it-works, #faq {
   background: #fff url("../img/bg-shadow.png") no-repeat top center;
-  position: relative;
+  display: block;
 }
 
 #how-it-works h2, #faq h2 {
   width: 100%;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 #how-it-works h3, #faq h3 {
@@ -632,6 +631,9 @@ p.info {
 }
 
 #how-it-works .container, #faq .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   max-width: 500px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -639,7 +641,7 @@ p.info {
 }
 
 #how-it-works .container .flex, #faq .container .flex {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 #how-it-works .container .flex-0, #faq .container .flex-0 {

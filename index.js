@@ -11,7 +11,7 @@ const csv2Json = require('csvtojson');
 const json2Csv = require('json2csv').parse;
 */
 
-// Serve dynamic crawling
+// Serve dynamic SEO crawling
 app.get('/robots.txt', (req, res) => {
     if (process.env.HEROKU_ENV === 'staging') {
         res.send('*\nDisallow: /');
