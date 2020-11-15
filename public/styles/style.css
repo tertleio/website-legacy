@@ -345,6 +345,10 @@ p.info {
   background-size: 1.1em;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
 .modal {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -404,6 +408,7 @@ p.info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   background: red;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -411,7 +416,7 @@ p.info {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 1.5em 0 0 0;
+  padding: 1.5em 0;
   background: #ffffff;
   border-radius: 0 0 1.2rem 1.2em;
   left: 0;
@@ -433,11 +438,7 @@ p.info {
   display: flex;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   padding: 5% 10%;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
 }
 
 .modal .container input {

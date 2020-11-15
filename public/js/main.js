@@ -44,7 +44,10 @@ emailCta.forEach(i => {
 
 // Open modal
 const email = document.getElementById('email');
+const body = document.getElementsByTagName('body')[0];
+console.log(body);
 const openModal = (inputValue) => {
+    body.className = 'modal-open'
     email.value = inputValue;
     modal.style.display = 'block';
 };
@@ -52,6 +55,7 @@ const openModal = (inputValue) => {
 // Close form
 const closeModal = document.getElementById('close-modal'); // Open
 closeModal.addEventListener('click', (e) => {
+    body.className = '';
     modal.style.display = 'none';
 
 }); 
