@@ -14,9 +14,9 @@ const json2Csv = require('json2csv').parse;
 // Serve dynamic SEO crawling
 app.get('/robots.txt', (req, res) => {
     if (process.env.HEROKU_ENV === 'staging') {
-        res.send('*\nDisallow: /');
+        res.send('User-agent: *\nDisallow: /');
     } else {
-        res.send('*\nAllow: /');
+        res.send('User-agent: *\nAllow: /');
     }
 });
 
