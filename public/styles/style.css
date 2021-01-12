@@ -75,7 +75,8 @@ table {
           box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -88,14 +89,18 @@ button {
   border: 0;
 }
 
-h1, h2, h3, h5, h6 {
+h1,
+h2,
+h3,
+h5,
+h6 {
   font-family: 'Poppins', sans-serif;
   color: #000;
   line-height: 1.5em;
 }
 
 h1 {
-  font-size: 3.8em;
+  font-size: 3em;
   line-height: 1.2em;
 }
 
@@ -105,14 +110,14 @@ h2 {
 }
 
 h3 {
-  font-size: 1.21em;
+  font-size: 1.3em;
   color: #000;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: #707070;
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 h5 {
@@ -126,7 +131,7 @@ h6 {
 }
 
 p {
-  font-size: 1.05em;
+  font-size: 1.15em;
   margin-bottom: 1.5em;
   line-height: 1.7em;
 }
@@ -137,8 +142,9 @@ p {
   font-style: normal;
 }
 
-a:link, a:visited {
-  color: #3582B9;
+a:link,
+a:visited {
+  color: #3582b9;
 }
 
 a:hover {
@@ -165,14 +171,14 @@ a:hover {
 }
 
 .btn.btn-primary {
-  border: 1px solid #60964F;
+  border: 1px solid #60964f;
   color: #ffffff;
-  background: #60964F;
+  background: #60964f;
 }
 
 .btn.btn-secondary {
-  border: 1px solid #60964F;
-  color: #60964F;
+  border: 1px solid #60964f;
+  color: #60964f;
   background: none;
 }
 
@@ -197,17 +203,17 @@ body {
           justify-content: space-between;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  background: #EEEEEE;
+  background: #eeeeee;
   border-radius: 0.3em;
   padding: 0.4em;
   outline: 0;
 }
 
 .field2 {
-  background: #EEEEEE;
+  background: #eeeeee;
   font-family: proxima-nova, sans-serif;
   color: #707070;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -300,17 +306,17 @@ select {
 .field.focused {
   background: url("../img/focused-anim.gif") no-repeat bottom 15px right;
   background-size: 22px;
-  border-bottom: 1px solid #FF9B00;
+  border-bottom: 1px solid #ff9b00;
 }
 
 .field.valid {
-  border-bottom: 1px solid #94BB77;
+  border-bottom: 1px solid #94bb77;
   background: url("../img/valid.svg") no-repeat center right;
   background-size: 0.8em;
 }
 
 .field.invalid {
-  border-bottom: 1px solid #EB3333;
+  border-bottom: 1px solid #eb3333;
   background: url("../img/invalid.svg") no-repeat center right;
   background-size: 1em;
 }
@@ -547,7 +553,7 @@ p.info {
 }
 
 #header.wrap li a:hover {
-  color: #60964F;
+  color: #60964f;
 }
 
 #header.wrap .btn {
@@ -558,11 +564,13 @@ p.info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: url("../img/bg-pattern.png") no-repeat bottom right;
   padding-bottom: 0;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 #hero .emoji {
@@ -573,13 +581,14 @@ p.info {
 }
 
 #hero h4 {
-  margin-top: 1em;
+  margin-top: 0.5em;
+  line-height: 1.3em;
 }
 
 #hero ul {
   margin-left: 0.3em;
   margin-top: 1.2em;
-  font-size: 1.5em;
+  font-size: 1.7em;
   color: #707070;
   line-height: 1.2em;
 }
@@ -601,69 +610,70 @@ p.info {
 }
 
 #hero .hero-img {
-  margin-bottom: -2px;
+  margin-bottom: 2em;
+  width: 19.5em !important;
 }
 
-#hero .flex-1 {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-preferred-size: 700px;
-      flex-basis: 700px;
-}
-
-#hero .flex-2 {
-  -ms-flex-negative: 5;
-      flex-shrink: 5;
-  margin-left: 3em;
+#hero .flex {
+  padding: 3em 0 11em 0;
+  text-align: center;
 }
 
 #hero .sign-up {
-  margin: 3.5em 0;
+  margin: 3em auto;
   width: 450px;
 }
 
-#how-it-works, #faq {
+#how-it-works,
+#faq {
   background: #fff url("../img/bg-shadow.png") no-repeat top center;
   display: block;
 }
 
-#how-it-works h2, #faq h2 {
+#how-it-works h2,
+#faq h2 {
   width: 100%;
   margin-bottom: 1em;
 }
 
-#how-it-works h3, #faq h3 {
+#how-it-works h3,
+#faq h3 {
   margin-bottom: 0.6em;
 }
 
-#how-it-works .container, #faq .container {
+#how-it-works .container,
+#faq .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 500px;
+  max-width: 450px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
 }
 
-#how-it-works .container .flex, #faq .container .flex {
+#how-it-works .container .flex,
+#faq .container .flex {
   margin-bottom: 2em;
 }
 
-#how-it-works .container .flex-0, #faq .container .flex-0 {
+#how-it-works .container .flex-0,
+#faq .container .flex-0 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   text-align: center;
 }
 
-#how-it-works .container .flex-3 img, #faq .container .flex-3 img {
+#how-it-works .container .flex-3 img,
+#faq .container .flex-3 img {
   width: 3em;
   margin-right: 1em;
   padding-top: 10px;
 }
 
-#how-it-works .container ::before, #faq .container ::before {
+#how-it-works .container ::before,
+#faq .container ::before {
   content: '';
   background: url("../img/separator-left.png") no-repeat center left;
   height: 250px;
@@ -673,7 +683,8 @@ p.info {
   position: absolute;
 }
 
-#how-it-works .container ::after, #faq .container ::after {
+#how-it-works .container ::after,
+#faq .container ::after {
   content: '';
   background: url("../img/separator-left.png") no-repeat center left;
   height: 250px;
@@ -686,7 +697,7 @@ p.info {
 #footer .container {
   -ms-flex-line-pack: start;
       align-content: flex-start;
-  border-top: 1px solid #EEEEEE;
+  border-top: 1px solid #eeeeee;
   padding: 3em 0;
 }
 
@@ -704,24 +715,7 @@ main {
 
 @media screen and (max-width: 700px) {
   :root {
-    font-size: 13px;
-  }
-  h2 {
-    float: left;
-  }
-  .dt {
-    display: none;
-  }
-  .mb {
-    display: block;
-  }
-  .mb ul {
-    width: 90%;
-  }
-  .mb li {
-    padding-left: 0 !important;
-    padding-bottom: 0.3em;
-    line-height: 1.3em;
+    font-size: 14px;
   }
   .wrap {
     padding: 0 2em;
@@ -744,6 +738,9 @@ main {
     overflow: hidden;
     padding-bottom: 0;
   }
+  #hero h4 {
+    margin-top: 1.3em;
+  }
   #hero .sign-up {
     max-width: 100%;
     margin-bottom: 0;
@@ -758,22 +755,30 @@ main {
   #hero .flex-2 {
     margin-left: 0;
   }
-  #how-it-works, #faq {
+  #hero .hero-img {
+    margin-bottom: 1.7em;
+    width: 15em !important;
+  }
+  #how-it-works,
+  #faq {
     background-size: 200%;
   }
-  #how-it-works h2, #faq h2 {
+  #how-it-works h2,
+  #faq h2 {
     text-align: left;
   }
-  #how-it-works ::before, #how-it-works ::after, #faq ::before, #faq ::after {
+  #how-it-works ::before,
+  #how-it-works ::after,
+  #faq ::before,
+  #faq ::after {
     display: none;
+  }
+  #modal-footer {
+    padding: 1em 0 1em 0;
   }
 }
 
-#modal-footer {
-  padding: 1em 0 1em 0;
-}
-
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 700px) and (max-width: 320px) {
   :root {
     font-size: 11px;
   }

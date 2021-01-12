@@ -2,9 +2,9 @@
 
 // Globals
 :root {
-    font-size: 16px;
-    scroll-behavior: auto;
-    scroll-behavior: smooth;
+  font-size: 16px;
+  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 *,
 *::before,
@@ -13,101 +13,114 @@
 }
 
 // Colors
-$color-primary: #60964F;
+$color-primary: #60964f;
 $color-secondary: #000;
-$color-third: #37352E;
+$color-third: #37352e;
 $color-text: #707070;
 $color-bg: #ffffff;
 $color-white: #ffffff;
-$color-grey1: #EEEEEE;
-$color-grey2: #B2B2B2;
+$color-grey1: #eeeeee;
+$color-grey2: #b2b2b2;
 
-$color-orange: #FF9B00;
-$color-green:  #94BB77;
-$color-red: #EB3333; 
-$color-blue: #3582B9;
+$color-orange: #ff9b00;
+$color-green: #94bb77;
+$color-red: #eb3333;
+$color-blue: #3582b9;
 
 // Typography
-body, html {
-    font-family: proxima-nova, sans-serif; // proxima regular
-    font-weight: 400;
-    font-style: normal;
-    color: $color-text;
-    height: 100vh;
+body,
+html {
+  font-family: proxima-nova, sans-serif; // proxima regular
+  font-weight: 400;
+  font-style: normal;
+  color: $color-text;
+  height: 100vh;
 }
 
-button { 
-    background: none;
-    border: 0;
+button {
+  background: none;
+  border: 0;
 }
 
 // $large-font: 50px <-- fix typography
-h1, h2, h3, h5, h6 {
-    font-family: 'Poppins', sans-serif;
-    color: $color-secondary;
-    line-height: 1.5em;
-} h1 {
-    font-size: 3.8em;
-    line-height: 1.2em;
-} h2 {
-    font-size: 2.3em;
-    color: $color-secondary;
-} h3 {
-    font-size: 1.21em;
-    color: $color-secondary;
-} h4 {
-    font-size: 1.5em;
-    color: $color-text;
-    line-height: 1.5em;
-} h5 {
-    font-size: 0.9em;
-    color: $color-text;
-} h6 {
-    font-size: 1.5em;
-    color: $color-white;
-} 
+h1,
+h2,
+h3,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  color: $color-secondary;
+  line-height: 1.5em;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1.2em;
+}
+h2 {
+  font-size: 2.3em;
+  color: $color-secondary;
+}
+h3 {
+  font-size: 1.3em;
+  color: $color-secondary;
+}
+h4 {
+  font-size: 1.8em;
+  color: $color-text;
+  line-height: 1.6em;
+}
+h5 {
+  font-size: 0.9em;
+  color: $color-text;
+}
+h6 {
+  font-size: 1.5em;
+  color: $color-white;
+}
 
 p {
-    font-size: 1.05em;
-    margin-bottom: 1.5em;
-    line-height: 1.7em;
-} .bold {
-    font-family: proxima-nova, sans-serif; // proxima bold
-    font-weight: 700;
-    font-style: normal;
-} 
-
+  font-size: 1.15em;
+  margin-bottom: 1.5em;
+  line-height: 1.7em;
+}
+.bold {
+  font-family: proxima-nova, sans-serif; // proxima bold
+  font-weight: 700;
+  font-style: normal;
+}
 
 // Buttons & Links
-a:link, a:visited {
-    color: $color-blue;
-}   a:hover {
-    transition: all 0.5s;
-    text-decoration: underline;
+a:link,
+a:visited {
+  color: $color-blue;
+}
+a:hover {
+  transition: all 0.5s;
+  text-decoration: underline;
 }
 
 .btn {
-    border-radius: 0.25rem;
-    transition: all 0.5s;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 0.88rem;
-    text-decoration: none !important;
-    text-align: center;
-    padding: 0.8rem 1.3rem;
- .btn:hover {
+  border-radius: 0.25rem;
+  transition: all 0.5s;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none !important;
+  text-align: center;
+  padding: 0.8rem 1.3rem;
+  .btn:hover {
     text-decoration: none;
     cursor: pointer;
-}
-    &.btn-primary {
-        border: 1px solid $color-primary;
-        color: $color-bg;
-        background: $color-primary;
-    }
-    &.btn-secondary {
-        border: 1px solid $color-primary;
-        // border: 1px solid $color-grey2;
-        color: $color-primary;
-        background: none;
-    }
+  }
+  &.btn-primary {
+    border: 1px solid $color-primary;
+    color: $color-bg;
+    background: $color-primary;
+  }
+  &.btn-secondary {
+    border: 1px solid $color-primary;
+    // border: 1px solid $color-grey2;
+    color: $color-primary;
+    background: none;
+  }
 }

@@ -1,74 +1,87 @@
 @media screen and (max-width: 700px) {
-    :root {
-        font-size: 13px;
-    }
-    h2 {
-        float: left;
-    }
-    .dt {
-        display: none;
-    } .mb {
-        display: block;
-        ul {width: 90%; }
-            li {  // --hero ul li's
-                padding-left: 0 !important;
-                padding-bottom: 0.3em;
-                line-height: 1.3em;
-            }
-    }
-    
-// nav
-.wrap { 
+  :root {
+    font-size: 14px;
+  }
+  //   h2 {
+  //     float: left;
+  //   }
+  //   .dt {
+  //     display: none;
+  //   }
+  //   .mb {
+  //     display: block;
+  //     ul {
+  //       width: 90%;
+  //     }
+  //     li {
+  //       // --hero ul li's
+  //       padding-left: 0 !important;
+  //       padding-bottom: 0.3em;
+  //       line-height: 1.3em;
+  //     }
+
+  // nav
+  .wrap {
     padding: 0 2em; // padding on  all wrappers
-}
- #header {
-     padding: 0 1.5em;
+  }
+  #header {
+    padding: 0 1.5em;
     nav li {
-        display: none;
+      display: none;
     }
- }
+  }
 
-.container {
-        overflow: hidden;
+  .container {
+    overflow: hidden;
+  }
+  #hero {
+    &.container {
+      overflow: hidden;
+      padding-bottom: 0;
     }
-    #hero {
-        &.container {
-            overflow: hidden;
-            padding-bottom: 0;
-        }
-        height: inherit;
-        flex-wrap: wrap;
-        .sign-up {
-            max-width: 100%;
-            margin-bottom: 0;
-        }
-        .hero-img {
-            width: 100%;
-        }
-         .flex {
-            max-width: 100%;
-            padding-top: 8%;
-        } .flex-2 {
-            margin-left: 0;
-        }
+    height: inherit;
+    flex-wrap: wrap;
+    h4 {
+      margin-top: 1.3em;
     }
-    #how-it-works, #faq {
-        background-size: 200%;
-        h2 {
-        text-align: left;
-        }
-        ::before, ::after {
-            display: none;
-        }
+    .sign-up {
+      max-width: 100%;
+      margin-bottom: 0;
     }
-}
+    .hero-img {
+      width: 100%;
+    }
+    .flex {
+      max-width: 100%;
+      padding-top: 8%;
+    }
+    .flex-2 {
+      margin-left: 0;
+    }
+    .hero-img {
+      margin-bottom: 1.7em;
+      width: 15em !important;
+    }
+  }
+  #how-it-works,
+  #faq {
+    background-size: 200%;
+    h2 {
+      text-align: left;
+    }
+    ::before,
+    ::after {
+      display: none;
+    }
+  }
 
-#modal-footer {
+  #modal-footer {
     padding: 1em 0 1em 0;
-}
+  }
 
-@media screen and (max-width: 320px) {
+  @media screen and (max-width: 320px) {
     :root {
-        font-size: 11px;
+      font-size: 11px;
     }
+  }
 }
