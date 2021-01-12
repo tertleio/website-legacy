@@ -148,7 +148,7 @@ p.info {
     // --scrollable area
     position: absolute;
     border-radius: 0rem 0 1.2rem 1.2rem;
-    max-width: 600px;
+    max-width: 500px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -188,7 +188,7 @@ p.info {
     align-items: flex-start;
     background: $color-bg;
     border-radius: 0 0 1.2rem 1.2em;
-    margin-bottom: 2em;
+    margin: 1.5em 0;
     left: 0;
     bottom: 0;
     .validation-feedback {
@@ -205,7 +205,7 @@ p.info {
       box-shadow: none;
     }
     overflow-y: auto;
-    max-height: calc(90vh - 210px); // --adds scroll height
+    // max-height: calc(90vh - 210px); // --adds scroll height
     display: flex;
     flex-basis: 100%;
     padding: 2em 3em 0 3em;

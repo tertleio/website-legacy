@@ -372,7 +372,7 @@ p.info {
 .modal .modal-container {
   position: absolute;
   border-radius: 0rem 0 1.2rem 1.2rem;
-  max-width: 600px;
+  max-width: 500px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -429,7 +429,7 @@ p.info {
           align-items: flex-start;
   background: #ffffff;
   border-radius: 0 0 1.2rem 1.2em;
-  margin-bottom: 2em;
+  margin: 1.5em 0;
   left: 0;
   bottom: 0;
 }
@@ -443,7 +443,6 @@ p.info {
 
 .modal .container {
   overflow-y: auto;
-  max-height: calc(90vh - 210px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -745,9 +744,6 @@ main {
   #how-it-works h2,
   #faq h2 {
     text-align: left;
-  }
-  #modal-footer {
-    padding: 1em 0 1em 0;
   }
 }
 
