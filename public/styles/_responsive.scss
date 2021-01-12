@@ -35,12 +35,13 @@
     overflow: hidden;
   }
   #hero {
+    height: inherit;
+    flex-wrap: wrap;
+    background-size: 40em;
     &.container {
       overflow: hidden;
       padding-bottom: 0;
     }
-    height: inherit;
-    flex-wrap: wrap;
     h4 {
       margin-top: 1.3em;
     }
@@ -69,10 +70,10 @@
     h2 {
       text-align: left;
     }
-    ::before,
-    ::after {
-      display: none;
-    }
+    // ::before,
+    // ::after {
+    //   display: none;
+    // }
   }
 
   #modal-footer {

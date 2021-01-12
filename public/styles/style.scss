@@ -58,7 +58,7 @@
 #hero {
   display: flex;
   justify-content: center;
-  background: url('../img/bg-pattern.png') no-repeat bottom right;
+  background: url('../img/bg-pattern.png') no-repeat bottom center;
   padding-bottom: 0;
   align-content: center;
   .emoji {
@@ -143,26 +143,26 @@
       padding-top: 10px;
     }
   }
-  position: relative;
-  ::before {
-    // fix before/after to be responsive on dynamic height of content
-    content: '';
-    background: url('../img/separator-left.png') no-repeat center left;
-    height: 250px;
-    width: 25px;
-    top: 30%;
-    left: -30%;
-    position: absolute;
-  }
-  ::after {
-    content: '';
-    background: url('../img/separator-left.png') no-repeat center left; // fix img right.png
-    height: 250px;
-    width: 25px;
-    top: 30%;
-    right: -30%;
-    position: absolute;
-  }
+  //   position: relative;
+  //   ::before {
+  //     // fix before/after to be responsive on dynamic height of content
+  //     content: '';
+  //     background: url('../img/separator-left.png') no-repeat center left;
+  //     height: 250px;
+  //     width: 25px;
+  //     top: 30%;
+  //     left: -30%;
+  //     position: absolute;
+  //   }
+  //   ::after {
+  //     content: '';
+  //     background: url('../img/separator-left.png') no-repeat center left; // fix img right.png
+  //     height: 250px;
+  //     width: 25px;
+  //     top: 30%;
+  //     right: -30%;
+  //     position: absolute;
+  //   }
 }
 
 #footer .container {

@@ -217,11 +217,11 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-right: 0.5em;
   outline: 0;
+  width: 100%;
   border-radius: 0.25rem;
   font-size: 1em;
-  padding: 0.75em  1em;
+  padding: 0.75em 1em;
 }
 
 .field2::-webkit-input-placeholder {
@@ -254,7 +254,7 @@ select {
   font-family: proxima-nova, sans-serif;
   color: #707070;
   border: 0;
-  border-bottom: 1px solid #D7D7D7;
+  border-bottom: 1px solid #d7d7d7;
   width: 100%;
   font-size: 1rem;
   padding: 0.5em 0;
@@ -292,7 +292,8 @@ select {
   color: #707070;
 }
 
-.field:focus + label, .field:not(:placeholder-shown) + label {
+.field:focus + label,
+.field:not(:placeholder-shown) + label {
   position: absolute;
   bottom: 1.6em;
   font-size: 0.7em;
@@ -377,8 +378,8 @@ p.info {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background: #ffffff;
-  -webkit-box-shadow: 0px 39px 90px #000000E3;
-          box-shadow: 0px 39px 90px #000000E3;
+  -webkit-box-shadow: 0px 39px 90px #000000e3;
+          box-shadow: 0px 39px 90px #000000e3;
   /*
         box-shadow: 
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -567,7 +568,7 @@ p.info {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../img/bg-pattern.png") no-repeat bottom right;
+  background: url("../img/bg-pattern.png") no-repeat bottom center;
   padding-bottom: 0;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -649,7 +650,6 @@ p.info {
   max-width: 450px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  position: relative;
 }
 
 #how-it-works .container .flex,
@@ -670,28 +670,6 @@ p.info {
   width: 3em;
   margin-right: 1em;
   padding-top: 10px;
-}
-
-#how-it-works .container ::before,
-#faq .container ::before {
-  content: '';
-  background: url("../img/separator-left.png") no-repeat center left;
-  height: 250px;
-  width: 25px;
-  top: 30%;
-  left: -30%;
-  position: absolute;
-}
-
-#how-it-works .container ::after,
-#faq .container ::after {
-  content: '';
-  background: url("../img/separator-left.png") no-repeat center left;
-  height: 250px;
-  width: 25px;
-  top: 30%;
-  right: -30%;
-  position: absolute;
 }
 
 #footer .container {
@@ -733,6 +711,7 @@ main {
     height: inherit;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    background-size: 40em;
   }
   #hero.container {
     overflow: hidden;
@@ -766,12 +745,6 @@ main {
   #how-it-works h2,
   #faq h2 {
     text-align: left;
-  }
-  #how-it-works ::before,
-  #how-it-works ::after,
-  #faq ::before,
-  #faq ::after {
-    display: none;
   }
   #modal-footer {
     padding: 1em 0 1em 0;
