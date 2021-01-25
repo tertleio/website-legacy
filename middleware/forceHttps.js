@@ -1,5 +1,3 @@
-const { networkInterfaces } = require('os');
-
 const forceHttpsIfProd = async (req, res, next) => {
   console.log('this ran');
   if (!req.headers.host.includes('staging') && !req.secure) {
