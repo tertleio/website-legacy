@@ -1,6 +1,5 @@
 const forceHttpsIfProd = async (req, res, next) => {
-  if (!req.secure) {
-    // // if (!req.headers.host.includes('staging') && !res.secure) {
+  if (!req.headers.host.includes('staging') && !res.secure) {
     console.log(req.secure);
     return res.redirect('https://' + req.headers.host + req.url);
   }
