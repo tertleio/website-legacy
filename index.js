@@ -27,7 +27,7 @@ app.get('/robots.txt', (req, res) => {
 app.use(cors()); // --cross communication between db and backend
 app.use(express.json()); // --parses req.body to json
 app.use(express.static('public')); // --serves up public front-end as static pages
-app.use('/', forceHttpsIfProd);
+app.all(forceHttpsIfProd(req, res));
 
 // Check for duplicate emails
 const checkExists = async (table, colVal, rowVal) => {
