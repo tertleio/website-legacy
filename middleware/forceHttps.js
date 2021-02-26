@@ -10,6 +10,7 @@ const forceHttpsIfProd = async (req, res, next) => {
     res.redirect('https://' + req.headers.host + req.url);
     return next();
   }
+  next();
 };
 
 module.exports = { forceHttpsIfProd };
