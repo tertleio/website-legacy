@@ -12,6 +12,8 @@ const forceHttpsIfProd = async (req, res, next) => {
       res.redirect('https://' + req.headers.host + req.url);
       return next();
     } else if (!req.headers.host.includes('www.')) {
+      console.log('inside non-www function ran)');
+      console.log(req.headers.host);
       res.redirect('https://www.' + req.headers.host + req.url);
       return next();
     }
