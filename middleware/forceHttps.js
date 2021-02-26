@@ -10,9 +10,11 @@ const forceHttpsIfProd = async (req, res, next) => {
       console.log('inside if ran');
       res.redirect('https://' + req.headers.host + req.url);
       return next();
-    } else {
+    } else if (!req.headers.host) {
+      res.redirect('https://' + 'www.' + req.url);
       return next();
     }
+    next();
   }
 };
 
