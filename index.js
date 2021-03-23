@@ -25,7 +25,7 @@ app.get('/robots.txt', (req, res) => {
 
 // MIDDLEWARE
 app.enable('trust proxy'); // --give express access to req.secure
-// app.use('*', forceHttpsIfProd);
+app.use('*', forceHttpsIfProd);
 app.use(cors()); // --cross communication between db and backend
 app.use(express.json()); // --parses req.body to json
 app.use(express.static('public')); // --serves up public front-end as static pages
