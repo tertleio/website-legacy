@@ -46,11 +46,10 @@ app.post('/email-submit', async (req, res) => {
   try {
     const { email } = await req.body;
     const doesExist = await checkExists('signups', 'email', email);
-    if (doesExist) res.status(409).send();
+    if (doesExist) res.status(409).send(email);
     else {
       const newEmail = await pool.query(
-        `
-                INSERT INTO signups (email) VALUES($1) RETURNING *`,
+        `INSERT INTO signups (email) VALUES($1) RETURNING *`,
         [email]
       );
       res.status(200).send(newEmail);
