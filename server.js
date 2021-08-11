@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const pool = require('./db');
+const pool = require('./config');
 // const { resolveSoa } = require('dns');
 /*
 const path = require('path);
@@ -30,7 +30,6 @@ app.use(cors()); // --cross communication between db and backend
 app.use(express.json()); // --parses req.body to json
 app.use(express.static('public')); // --serves up public front-end as static pages
 
-// Check for duplicate emails
 const checkExists = async (table, colVal, rowVal) => {
   const doesExist = await pool.query(`
     SELECT COUNT(*)
@@ -45,11 +44,11 @@ const checkExists = async (table, colVal, rowVal) => {
 app.post('/email-submit', async (req, res) => {
   try {
     const { email } = await req.body;
-    const doesExist = await checkExists('signups', 'email', email);
+    const doesExist = await checkExists('website_signups', 'email', email);
     if (doesExist) res.status(409).send(email);
     else {
       const newEmail = await pool.query(
-        `INSERT INTO signups (email) VALUES($1) RETURNING *`,
+        `INSERT INTO website_signups (email) VALUES($1) RETURNING *`,
         [email]
       );
       res.status(200).send(newEmail);
@@ -72,7 +71,7 @@ app.post('/signup-submit', async (req, res) => {
     } = req.body;
     const newForm = await pool.query(
       `
-            UPDATE signups
+            UPDATE website_signups
             SET first_name = $1, last_name = $2, postcode = $3, skillset = $4, looking_for = $5, linkedin = $6 
             WHERE email = $7`,
       [firstName, lastName, postcode, skillset, lookingFor, linkedin, email]

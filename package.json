@@ -8,8 +8,8 @@
     "npm": "6.14.8"
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "test"
+    "start": "node server.js",
+    "dev": "NODE_ENV=dev nodemon server.js"
   },
   "repository": {
     "type": "git",
