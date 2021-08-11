@@ -123,7 +123,7 @@ signupForm.addEventListener('submit', async (e) => {
       document.getElementById('modal-footer').style = 'display: none;';
       document.getElementById('signup-body').style = 'display: none;';
       signupForm.firstElementChild.firstElementChild.innerHTML =
-        "Thanks! We got it. We'll let you know when we're ready to ship.";
+        "Thanks! We got it. We'll be sending out periodic invitations very soon.";
       // signupForm.firstElementChild.firstElementChild. = 'Sweet! We got it. We\'ll let you know when we\'re ready to ship.'
     } else {
       renderFeedback.style = 'color: red';
