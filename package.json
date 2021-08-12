@@ -23,14 +23,13 @@
   },
   "homepage": "https://github.com/tertletech/tertle#readme",
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.2"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "csvtojson": "^2.0.10",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "json2csv": "^5.0.6",
     "node": "^15.10.0",
     "pg": "^8.5.1",
     "smoothscroll-polyfill": "^0.4.4"
