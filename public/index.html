@@ -1,245 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-15RGG8250F"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-15RGG8250F"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-15RGG8250F');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-15RGG8250F');
     </script>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NCWXM8M');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NCWXM8M');
+    </script>
     <!-- End Google Tag Manager -->
-        
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO  & META -->
     <title>Tertle - Co-founder Matching</title>
-    <meta name="description" content="Get matched with like-minded tech co-founders and hatch a startup, together">
+    <meta
+      name="description"
+      content="Get matched with like-minded tech co-founders and hatch a startup, together"
+    />
 
     <!-- SOCIAL -->
-	<meta property="og:title" content="Tertle - Co-founder Matching">
-    <meta property="og:description" content="Get matched with like-minded tech co-founders and hatch a startup, together">
-    <meta property="og:image" content="http://tertle.io/img/tertle-landing3.png/">
-    <meta property="og:url" content="http://tertle.io/">
-    <meta name="twitter:card" content="summary_large_image">
-    
+    <meta property="og:title" content="Tertle - Co-founder Matching" />
+    <meta
+      property="og:description"
+      content="Get matched with like-minded tech co-founders and hatch a startup, together"
+    />
+    <meta
+      property="og:image"
+      content="http://tertle.io/img/tertle-landing3.png/"
+    />
+    <meta property="og:url" content="http://tertle.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <!-- IMPORTS -->
     <script defer src="./js/main.js" type="module"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swapf" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/ram2xxa.css">
+    <!-- <script src="./js/utils/misc.js"></script> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swapf"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/ram2xxa.css" />
     <link rel="stylesheet" href="./styles/style.css" />
-    
-</head>
-    <div class="modal" style="display: none;">
-        <div class="modal-container">
-            <div id="titlebar">
-                    <h6>Sign-Up</h6>
-                    <button id="close-modal" class="close" style="color: black" title="Close"></button>
+  </head>
+
+  <div class="modal" style="display: none">
+    <div class="modal-container">
+      <div id="titlebar">
+        <h6>Sign-Up</h6>
+        <button
+          id="close-modal"
+          class="close"
+          style="color: black"
+          title="Close"
+        ></button>
+      </div>
+
+      <div class="container">
+        <form id="signup-form">
+          <div class="flex-row header">
+            <p class="info">
+              To help us find you the right match, we need to know a little more
+              about you.
+            </p>
+          </div>
+          <div id="signup-body">
+            <div class="flex-col" style="display: none">
+              <!-- Hiding for now, bugging db submission on autofill -->
+              <div class="flex-item">
+                <input
+                  id="email"
+                  name="email"
+                  class="field disabled valid"
+                  placeholder="joe@domain.com"
+                  type="text"
+                  value=""
+                  tabindex="-1"
+                />
+                <label class="disabled" for="email">Your Email</label>
+              </div>
             </div>
-            
-            <div class="container">
-                <form id="signup-form">                
-                    <div class="flex-row header">
-                        <p class="info">To help us find you the right match, we need to know a little more about you.</p>
-                    </div>
-                <div id="signup-body">
-                    <div class="flex-col" style="display: none;"> <!-- Hiding for now, bugging db submission on autofill -->
-                        <div class="flex-item">
-                            <input id="email" name="email" class="field disabled valid" placeholder="joe@domain.com" type="text" value="" tabindex="-1"/>
-                            <label class='disabled' for="email">Your Email</label>
-                        </div>
-                    </div>
 
-                    <div class="flex-row">
-                        <div class="flex-item">
-                            <input id="first-name" name="first-name" class="field" placeholder="Something3" type="text" value="" />
-                            <label for="first-name">First Name</label>
-                        </div>
-                        <div class="flex-item">
-                            <input id="last-name" name="last-name" class="field" placeholder="Something" type="text" value="" />
-                            <label for="last-name">Last Name</label>
-                        </div>
-                    </div>
+            <div class="flex-row">
+              <div class="flex-item">
+                <input
+                  id="first-name"
+                  name="first-name"
+                  class="field"
+                  placeholder="Something3"
+                  type="text"
+                  value=""
+                />
+                <label for="first-name">First Name</label>
+              </div>
+              <div class="flex-item">
+                <input
+                  id="last-name"
+                  name="last-name"
+                  class="field"
+                  placeholder="Something"
+                  type="text"
+                  value=""
+                />
+                <label for="last-name">Last Name</label>
+              </div>
+            </div>
 
-                    <div class="flex-col">
-                        <div class="flex-item">
-                            <input id="postcode" class="field" type="text" placeholder="Something2" />
-                            <label for="postcode"  method="Postcode" value=""/>Postcode</label>
-                           
-                        </div>
-                </div>
+            <div class="flex-col">
+              <div class="flex-item">
+                <input
+                  id="postcode"
+                  class="field"
+                  type="text"
+                  placeholder="Something2"
+                />
+                <label for="postcode" method="Postcode" value=""
+                  >Postcode</label
+                >
+              </div>
+            </div>
 
-                    <div id="skillset-wrapper" class="flex-col select">
-                        <div class="flex-item select">
-                            <select  id="skillset" class="field dropdown" name="skillset" placeholder="something" value="">
-                                <option value=""></option>
-                                <option value="Software Developer">Software Developer</option>
-                                <option value="Designer">Designer</option>
-                                <option value="User Researcher">User Researcher</option>
-                                <option value="Product Manager">Product Manager</option>
-                                <option value="Other skillset">Other...</option>
-                            </select>
-                            <label for="skillset">I am a...</label>
-                        </div>
-                        <div style="display: none" class="flex-item other">
-                             <input id="skillset-other" class="field inactive" type="text" placeholder="Other" value="" />
-                        </div>
-                        
-                    </div>
+            <div id="skillset-wrapper" class="flex-col select">
+              <div class="flex-item select">
+                <select
+                  id="skillset"
+                  class="field dropdown"
+                  name="skillset"
+                  placeholder="something"
+                  value=""
+                >
+                  <option value=""></option>
+                  <option value="Software Developer">Software Developer</option>
+                  <option value="Designer">Designer</option>
+                  <option value="User Researcher">User Researcher</option>
+                  <option value="Product Manager">Product Manager</option>
+                  <option value="Other skillset">Other...</option>
+                </select>
+                <label for="skillset">I am a...</label>
+              </div>
+              <div style="display: none" class="flex-item other">
+                <input
+                  id="skillset-other"
+                  class="field inactive"
+                  type="text"
+                  placeholder="Other"
+                  value=""
+                />
+              </div>
+            </div>
 
-                    <div id="lookingfor-wrapper" class="flex-col select">
-                        <div class="flex-item select">
-                            <select id="looking-for" class="field dropdown" name="looking-for" value="" />
-                                <option  value=""></option>
-                                <option value="Software Developer">Software Developer</option>
-                                <option value="Designer">Designer</option>
-                                <option value="User Researcher">User Researcher</option>
-                                <option value="Product Manager">Product Manager</option>
-                                <option value="Any skillset">Any skillset</option>
-                                <option value="Undecided">Undecided</option>
-                                <option value="Looking for other">Other...</option>
-                            </select>
-                            <label for="looking-for">Looking for a...</label>
-                        </div>
-                        
-                        <div style="display: none" class="flex-item other two">
-                            <input id="looking-for-other" class="field inactive" type="text" placeholder="Other" value="" />
+            <div id="lookingfor-wrapper" class="flex-col select">
+              <div class="flex-item select">
+                <select
+                  id="looking-for"
+                  class="field dropdown"
+                  name="looking-for"
+                  value=""
+                >
+                  <option value=""></option>
+                  <option value="Software Developer">Software Developer</option>
+                  <option value="Designer">Designer</option>
+                  <option value="User Researcher">User Researcher</option>
+                  <option value="Product Manager">Product Manager</option>
+                  <option value="Any skillset">Any skillset</option>
+                  <option value="Undecided">Undecided</option>
+                  <option value="Looking for other">Other...</option>
+                </select>
+                <label for="looking-for">Looking for a...</label>
+              </div>
 
-                        </div>
-                
-                    </div>
-                    
+              <div style="display: none" class="flex-item other two">
+                <input
+                  id="looking-for-other"
+                  class="field inactive"
+                  type="text"
+                  placeholder="Other"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="flex-col">
+              <div class="flex-item">
+                <input
+                  id="linkedin"
+                  class="field"
+                  type="text"
+                  placeholder="Somethinglol"
+                  value=""
+                />
+                <label for="linkedin">Your LinkedIn Url (optional)</label>
+              </div>
+            </div>
+          </div>
+          <!-- /body container scrollable-->
 
-                    <div class="flex-col">
-                        <div class="flex-item">
-                            <input id="linkedin" class="field" type="text" placeholder="Somethinglol" value="" />
-                            <label for="linkedin">Your LinkedIn Url (optional)<label>
-                        </div>
-                    </div>
-            </div> <!-- /container (scrollable) -->
-                    <div id="modal-footer">
-                        <div  class="validation-feedback" style="opacity: 0;">Please fill in the required fields  marked with ' X '</div>
-                        <button class="btn btn-primary submit" type="submit" method="POST">Submit</button>
-                    </div>
-                </div> <!-- end of form body, (!) fix dom order later -->
-                </form> 
-        </div> <!-- /modal-container -->
-    </div> <!-- /modal -->
+          <div id="modal-footer">
+            <div class="validation-feedback" style="opacity: 0">
+              Please fill in the required fields marked with ' X '
+            </div>
+            <button class="btn btn-primary submit" type="submit" method="POST">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- /body container-->
+    </div>
+    <!-- /modal-container -->
+  </div>
+  <!-- /modal -->
 
-
-
-
-
-<body class="">
+  <body class="">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCWXM8M"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NCWXM8M"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div id="header" class="wrap"> 
-        <header class=  "container">
-            <img id="logo" src="./img/logo3.svg" alt=""Tertle logo " title="Tertle says hi"/>
-                <nav>
-                    <ul>
-                        <li><a class="hello" href="#how-it-works">How It Works</a></li>
-                        <li><a class="hello" href="#faq">FAQ</a></li>
-                        <form style ="display: none;" id="nav-init" class="signup-init">
-                            <div class="sign-up">
-                                <input class="field2" type="email" name="EMAIL" placeholder="Your email.." value="" required />
-                                <button type="submit" class="btn btn-primary">JOIN WAITLIST</button>
-                            </div>
-                        </form>
-                        <a id="nav-btn" class="btn btn-secondary" href="#">Join Waitlist</a>
-                    </ul>
-                </nav>
-        </header>
+    <div id="header" class="wrap">
+      <header class="container">
+        <img id="logo" src="./img/logo3.svg" alt=""Tertle logo " title="Tertle
+        says hi"/>
+        <nav>
+          <ul>
+            <li><a class="hello" href="#how-it-works">How It Works</a></li>
+            <li><a class="hello" href="#faq">FAQ</a></li>
+            <form style="display: none" id="nav-init" class="signup-init">
+              <div class="sign-up">
+                <input
+                  class="field2"
+                  type="email"
+                  name="EMAIL"
+                  placeholder="Your email.."
+                  value=""
+                  required
+                />
+                <button type="submit" class="btn btn-primary">
+                  JOIN WAITLIST
+                </button>
+              </div>
+            </form>
+            <a id="nav-btn" class="btn btn-secondary" href="#">Join Waitlist</a>
+          </ul>
+        </nav>
+      </header>
     </div>
     <main>
-        <div class="wrap">
-            <div id="hero" class="container">
-                <div class="flex flex-1">
-										<img class="hero-img" src="./img/match-puzzle.svg" alt="Find a co-founder" title="Find a co-founder" />
-										
-										<h1>Co-founder matching</h1>
-                    <!-- <h1 class="mb">Co-founder<br /> matching <img src="./img/emoji/rocket.png" style="width: 0.8em; vertical-align: bottom; padding-bottom: 0.15em;""  alt="Rocket emoji" title="Whooooosh rocket" /></h1> -->
-										<h4>1:1 intros to like-minded innovators<img src="./img/emoji/rocket.png" class="emoji" style="vertical-align: bottom; padding-bottom: 0.3em;" alt="Startup rocket emoji" title="Whoooosh goes the startup rocket" / ></h4>
+      <div class="wrap">
+        <div id="hero" class="container">
+          <div class="flex flex-1">
+            <img
+              class="hero-img"
+              src="./img/match-puzzle.svg"
+              alt="Find a co-founder"
+              title="Find a co-founder"
+            />
 
+            <h1>Co-founder matching</h1>
+            <!-- <h1 class="mb">Co-founder<br /> matching <img src="./img/emoji/rocket.png" style="width: 0.8em; vertical-align: bottom; padding-bottom: 0.15em;""  alt="Rocket emoji" title="Whooooosh rocket" /></h1> -->
+            <h4>
+              1:1 intros to like-minded innovators<img
+              src="./img/emoji/rocket.png" class="emoji" style="vertical-align:
+              bottom; padding-bottom: 0.3em;" alt="Startup rocket emoji"
+              title="Whoooosh goes the startup rocket" / >
+            </h4>
 
-                    <form class="signup-init">
-                        <div class="sign-up">
-                            <input class="field2" type="email" name="EMAIL" placeholder="Your email.." value="" required />
-                            <button type="submit" class="btn btn-primary">JOIN WAITLIST</button>
-                        </div>
-                    </form>
-                </div>        
-            </div>
+            <form class="signup-init">
+              <div class="sign-up">
+                <input
+                  class="field2"
+                  type="email"
+                  name="EMAIL"
+                  placeholder="Your email.."
+                  value=""
+                  required
+                />
+                <button type="submit" class="btn btn-primary">
+                  JOIN WAITLIST
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
 
-        <div id="how-it-works" class="wrap">
-            <div class="container">
-                <div class="flex flex-0">
-                    <h2>How it works</h3>
-                </div>
-                
-                <div class="flex flex-1">
-                    <h3>1. Create your profile</h3>
-                    <p>Tell Tertle a little bit more about you and what you’re looking for in a co-founder.</p>
-                </div>
-                
-                <div class="flex flex-2">
-                    <h3>2. Vetted matching</h3>
-                    <p>Tertle will  match you up based on things you both care about - like your skillsets, location, values and interests.</p>
-                </div>
-                <div class="flex flex-3">
-                    <h3>3. Connect and chat</h3>
-                    <p>Receive weekly 1:1 video chat calendar invitations at a time that suits you.</p>
-                </div>
-            </div>
-        </div>
-        <div id="faq" class="wrap">
-            <div class="container">
-                <div class="flex flex-0">
-                    <h2>FAQ</h2>
-                </div>
-                <div class="flex flex-1">
-                    <h3>Why was Tertle started?</h3>
-                    <p>
-                        We, like you, are startup fanatics. Finding the right co-founders is one of the most important decisions you’ll ever make in pursuit of a successful venture.
+      <div id="how-it-works" class="wrap">
+        <div class="container">
+          <div class="flex flex-0">
+            <h2>How it works</h2>
+          </div>
 
-                        We think there’s nothing currently out there that really hits the mark in helping like-minded co-founders easily connect—and so, Tertle hatched.
-                    </p>
-                </div>
-                <div class="flex">
-                    <h3>How much does it cost?</h3>
-                    <p>It's FREE for all our beta users, forever!</p>
-                </div>
-                <div class="flex">
-                    <h3>Where did you learn how to spell?</h3>
-                    <p>Spellchecker bugged out when we came up with the name (and 'turtle.io' was taken).</p>
-                </div>
-                <div class="flex">
-                    <h3>Can I ask you some more questions?</h3>
-                    <p>You can contact us via email <a href="mailto:&#121;&#111;&#117;&#114;&#102;&#114;&#105;&#101;&#110;&#100;&#115;&#064;&#116;&#101;&#114;&#116;&#108;&#101;&#046;&#105;&#111;" target="_blank">here</a>. Ask us anything!</p>
-                </div>
-            </div>
+          <div class="flex flex-1">
+            <h3>1. Create your profile</h3>
+            <p>
+              Tell Tertle a little bit more about you and what you’re looking
+              for in a co-founder.
+            </p>
+          </div>
+
+          <div class="flex flex-2">
+            <h3>2. Vetted matching</h3>
+            <p>
+              Tertle will match you up based on things you both care about -
+              like your skillsets, location, values and interests.
+            </p>
+          </div>
+          <div class="flex flex-3">
+            <h3>3. Connect and chat</h3>
+            <p>
+              Receive weekly 1:1 video chat calendar invitations at a time that
+              suits you.
+            </p>
+          </div>
         </div>
+      </div>
+      <div id="faq" class="wrap">
+        <div class="container">
+          <div class="flex flex-0">
+            <h2>FAQ</h2>
+          </div>
+          <div class="flex flex-1">
+            <h3>Why was Tertle started?</h3>
+            <p>
+              We, like you, are startup fanatics. Finding the right co-founders
+              is one of the most important decisions you’ll ever make in pursuit
+              of a successful venture. We think there’s nothing currently out
+              there that really hits the mark in helping like-minded co-founders
+              easily connect—and so, Tertle hatched.
+            </p>
+          </div>
+          <div class="flex">
+            <h3>How much does it cost?</h3>
+            <p>It's FREE for all our beta users, forever!</p>
+          </div>
+          <div class="flex">
+            <h3>Where did you learn how to spell?</h3>
+            <p>
+              Spellchecker bugged out when we came up with the name (and
+              'turtle.io' was taken).
+            </p>
+          </div>
+          <div class="flex">
+            <h3>Can I ask you some more questions?</h3>
+            <p>
+              You can contact us via email
+              <a
+                href="mailto:&#121;&#111;&#117;&#114;&#102;&#114;&#105;&#101;&#110;&#100;&#115;&#064;&#116;&#101;&#114;&#116;&#108;&#101;&#046;&#105;&#111;"
+                target="_blank"
+                >here</a
+              >. Ask us anything!
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
     <div id="footer" class="wrap">
-        <footer class="container">
-            <div class="flex flex-1">
-                © Tertle 2020 <img src="./img/heart.svg">
-            </div>
-        </footer>
+      <footer class="container">
+        <div class="flex flex-1">
+          © Tertle 2020 <img src="./img/heart.svg" />
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
+<!-- <script>
+  includeHTML();
+</script> -->
