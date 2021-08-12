@@ -11,6 +11,11 @@ const csv2Json = require('csvtojson');
 const json2Csv = require('json2csv').parse;
 */
 
+if (process.env.NODE_ENV === 'dev') {
+  const morgan = require('morgan');
+  app.use(morgan('dev')); // --req logger
+}
+
 // IMPORTS
 const { forceHttpsIfProd } = require('./middleware/forceHttps');
 
