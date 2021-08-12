@@ -2,4 +2,4 @@
 .env
 .DS_Store
 .style.css.map
-
+package-lock.json
