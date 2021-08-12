@@ -47,9 +47,9 @@ const checkExists = async (table, colVal, rowVal) => {
 
 // ROUTES
 app.post('/email-submit', async (req, res) => {
-  const { email } = req.body;
-
   try {
+    const { email } = req.body;
+
     const doesExist = await checkExists('website_signups', 'email', email);
     if (doesExist) res.status(409).send(email);
     else {
@@ -65,17 +65,17 @@ app.post('/email-submit', async (req, res) => {
 });
 
 app.post('/signup-submit', async (req, res) => {
-  const {
-    email,
-    firstName,
-    lastName,
-    postcode,
-    skillset,
-    lookingFor,
-    linkedin,
-  } = req.body;
-
   try {
+    const {
+      email,
+      firstName,
+      lastName,
+      postcode,
+      skillset,
+      lookingFor,
+      linkedin,
+    } = req.body;
+
     const newForm = await pool.query(
       `
             UPDATE website_signups
