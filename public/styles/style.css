@@ -510,6 +510,10 @@ p.info {
   margin: 0 auto;
 }
 
+.mainlol {
+  background: red !important;
+}
+
 #header.wrap {
   position: fixed;
   z-index: 9999;
@@ -671,10 +675,15 @@ p.info {
   padding-top: 10px;
 }
 
+#footer {
+  position: relative;
+}
+
 #footer .container {
   -ms-flex-line-pack: start;
       align-content: flex-start;
   border-top: 1px solid #eeeeee;
+  margin-top: 6em;
   padding: 3em 0;
 }
 
@@ -682,8 +691,42 @@ p.info {
   margin-left: 3px;
 }
 
+#footer::after {
+  content: '';
+  background: url("../img/tertle-rocket.gif") no-repeat top -4em right 0;
+  position: absolute;
+  z-index: 999999;
+  background-size: 18em;
+  top: 0;
+  overflow: visible !important;
+  right: 0;
+  height: 35em;
+  width: 35em;
+}
+
 main {
   padding-top: 2em;
+}
+
+.four-oh-four {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -2em;
+  padding: 0 1em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45em;
+  background-image: url("../img/tertle-rocket.gif");
+  background-size: 40em;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  overflow: hidden;
 }
 
 .mb {
@@ -700,7 +743,7 @@ main {
   #header {
     padding: 0 1.5em;
   }
-  #header nav li {
+  #header nav .desktop {
     display: none;
   }
   .container {

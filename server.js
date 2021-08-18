@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const pool = require('./config');
+const path = require('path');
 // const { resolveSoa } = require('dns');
 /*
-const path = require('path);
 const process = require('process');
 const fs = require('fs');
 const csv2Json = require('csvtojson');
@@ -34,6 +34,9 @@ app.use('*', forceHttpsIfProd);
 app.use(cors()); // --cross communication between db and backend
 app.use(express.json()); // --parses req.body to json
 app.use(express.static('public')); // --serves up public front-end as static pages
+app.use('*', (req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'public/fourohfour.html'));
+});
 
 const checkExists = async (table, colVal, rowVal) => {
   const doesExist = await pool.query(`

@@ -1,9 +1,9 @@
 @import './_base.scss';
 @import './_forms.scss';
 
-* {
-  //  outline: 1px solid red;
-}
+// * {
+//    outline: 1px solid red;
+// }
 
 // Frame init
 .wrap {
@@ -16,6 +16,9 @@
   padding: 6em 0; // padding top/bottom of all
   max-width: 1150px;
   margin: 0 auto;
+}
+.mainlol {
+  background: red !important;
 }
 
 // Header
@@ -164,20 +167,53 @@
   //     position: absolute;
   //   }
 }
+#footer {
+  position: relative;
+}
 
 #footer .container {
   align-content: flex-start;
   border-top: 1px solid $color-grey1;
+  margin-top: 6em;
   padding: 3em 0;
   img {
     margin-left: 3px;
   }
 }
+
+#footer::after {
+  content: '';
+  background: url('../img/tertle-rocket.gif') no-repeat top -4em right 0;
+  position: absolute;
+  z-index: 999999;
+  background-size: 18em;
+  top: 0;
+  overflow: visible !important;
+  right: 0;
+  height: 35em;
+  width: 35em;
+}
+
 main {
   padding-top: 2em;
+}
+
+.four-oh-four {
+  display: flex;
+  margin-top: -2em;
+  padding: 0 1em;
+  flex-direction: row-reverse;
+  justify-content: center;
+  height: 45em;
+  background-image: url('../img/tertle-rocket.gif');
+  background-size: 40em;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  overflow: hidden;
 }
 
 .mb {
   display: none;
 }
+
 @import './_responsive.scss';
