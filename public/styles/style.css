@@ -675,33 +675,34 @@ p.info {
   padding-top: 10px;
 }
 
-#footer {
+#footer .woosh {
   position: relative;
+  right: 0;
+  margin: 0 auto;
+  border: none !important;
+  overflow: visible;
+}
+
+.woosh::before {
+  content: '';
+  background: url("../img/tertle-rocket.gif") no-repeat top right;
+  position: absolute;
+  background-size: 14em;
+  top: 0;
+  right: -3em;
+  height: 14em;
+  width: 14em;
 }
 
 #footer .container {
   -ms-flex-line-pack: start;
       align-content: flex-start;
   border-top: 1px solid #eeeeee;
-  margin-top: 6em;
   padding: 3em 0;
 }
 
 #footer .container img {
   margin-left: 3px;
-}
-
-#footer::after {
-  content: '';
-  background: url("../img/tertle-rocket.gif") no-repeat top -4em right 0;
-  position: absolute;
-  z-index: 999999;
-  background-size: 18em;
-  top: 0;
-  overflow: visible !important;
-  right: 0;
-  height: 35em;
-  width: 35em;
 }
 
 main {
@@ -722,6 +723,9 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   height: 45em;
+  background: red;
+  -webkit-transform: rotate 40deg;
+          transform: rotate 40deg;
   background-image: url("../img/tertle-rocket.gif");
   background-size: 40em;
   background-repeat: no-repeat;
