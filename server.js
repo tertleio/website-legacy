@@ -34,9 +34,6 @@ app.use('*', forceHttpsIfProd);
 app.use(cors()); // --cross communication between db and backend
 app.use(express.json()); // --parses req.body to json
 app.use(express.static('public')); // --serves up public front-end as static pages
-app.use('*', (req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'public/fourohfour.html'));
-});
 
 const checkExists = async (table, colVal, rowVal) => {
   const doesExist = await pool.query(`
@@ -80,16 +77,20 @@ app.post('/signup-submit', async (req, res) => {
     } = req.body;
 
     const newForm = await pool.query(
-      `
-            UPDATE website_signups
-            SET first_name = $1, last_name = $2, postcode = $3, skillset = $4, looking_for = $5, linkedin = $6 
-            WHERE email = $7`,
+      `UPDATE website_signups
+      SET first_name = $1, last_name = $2, postcode = $3, skillset = $4, looking_for = $5, linkedin = $6 
+      WHERE email = $7`,
       [firstName, lastName, postcode, skillset, lookingFor, linkedin, email]
     );
   } catch (error) {
     console.error(error.message);
   }
   res.send(req.body);
+});
+
+// if no matching routes, send 404
+app.use('*', (req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'public/fourohfour.html'));
 });
 
 // START SERVER LISTENER
