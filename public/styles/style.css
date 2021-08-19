@@ -628,6 +628,10 @@ p.info {
   width: 450px;
 }
 
+#faq {
+  margin-bottom: -5em;
+}
+
 #how-it-works,
 #faq {
   background: #fff url("../img/bg-shadow.png") no-repeat top center;
@@ -723,9 +727,6 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   height: 45em;
-  background: red;
-  -webkit-transform: rotate 40deg;
-          transform: rotate 40deg;
   background-image: url("../img/tertle-rocket.gif");
   background-size: 40em;
   background-repeat: no-repeat;

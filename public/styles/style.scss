@@ -114,6 +114,9 @@
   }
 }
 
+#faq {
+  margin-bottom: -5em;
+}
 #how-it-works,
 #faq {
   background: #fff url('../img/bg-shadow.png') no-repeat top center;
@@ -132,6 +135,7 @@
   display: flex;
   max-width: 450px;
   flex-wrap: wrap;
+
   .flex {
     margin-bottom: 2em;
   }
@@ -206,8 +210,6 @@ main {
   flex-direction: row-reverse;
   justify-content: center;
   height: 45em;
-  background: red;
-  transform: rotate 40deg;
   background-image: url('../img/tertle-rocket.gif');
   background-size: 40em;
   background-repeat: no-repeat;
