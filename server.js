@@ -88,9 +88,12 @@ app.post('/signup-submit', async (req, res) => {
   res.send(req.body);
 });
 
-// if no matching routes, send 404
-app.use('*', (req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'public/fourohfour.html'));
+// if no matching routes, try req from app.tertle
+app.get('*', (req, res) => {
+  const slug = req.params[0];
+  console.log('this ran');
+  res.redirect(302, `https://app.tertle.io${slug}`);
+  // res.status(404).sendFile(path.join(__dirname, 'public/fourohfour.html'));
 });
 
 // START SERVER LISTENER
