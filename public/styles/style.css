@@ -625,7 +625,7 @@ p.info {
 
 #hero .sign-up {
   margin: 3em auto;
-  width: 450px;
+  width: 475px;
 }
 
 #faq {
@@ -654,7 +654,7 @@ p.info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 450px;
+  max-width: 475px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
