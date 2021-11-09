@@ -63,7 +63,7 @@ table {
 }
 
 :root {
-  font-size: 16px;
+  font-size: 17px;
   scroll-behavior: auto;
   scroll-behavior: smooth;
 }
@@ -105,7 +105,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.3em;
+  font-size: 2.5em;
   color: #000;
 }
 
@@ -681,7 +681,7 @@ p.info {
 
 #footer .woosh {
   position: relative;
-  right: 0;
+  right: -2.5em;
   margin: 0 auto;
   border: none !important;
   overflow: visible;
@@ -699,14 +699,35 @@ p.info {
 }
 
 #footer .container {
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border-top: 1px solid #eeeeee;
   padding: 3em 0;
 }
 
 #footer .container img {
   margin-left: 3px;
+}
+
+#footer .container #footer-nav .copyright {
+  margin-right: 0.75em;
+}
+
+#footer .container #footer-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#footer .container #footer-nav ul li {
+  padding: 0 0.75em;
 }
 
 main {

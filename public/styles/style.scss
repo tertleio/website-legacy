@@ -174,7 +174,7 @@
 
 #footer .woosh {
   position: relative;
-  right: 0;
+  right: -2.5em;
   margin: 0 auto;
   border: none !important;
   overflow: visible;
@@ -191,11 +191,24 @@
 }
 
 #footer .container {
-  align-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
   border-top: 1px solid $color-grey1;
   padding: 3em 0;
   img {
     margin-left: 3px;
+  }
+  #footer-nav {
+    .copyright {
+      margin-right: 0.75em;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        padding: 0 0.75em;
+      }
+    }
   }
 }
 
