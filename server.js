@@ -50,7 +50,8 @@ const checkExists = async (table, colVal, rowVal) => {
 // ROUTES
 app.post('/email-submit', async (req, res) => {
   try {
-    const { email } = req.body;
+    let { email } = req.body;
+    email = email.toLowerCase();
 
     const doesExist = await checkExists('website_signups', 'email', email);
     if (doesExist) res.status(409).send(email);
@@ -78,11 +79,21 @@ app.post('/signup-submit', async (req, res) => {
       linkedin,
     } = req.body;
 
+    const emailLowerCase = email.toLowerCase();
+
     const newForm = await pool.query(
       `UPDATE website_signups
       SET first_name = $1, last_name = $2, postcode = $3, skillset = $4, looking_for = $5, linkedin = $6 
       WHERE email = $7`,
-      [firstName, lastName, postcode, skillset, lookingFor, linkedin, email]
+      [
+        firstName,
+        lastName,
+        postcode,
+        skillset,
+        lookingFor,
+        linkedin,
+        emailLowerCase,
+      ]
     );
   } catch (error) {
     console.error(error.message);
