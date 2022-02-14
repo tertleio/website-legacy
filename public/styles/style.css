@@ -163,17 +163,25 @@ a:hover {
   text-decoration: none !important;
   text-align: center;
   padding: 0.8rem 1.3rem;
+  cursor: pointer;
 }
 
 .btn .btn:hover {
   text-decoration: none;
-  cursor: pointer;
 }
 
 .btn.btn-primary {
   border: 1px solid #60964f;
   color: #ffffff;
   background: #60964f;
+}
+
+.btn.btn-primary.__lg {
+  padding: 1.3em 2.3em;
+  border-radius: 0.4em;
+  font-size: 1.2em;
+  -webkit-box-shadow: #6b9b72 0px 15px 25px -10px;
+          box-shadow: #6b9b72 0px 15px 25px -10px;
 }
 
 .btn.btn-secondary {
@@ -623,9 +631,8 @@ p.info {
   text-align: center;
 }
 
-#hero .sign-up {
-  margin: 3em auto;
-  width: 475px;
+#hero .join {
+  margin-top: 1.75em;
 }
 
 #faq {

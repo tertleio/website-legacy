@@ -108,14 +108,20 @@ a:hover {
   text-decoration: none !important;
   text-align: center;
   padding: 0.8rem 1.3rem;
+  cursor: pointer;
   .btn:hover {
     text-decoration: none;
-    cursor: pointer;
   }
   &.btn-primary {
     border: 1px solid $color-primary;
     color: $color-bg;
     background: $color-primary;
+    &.__lg {
+      padding: 1.3em 2.3em;
+      border-radius: 0.4em;
+      font-size: 1.2em;
+      box-shadow: rgb(107, 155, 114) 0px 15px 25px -10px;
+    }
   }
   &.btn-secondary {
     border: 1px solid $color-primary;
