@@ -3,15 +3,7 @@ const app = express();
 const cors = require('cors');
 const pool = require('./config');
 const path = require('path');
-// const { resolveSoa } = require('dns');
-/*
-const process = require('process');
 const fs = require('fs');
-const csv2Json = require('csvtojson');
-const json2Csv = require('json2csv').parse;
-
-// adding comment to deploy test
-*/
 
 if (process.env.NODE_ENV === 'dev') {
   const morgan = require('morgan');
@@ -23,7 +15,7 @@ const { forceHttpsIfProd } = require('./middleware/forceHttps');
 
 // SERVE DYNAMIC SEO CRAWLING
 app.get('/robots.txt', (req, res) => {
-  if (process.env.HEROKU_ENV === 'staging') {
+  if (process.env.NODE_ENV === 'staging') {
     res.send('User-agent: *\nDisallow: /');
   } else {
     res.send('User-agent: *\nAllow: /');
@@ -35,7 +27,7 @@ app.enable('trust proxy'); // --give express access to req.secure
 app.use('*', forceHttpsIfProd);
 app.use(cors()); // --cross communication between db and backend
 app.use(express.json()); // --parses req.body to json
-app.use(express.static('public')); // --serves up public front-end as static pages
+app.use(express.static('../client/public')); // --serves up public front-end as static pages
 
 const checkExists = async (table, colVal, rowVal) => {
   const doesExist = await pool.query(`
@@ -110,7 +102,7 @@ app.get('*', (req, res) => {
 });
 
 // START SERVER LISTENER
-const PORT = process.env.PORT || 2000;
+const PORT = process.env.PORT || 2022;
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}...`);
 });
