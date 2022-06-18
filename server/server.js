@@ -95,14 +95,12 @@ app.post('/signup-submit', async (req, res) => {
 
 // if no matching routes, try req from app.tertle
 app.get('*', (req, res) => {
-  const slug = req.params[0];
-  console.log('this ran');
   res.redirect(302, `https://app.tertle.io${slug}`);
   // res.status(404).sendFile(path.join(__dirname, 'public/fourohfour.html'));
 });
 
 // START SERVER LISTENER
-const PORT = process.env.PORT || 2022;
+const PORT = process.env.PORT || 7331;
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}...`);
 });
