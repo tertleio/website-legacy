@@ -95,6 +95,7 @@ app.post('/signup-submit', async (req, res) => {
 
 // if no matching routes, try req from app.tertle
 app.get('*', (req, res) => {
+  const slug = req.params[0];
   res.redirect(302, `https://app.tertle.io${slug}`);
   // res.status(404).sendFile(path.join(__dirname, 'public/fourohfour.html'));
 });
