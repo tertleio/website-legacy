@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "cd ./server && node server.js",
-    "dev": "NODE_ENV=dev cd ./server && nodemon server.js"
+    "dev": " cd ./server && NODE_ENV=dev nodemon server.js"
   },
   "repository": {
     "type": "git",

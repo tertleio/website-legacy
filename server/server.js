@@ -27,7 +27,12 @@ app.enable('trust proxy'); // --give express access to req.secure
 app.use('*', forceHttpsIfProd);
 app.use(cors()); // --cross communication between db and backend
 app.use(express.json()); // --parses req.body to json
-app.use(express.static('../client/public')); // --serves up public front-end as static pages
+app.use(express.static(path.join(__dirname, '../public/'))); // --serves up public front-end as static pages
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/', 'index.html'));
+  // res.status(404).sendFile(path.join(__dirname, 'public/fourohfour.html'));
+});
 
 const checkExists = async (table, colVal, rowVal) => {
   const doesExist = await pool.query(`
@@ -94,11 +99,11 @@ app.post('/signup-submit', async (req, res) => {
 });
 
 // if no matching routes, try req from app.tertle
-app.get('*', (req, res) => {
-  const slug = req.params[0];
-  res.redirect(302, `https://app.tertle.io${slug}`);
-  // res.status(404).sendFile(path.join(__dirname, 'public/fourohfour.html'));
-});
+// app.get('*', (req, res) => {
+//   const slug = req.params[0];
+//   res.redirect(302, `https://app.tertle.io${slug}`);
+//   // res.status(404).sendFile(path.join(__dirname, 'public/fourohfour.html'));
+// });
 
 // START SERVER LISTENER
 const PORT = process.env.PORT || 7331;
