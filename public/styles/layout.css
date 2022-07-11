@@ -61,10 +61,14 @@ ul {
 #hero {
   display: flex;
   justify-content: center;
-  background: url('../assets//bg-pattern.png') no-repeat bottom center;
+  background: var(--bg-pattern) no-repeat bottom center;
   padding-bottom: 0;
   padding-block: min(60vh, 10rem);
   align-content: center;
+}
+#hero h1 {
+  /* clamp() */
+  padding-bottom: 0.2em;
 }
   #hero-img { 
     width: 16em;

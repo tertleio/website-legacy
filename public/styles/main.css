@@ -8,6 +8,7 @@
   scroll-behavior: auto;
   scroll-behavior: smooth;
   /* theme */
+  --bg-pattern: url('../assets/bg-pattern.png');
   --color-bg: var(--color-light);
   --color-fg: var(--color-dark);
   --color-dark: #000;
@@ -25,11 +26,17 @@
   --color-green: #94bb77;
   --color-red: #eb3333;
   --color-blue: #3582b9;
+  --img-shadow: url('../assets/bg-shadow.png');
 }
 
 [theme="dark"] {
   --color-bg: var(--color-dark);
   --color-fg: var(--color-light);
+  --color-primary: #00FF00;
+  --color-secondary: var(--color-white);
+  --color-text: #B6B6B6;
+  --bg-pattern: url('../assets/bg-pattern-dark.png');
+  --img-shadow: url('../assets/bg-shadow.png') no-repeat top center 0.8;
 }
 
 /* [theme="light"] {
