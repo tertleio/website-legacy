@@ -1,8 +1,20 @@
+'use strict';
+import nav from './nav.js';
+const doc = document;
 // import { getFormInputs, submitData } from './requests.js';
 // import { checkAllValid } from './validation.js';
-import nav from './nav.js';
 
 nav();
+
+doc.addEventListener('DOMContentLoaded', () => {
+  const toggle = doc.getElementById('toggle');
+
+  toggle.onclick = () => {
+    const currentTheme = doc.documentElement.getAttribute('theme');
+    const updateTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    doc.documentElement.setAttribute('theme', updateTheme);
+  };
+});
 
 // URLS ---------------------------------------------------------
 // const signupSubmitUrl = '/signup-submit';

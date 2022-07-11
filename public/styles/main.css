@@ -1,0 +1,39 @@
+@import '_reset.css';
+
+:root {
+  font-size: 17px;
+  scroll-behavior: auto;
+  scroll-behavior: smooth;
+  --color-bg: var(--color-light)
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-primary: #00bcd4;
+  --color-secondary: #fafafa;
+  --color-tertiary: #fafafa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+[theme="dark"] {
+  --color-bg: #000;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--color-dark);
+  }
+}
