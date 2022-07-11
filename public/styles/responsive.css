@@ -3,15 +3,16 @@
     font-size: 14px;
   }
 
-  // nav
+  /* Nav */
   .wrap {
-    padding: 0 2em; // padding on  all wrappers
+    padding: 0 2em;
   }
   #header {
     padding: 0 1.5em;
-    nav .desktop {
-      display: none;
-    }
+  }
+  
+  #header nav .desktop {
+    display: none;
   }
 
   .container {

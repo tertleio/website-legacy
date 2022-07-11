@@ -1,15 +1,31 @@
 @import '_reset.css';
+@import 'typography.css';
+@import 'pointers.css';
+@import 'layout.css';
+@import 'responsive.css';
 
 :root {
-  font-size: 17px;
+  font-size: 16px;
   scroll-behavior: auto;
   scroll-behavior: smooth;
-  --color-bg: var(--color-light)
+  /* theme */
+  --color-bg: var(--color-light);
+  --color-fg: var(--color-dark);
   --color-dark: #000;
   --color-light: #fff;
-  --color-primary: #00bcd4;
-  --color-secondary: #fafafa;
-  --color-tertiary: #fafafa;
+  /* colors */
+  --color-primary: #60964f;
+  --color-secondary: #000;
+  --color-third: #37352e;
+  --color-text: #707070;
+  --color-bg: #ffffff;
+  --color-white: #ffffff;
+  --color-grey1: #eeeeee;
+  --color-grey2: #b2b2b2;
+  --color-orange: #ff9b00;
+  --color-green: #94bb77;
+  --color-red: #eb3333;
+  --color-blue: #3582b9;
 }
 
 *,
@@ -18,14 +34,13 @@
   box-sizing: border-box;
 }
 
-
-
 [theme="dark"] {
-  --color-bg: #000;
+  --color-bg: var(--color-dark);
+  --color-fg: var(--color-light);
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
+html, body {
+  font-family: proxima-nova, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   color: var(--color-primary);

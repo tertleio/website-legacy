@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light" lang="en">
+<html lang="en" theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,7 +43,7 @@
     <meta property="og:title" content="Tertle - Co-founder Matching" />
     <meta
       property="og:description"
-      content="Get matched with like-minded tech co-founders and hatch a startup." 
+      content="Get matched with like-minded tech co-founders and hatch a startup."
     />
     <meta
       property="og:image"
@@ -53,109 +53,83 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- IMPORTS -->
-    <script defer src="../js/main.js" type="module"></script>
+    <script defer src="./js/main.js" type="module"></script>
     <!-- <script src="./js/utils/misc.js"></script> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swapf"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://use.typekit.net/ram2xxa.css" />
-    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
 
-  <body class="">
+  <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
+    <noscript>
+      <iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-NCWXM8M"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
+      ></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div id="header" class="wrap">
+    <div id="header" class="wrapper">
       <header class="container">
-        <img id="logo" src="./img/logo3.svg" alt=""Tertle logo " title="Tertle
-        says hi"/>
+        <img id="logo" src="./assets/logo3.svg" alt=""Tertle logo "
+        title="Tertle says hi"/>
         <nav>
           <ul>
+            <li class="desktop" id="toggle-theme">Toggle Theme</li>
             <li class="desktop"><a href="#how-it-works">How It Works</a></li>
             <li class="desktop"><a href="#faq">FAQ</a></li>
             <li>
               <a href="https://app.tertle.io">Login</a>
             </li>
-            <!-- <form style="display: none" id="nav-init" class="signup-init">
-              <div class="sign-up">
-                <input
-                  class="field2"
-                  type="email"
-                  name="EMAIL"
-                  placeholder="Your email.."
-                  value=""
-                  required
-                />
-                <a href="https://app.tertle.io/join" >
-                  <button type="submit" class="btn btn-primary">
-                  JOIN WAITLIST
-                </button>
-              </a>
-              </div>
-            </form> -->
-            <a id="nav-btn" class="btn btn-secondary" href="https://app.tertle.io/join">Join Tertle</a>
-            <button id="toggle">Toggle Theme</a>
+            <a
+              id="nav-btn"
+              class="btn btn-secondary"
+              href="https://app.tertle.io/join"
+              >Join Tertle</a
+            >
           </ul>
         </nav>
       </header>
     </div>
+
     <main>
       <div class="wrap">
         <div id="hero" class="container">
           <div class="flex flex-1">
             <img
-              class="hero-img"
-              src="./img/match-puzzle.svg"
+              id="hero-img"
+              src="./assets/match-puzzle.svg"
               alt="Find a co-founder"
               title="Find a co-founder"
             />
 
             <h1>Co-founder matching</h1>
-            <!-- <h1 class="mb">Co-founder<br /> matching <img src="./img/emoji/rocket.png" style="width: 0.8em; vertical-align: bottom; padding-bottom: 0.15em;""  alt="Rocket emoji" title="Whooooosh rocket" /></h1> -->
             <h4>
               1:1 intros to like-minded innovators<img
-              src="./img/emoji/rocket.png" class="emoji" style="vertical-align:
-              bottom; padding-bottom: 0.3em;" alt="Startup rocket emoji"
-              title="Whoooosh goes the startup rocket" / >
+              src="./assets/emoji/rocket.png" class="emoji"
+              style="vertical-align: bottom; padding-bottom: 0.3em;"
+              alt="Startup rocket emoji" title="Whoooosh goes the startup
+              rocket" / >
             </h4>
 
-            <!-- <form class="signup-init">
-              <div class="sign-up">
-                <input
-                  class="field2"
-                  type="email"
-                  name="EMAIL"
-                  placeholder="Your email.."
-                  value=""
-                  required
-                />
-                <button type="submit" class="btn btn-primary">
-                  JOIN WAITLIST
-                </button>
-              </div>
-            </form> -->
             <div class="join">
-            <a href="https://app.tertle.io/join" >
-              <button type="submit" class="btn btn-primary __lg">
-              JOIN TERTLE
-            </button>
-          </a>
-          </div>
+              <a href="https://app.tertle.io/join">
+                <button type="submit" class="btn btn--primary btn__lg">
+                  JOIN TERTLE
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div id="how-it-works" class="wrap">
+      <div id="how-it-works" class="wrapper">
         <div class="container">
           <div class="flex flex-0">
             <h2>How it works</h2>
@@ -185,7 +159,8 @@
           </div>
         </div>
       </div>
-      <div id="faq" class="wrap">
+
+      <div id="faq" class="wrapper">
         <div class="container">
           <div class="flex flex-0">
             <h2>FAQ</h2>
@@ -219,23 +194,25 @@
                 href="mailto:&#121;&#111;&#117;&#114;&#102;&#114;&#105;&#101;&#110;&#100;&#115;&#064;&#116;&#101;&#114;&#116;&#108;&#101;&#046;&#105;&#111;"
                 target="_blank"
                 >here</a
-              >. Ask us anything!
+              >
+              Ask us anything!
             </p>
           </div>
         </div>
       </div>
     </main>
 
-    <div id="footer" class="wrap">
+    <div id="footer" class="wrapper">
       <div class="container woosh"></div>
       <footer class="container footer">
-          <div id="footer-nav">
-            <ul>
-              <span class="copyright">© Tertle 2021 <img src="./img/heart.svg" alt="Love" /></span>
-              <li><a href="https://app.tertle.io/privacy">Privacy</a></li>
-              <li><a href="https://app.tertle.io/login">Login</a></li>
-            </ul>
-          </div>
+        <div id="footer-nav">
+          <ul>
+            <span class="copyright">
+              © Tertle 2021 <img src="./assets/heart.svg" alt="Love" />
+            </span>
+            <li><a href="https://app.tertle.io/privacy">Privacy</a></li>
+            <li><a href="https://app.tertle.io/login">Login</a></li>
+          </ul>
         </div>
       </footer>
     </div>

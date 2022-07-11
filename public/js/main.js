@@ -7,9 +7,9 @@ const doc = document;
 nav();
 
 doc.addEventListener('DOMContentLoaded', () => {
-  const toggle = doc.getElementById('toggle');
+  const toggleTheme = doc.getElementById('toggle-theme');
 
-  toggle.onclick = () => {
+  toggleTheme.onclick = () => {
     const currentTheme = doc.documentElement.getAttribute('theme');
     const updateTheme = currentTheme === 'dark' ? 'light' : 'dark';
     doc.documentElement.setAttribute('theme', updateTheme);
