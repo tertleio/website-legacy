@@ -1,45 +1,41 @@
-h1,
-h2,
-h3,
-h5,
-h6 {
+h1, .h2, h2, .h2, h3, .h3, h5, .h5, h6, .h6 {
   font-family: 'Poppins', sans-serif;
   color: var(--color-secondary);
 }
 
-h1 {
+h1, .h2 {
   font-size: 2em;
   line-height: 1.2em;
 }
 
-h2 {
+h2, .h2 {
   font-size: 1.5em;
   color: var(--color-secondary);
 }
 
-h3 {
+h3, .h3 {
   font-size: 0.85em;
   color: var(--color-fg);
   margin-bottom: 0.6em;
 }
 
-h4 {
+h4, .h4 {
   font-size: 1.2em;
   color: var(--color-text);
   line-height: 1.6em;
 }
 
-h5 {
+h5, .h5 {
   font-size: 0.9em;
   color: var(--color-text)
 }
 
-h6 {
+h6, .h6 {
   font-size: 0.9em;
   color: var(--color-light)
 }
 
-p {
+p, .p {
   font-size: 0.75em;
   line-height: 1.6em;
   color: var(--color-text);

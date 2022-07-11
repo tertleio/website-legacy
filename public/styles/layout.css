@@ -66,10 +66,6 @@ ul {
   padding-block: min(60vh, 10rem);
   align-content: center;
 }
-  #hero h1 {
-    /* clamp()
-    padding-bottom: 0.1em; */
-  }
   #hero-img { 
     width: 16em;
     padding: 1em;
