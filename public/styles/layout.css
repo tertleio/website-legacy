@@ -4,13 +4,16 @@
   
 .wrapper {
   width: 100%;
-  padding: 0 4em; 
+  /* padding: 0 4em;  */
   overflow: hidden;
+
 }
 .container {
+  /* background: blue; */
   padding: 0.8em 0;
   max-width: 1150px;
-  margin: 0 auto;
+  width: min(100% - 3rem, 1150px);
+  margin-inline: auto;
 }
 
 ul {
@@ -57,15 +60,15 @@ ul {
 
 #hero {
   display: flex;
-  height: 80vh;
   justify-content: center;
   background: url('../assets//bg-pattern.png') no-repeat bottom center;
   padding-bottom: 0;
-  padding-top: 2em;
+  padding-block: min(60vh, 10rem);
   align-content: center;
 }
   #hero h1 {
-    padding-bottom: 0.1em;
+    /* clamp()
+    padding-bottom: 0.1em; */
   }
   #hero-img { 
     width: 16em;
@@ -82,11 +85,11 @@ ul {
     width: 19.5em !important;
   }
   #hero .flex {
-    padding: 3em 0 0em 0;
+    /* padding: 3em 0 0em 0; */
     text-align: center;
   }
   #hero .join {
-    margin-top: 1.75em;
+    margin-top: 1.25em;
   }
 
 #how-it-works,
@@ -101,15 +104,19 @@ ul {
   padding: 4em 0;
   max-width: 475px;
   flex-wrap: wrap;
+  text-align: left;
+}
+
+#how-it-works .container h2,
+#faq .container h2 {
+  text-align: center
 }
 
   .flex {
     margin-bottom: 2.5em;
-    text-align: left;
   }
   .flex-0 {
     flex: 1;
-    text-align: center;
   }
   .flex-3 img {
       width: 3em;
@@ -119,7 +126,7 @@ ul {
 
 #footer .woosh {
   position: relative;
-  right: -2.5em;
+  right: -2em;
   margin: 0 auto;
   border: none !important;
   overflow: visible;
@@ -130,7 +137,7 @@ ul {
   background: url('../assets//tertle-rocket.gif') no-repeat top right;
   position: absolute;
   background-size: 10em;
-  top: 0;
+  top: -1em;
   right: -1em;
   height: 10em;
   width: 10em;
@@ -140,7 +147,7 @@ ul {
   display: flex;
   justify-content: flex-start;
   border-top: 1px solid var(--color-grey1);
-  padding: 2em 0;
+  padding: 1.5em 0;
 }
  #footer img {
     margin-left: 3px;

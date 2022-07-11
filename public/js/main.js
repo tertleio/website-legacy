@@ -7,10 +7,11 @@ const doc = document;
 nav();
 
 doc.addEventListener('DOMContentLoaded', () => {
-  const toggleTheme = doc.getElementById('toggle-theme');
+  const toggle = doc.getElementById('toggle-theme');
 
-  toggleTheme.onclick = () => {
+  toggle.onclick = () => {
     const currentTheme = doc.documentElement.getAttribute('theme');
+    console.log(currentTheme);
     const updateTheme = currentTheme === 'dark' ? 'light' : 'dark';
     doc.documentElement.setAttribute('theme', updateTheme);
   };

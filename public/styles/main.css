@@ -5,7 +5,6 @@
 @import 'responsive.css';
 
 :root {
-  font-size: 16px;
   scroll-behavior: auto;
   scroll-behavior: smooth;
   /* theme */
@@ -28,16 +27,15 @@
   --color-blue: #3582b9;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 [theme="dark"] {
   --color-bg: var(--color-dark);
   --color-fg: var(--color-light);
 }
+
+/* [theme="light"] {
+  --color-bg: var(--color-light);
+  --color-fg: var(--color-dark);
+} */
 
 html, body {
   font-family: proxima-nova, sans-serif;
@@ -49,8 +47,8 @@ html, body {
   background-color: var(--color-bg);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: var(--color-dark);
   }
-}
+} */
