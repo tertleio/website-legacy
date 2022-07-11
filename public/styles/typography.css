@@ -18,9 +18,9 @@ h2 {
 }
 
 h3 {
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: var(--color-fg);
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
 }
 
 h4 {
@@ -40,7 +40,8 @@ h6 {
 }
 
 p {
-  font-size: 0.8em;
+  font-size: 0.75em;
+  line-height: 1.6em;
   color: var(--color-text);
 }
 

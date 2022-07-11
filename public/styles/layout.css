@@ -26,7 +26,7 @@ ul {
     width: 5.5em;
   }
 
-  header {
+  #header header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,17 +36,21 @@ ul {
     display: inline-flex;
     align-items: center;
     color: var(--color-text);
-  } #header li {
-    padding: 0.3em 1.3em;
   } 
-  #header ul a,
+    #header li {
+      padding: 0.3em 1.3em;
+    } 
+
+    #header ul a,
     #header ul a:visited {
-      color: var(--color-text);
+        color: var(--color-text);
+        text-decoration: none;
+    }
+
+    #header ul a:hover {
       text-decoration: none;
-  } #header ul a:hover {
-    text-decoration: none;
-    color: var(--color-fg)
-  }
+      color: var(--color-fg)
+    }
 
 
 
@@ -60,9 +64,9 @@ ul {
   padding-top: 2em;
   align-content: center;
 }
-#hero h1 {
-  padding-bottom: 0.1em;
-}
+  #hero h1 {
+    padding-bottom: 0.1em;
+  }
   #hero-img { 
     width: 16em;
     padding: 1em;
@@ -94,13 +98,13 @@ ul {
 #how-it-works .container,
 #faq .container {
   display: flex;
-  padding: 5em 0;
+  padding: 4em 0;
   max-width: 475px;
   flex-wrap: wrap;
 }
 
   .flex {
-    margin-bottom: 2em;
+    margin-bottom: 2.5em;
     text-align: left;
   }
   .flex-0 {
@@ -162,3 +166,5 @@ ul {
   background-position: bottom;
   overflow: hidden;
 }
+
+.copyright { margin-right: 1em;}

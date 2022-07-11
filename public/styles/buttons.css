@@ -15,26 +15,26 @@ a:hover {
   font-size: 0.88rem;
   text-decoration: none !important;
   text-align: center;
-  padding: 0.8rem 1.6rem;
+  padding: 0.9rem 1.6rem;
   cursor: pointer;
 } .btn:hover {
     text-decoration: none;
 }
 
-.btn--primary {
+.btn.btn--primary {
     border: 1px solid var(--color-primary);
     color: var(--color-bg);
     background: var(--color-primary);
-  } .btn__lg {
-    padding: 1em 2em;
-    border-radius: 0.4em;
-    font-size: 0.8em;
-    box-shadow: rgb(107, 155, 114) 0px 15px 25px -10px;
   } 
-  
-.btn.btn-secondary {
+.btn.btn--secondary {
   border: 1px solid var(--color-primary);
-  /* border: 1px solid var(--color-grey2); */
   color: var(--color-primary);
   background: none;
+}
+
+.btn.btn__lg {
+  padding: 1.2em 2em;
+  border-radius: 0.4em;
+  font-size: 0.8em;
+  /* box-shadow: rgb(107, 155, 114) 0px 15px 25px -10px; */
 }

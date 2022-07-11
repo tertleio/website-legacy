@@ -1,6 +1,6 @@
 @import '_reset.css';
 @import 'typography.css';
-@import 'pointers.css';
+@import 'buttons.css';
 @import 'layout.css';
 @import 'responsive.css';
 
@@ -41,9 +41,11 @@
 
 html, body {
   font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
-  color: var(--color-primary);
+  color: var(--color-text);
   background-color: var(--color-bg);
 }
 
