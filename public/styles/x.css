@@ -22,7 +22,12 @@ ul {
   background: var(--color-bg);
 }
   #logo {
+    display: flex;
     width: 5.5em;
+  }
+
+  .logo-emblem {
+    margin-right: 0.4em;
   }
 
   #header header {
@@ -49,6 +54,10 @@ ul {
     #header a:hover {
       text-decoration: none;
       color: var(--color-fg)
+    }
+
+    #nav-btn {
+      margin-left: 0.5em;
     }
 
 
@@ -93,15 +102,27 @@ ul {
   margin-top: 2em;
   background: url('../assets/terminal.svg') no-repeat center top;
   background-size: 100%;
-  width: 45rem;
+  width: clamp(100%, 100vw, 45rem);
   height: 100%;
-  padding: 2em 4em;
+  padding: 4rem 2rem;
 }
 
+#hero.wrapper {
+  background: url('../assets/bg-pattern-dark.svg') no-repeat center bottom;
+  /* background-size: 100%; */
+}
+
+#hero.wrapper::before {
+  background: url('../assets/rabbit.png') no-repeat center bottom;
+  position: absolute;
+  bottom: 0;
+  width: 10em;
+  height: 10em;
+}
 
 #hero .signup {
   display: flex;
-  margin-top: 1.5em;
+  margin: 2.5em;
   justify-content: space-around;
   padding: 0.2em;
   border-radius: 0.2em;
@@ -117,7 +138,7 @@ ul {
   font-family: 'Metrophobic', sans-serif;
   font-family: 'Ubuntu Mono', monospace;
   margin: 0 auto;
-  width: 23ch;
+  width: 23.2ch;
 }
 
 .typer p {
@@ -127,8 +148,8 @@ ul {
   margin: 0 auto;
   letter-spacing: .15em;
   animation: 
-  typing 3s steps(40, end),
-  blink-caret 1.5s step-end infinite;
+  typing 2s steps(40, end),
+  blink-caret 2s step-end infinite;
   color: var(--color-primary);
   font-size: 1.1rem;
   /* color: #C1FFC1; */
