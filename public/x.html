@@ -26,34 +26,42 @@
   <body>
     <div id="header" class="wrapper">
       <header class="container">
-        <div id="logo">
-          <img
-            class="logo-emblem"
-            src="./assets/logo-emblem.svg"
-            alt="Tertle logo"
-            title="Tertle says hi"
-          />
-          <img
-            class="logo-letters"
-            src="./assets/logo-letters.svg"
-            alt="Tertle letters"
-            title="Tertle"
-          />
+        <div class="header__logo">
+          <div class="logo">
+            <img
+              class="logo-emblem"
+              src="./assets/logo-emblem.svg"
+              alt="Tertle logo"
+              title="Tertle says hi"
+            />
+            <img
+              class="logo-letters"
+              src="./assets/logo-letters.svg"
+              alt="Tertle letters"
+              title="Tertle"
+            />
+          </div>
         </div>
-        <nav>
+
+        <nav class="header__nav">
           <ul>
-            <li class="desktop" id="toggle-theme">Toggle</li>
-            <li class="desktop"><a href="#how-it-works">Overview</a></li>
-            <li class="desktop"><a href="#faq">For Hirers</a></li>
-            <button
-              id="nav-btn"
-              class="btn btn--secondary"
-              href="https://app.tertle.io/join"
-            >
-              Join Waitlist
-            </button>
+            <li class="dt active" id="toggle-theme">
+              <a href="#">For Devs</a>
+            </li>
+            <li class="dt"><a href="#">For Hirers</a></li>
+            <li class="dt"><a href="#">For Founders</a></li>
           </ul>
         </nav>
+
+        <div class="header__cta">
+          <button
+            id="nav-cta"
+            class="btn btn--secondary"
+            href="https://app.tertle.io/join"
+          >
+            Join Waitlist
+          </button>
+        </div>
       </header>
     </div>
 
