@@ -113,6 +113,37 @@ ul {
   margin-left: 0.5em;
 }
 
+.typer {
+  font-family: 'Metrophobic', sans-serif;
+  font-family: 'Ubuntu Mono', monospace;
+  margin: 0 auto;
+  width: 23ch;
+}
+
+.typer p {
+  overflow: hidden; 
+  border-right: 1px solid; 
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+  typing 3s steps(40, end),
+  blink-caret 1.5s step-end infinite;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  /* color: #C1FFC1; */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--color-primary); }
+}
+
 #hero input {
   padding: 1.25em;
   background-color: #242424;
