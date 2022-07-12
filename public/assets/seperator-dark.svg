@@ -1,16 +1,21 @@
-<svg width="1196" height="2" viewBox="0 0 1196 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1107" height="179" viewBox="0 0 1107 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.08" d="M1107 1.00018C1107 99.3067 859.19 179 553.5 179C247.81 179 0 99.3067 0 1.00018C39 1 231.31 1 537 1C842.69 1 1034 1.00018 1107 1.00018Z" fill="url(#paint0_radial_1995_2145)"/>
 <g opacity="0.35">
-<mask id="mask0_1995_2140" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1196" height="2">
-<line x1="-1.31134e-07" y1="1.25" x2="1196" y2="1.24979" stroke="#2C2C2C" stroke-width="1.5"/>
+<mask id="mask0_1995_2145" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="94" y="0" width="884" height="1">
+<line x1="94.5" y1="0.5" x2="977.5" y2="0.500077" stroke="white" stroke-linecap="round"/>
 </mask>
-<g mask="url(#mask0_1995_2140)">
-<ellipse cx="609.172" cy="14.3483" rx="558.604" ry="95.8446" fill="url(#paint0_radial_1995_2140)"/>
+<g mask="url(#mask0_1995_2145)">
+<ellipse cx="528.5" cy="2.5" rx="390.5" ry="11.4999" fill="url(#paint1_radial_1995_2145)"/>
 </g>
 </g>
 <defs>
-<radialGradient id="paint0_radial_1995_2140" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(609.172 14.3483) rotate(90) scale(95.8446 558.604)">
+<radialGradient id="paint0_radial_1995_2145" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(553.5 1.00002) rotate(90) scale(178 553.5)">
+<stop stop-color="#D9D9D9" stop-opacity="0.7"/>
+<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_radial_1995_2145" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(528.5 2.5) rotate(90) scale(11.4999 390.5)">
 <stop stop-color="#D9D9D9"/>
-<stop offset="0.6875" stop-color="#D9D9D9" stop-opacity="0.505208"/>
+<stop offset="0.604167" stop-color="#D9D9D9" stop-opacity="0.505208"/>
 <stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
 </radialGradient>
 </defs>
