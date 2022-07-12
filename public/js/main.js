@@ -7,13 +7,15 @@ const doc = document;
 nav();
 
 doc.addEventListener('DOMContentLoaded', () => {
-  const toggle = doc.getElementById('toggle-theme');
+  const chosenTheme = localStorage.getItem('theme');
+  if (chosenTheme) doc.documentElement.setAttribute('theme', chosenTheme);
 
+  const toggle = doc.getElementById('toggle-theme');
   toggle.onclick = () => {
     const currentTheme = doc.documentElement.getAttribute('theme');
-    console.log(currentTheme);
     const updateTheme = currentTheme === 'dark' ? 'light' : 'dark';
     doc.documentElement.setAttribute('theme', updateTheme);
+    localStorage.setItem('theme', updateTheme);
   };
 });
 

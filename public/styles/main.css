@@ -1,7 +1,6 @@
 @import '_reset.css';
 @import 'typography.css';
 @import 'buttons.css';
-@import 'layout.css';
 @import 'responsive.css';
 
 :root {
@@ -26,7 +25,6 @@
   --color-green: #94bb77;
   --color-red: #eb3333;
   --color-blue: #3582b9;
-  --img-shadow: url('../assets/bg-shadow.png');
 }
 
 [theme="dark"] {
@@ -35,8 +33,8 @@
   --color-primary: #00FF00;
   --color-secondary: var(--color-white);
   --color-text: #B6B6B6;
-  --bg-pattern: url('../assets/bg-pattern-dark.png');
-  --img-shadow: url('../assets/bg-shadow.png') no-repeat top center 0.8;
+  --bg-pattern: url('../assets/bg-pattern-dark.svg');
+  --img-shadow: url('../assets/bg-shadow.png') no-repeat top center;
 }
 
 /* [theme="light"] {

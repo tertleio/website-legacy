@@ -1,0 +1,124 @@
+.wrapper {
+  width: 100%;
+  /* padding: 0 4em;  */
+  overflow: hidden;
+
+}
+.container {
+  /* background: blue; */
+  padding: 0.8em 0;
+  max-width: 1150px;
+  width: min(100% - 3rem, 1150px);
+  margin-inline: auto;
+}
+
+ul {
+  font-size: 0.7em;
+}
+
+#header.wrapper {
+  position: fixed;
+  z-index: 9999;
+  background: var(--color-bg);
+}
+  #logo {
+    width: 5.5em;
+  }
+
+  #header header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #header ul {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-text);
+  } 
+    #header li {
+      padding: 0.3em 1.3em;
+    } 
+
+    #header a,
+    #header a:visited {
+        color: var(--color-text);
+        text-decoration: none;
+    }
+
+    #header a:hover {
+      text-decoration: none;
+      color: var(--color-fg)
+    }
+
+
+#hero.wrapper {
+  width: 100%;
+}
+
+.hero-flex-x {
+  display: flex;
+  justify-content: center;
+  /* background: red;  */
+  height: 100vh;
+}
+
+.hero-flex-y {
+  /* display: flex;
+  justify-content: center; */
+  margin-top: 5em;
+  /* background: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.hero-content img {
+  max-width: 10em;
+}
+
+.hero-header {
+  margin: 0 auto;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em; */
+}
+
+.hero-block {
+  margin-top: 2em;
+  background: url('../assets/terminal.svg') no-repeat center top;
+  background-size: 100%;
+  width: 45rem;
+  height: 100%;
+  padding: 2em 4em;
+}
+
+
+#hero .signup {
+  display: flex;
+  margin-top: 1.5em;
+  justify-content: space-around;
+  padding: 0.2em;
+  border-radius: 0.2em;
+  background-color: #242424;
+}
+
+.signup button {
+  width: 15em;
+  margin-left: 0.5em;
+}
+
+#hero input {
+  padding: 1.25em;
+  background-color: #242424;
+  color: white;
+  width: 100%;
+  font-size: 0.6em;
+  border: 0;
+  border-radius: 0.3em;
+}
