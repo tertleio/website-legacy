@@ -23,6 +23,8 @@ body::after {
   margin-inline: auto;
 }
 
+
+
 ul {
   font-size: 0.7em;
 }
@@ -30,6 +32,7 @@ ul {
 
 #header.wrapper {
   position: fixed;
+  padding: 0;
   width: 100%;
   overflow: hidden;
   z-index: 999;
@@ -83,7 +86,7 @@ ul {
 
 #hero.wrapper {
   width: 100%;
-  background: radial-gradient(20em at center, #060606, #000);
+  /* background: radial-gradient(15em at center, #373737, #000) no-repeat; */
   padding-top: 5em;
   padding-bottom: 10em;
 }
@@ -110,7 +113,7 @@ ul {
   background: url('../assets/terminal.svg') no-repeat center top;
   background-size: 100%;
   width: clamp(100%, 100vw, 45rem);
-  height: 15em;
+  width: 28em;
   padding: 2.5rem 2rem;
 }
 
@@ -167,4 +170,23 @@ ul {
   font-size: 0.6em;
   border: 0;
   border-radius: 0.3em;
+}
+
+.features.container, .faqs.container {
+  display: flex;
+  padding: 5em 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../assets/bg-pattern-dark.svg') no-repeat center top;
+  background-size: clamp(80%, 90vw, 70rem);
+}
+
+.features h2, .faqs h2 {
+  margin-bottom: 1em;
+}
+
+.features__feature, .faqs__faq {
+  width: 20em;
+  padding: 1em 1em;
 }
