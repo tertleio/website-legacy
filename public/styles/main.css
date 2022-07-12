@@ -16,7 +16,7 @@
   --color-primary: #60964f;
   --color-secondary: #000;
   --color-third: #37352e;
-  --color-text: #707070;
+  --color-text: #707070;;
   --color-bg: #ffffff;
   --color-white: #ffffff;
   --color-grey1: #eeeeee;
@@ -32,7 +32,7 @@
   --color-fg: var(--color-light);
   --color-primary: #00FF00;
   --color-secondary: var(--color-white);
-  --color-text: #B6B6B6;
+  --color-text: #7B7B7B;
   --bg-pattern: url('../assets/bg-pattern-dark.svg');
   --img-shadow: url('../assets/bg-shadow.png') no-repeat top center;
 }
