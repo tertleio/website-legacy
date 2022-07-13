@@ -2,6 +2,11 @@
   :root {
     font-size: 16px;
   }
+
+  /* .burger {
+    display: block !important;
+  } */
+
 }
 
 @media screen and (max-width: 700px) {
@@ -13,8 +18,22 @@
     display: none !important;
   }
 
+  .switch-wrapper {
+    display: none !important;
+  }
 
+  .burger {
+    margin-top: 0.2em;
+  }
+  .burger-line {
+    width: 1.8rem;
+    margin: 0.25em;
+    border-radius: 2rem;
+    height: 0.2rem;
+    background: var(--color-primary);
+  }
 
+  .logo-emblem {  margin-right: 0.4rem !important; }
 }
 
 @media screen and (max-width: 350px) {
