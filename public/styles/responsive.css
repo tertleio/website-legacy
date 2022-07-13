@@ -19,7 +19,8 @@
   }
 
   .switch-wrapper {
-    display: none !important;
+    /* display: none !important; */
+    margin-left: 1.5rem !important;
   }
 
   .burger {
@@ -30,10 +31,8 @@
     margin: 0.25em;
     border-radius: 2rem;
     height: 0.2rem;
-    background: var(--color-primary);
+    background: var(--color-fg);
   }
-
-  .logo-emblem {  margin-right: 0.4rem !important; }
 }
 
 @media screen and (max-width: 350px) {
