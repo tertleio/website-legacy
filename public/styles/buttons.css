@@ -8,7 +8,6 @@ a:hover {
 }
 
 .btn {
-  width: 100%;
   border-radius: 0.25rem;
   /* transition: all 0.5s; */
   text-transform: uppercase;
@@ -16,8 +15,10 @@ a:hover {
   font-size: 0.88rem;
   text-decoration: none !important;
   text-align: center;
-  padding-left: min(1.5rem, 10%); 
-  padding-right: min(1.5rem, 10%);
+  /* padding-left: min(1rem, 5%); 
+  padding-right: min(1rem, 5%); */
+  padding-left: 1.25em;
+  padding-right: 1.25em;
   padding-top: 0.9em;
   padding-bottom: 0.9em;
   cursor: pointer;
