@@ -5,8 +5,8 @@ const navCta = document.getElementById('nav-cta');
 const overlay = document.getElementById('overlay');
 
 doc.addEventListener('DOMContentLoaded', () => {
-  // const chosenTheme = localStorage.getItem('theme');
-  // if (chosenTheme) doc.documentElement.setAttribute('theme', chosenTheme);
+  const chosenTheme = localStorage.getItem('theme');
+  if (chosenTheme) doc.documentElement.setAttribute('theme', chosenTheme);
 
   const toggle = doc.getElementById('toggle-theme');
   console.log(toggle);
