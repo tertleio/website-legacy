@@ -9,67 +9,16 @@
     font-size: 14px;
   }
 
-.mb {
-  display: none;
-}
-
-
-#header nav .desktop {
-  display: none;
-}
-
-.container {
-  overflow: hidden;
-}
-
-
-#hero {
-  height: inherit;
-  flex-wrap: wrap;
-  background-size: 40em;
-}
-  #hero .container {
-    overflow: hidden;
-    padding-bottom: 0;
+  .dt {
+    display: none !important;
   }
-  #hero h4 {
-    margin-top: 1.3em;
-  }
-  #hero .sign-up {
-    max-width: 100%;
-    margin-bottom: 0;
-  }
-  #hero .hero-img {
-    width: 5em;
-  }
-  #hero .flex {
-    max-width: 100%;
-    padding-top: 8%;
-  }
-  #hero .flex-2 {
-    margin-left: 0;
-  }
-  #hero .hero-img {
-    margin-bottom: 1.7em;
-  }
+
+
+
 }
 
-
-#how-it-works,
-#faq {
-  background-size: 200%;
-}
-#how-it-works h2, #faq h2 {
-  text-align: left;
-}
-
-
-#modal-footer {
-  padding: 1em 0 1em 0;
-}
-
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
   :root {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
