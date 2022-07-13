@@ -79,9 +79,9 @@
 } */
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(1.34rem);
-  -ms-transform: translateX(1.34rem);
-  transform: translateX(1.34rem);
+  -webkit-transform: translateX(1.29rem);
+  -ms-transform: translateX(1.29rem);
+  transform: translateX(1.29rem);
 }
 
 /* Rounded sliders */
@@ -139,19 +139,19 @@ ul {
 
     .header__nav ul {
       display: flex;
-      color: var(--color-text);
+      color: var(--color-grey4);
       gap: 2em;
     } 
 
     .header__nav a,
     .heaver__nav a:visited {
         padding: 0.5em 0.5em;
-        color: var(--color-text);
+        color: var(--color-grey4);
         text-decoration: none;
     }
 
     .header__nav li.active a { 
-      color:var(--color-white)
+      color: var(--color-fg);
     }
 
     .header__nav a:hover {
@@ -205,9 +205,8 @@ ul {
   width: 19em;
   justify-content: space-around;
   padding: 0.25em;
-  border-radius: 0.3em;
-  /* background-color: #242424; */
-  background-color: #181818;
+  border-radius: 0.25em;
+  background-color: var(--color-highlight);
 }
 
 .signup button {
@@ -217,7 +216,7 @@ ul {
 #hero input {
   padding: 1em;
   background-color: inherit;
-  color: white;
+  color: var(--color-fg);
   margin-right: 0.5em;
   font-size: 0.6em;
   flex: 2;
@@ -257,7 +256,7 @@ ul {
 }
 
 #features.wrapper, #faqs.wrapper {
-  background: url('../assets/seperator-dark.svg') no-repeat center top;
+  background: var(--separator) no-repeat center top;
   background-size: clamp(23em, 90vw, 80rem);
 }
 

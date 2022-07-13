@@ -1,9 +1,9 @@
-a:link,
+a, a:link,
 a:visited {
-  color: var(--color-blue);
+  color: var(--color-link);
 }
 a:hover {
-  transition: all 0.5s;
+  transition: all 0.25s;
   text-decoration: underline;
 }
 
