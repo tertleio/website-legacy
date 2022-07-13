@@ -1,23 +1,38 @@
 'use strict';
-import nav from './nav.js';
 const doc = document;
-// import { getFormInputs, submitData } from './requests.js';
-// import { checkAllValid } from './validation.js';
 
-nav();
+const navCta = document.getElementById('nav-cta');
+const overlay = document.getElementById('overlay');
+const toggle = doc.getElementById('toggle-theme');
 
-doc.addEventListener('DOMContentLoaded', () => {
-  const chosenTheme = localStorage.getItem('theme');
-  if (chosenTheme) doc.documentElement.setAttribute('theme', chosenTheme);
+function theme() {
+  doc.addEventListener('DOMContentLoaded', () => {
+    const chosenTheme = localStorage.getItem('theme');
+    if (chosenTheme) doc.documentElement.setAttribute('theme', chosenTheme);
 
-  const toggle = doc.getElementById('toggle-theme');
-  toggle.onclick = () => {
-    const currentTheme = doc.documentElement.getAttribute('theme');
-    const updateTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    doc.documentElement.setAttribute('theme', updateTheme);
-    localStorage.setItem('theme', updateTheme);
-  };
-});
+    toggle.onclick = () => {
+      const currentTheme = doc.documentElement.getAttribute('theme');
+      const updateTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      doc.documentElement.setAttribute('theme', updateTheme);
+      localStorage.setItem('theme', updateTheme);
+    };
+  });
+}
+
+function onScroll() {
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 500) {
+      navCta.className = 'btn btn--primary';
+      overlay.style['animation-name'] = 'hide-rabbit';
+    } else {
+      navCta.className = 'btn btn--secondary';
+      overlay.style['animation-name'] = 'show-rabbit';
+    }
+  });
+}
+
+theme();
+onScroll();
 
 // URLS ---------------------------------------------------------
 // const signupSubmitUrl = '/signup-submit';

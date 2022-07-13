@@ -3,16 +3,31 @@
   overflow: hidden;
 
 } */
-html {
-  position: relative;
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0; 
+  pointer-events: none;
+  animation-name: show-rabbit;
+  animation-duration: 0.5s;
+  background: url('../assets/rabbit.png') no-repeat;
+  background-position: center bottom -1.4em;
+  animation-fill-mode: forwards;
 }
 
-html::after {
-    position: absolute;
-    background: url('../assets/rabbit.png') no-repeat center bottom;
-    width: 100%;
-    height: 100vh;
-    content: '';
+@keyframes show-rabbit {
+  0% { background-position: center bottom -5em; }
+  100% { background-position: center bottom -1.4em; }
+}
+
+@keyframes hide-rabbit {
+  0% { background-position: center bottom -1.4em; }
+  100% { background-position: center bottom -5em; }
 }
 
 .container {
@@ -92,7 +107,7 @@ ul {
   padding-top: 5em;
   padding-bottom: 10em;
   background: url('../assets/bg-pattern-dark.svg') no-repeat center bottom;
-  background-size: clamp(45rem, 80vw, 80rem);
+  background-size: clamp(45rem, 60vw, 80rem);
 }
 
 .hero__flex-x {
@@ -127,7 +142,8 @@ ul {
   justify-content: space-around;
   padding: 0.25em;
   border-radius: 0.3em;
-  background-color: #242424;
+  /* background-color: #242424; */
+  background-color: #181818;
 }
 
 .signup button {
@@ -136,7 +152,7 @@ ul {
 
 #hero input {
   padding: 1em;
-  background-color: #242424;
+  background-color: inherit;
   color: white;
   margin-right: 0.5em;
   font-size: 0.6em;
@@ -183,7 +199,7 @@ ul {
 
 #features.wrapper { background-position-y: -2px;}
 
-.features.container, .faqs.container {
+.content.container {
   display: flex;
   padding: 4.5em 0;
   flex-direction: column;
@@ -191,7 +207,7 @@ ul {
   align-items: center;
 }
 
-.features h2, .faqs h2 {
+.content h2, #hero h2 {
   margin-bottom: 1em;
 }
 
