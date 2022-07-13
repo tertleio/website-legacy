@@ -3,21 +3,20 @@ const doc = document;
 
 const navCta = document.getElementById('nav-cta');
 const overlay = document.getElementById('overlay');
-const toggle = doc.getElementById('toggle-theme');
 
-function theme() {
-  doc.addEventListener('DOMContentLoaded', () => {
-    const chosenTheme = localStorage.getItem('theme');
-    if (chosenTheme) doc.documentElement.setAttribute('theme', chosenTheme);
+doc.addEventListener('DOMContentLoaded', () => {
+  // const chosenTheme = localStorage.getItem('theme');
+  // if (chosenTheme) doc.documentElement.setAttribute('theme', chosenTheme);
 
-    toggle.onclick = () => {
-      const currentTheme = doc.documentElement.getAttribute('theme');
-      const updateTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      doc.documentElement.setAttribute('theme', updateTheme);
-      localStorage.setItem('theme', updateTheme);
-    };
-  });
-}
+  const toggle = doc.getElementById('toggle-theme');
+  console.log(toggle);
+  toggle.onclick = () => {
+    const currentTheme = doc.documentElement.getAttribute('theme');
+    const updateTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    doc.documentElement.setAttribute('theme', updateTheme);
+    localStorage.setItem('theme', updateTheme);
+  };
+});
 
 function onScroll() {
   window.addEventListener('scroll', () => {
@@ -31,7 +30,6 @@ function onScroll() {
   });
 }
 
-theme();
 onScroll();
 
 // URLS ---------------------------------------------------------

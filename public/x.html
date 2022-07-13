@@ -27,7 +27,7 @@
     <div id="overlay"></div>
     <div id="header" class="wrapper">
       <header class="container">
-        <div class="header__logo">
+        <div class="header__start">
           <div class="logo">
             <img
               class="logo-emblem"
@@ -35,20 +35,22 @@
               alt="Tertle logo"
               title="Tertle says hi"
             />
-            <img
+            <!-- <img
               class="logo-letters"
               src="./assets/logo-letters.svg"
               alt="Tertle letters"
               title="Tertle"
-            />
+            /> -->
+            <label class="switch">
+              <input id="toggle-theme" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
           </div>
         </div>
 
         <nav class="header__nav">
           <ul>
-            <li class="dt" id="toggle-theme">
-              <a href="#">For Hirers</a>
-            </li>
+            <li class="dt"><a href="#">For Hirers</a></li>
             <li class="dt"><a href="#">For Founders</a></li>
             <li class="dt"><a href="#">For Investors</a></li>
           </ul>
