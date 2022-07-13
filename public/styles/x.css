@@ -133,7 +133,10 @@ ul {
   padding: 0.4em;
 }
 
-  .logo { display: flex; }
+  .logo { 
+    display: flex; 
+    width: 6em;
+  }
   .logo-emblem {  margin-right: 0.5em; }
   .logo-emblem > *  { fill: var(--color-fg); }
 
@@ -158,6 +161,13 @@ ul {
       text-decoration: none;
       color: var(--color-fg)
     }
+
+    .header__cta {
+      display: flex;
+      justify-content: flex-end;
+      width: 6em;
+    }
+  
 
 
 #hero.wrapper {
@@ -184,6 +194,7 @@ ul {
   /* background: url('../assets/terminal.svg') no-repeat center top; */
 }
 
+
 .signup {
   width: 90vw;
   display: flex;
@@ -203,7 +214,7 @@ ul {
   font-size: 0.6em;
   flex: 2;
   border: 0;
-  border-radius: 0.3em;
+  border-radius: 0.2em;
 }
 
 .signup button {
@@ -214,7 +225,7 @@ ul {
   font-family: 'Metrophobic', sans-serif;
   font-family: 'Ubuntu Mono', monospace;
   margin: 0 auto;
-  width: 23.2ch;
+  width: 22ch;
 }
 
 .typer p {
@@ -222,7 +233,7 @@ ul {
   border-right: 1px solid; 
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto;
-  letter-spacing: .15em; 
+  letter-spacing: .1em; 
   animation: 
     typing 2.5s steps(40, end),
     blink-caret 2s step-end infinite;
