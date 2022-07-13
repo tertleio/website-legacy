@@ -253,7 +253,7 @@
 <path d="M669.206 0.000549316L669.206 298" stroke="white" stroke-width="0.836508" stroke-miterlimit="10"/>
 </mask>
 <g mask="url(#mask0_2004_2231)">
-<ellipse cx="557.846" cy="297.5" rx="557.5" ry="205.5" fill="url(#paint125_radial_2004_2231)"/>
+<ellipse cx="557.846" cy="297.5" rx="557.5" ry="205.5" fill="url(#paint125_radial_2004_2231)" fill-opacity="0.8"/>
 </g>
 </g>
 <defs>
