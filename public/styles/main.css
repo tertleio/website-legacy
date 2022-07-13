@@ -13,7 +13,7 @@
   --color-link: var(--color-primary-dark);
   --color-text: var(--color-grey3);
   --separator: url('../assets/separator-dark.svg');
-  --bg-pattern: url('../assets/bg-pattern.png');
+  --bg-pattern: url('../assets/bg-pattern-dark.svg');
   --color-highlight: var(--color-grey5);
   /* colors */
   --color-primary-light: #60964f;
@@ -39,7 +39,7 @@
   --color-text: #7B7B7B;
   --color-link: var(--color-blue);
   --color-highlight: #E5E5E5;
-  --bg-pattern: url('../assets/bg-pattern-dark.svg');
+  --bg-pattern: url('../assets/bg-pattern-light.svg');
   --img-shadow: url('../assets/bg-shadow.png') no-repeat top center;
   transition: all ease-in 5s;
 }
