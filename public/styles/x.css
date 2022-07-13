@@ -16,18 +16,19 @@
   animation-name: show-rabbit;
   animation-duration: 0.25s;
   background: url('../assets/rabbit.png') no-repeat;
+  background-size: 8rem;
   background-position: center bottom -1.4em;
   animation-fill-mode: forwards;
 }
 
 @keyframes show-rabbit {
-  0% { background-position: center bottom -5em; }
+  0% { background-position: center bottom -7em; }
   100% { background-position: center bottom -1.4em; }
 }
 
 @keyframes hide-rabbit {
   0% { background-position: center bottom -1.4em; }
-  100% { background-position: center bottom -5em; }
+  100% { background-position: center bottom -7em; }
 }
 
 
@@ -78,6 +79,10 @@
   box-shadow: 0 0 1px white;
 } */
 
+.wrapper {
+  padding: 1rem;
+}
+
 input:checked + .slider:before {
   -webkit-transform: translateX(1.29rem);
   -ms-transform: translateX(1.29rem);
@@ -96,7 +101,7 @@ input:checked + .slider:before {
 .container {
   padding: 0.7em 0;
   max-width: 1150px;
-  width: min(100% - 3rem, 1150px);
+  /* width: min(100% - 3rem, 1150px); */
   margin-inline: auto;
 }
 
@@ -174,47 +179,34 @@ ul {
   background-size: clamp(45rem, 80vw, 70rem);
 }
 
-.hero__flex-x {
-  display: flex;
-  justify-content: center;
-  /* background: red;  */
-}
 
-.hero__flex-y {
-  /* display: flex;
-  justify-content: center; */
-  /* background: blue; */
+.hero__header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1em;
+  text-align: center;
+  margin: 0 2.5em;
 }
 
-.hero__block {
-  margin-top: 2em;
+.hero__body {
+  margin-top: 3em;
   /* background: url('../assets/terminal.svg') no-repeat center top; */
-  /* width: 100%; */
-  /* background: red; */
-  padding: 2.5rem 2rem;
 }
 
 .signup {
+  width: 90vw;
   display: flex;
+  max-width: 16.5em;
   margin-top: 1em;
-  width: 19em;
-  justify-content: space-around;
   padding: 0.25em;
   border-radius: 0.25em;
   background-color: var(--color-highlight);
 }
 
-.signup button {
-  width: 12em;
-}
-
-#hero input {
+.signup .email {
   padding: 1em;
+  width: 100%;
   background-color: inherit;
   color: var(--color-fg);
   margin-right: 0.5em;
@@ -222,6 +214,10 @@ ul {
   flex: 2;
   border: 0;
   border-radius: 0.3em;
+}
+
+.signup button {
+  max-width: 10rem;
 }
 
 .typer {
@@ -258,23 +254,23 @@ ul {
 #faqs.wrapper {
   background: var(--separator) no-repeat center top;
   background-size: clamp(23em, 90vw, 80rem);
+  margin: 0 auto;
 }
 
-#features.wrapper { background-position-y: -2px;}
-
 .content.container {
-  display: flex;
   padding: 3.5em 0;
+  max-width: 18em;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.content h2, #hero h2 {
-  margin-bottom: 1em;
+.content-chunk {
+  display: block;
+  width: 100%;
+  padding-bottom: 2em;
 }
 
-.features__feature, .faqs__faq {
-  width: 20em;
-  padding: 1em 1em;
+.content h2, #hero h2 {
+  margin-bottom: 2em;
 }

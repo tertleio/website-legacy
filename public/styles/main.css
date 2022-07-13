@@ -41,7 +41,6 @@
   --color-highlight: #E5E5E5;
   --bg-pattern: url('../assets/bg-pattern-light.svg');
   --img-shadow: url('../assets/bg-shadow.png') no-repeat top center;
-  transition: all ease-in 5s;
 }
 
 

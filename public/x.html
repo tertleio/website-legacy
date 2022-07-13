@@ -64,10 +64,10 @@
         </div>
 
         <nav class="header__nav">
-          <ul>
-            <li class="dt"><a href="#">For Hirers</a></li>
-            <li class="dt"><a href="#">For Founders</a></li>
-            <li class="dt"><a href="#">For Investors</a></li>
+          <ul class="mb">
+            <li><a href="#">For Hirers</a></li>
+            <li><a href="#">For Founders</a></li>
+            <li><a href="#">For Investors</a></li>
           </ul>
         </nav>
 
@@ -85,36 +85,34 @@
 
     <section id="hero" class="wrapper">
       <div class="hero container">
-        <div class="hero__flex-x">
-          <div class="hero__flex-y">
-            <h1>Contract Matching</h1>
-            <p class="fs-md" style="margin-top: 0.2em">
-              Developer jobs, without all the fluff 🚀
-            </p>
+        <div class="hero__header">
+          <h1>Contract Matching</h1>
+          <p class="fs-md" style="margin-top: 0.6rem">
+            Developer jobs, without all the fluff 🚀
+          </p>
 
-            <div class="hero__block">
-              <div class="typer"><p>Follow the white rabbit...</p></div>
+          <div class="hero__body">
+            <div class="typer"><p>Follow the white rabbit...</p></div>
 
-              <form>
-                <div class="signup">
-                  <input
-                    class="field2"
-                    type="email"
-                    name="EMAIL"
-                    placeholder="Your email..."
-                    value=""
-                    required
-                  />
-                  <button
-                    type="submit"
-                    class="btn btn--primary"
-                    href="https://app.tertle.io/join"
-                  >
-                    Join Waitlist
-                  </button>
-                </div>
-              </form>
-            </div>
+            <form>
+              <div class="signup">
+                <input
+                  class="email"
+                  type="email"
+                  name="EMAIL"
+                  placeholder="Your email..."
+                  value=""
+                  required
+                />
+                <button
+                  type="submit"
+                  class="btn btn--primary"
+                  href="https://app.tertle.io/join"
+                >
+                  Join Waitlist
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -125,7 +123,7 @@
         <div class="content container">
           <h2>Features</h2>
 
-          <div class="features__feature">
+          <div class="content-chunk">
             <h3>Beautiful profiles</h3>
             <p>
               Comes with all your favourite integrations, auto updates when you
@@ -133,7 +131,7 @@
             </p>
           </div>
 
-          <div class="features__feature">
+          <div class="content-chunk">
             <h3>Vetted matching</h3>
             <p>
               Cut out all the noise to and let our algorithm find you the best
@@ -141,7 +139,7 @@
             </p>
           </div>
 
-          <div class="features__feature">
+          <div class="content-chunk">
             <h3>Automated interviews & Comms</h3>
             <p>
               We’ll handle all the boring fluff - so you can focus on the stuff
@@ -155,12 +153,7 @@
         <div class="content container">
           <h2>FAQ</h2>
 
-          <div class="faqs__faq">
-            <h3>Can I go to space?</h3>
-            <p>Yes you can.</p>
-          </div>
-
-          <div class="faqs__faq">
+          <div class="content-chunk">
             <h3>Vetted matching</h3>
             <p>
               Cut out all the noise to and let our algorithm find you the best
@@ -168,11 +161,19 @@
             </p>
           </div>
 
-          <div class="faqs__faq">
-            <h3>Can I ask you some more quesitons?</h3>
+          <div class="content-chunk">
+            <h3>Vetted matching</h3>
             <p>
-              Yes you can. You can email us
-              <a href="mailto: email@email.com">here</a>.
+              Cut out all the noise to and let our algorithm find you the best
+              roles that suit your needs.
+            </p>
+          </div>
+
+          <div class="content-chunk">
+            <h3>Vetted matching</h3>
+            <p>
+              Yes you can. You can email
+              <a class="p" href="mailto: email@email.com">here</a>.
             </p>
           </div>
         </div>
