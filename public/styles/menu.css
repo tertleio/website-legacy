@@ -16,20 +16,19 @@
   position: relative;
   z-index: 999;
   border-radius: 0.2em;
-  padding: 0.1rem 0.35rem;
+  padding: 0.1rem;
   cursor: pointer;
-} .burger-menu:hover {
-  /* background: var(--color-grey1); */
+} .burger-menu:hover{
+  background: var(--color-grey1);
 } .burger-menu:focus {
   background: red;
 }
 
 .burger-line {
-  width: 1.8rem;
-  margin-top: 0.4rem;
-  margin-bottom: 0.4rem;
+  width: 1.5rem;
+  margin: 0.4rem;
   border-radius: 2rem;
-  height: 0.2rem;
+  height: 0.19rem;
   background: var(--color-nav);
 }
 
@@ -37,13 +36,14 @@
 
 .menu {
   position: absolute;
+  display: none;
   left: -1em;
   margin-top: 0.7em;
   background: var(--color-bg);
   border-radius: 0 0 0.6em 0.6em;
   border-radius: 0.6em;
   /* light */
-  border-top: 3px solid var(--color-fg);
+  border-top: 3px solid var(--color-primary);
   border-right: 1px solid var(--color-highlight); 
   border-bottom: 1px solid var(--color-highlight);
   border-left: 1px solid var(--color-highlight);
@@ -54,9 +54,9 @@
     width: 0;
     height: 0;
     /* light */
-    border-left: 0.7rem solid var(--color-fg);
+    border-left: 0.7rem solid var(--color-primary);
     border-right: 0.7rem solid transparent;
-    border-top: 0.7rem solid var(--color-fg);
+    border-top: 0.7rem solid var(--color-primary);
     border-bottom: 0.7rem solid transparent;
     transform: rotate(45deg);
     left: 2.1rem;

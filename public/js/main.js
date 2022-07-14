@@ -1,6 +1,6 @@
 'use strict';
 const doc = document;
-import nav from './nav.js';
+import menu from './menu.js';
 
 const navCta = doc.getElementById('nav-cta');
 const overlay = doc.getElementById('overlay');
@@ -30,7 +30,7 @@ function onScroll() {
   });
 }
 
-nav();
+menu();
 onScroll();
 
 // URLS ---------------------------------------------------------
