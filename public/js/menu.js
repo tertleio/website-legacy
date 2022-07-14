@@ -18,8 +18,6 @@ function openMenu() {
   if (show) window.addEventListener('click', closeMenu);
 }
 
-function menu() {
-  elBurger.addEventListener('click', openMenu);
-}
+const menu = () => elBurger.addEventListener('click', openMenu);
 
 export default menu;
