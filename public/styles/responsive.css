@@ -3,36 +3,21 @@
     font-size: 16px;
   }
 
-  /* .burger {
-    display: block !important;
+  /* .mb {
+    display: none;
   } */
 
 }
 
 @media screen and (max-width: 700px) {
   :root {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .dt {
     display: none !important;
   }
 
-  .switch-wrapper {
-    /* display: none !important; */
-    margin-left: 1.5rem !important;
-  }
-
-  .burger {
-    margin-top: 0.2em;
-  }
-  .burger-line {
-    width: 1.8rem;
-    margin: 0.25em;
-    border-radius: 2rem;
-    height: 0.2rem;
-    background: var(--color-fg);
-  }
 }
 
 @media screen and (max-width: 350px) {

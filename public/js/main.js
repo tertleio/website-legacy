@@ -1,15 +1,15 @@
 'use strict';
 const doc = document;
+import nav from './nav.js';
 
-const navCta = document.getElementById('nav-cta');
-const overlay = document.getElementById('overlay');
+const navCta = doc.getElementById('nav-cta');
+const overlay = doc.getElementById('overlay');
 
 doc.addEventListener('DOMContentLoaded', () => {
   const chosenTheme = localStorage.getItem('theme');
   if (chosenTheme) doc.documentElement.setAttribute('theme', chosenTheme);
 
   const toggle = doc.getElementById('toggle-theme');
-  console.log(toggle);
   toggle.onclick = () => {
     const currentTheme = doc.documentElement.getAttribute('theme');
     const updateTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -30,6 +30,7 @@ function onScroll() {
   });
 }
 
+nav();
 onScroll();
 
 // URLS ---------------------------------------------------------

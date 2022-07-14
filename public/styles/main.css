@@ -2,6 +2,7 @@
 @import 'typography.css';
 @import 'buttons.css';
 @import 'responsive.css';
+@import 'nav.css';
 
 :root {
   scroll-behavior: auto;
