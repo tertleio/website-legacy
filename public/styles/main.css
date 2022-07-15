@@ -15,6 +15,7 @@
   --color-text: var(--color-grey3);
   --color-nav: var(--color-grey4);
   --separator: url('../assets/separator-dark.svg');
+  --splitter: url('../assets/splitter-dark.svg');
   --bg-pattern: url('../assets/bg-pattern-dark.svg');
   --color-highlight: var(--color-grey5);
   /* colors */
@@ -43,7 +44,8 @@
   --color-link: var(--color-blue);
   --color-highlight: #E5E5E5;
   --bg-pattern: url('../assets/bg-pattern-light.svg');
-  --img-shadow: url('../assets/bg-shadow.png') no-repeat top center;
+  --separator: url('../assets/separator-light.svg');
+  --splitter: url('../assets/splitter-light.svg');
 }
 
 #matrix {
@@ -109,3 +111,63 @@ html, body {
     --color-bg: var(--color-dark);
   }
 } */
+
+/* * {
+  outline: 1px solid red;
+} */
+
+
+#footer .container {
+  background: var(--splitter) no-repeat center top;
+  padding: 2.25em 1em;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+
+#footer .container > * {
+  flex: 1;
+}
+
+#footer .container ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  /* gap: 0.25em; */
+}
+
+#footer h5 {
+  font-size: 1rem;
+  height: 2em;
+  font-weight: 200;
+  color: var(--color-fg);
+  margin: 0;
+  padding: 0;
+}
+#footer a {
+  color: var(--color-nav);
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: var(--color-link);
+}
+
+#footer .logo {
+  flex: 1.225;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#footer .logo img.emblem {
+  width: 1.5em;
+  margin-bottom: 0.2em;
+  margin-right: 0.5em;
+}
+
+#footer .logo img {
+  width: 3em;
+}
