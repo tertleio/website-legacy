@@ -126,13 +126,18 @@ html, body {
 }
 
 
-/* #footer .container > * {
+#footer .container > * {
   flex: 1;
-} */
+}
 
 #footer .container > *:first-child {
-  flex: 0.3;
+  flex: 1.2;
 }
+
+#footer .container > *:last-child {
+  margin-right: auto;
+}
+
 
 #footer .container ul {
   display: flex;
@@ -161,8 +166,8 @@ html, body {
 
 
 #copyright {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   /* color: var(--color-higlight) */
 }
 
