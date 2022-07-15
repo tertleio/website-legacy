@@ -146,7 +146,7 @@ html, body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  /* gap: 0.25em; */
+  gap: 0.1em;
 }
 
 #footer h5 {
@@ -156,6 +156,7 @@ html, body {
   color: var(--color-fg);
   margin: 0;
   padding: 0;
+  margin-bottom: 0.1em;
 }
 #footer a {
   color: var(--color-nav);
@@ -176,12 +177,13 @@ html, body {
 
 
 .footer__chunk .rocket {
-  width: 4.75em;
-  margin-top: -1rem;
-  margin-left: -1.5rem;
+  width: 4em;
+  margin-top: -1.5rem;
+  margin-left: -1.1rem;
 }
 
-#copyright svg > * {
+
+#copyright .logo-letters > * {
   width: 3em;
   fill: var(--color-fg);
   margin-right: 0.5em;
