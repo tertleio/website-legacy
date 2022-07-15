@@ -18,6 +18,7 @@
   --splitter: url('../assets/splitter-dark.svg');
   --bg-pattern: url('../assets/bg-pattern-dark.svg');
   --color-highlight: var(--color-grey5);
+  --logo-letters: url('../assets/logo-letters-dark.svg');
   /* colors */
   --color-primary-light: #60964f;
   --color-primary-dark:  #00FF00;
@@ -46,6 +47,7 @@
   --bg-pattern: url('../assets/bg-pattern-light.svg');
   --separator: url('../assets/separator-light.svg');
   --splitter: url('../assets/splitter-light.svg');
+  --logo-letters: url('../assets/logo-letters-light.svg');
 }
 
 #matrix {
@@ -119,24 +121,24 @@ html, body {
 
 #footer .container {
   background: var(--splitter) no-repeat center top;
-  padding: 2.25em 1em;
+  padding: 2.5em 1em;
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
 
-#footer .container > * {
+/* #footer .container > * {
   flex: 1;
-}
+} */
 
 #footer .container > *:first-child {
-  flex: 1.2;
+  flex: 0.35;
 }
 
-#footer .container > *:last-child {
+/* #footer .container > *:last-child {
   margin-right: auto;
-}
+} */
 
 
 #footer .container ul {
@@ -160,15 +162,15 @@ html, body {
   text-decoration: none;
 }
 
-.footer_chunk a:hover {
+#footer a:hover {
   color: var(--color-link);
 }
 
 
 #copyright {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* color: var(--color-higlight) */
+  display: flex;
+  flex-direction: column;
+  color: var(--color-higlight)
 }
 
 
@@ -179,7 +181,8 @@ html, body {
   margin-left: -1.5rem;
 }
 
-#copyright .letters {
+#copyright svg > * {
   width: 3em;
+  fill: var(--color-fg);
   margin-right: 0.5em;
 }
