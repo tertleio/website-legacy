@@ -133,7 +133,7 @@ html, body {
 } */
 
 #footer .container > *:first-child {
-  flex: 0.35;
+  flex: 0.2;
 }
 
 /* #footer .container > *:last-child {
@@ -146,7 +146,7 @@ html, body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  gap: 0.1em;
+  /* gap: 0.1em; */
 }
 
 #footer h5 {
@@ -156,7 +156,7 @@ html, body {
   color: var(--color-fg);
   margin: 0;
   padding: 0;
-  margin-bottom: 0.1em;
+  /* margin-bottom: 0.1em; */
 }
 #footer a {
   color: var(--color-nav);
@@ -171,14 +171,15 @@ html, body {
 #copyright {
   display: flex;
   flex-direction: column;
-  color: var(--color-higlight)
+  color: var(--color-higlight);
+  /* background: red; */
 }
 
 
 
 .footer__chunk .rocket {
   width: 4em;
-  margin-top: -1.5rem;
+  margin-top: -1.6rem;
   margin-left: -1.1rem;
 }
 
