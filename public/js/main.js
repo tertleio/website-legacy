@@ -19,9 +19,8 @@ function changeTheme(theme) {
 doc.addEventListener('DOMContentLoaded', () => {
   let currentTheme = doc.documentElement.getAttribute('theme');
   const localTheme = localStorage.getItem('theme');
-  if (currentTheme !== localTheme) {
-    changeTheme(localTheme === 'dark' ? 'dark' : 'light');
-  }
+  if (localTheme) currentTheme = localTheme;
+  changeTheme(currentTheme === 'dark' ? 'dark' : 'light');
 
   toggle.onclick = () => {
     const getTheme = doc.documentElement.getAttribute('theme');
