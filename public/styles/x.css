@@ -108,7 +108,11 @@ ul {
       min-width: 6.5rem;
     }
   
-
+@media screen and (max-width: 700px) {
+  .header__left {
+    min-width: 8em;
+  }
+}
 
 #hero.wrapper {
   width: 100%;
