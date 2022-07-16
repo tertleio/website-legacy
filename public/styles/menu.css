@@ -15,7 +15,7 @@
 .burger-menu {
   position: relative;
   z-index: 999;
-  padding: 0.15rem 0;
+  padding: 0.3rem 0.2rem;
   border-radius: 0.2em;
   cursor: pointer;
 } .burger-menu:hover{
@@ -42,8 +42,7 @@
   background: var(--color-bg);
   border-radius: 0 0 0.6em 0.6em;
   border-radius: 0.6em;
-  /* light */
-  border-top: 3px solid var(--color-primary);
+  border-top: 2px solid var(--color-primary);
   border-right: 1px solid var(--color-highlight); 
   border-bottom: 1px solid var(--color-highlight);
   border-left: 1px solid var(--color-highlight);
@@ -76,7 +75,7 @@
     border-bottom: 1px solid var(--color-highlight);
   }
 
-  .menu a {
+  .header .menu a {
     padding: 0.6rem 1em 0.6rem 2.5em;
     display: flex;
     justify-content: flex-end;
@@ -84,9 +83,8 @@
     padding-bottom: 1rem;
     padding-right: 1rem;
     color: var(--color-nav);
-    color: var(--color-text);
   }
-  .menu a:hover { 
+  .header .menu a:hover { 
     background: var(--color-fg);
     color: var(--color-bg);
     text-decoration: none;

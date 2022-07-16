@@ -26,7 +26,7 @@
   <body>
     <div id="overlay"></div>
     <div id="header" class="wrapper">
-      <header class="container">
+      <header class="header container">
         <div class="header__left">
           <div class="logo">
             <svg
@@ -75,15 +75,20 @@
           </div>
         </div>
 
-        <nav class="header__nav">
+        <nav class="header__mid dt">
           <ul>
-            <li class="dt"><a href="#">For Hirers</a></li>
-            <li class="dt"><a href="#">For Founders</a></li>
-            <li class="dt"><a href="#">For Investors</a></li>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Hatch</a></li>
+            <li><a href="#">Blog</a></li>
           </ul>
         </nav>
 
         <div class="header__right">
+          <nav>
+            <ul>
+              <li><a href="#">For Hirers</a></li>
+            </ul>
+          </nav>
           <button
             id="nav-cta"
             class="btn btn--secondary"
@@ -256,7 +261,7 @@
     </footer>
 
     <div id="matrix" style="display: none">
-      <canvas id="canvas" height="500"></canvas>
+      <canvas id="canvas" height="300"></canvas>
     </div>
   </body>
 </html>
