@@ -155,7 +155,7 @@ html, body {
 
 @media screen and (max-width: 700px) {
   .footer__chunk {
-    /* margin: 0.5em 0; */
+    margin-bottom: 0.25em;
     flex-basis: 44%;
   }
 
@@ -165,8 +165,8 @@ html, body {
   .footer__chunk:nth-child(4) {order: 4}
 
   #footer ul {
-    gap: 0.8em;
-    margin-top: 0.8em;
+    gap: 0.9em;
+    margin-top: 0.9em;
     text-decoration: underline;
     /* text-decoration: underline; */
   }
@@ -176,8 +176,8 @@ html, body {
 #footer h5 {
   font-size: 1.1rem;
   color: var(--color-fg);
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
 }
 
 #footer a {
