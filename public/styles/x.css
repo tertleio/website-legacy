@@ -82,26 +82,20 @@ ul {
   .logo-emblem > *  { fill: var(--color-fg); }
 
   .header__mid  {
+    position: relative;
     max-width: 10em;
     margin-left: 1em;
     margin-right: 1em;
     display: flex;
+    gap: 1.5em;
     justify-content: center;
   }
 
-
-  .header__mid ul, .header__right ul {
-    height: 100%;
-    width: 100%;
-    gap: 2em;
-    display: flex;
-    justify-content: center;
-  }
 
     .header a,
     .header a:visited {
         color: var(--color-nav);
-        /* text-decoration: none; */
+        text-decoration: none;
     }
 
     .header li.active a { 
@@ -110,7 +104,7 @@ ul {
 
     .header a:hover {
       text-decoration: none;
-      color: var(--color-fg);
+      color: var(--color-link);
     }
 
     .header__right {
@@ -120,7 +114,7 @@ ul {
       align-items: center;
       flex: 1;
       width: 5em;
-    }
+    } 
 
   
 @media screen and (max-width: 900px) {
