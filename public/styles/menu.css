@@ -32,23 +32,6 @@
   background: var(--color-nav);
 }
 
-
-.__overview {
-  margin-top: -0.3rem;
-  position: absolute;
-  top: 2rem;
-}
-
-/* ul li:hover > ul,
-ul li:focus-within > ul,
-ul li ul:hover,
-ul li ul:focus {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-} */
-
-
 li.menu-root { position: relative; }
 .menu-root a::after { 
   visibility: hidden;
@@ -68,7 +51,6 @@ ul .menu-root ::before {
   content: '';
   position: absolute;
   width: 100%;
-  padding-right: calc(100% + 2em);
   padding-bottom: 2.9rem;
   display: flex;
   justify-content: center;
@@ -111,8 +93,9 @@ ul li ul:focus {
   position: absolute;
   display: flex;
   visibility: hidden;
-  left: -1em;
+  left: 0;
   top: 3rem;
+  width: 100%;
   background: var(--color-bg);
   border-radius: 0 0 0.6em 0.6em;
   border-radius: 0.6em;
@@ -127,9 +110,8 @@ ul li ul:focus {
     text-align: right;
     gap: 0 !important;
     display: flex;
-    /* width: 100%; */
     font-size: 1.1rem;
-    min-width: 16.25rem;
+    width: 100%;
     flex-direction: column;
     color: var(--color-text);
     margin-top: -2px;
@@ -147,7 +129,7 @@ ul li ul:focus {
     padding-bottom: 1rem;
     padding-right: 1rem;
   }
-  .header .menu a:hover { 
+  .header .menu a:hover, .header .menu a:focus { 
     background: var(--color-link);
     color: var(--color-bg);
     text-decoration: none;

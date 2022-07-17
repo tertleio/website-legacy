@@ -83,11 +83,8 @@ ul {
 
   .header__mid  {
     position: relative;
-    max-width: 10em;
-    margin-left: 1em;
-    margin-right: 1em;
     display: flex;
-    gap: 1.5em;
+    align-items: center;
     justify-content: center;
   }
 
@@ -96,6 +93,7 @@ ul {
     .header a:visited {
         color: var(--color-nav);
         text-decoration: none;
+        padding: 0.5em 1em;
     }
 
     .header li.active a { 
@@ -110,10 +108,8 @@ ul {
     .header__right {
       display: flex;
       justify-content: flex-end;
-      gap: 0.8em;
       align-items: center;
       flex: 1;
-      width: 5em;
     } 
 
   
