@@ -1,27 +1,18 @@
-
-
-/* .user-menu-btn {
-  display: flex;
-  position: relative;
-  align-items: center;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-  padding-left: 0.5em;
-  cursor: pointer;
-  margin-left: 1em;
-} */
-
-
 .burger-menu {
   position: relative;
-  z-index: 999;
-  padding: 0.3rem 0.2rem;
+  /* padding: 0.5rem 1rem; */
   border-radius: 0.2em;
   cursor: pointer;
 } .burger-menu:hover{
   background: var(--color-highlight);
 } .burger-menu:focus {
   background: red;
+}
+
+.menu a span { margin-right: auto; margin-left: 0.25em; }
+
+.burger {
+  padding: 0.5rem 0.5rem;
 }
 
 .burger-line {
@@ -32,7 +23,7 @@
   background: var(--color-nav);
 }
 
-li.menu-root { position: relative; }
+.menu-root { position: relative; }
 .menu-root a::after { 
   visibility: hidden;
   position: absolute;
@@ -44,10 +35,11 @@ li.menu-root { position: relative; }
   left: 35%;
   transform: rotate(45deg);
   bottom: -1.9rem;
+  z-index: 999;
 }
 
 /* hover filler */
-ul .menu-root ::before {
+.menu-root ::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -57,27 +49,14 @@ ul .menu-root ::before {
   height: 100%;
 }
 
-/* pointer graphic */
-/* .menu-root:hover ::after {
-  position: absolute;
-  content: "";
-  border-left: 0.5rem solid var(--color-link);
-  border-right: 0.5rem solid transparent;
-  border-top: 0.5rem solid var(--color-link);
-  border-bottom: 0.5rem solid transparent;
-  left: 35%;
-  transform: rotate(45deg);
-  bottom: -1.9rem;
-} */
+.menu-list:hover > .menu,
+.menu-list:hover > .menu-root a::after { visibility: visible; };
 
-ul.menu-list:hover > .menu,
-ul.menu-list:hover > .menu-root a::after { visibility: visible; };
+.menu-list:focus > .menu,
+.menu-list:focus > .menu-root a::after { visibility: visible }
 
-ul.menu-list:focus > .menu,
-ul.menu-list:focus > .menu-root a::after { visibility: visible }
-
-ul.menu-list:focus-within > .menu,
-ul.menu-list:focus-within > .menu-root a::after { visibility: visible }
+.menu-list:focus-within > .menu,
+.menu-list:focus-within > .menu-root a::after { visibility: visible }
 
 
 /* ul.item:hover > .menu,
@@ -96,6 +75,7 @@ ul li ul:focus {
   left: 0;
   top: 3rem;
   width: 100%;
+  min-width: 11em;
   background: var(--color-bg);
   border-radius: 0 0 0.6em 0.6em;
   border-radius: 0.6em;
@@ -108,7 +88,6 @@ ul li ul:focus {
 
   .menu ul {
     text-align: right;
-    gap: 0 !important;
     display: flex;
     font-size: 1.1rem;
     width: 100%;
@@ -122,12 +101,9 @@ ul li ul:focus {
   }
 
   .header .menu a {
-    padding: 0.6em 1em 0.6em 2.5em;
+    padding: 1em 1em;
     display: flex;
     justify-content: flex-end;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-right: 1rem;
   }
   .header .menu a:hover, .header .menu a:focus { 
     background: var(--color-link);
