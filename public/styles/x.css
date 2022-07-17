@@ -67,14 +67,17 @@ ul {
   justify-content: space-between;
   align-items: center;
   padding: 0.4em;
+  height: 3em;
+  align-items: center;
 }
 
   .header__left {
     display: flex;
-    justify-content: flex-start;
+    position: relative;
     align-items: center;
     flex: 1;
-    gap: 0.5em;
+    height: 1em;
+    gap: 0.4em;
     flex-shrink: 3;
   }
 
@@ -83,8 +86,8 @@ ul {
 
   .header__mid  {
     position: relative;
+    height: 1em;
     display: flex;
-    align-items: center;
     justify-content: center;
   }
 
@@ -94,6 +97,7 @@ ul {
         color: var(--color-nav);
         text-decoration: none;
         padding: 0.5em 1em;
+        height: 100%;
     }
 
     .header li.active a { 
