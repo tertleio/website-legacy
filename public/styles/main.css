@@ -159,10 +159,10 @@ html, body {
     flex-basis: 44%;
   }
 
-  .footer__chunk:nth-child(1) {order: 3}
-  .footer__chunk:nth-child(2) {order: 1}
-  .footer__chunk:nth-child(3) {order: 2}
-  .footer__chunk:nth-child(4) {order: 4}
+  .footer__chunk:nth-child(1) { order: 3 }
+  .footer__chunk:nth-child(2) { order: 1 }
+  .footer__chunk:nth-child(3) { order: 2 }
+  .footer__chunk:nth-child(4) { order: 4 }
 
   #footer ul {
     gap: 0.9em;

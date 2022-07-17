@@ -49,22 +49,9 @@ ul li ul:focus {
 } */
 
 
-.root__item { position: relative}
-
-/* hover filler */
-ul .root__item ::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  padding-right: calc(100% + 2em);
-  padding-bottom: 2.9rem;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-}
-
-/* pointer graphic */
-.root__item:hover ::after {
+li.menu-root { position: relative; }
+.menu-root a::after { 
+  visibility: hidden;
   position: absolute;
   content: "";
   border-left: 0.5rem solid var(--color-link);
@@ -76,9 +63,39 @@ ul .root__item ::before {
   bottom: -1.9rem;
 }
 
-ul.item:hover > .menu { visibility: visible };
-ul.item:focus > .menu { visibility: visible }
-ul.item:focus-within > .menu { visibility: visible }
+/* hover filler */
+ul .menu-root ::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  padding-right: calc(100% + 2em);
+  padding-bottom: 2.9rem;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+/* pointer graphic */
+/* .menu-root:hover ::after {
+  position: absolute;
+  content: "";
+  border-left: 0.5rem solid var(--color-link);
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid var(--color-link);
+  border-bottom: 0.5rem solid transparent;
+  left: 35%;
+  transform: rotate(45deg);
+  bottom: -1.9rem;
+} */
+
+ul.menu-list:hover > .menu,
+ul.menu-list:hover > .menu-root a::after { visibility: visible; };
+
+ul.menu-list:focus > .menu,
+ul.menu-list:focus > .menu-root a::after { visibility: visible }
+
+ul.menu-list:focus-within > .menu,
+ul.menu-list:focus-within > .menu-root a::after { visibility: visible }
 
 
 /* ul.item:hover > .menu,
@@ -89,21 +106,6 @@ ul li ul:focus {
   opacity: 1;
   display: block;
 } */
-
-.menu {
-  position: absolute;
-  display: flex;
-  visibility: hidden;
-  left: -1em;
-  top: 4rem;
-  background: var(--color-bg);
-  border-radius: 0 0 0.6em 0.6em;
-  border-radius: 0.6em;
-  border-top: 3px solid var(--color-link);
-  border-right: 1px solid var(--color-highlight); 
-  border-bottom: 1px solid var(--color-highlight);
-  border-left: 1px solid var(--color-highlight);
-}
 
 .menu {
   position: absolute;
