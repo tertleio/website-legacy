@@ -100,7 +100,7 @@ ul {
       color: var(--color-fg);
     }
 
-    .header a:hover {
+    .header a:hover, .header a:focus {
       text-decoration: none;
       color: var(--color-link);
     }
