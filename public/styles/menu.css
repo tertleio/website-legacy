@@ -1,19 +1,20 @@
 .ico {
-  width: 1.5em;
-  text-align: center;
-  vertical-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 0.3rem;
   cursor: pointer;
 }
 
 .ico svg > * { fill: var(--color-nav); }
 .ico:hover, .ico:focus { background: var(--color-highlight); } 
-.ico :hover, .ico :focus svg > * { fill: var(--color-fg) }
+/* .ico-burger { display: flex; align-items: center; justify-content: center; } */
 
-/* no clue why this won't vertically center without custom padding... */
-.ico-burger { padding-top: 0.03rem; }
-
-.menu-root { position: relative;}
+.menu-root { position: relative; }
 /* arrow */
 .menu-root::after { 
   position: absolute;
@@ -29,7 +30,7 @@ border-top: 0.5rem solid var(--color-link);
   z-index: -99;
 }
 
-.ico .menu-root::after { top: 3.3rem;  }
+.ico.menu-root::after { top: 3.3rem; left: 0.65rem; }
 
 /* hover filler */
 .menu-root::before {
