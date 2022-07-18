@@ -73,6 +73,7 @@ ul {
     position: relative;
     align-items: center;
     flex: 1;
+    gap: 0.5em;
     height: 1em;
     flex-shrink: 3;
   }
