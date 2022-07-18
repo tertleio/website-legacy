@@ -4,16 +4,14 @@
   vertical-align: center;
   border-radius: 0.3rem;
   cursor: pointer;
-} .ico:hover{
-  background: var(--color-highlight);
-} .ico:focus {
-  background: red;
 }
+
+.ico svg > * { fill: var(--color-nav); }
+.ico:hover, .ico:focus { background: var(--color-highlight); } 
+.ico :hover, .ico :focus svg > * { fill: var(--color-fg) }
 
 /* no clue why this won't vertically center without custom padding... */
 .ico-burger { padding-top: 0.03rem; }
-
-.ico svg > * { fill: var(--color-fg); }
 
 .menu-root { position: relative;}
 /* arrow */
