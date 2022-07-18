@@ -127,7 +127,6 @@ html, body {
   max-width: 1150px;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2em;
 }
 
 
@@ -149,12 +148,16 @@ html, body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 0.5em;
-  gap: 0.5em;
+  margin-top: 1rem;
+}
+
+#footer ul a {
+  padding: 0.5rem 1rem;
 }
 
 #footer h5 {
-  font-size: 1.1rem;
+  padding-left: 1rem;
+  font-size: 1rem;
   color: var(--color-fg);
 }
 
@@ -194,6 +197,7 @@ html, body {
   .footer__chunk {
     flex-basis: 40%;
     max-width: 40%;
+    margin-bottom: 2rem;
   }
 
   .footer__chunk:nth-child(1) { order: 3 }
@@ -201,10 +205,10 @@ html, body {
   .footer__chunk:nth-child(3) { order: 2 }
   .footer__chunk:nth-child(4) { order: 4 }
 
-  #footer ul {
-    gap: 1em;
-    margin-top: 1em;
+  #footer ul a {
     text-decoration: underline;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     /* text-decoration: underline; */
   }
 
