@@ -73,6 +73,7 @@ ul {
     position: relative;
     align-items: center;
     flex: 1;
+    gap: 1rem;
     height: 1em;
     flex-shrink: 3;
   }
@@ -115,7 +116,7 @@ ul {
   
 @media screen and (max-width: 900px) {
   .header__left {
-    gap: 0.6em;
+    /* gap: 0.6em; */
     flex: 0;
   }
 }

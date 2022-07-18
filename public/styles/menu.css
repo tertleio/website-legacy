@@ -42,8 +42,8 @@ border-top: 0.5rem solid var(--color-link);
   height: 2rem;
 }
 
-/* .menu-wrapper { position: relative; } */
-/* .menu-root { position: relative; } */
+/* .menu-wrapper { position: relative; }
+.menu-root { position: relative; }
 
 .menu-wrapper:hover .menu,
 .menu-wrapper:hover > .menu-root::after { visibility: visible; z-index: 1; };
@@ -52,7 +52,19 @@ border-top: 0.5rem solid var(--color-link);
 .menu-wrapper:focus > .menu-root::after { visibility: visible; z-index: 1;}
 
 .menu-wrapper:focus-within > .menu,
-.menu-wrapper:focus-within > .menu-root::after { visibility: visible; z-index: 1; }
+.menu-wrapper:focus-within > .menu-root::after { visibility: visible; z-index: 1; } */
+
+
+.menu-wrapper:hover .menu,
+.menu-wrapper:hover > .menu-root::after,
+.menu-wrapper:focus > .menu,
+.menu-wrapper:focus > .menu-root::after,
+.menu-wrapper:focus-within > .menu,
+.menu-wrapper:focus-within > .menu-root::after {
+  visibility: visible; z-index: 1;
+  display: block;
+}
+
 
 
 /* ul.item:hover > .menu,
@@ -66,8 +78,8 @@ ul li ul:focus {
 
 .menu {
   position: absolute;
-  visibility: hidden;
-  display: flex;
+  /* visibility: hidden; */
+  display: none;
   left: 0;
   top: 3.3rem;
   width: 100%;
@@ -150,7 +162,8 @@ ul li ul:focus {
   cursor: pointer;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
+  right: -0.1rem;
   bottom: 0;
   -webkit-transition: .4s;
   transition: .1s;
@@ -170,6 +183,7 @@ ul li ul:focus {
   transition: .1s;
 }
 
+/* burger menu tappable area */
 .slider-cover::after {
   position: absolute;
   width: 19rem;

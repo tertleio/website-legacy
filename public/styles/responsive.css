@@ -1,12 +1,12 @@
 /* desktop */
 @media screen and (min-width: 900px) {
 .tb { display: none; }
+.mb { display: none; }
 }
 
 /* tablet */
 @media screen and (min-width: 700px) {
   :root { font-size: 16px; }
-  .mb { display: none; }
 }
 
 /* mobile */
