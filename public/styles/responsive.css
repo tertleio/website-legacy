@@ -13,7 +13,7 @@
 @media screen and (max-width: 700px) {
   :root { font-size: 13px; }
   .dt { display: none !important; }
-  .wrapper { padding: 0.5rem 0.75rem !important; }
+  #header.wrapper { padding: 0.5rem 0.75rem !important; }
 }
 
 /* mobile mini */

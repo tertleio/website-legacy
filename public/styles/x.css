@@ -122,7 +122,7 @@ ul {
 #hero.wrapper {
   width: 100%;
   /* background: radial-gradient(15em at center, #373737, #000) no-repeat; */
-  padding-top: 5em;
+  padding-top: 4em;
   padding-bottom: 8em;
   background: var(--bg-pattern) no-repeat center bottom;
   background-size: clamp(45rem, 80vw, 70rem);
