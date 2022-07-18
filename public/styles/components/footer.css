@@ -1,6 +1,10 @@
+#footer.wrapper {
+  background: var(--splitter) no-repeat center top;
+  padding: 0 !important;
+}
+
 #footer .container {
   display: flex;
-  background: var(--splitter) no-repeat center top;
   padding: 2.5em 1em;
   display: flex;
   max-width: 1150px;
