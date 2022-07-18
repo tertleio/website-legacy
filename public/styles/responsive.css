@@ -1,19 +1,19 @@
 /* desktop */
 @media screen and (min-width: 900px) {
 .tb { display: none; }
-.mb { display: none; }
 }
 
 /* tablet */
 @media screen and (min-width: 700px) {
   :root { font-size: 16px; }
+  .mb { display: none; }
 }
 
 /* mobile */
 @media screen and (max-width: 700px) {
   :root { font-size: 13px; }
   .dt { display: none !important; }
-  .wrapper { padding: 0.75rem !important; }
+  .wrapper { padding: 0.5rem 0.75rem !important; }
 }
 
 /* mobile mini */
