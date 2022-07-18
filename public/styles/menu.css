@@ -101,7 +101,7 @@ ul li ul:focus {
     display: flex;
     justify-content: flex-end;
   }
-  .header .menu a:hover, .header .menu a:focus { 
+  .header .menu a:hover, .header .menu a:focus, .menu a.fill { 
     background: var(--color-link);
     color: var(--color-bg);
     text-decoration: none;
@@ -124,7 +124,6 @@ ul li ul:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center; */
-  width: 5em;
   border-radius: 4rem;
   background: red;
 }
@@ -137,7 +136,7 @@ ul li ul:focus {
   height: 1.5rem;
 }
 
-/* Hide default HTML checkbox */
+/* hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
@@ -145,6 +144,7 @@ ul li ul:focus {
 }
 
 
+/* slider outline */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -157,6 +157,7 @@ ul li ul:focus {
   border: 0.18rem solid var(--color-nav);
 }
 
+/* slider circle */
 .slider:before {
   position: absolute;
   content: "";
@@ -169,17 +170,17 @@ ul li ul:focus {
   transition: .1s;
 }
 
-/* .slider::after {
+.slider-cover::after {
   position: absolute;
-  width: 100%;
-  height: 5em;
-  background: red;
+  width: 19rem;
+  height: 3.9em;
+  /* border: 1px solid red; */
   content: "";
-  left: 0;
-  background-color: var(--color-fg);
+  left: -1.8rem;
+  bottom: -1.4rem;
   -webkit-transition: .4s;
   transition: .1s;
-} */
+}
 
 /* input:checked + .slider {
   background-color: var(--color-bg)
@@ -189,11 +190,12 @@ ul li ul:focus {
   box-shadow: 0 0 1px white;
 } */
 
-/* Rounded sliders */
+/* rounded outline */
 .slider.round {
   border-radius: 2rem;
 }
 
+/* rounded inner */
 .slider.round:before {
   border-radius: 50%;
 }

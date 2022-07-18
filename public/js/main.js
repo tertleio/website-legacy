@@ -9,8 +9,6 @@ const rocket = doc.querySelector('.rocket');
 const matrix = doc.getElementById('matrix');
 const toggles = doc.querySelectorAll('#toggle-theme');
 
-console.log(toggles);
-
 function changeTheme(theme) {
   rocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
   doc.documentElement.setAttribute('theme', theme);
@@ -30,13 +28,6 @@ doc.addEventListener('DOMContentLoaded', () => {
     };
   });
 });
-
-// onclick = (e) => {
-//   console.log(e.target);
-//   const fromTheme = doc.documentElement.getAttribute('theme');
-//   const toTheme = fromTheme === 'dark' ? 'light' : 'dark';
-//   changeTheme(toTheme);
-// };
 
 function onScroll() {
   window.addEventListener('scroll', () => {
