@@ -17,7 +17,7 @@
   --color-text: var(--color-grey3);
   --color-nav: var(--color-grey4);
   --separator: url('../assets/separator-dark.svg');
-  --splitter: url('../assets/splitter-dark.svg');
+  --splitter: url('../../assets/splitter-dark.svg');
   --bg-pattern: url('../assets/bg-pattern-dark.svg');
   --color-highlight: var(--color-grey5);
   --logo-letters: url('../assets/logo-letters-dark.svg');
@@ -48,7 +48,7 @@
   --color-highlight: #E5E5E5;
   --bg-pattern: url('../assets/bg-pattern-light.svg');
   --separator: url('../assets/separator-light.svg');
-  --splitter: url('../assets/splitter-light.svg');
+  --splitter: url('../../assets/splitter-light.svg');
   --logo-letters: url('../assets/logo-letters-light.svg');
 }
 
