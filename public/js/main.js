@@ -7,7 +7,9 @@ const navCta = doc.getElementById('nav-cta');
 const overlay = doc.getElementById('overlay');
 const rocket = doc.querySelector('.rocket');
 const matrix = doc.getElementById('matrix');
-const toggle = doc.getElementById('toggle-theme');
+const toggles = doc.querySelectorAll('#toggle-theme');
+
+console.log(toggles);
 
 function changeTheme(theme) {
   rocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
@@ -17,17 +19,24 @@ function changeTheme(theme) {
 }
 
 doc.addEventListener('DOMContentLoaded', () => {
-  let currentTheme = doc.documentElement.getAttribute('theme');
   const localTheme = localStorage.getItem('theme');
-  if (localTheme) currentTheme = localTheme;
-  changeTheme(currentTheme === 'dark' ? 'dark' : 'light');
+  if (localTheme) changeTheme(localTheme);
 
-  toggle.onclick = () => {
-    const getTheme = doc.documentElement.getAttribute('theme');
-    const newTheme = getTheme === 'dark' ? 'light' : 'dark';
-    changeTheme(newTheme);
-  };
+  toggles.forEach((toggle) => {
+    toggle.onclick = () => {
+      const fromTheme = doc.documentElement.getAttribute('theme');
+      const toTheme = fromTheme === 'dark' ? 'light' : 'dark';
+      changeTheme(toTheme);
+    };
+  });
 });
+
+// onclick = (e) => {
+//   console.log(e.target);
+//   const fromTheme = doc.documentElement.getAttribute('theme');
+//   const toTheme = fromTheme === 'dark' ? 'light' : 'dark';
+//   changeTheme(toTheme);
+// };
 
 function onScroll() {
   window.addEventListener('scroll', () => {
