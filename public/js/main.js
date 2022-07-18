@@ -66,7 +66,6 @@ function onScroll() {
   }
 })();
 
-// menu();
 onScroll();
 init();
 
