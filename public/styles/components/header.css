@@ -23,7 +23,12 @@
     flex-shrink: 3;
   }
   
-  #header a.logo { display: flex; align-items: center;}
+  #header a.logo { 
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-right: 1rem;
+  }
   .logo-emblem > *  { fill: var(--color-fg); }
 
   .header__mid  {
