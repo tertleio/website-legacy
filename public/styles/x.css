@@ -3,8 +3,8 @@
   background: var(--separator) no-repeat center top;
   background-size: clamp(23em, 90vw, 80rem);
   margin: 0 auto;
-
 }
+
 #overlay {
   position: fixed;
   width: 100%;
@@ -34,7 +34,7 @@
 
 
 .container {
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
   max-width: 1150px;
   margin-inline: auto;
 }
@@ -130,4 +130,21 @@ ul {
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: var(--color-primary); }
+}
+
+
+.content {
+  margin: 0 auto;
+}
+
+.content h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75em;
+}
+
+.content .__single {
+  max-width: 18em;
+  margin: 0 auto;
+  padding-bottom: 2em;
 }
