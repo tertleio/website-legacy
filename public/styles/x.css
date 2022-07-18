@@ -63,22 +63,21 @@ ul {
 #header .container {
   display: flex;
   padding: 0;
-  justify-content: space-between;
   align-items: center;
   align-items: center;
 }
 
   .header__left {
     display: flex;
+    justify-content: flex-start;
     position: relative;
     align-items: center;
     flex: 1;
-    gap: 0.5em;
     height: 1em;
     flex-shrink: 3;
   }
-
-  .logo { display: flex; }
+  
+  #header a.logo { display: flex; align-items: center; }
   .logo-emblem > *  { fill: var(--color-fg); }
 
   .header__mid  {
@@ -93,8 +92,7 @@ ul {
     .header a:visited {
         color: var(--color-nav);
         text-decoration: none;
-        padding: 0.5em 1em;
-        height: 100%;
+        padding: 0.5rem 1rem;
     }
 
     .header li.active a { 

@@ -92,7 +92,7 @@ ul li ul:focus {
   border-left: 1px solid var(--color-highlight);
 }
 
-.menu a span { margin-right: auto; margin-left: 0.25em; }
+.menu a span { margin-right: auto; padding-right: 1rem;  }
 
 
   .menu ul {
