@@ -33,7 +33,7 @@ input:checked + .slider:before {
   -ms-transform: translateX(1.29rem);
   transform: translateX(1.29rem);
 }
-
+                    
 #hero .container {
   display: flex;
   flex-direction: column;
@@ -62,7 +62,7 @@ input:checked + .slider:before {
     font-size: 1.9rem;
     width: 80vw;
     line-height: 2.5rem;
-    margin-top: 0.5rem;
+    margin-top: 0.6rem;
   }
 }
 

@@ -135,16 +135,14 @@ ul li ul:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center; */
-  border-radius: 4rem;
-  background: red;
 }
 
 .switch {
   position: relative;
   display: flex;
   border-radius: 4rem;
-  width: 2.8rem;
-  height: 1.5rem;
+  width: 2.4rem;
+  height: 1.4rem;
 }
 
 /* hide default HTML checkbox */
@@ -161,21 +159,20 @@ ul li ul:focus {
   cursor: pointer;
   top: 0;
   left: 0;
-  width: 100%;
-  right: -0.1rem;
   bottom: 0;
+  right: -5px;
   -webkit-transition: .4s;
   transition: .1s;
-  border: 0.18rem solid var(--color-nav);
+  border: 3px solid var(--color-nav);
 }
 
 /* slider circle */
 .slider:before {
   position: absolute;
   content: "";
-  width: 0.9rem;
-  height: 0.9rem;
-  left: 0.15rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  left: 3px;
   bottom: 0.15rem;
   background-color: var(--color-fg);
   -webkit-transition: .4s;
@@ -185,8 +182,8 @@ ul li ul:focus {
 /* burger menu tappable area */
 .slider-cover::after {
   position: absolute;
-  width: 19rem;
-  height: 3.9em;
+  width: 18rem;
+  height: 3.9rem;
   /* border: 1px solid red; */
   content: "";
   left: -1.8rem;
