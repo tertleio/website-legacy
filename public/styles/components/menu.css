@@ -28,7 +28,6 @@ border-top: 0.5rem solid var(--color-link);
   z-index: -99;
 }
 
-.ico.menu-root::after { top: 3.3rem; left: 0.65rem; }
 
 /* hover filler */
 .menu-root::before {
@@ -60,7 +59,7 @@ border-top: 0.5rem solid var(--color-link);
 .menu-wrapper:focus > .menu-root::after,
 .menu-wrapper:focus-within > .menu,
 .menu-wrapper:focus-within > .menu-root::after {
-  visibility: visible; z-index: 1;
+  visibility: visible;
   display: block;
 }
 
@@ -82,7 +81,7 @@ ul li ul:focus {
   left: 0;
   top: 3.3rem;
   width: 100%;
-  min-width: 12em;
+  min-width: 15em;
   background: var(--color-bg);
   border-radius: 0 0 0.6em 0.6em;
   border-radius: 0.6em;
@@ -130,12 +129,7 @@ ul li ul:focus {
 
 
 
-.switch-wrapper {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-}
+.switch-wrapper { }
 
 .switch {
   position: relative;

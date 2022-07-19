@@ -56,7 +56,6 @@
     .header a:hover, .header a:focus {
       text-decoration: none;
       color: var(--color-link);
-      border-radius: 0.25em;
     }
 
     .header__right {
