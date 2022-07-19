@@ -4,9 +4,6 @@
 
 #footer .container {
   display: flex;
-  padding: 2.5em 1em;
-  display: flex;
-  max-width: 1150px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -14,13 +11,12 @@
 
 #footer ul {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  margin-top: 0.75rem;
+  align-items: start;;
 }
 
 #footer ul a {
-  padding: 0.25rem 0.75rem;
+  margin: 0.5rem 0;
 }
 
 #footer a {
@@ -28,21 +24,13 @@
   text-decoration: none;
 }
 
-#footer a:hover {
+#footer a:hover, #footer a:focus {
   color: var(--color-link);
 }
 
 
-#copyright {
-  display: flex;
-  flex-direction: column;
-  color: var(--color-higlight);
-  /* background: red; */
-}
-
-
 .footer__chunk .rocket {
-  width: 4em;
+  width: 6rem;
   margin-top: -1.6rem;
   margin-left: -1.1rem;
 }

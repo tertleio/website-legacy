@@ -20,5 +20,5 @@
 
 /* mobile mini */
 @media screen and (max-width: 350px) {
-  :root { font-size: 14px; }
+  :root { font-size: 12px; }
 }

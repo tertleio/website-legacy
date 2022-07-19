@@ -56,7 +56,7 @@ input:checked + .slider:before {
 } 
 
 @media (max-width: 600px) {
-  .hero__header { margin-top: -15vh; }
+  .hero__header { margin-top: -14vh; }
   .hero__header h1 { line-height: 1.1em; }
   .hero__header h2 {
     font-size: 1.9rem;
