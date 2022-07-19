@@ -54,7 +54,7 @@
             </svg>
           </a>
 
-          <div class="menu-wrapper mb">
+          <div id="burger-ico" class="menu-wrapper">
             <div class="ico menu-root" tabindex="0">
               <!-- prettier-ignore-->
               <svg width="19px" height="17px" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +63,7 @@
                 <rect width="19" height="2" rx="1.5" fill="white"/>
               </svg>
             </div>
-            <nav class="menu">
+            <nav id="burger-menu" class="menu" style="display: none">
               <!-- prettier-ignore -->
               <ul>
                 <li>
@@ -105,7 +105,7 @@
               <ul>
                 <li><a href="#features"><span>📦</span>Features</a></li>
                 <li><a href="#why-tertle"><span>🐢</span>Why Tertle</a></li>
-                <li><a href="#faqs"><span>❓</span>Frequently Asked Questions</a></li>
+                <li><a href="#faq"><span>❓</span>Frequently Asked Questions</a></li>
               </ul>
             </nav>
           </ul>
@@ -149,30 +149,29 @@
         <div class="hero__header">
           <h1>Contract Matching</h1>
           <h2 class="p fs-lg">Developer jobs, without all the fluff 🚀</h2>
-
-          <div class="hero__body">
-            <form>
-              <div class="signup">
-                <input
-                  class="email"
-                  type="email"
-                  name="EMAIL"
-                  placeholder="Your email..."
-                  value=""
-                  required
-                />
-                <button
-                  type="submit"
-                  class="btn btn--primary"
-                  href="https://app.tertle.io/join"
-                >
-                  Join Waitlist
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="typer"><p>Follow the white rabbit...</p></div>
         </div>
+        <div class="hero__body">
+          <form>
+            <div class="signup">
+              <input
+                class="email"
+                type="email"
+                name="EMAIL"
+                placeholder="Your email..."
+                value=""
+                required
+              />
+              <button
+                type="submit"
+                class="btn btn--primary"
+                href="https://app.tertle.io/join"
+              >
+                Join Waitlist
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="typer"><p>Follow the white rabbit...</p></div>
       </div>
     </section>
 

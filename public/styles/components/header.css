@@ -1,7 +1,6 @@
 
 #header.wrapper {
   position: fixed;
-  background-color: var(--color-bg) !important;
   width: 100%;
   z-index: 999;
   background: var(--color-bg);
