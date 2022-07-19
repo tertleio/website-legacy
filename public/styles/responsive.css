@@ -1,22 +1,26 @@
 /* desktop */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
+:root { font-size: 17px; }
 .tb { display: none; }
-.mb { display: none !important; }
+.mb { display: none; }
 }
 
 /* tablet */
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 1024px) {
   :root { font-size: 16px; }
+  .mb { display: none; }
 }
 
 /* mobile */
-@media screen and (max-width: 700px) {
-  :root { font-size: 13px; }
+@media screen and (max-width: 600px) {
+  .mb { display: block; }
+  :root { font-size: 15px; }
   .dt { display: none !important; }
-  #header.wrapper { padding: 0.5rem 0.75rem !important; }
+  #header.wrapper { padding: 0 }
+  #header .container { padding: 0.5rem; }
 }
 
 /* mobile mini */
 @media screen and (max-width: 350px) {
-  :root { font-size: 11px; }
+  :root { font-size: 14px; }
 }

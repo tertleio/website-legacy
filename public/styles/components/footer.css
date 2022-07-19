@@ -1,6 +1,5 @@
 #footer.wrapper {
   background: var(--splitter) no-repeat center top;
-  padding: 0 !important;
 }
 
 #footer .container {
@@ -22,12 +21,6 @@
 
 #footer ul a {
   padding: 0.25rem 0.75rem;
-}
-
-#footer h5 {
-  padding-left: 0.75rem;
-  font-size: 1rem;
-  color: var(--color-fg);
 }
 
 #footer a {

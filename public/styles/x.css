@@ -1,5 +1,5 @@
 .wrapper:not(.header) {
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   background: var(--separator) no-repeat center top;
   background-size: clamp(23em, 90vw, 80rem);
   margin: 0 auto;
@@ -34,8 +34,8 @@
 
 
 .container {
-  padding: 4rem 1rem;
-  max-width: 1150px;
+  padding: 5rem 0.5rem;
+  max-width: 1200px;
   margin-inline: auto;
 }
 
@@ -45,16 +45,12 @@ input:checked + .slider:before {
   transform: translateX(1.29rem);
 }
 
-
-ul {
-  font-size: 0.7em;
-}
-
 #hero.wrapper {
   width: 100%;
+  min-height: 70vh;
   /* background: radial-gradient(15em at center, #373737, #000) no-repeat; */
-  padding-top: 4em;
-  padding-bottom: 8em;
+  padding-top: 5vh;
+  padding-bottom: 10vh;;
   background: var(--bg-pattern) no-repeat center bottom;
   background-size: clamp(45rem, 80vw, 70rem);
 }
@@ -66,11 +62,10 @@ ul {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 2.5em;
 }
 
 .hero__body {
-  margin-top: 3em;
+  margin-top: 5vh;
   /* background: url('../assets/terminal.svg') no-repeat center top; */
 }
 
@@ -78,7 +73,7 @@ ul {
 .signup {
   width: 90vw;
   display: flex;
-  max-width: 16.5em;
+  max-width: 25em;
   margin-top: 1em;
   padding: 0.25em;
   border-radius: 0.25em;
@@ -86,29 +81,27 @@ ul {
 }
 
 .signup .email {
-  padding: 1em;
+  padding: 1.5em;
   width: 100%;
   background-color: inherit;
   color: var(--color-fg);
   margin-right: 0.5em;
-  font-size: 0.6em;
   flex: 2;
   border: 0;
   border-radius: 0.2em;
 }
 
-.signup button {
-  max-width: 10rem;
-}
-
 .typer {
-  font-family: 'Metrophobic', sans-serif;
-  font-family: 'Ubuntu Mono', monospace;
+  display: flex;
+  text-align: center;
   margin: 0 auto;
-  width: 22ch;
+  margin: 0 auto;
+  width: 29ch;
 }
 
 .typer p {
+  font-family: 'Metrophobic', sans-serif;
+  font-family: 'Ubuntu Mono', monospace;
   overflow: hidden; 
   border-right: 1px solid; 
   white-space: nowrap; /* Keeps the content on a single line */
@@ -140,11 +133,11 @@ ul {
 .content h2 {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.75em;
+  margin-bottom: 1.25em;
 }
 
 .content .__single {
-  max-width: 18em;
+  max-width: 25rem;
   margin: 0 auto;
   padding-bottom: 2em;
 }

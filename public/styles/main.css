@@ -1,11 +1,11 @@
 @import '_reset.css';
 @import 'typography.css';
 @import 'buttons.css';
-@import 'responsive.css';
 @import './components/menu.css';
 @import './components/header.css';
 @import './components/footer.css';
 @import './components/features.css';
+@import 'responsive.css';
 
 :root {
   scroll-behavior: auto;
@@ -104,9 +104,8 @@
 html, body {
   font-family: proxima-nova, sans-serif;
   font-style: normal;
+  font-size: 1rem;
   font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-bg);
 }
