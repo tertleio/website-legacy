@@ -66,7 +66,7 @@
       flex: 1;
     } 
 
-    .header__right button {
+    .header__right .btn {
       font-size: 0.8em;
     }
 
