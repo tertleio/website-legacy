@@ -1,13 +1,12 @@
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: 'Poppins', sans-serif;
   color: var(--color-fg);
-  line-height: 1.5em;
+  line-height: 1.1em;
   margin-bottom: 0.6em;
 }
 
 h1, .h1 {
-  font-size: 2.8rem;
-  line-height: 1.2em;
+  font-size: 3rem;
   margin-bottom: 0.1em;
 }
 
@@ -61,7 +60,7 @@ p, .p {
 }
 
 .fs-lg {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .fs-xl {

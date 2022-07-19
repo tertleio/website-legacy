@@ -1,11 +1,7 @@
-.wrapper {
-  background: var(--separator) no-repeat center top;
-  background-size: clamp(23em, 90vw, 80rem);
-  margin: 0 auto;
-}
-
 #overlay {
   position: fixed;
+  cursor: pointer;
+  z-index: 1000;
   width: 100%;
   height: 100%; 
   top: 0;
@@ -42,9 +38,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 100%;
-  min-height: 97vh;
-  height: 40em;
+  min-height: 100vh;
   /* background: radial-gradient(15em at center, #373737, #000) no-repeat; */
   /* margin-top: 1em; */
   background: var(--bg-pattern) no-repeat center bottom;
@@ -53,42 +47,54 @@ input:checked + .slider:before {
 
 
 .hero__header {
-  margin-top: -15rem;
-  display: flex;
+  margin-top: -18vh;
+  display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+} 
+
+@media (max-width: 600px) {
+  .hero__header h2 {
+    font-size: 2rem;
+    width: 80vw;
+    line-height: 2.5rem;
+    margin-top: 0.5rem;
+  }
 }
 
 .hero__body {
-
   /* background: url('../assets/terminal.svg') no-repeat center top; */
+  margin: 3em 1em 4rem 1em;
 }
 
 
 .signup {
-  width: 90vw;
   display: flex;
-  justify-content: center;
-  max-width: 25em;
-  margin: 3em;
-  padding: 0.2em;
-  border-radius: 0.4em;
-  background-color: var(--color-highlight);
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 0.4rem;
+  gap: 0.5rem;
 }
 
 .signup .email {
-  padding: 1.5em;
-  width: 100%;
-  background-color: inherit;
-  color: var(--color-fg);
-  margin-right: 0.5em;
+  background-color: var(--color-highlight);
+  /* border: 1px solid var(--color-primary); */
   flex: 2;
-  border: 0;
-  border-radius: 0.2em;
+  border-radius: 0.25rem;
 }
 
+.signup button {
+  flex-grow: 1;
+}
+
+.signup input {
+  color: var(--color-fg);
+  min-width: 16rem;
+  font-size: 16px;
+  padding: 1.4em;
+}
 
 .typer {
   text-align: center;

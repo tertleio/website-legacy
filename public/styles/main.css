@@ -65,6 +65,12 @@
   margin-inline: auto;
 }
 
+.wrapper {
+  background: var(--separator) no-repeat center top;
+  background-size: clamp(23em, 90vw, 80rem);
+  margin: 0 auto;
+}
+
 /*
 #matrix::before {
   content: "";
