@@ -58,6 +58,13 @@
   width: 100%;
   position: relative;
 }
+
+.container {
+  padding: 5rem 1rem;
+  max-width: 1150px;
+  margin-inline: auto;
+}
+
 /*
 #matrix::before {
   content: "";
