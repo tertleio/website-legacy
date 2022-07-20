@@ -1,6 +1,6 @@
 'use strict';
 const doc = document;
-import menu from './menu.js';
+// import menu from './menu.js';
 import init from './matrix.js';
 
 const navCta = doc.getElementById('nav-cta');
@@ -66,7 +66,7 @@ function onScroll() {
   }
 })();
 
-menu();
+// menu();
 onScroll();
 init();
 

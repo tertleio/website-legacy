@@ -1,6 +1,11 @@
+#features {
+  height: 90vh;
+}
+
 .content-wrapper {
   display: flex;
   transition: all 0.25s;
+  gap: 0.75rem;
 }
 
 .content-left {
@@ -12,21 +17,22 @@
   border: var(--color-highlight);
   border-radius: 0.75rem;
   height: 100%;
-  width: 25em;
+  width: 37.5rem;
 }
 
 .content-btn {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  border: 2px solid var(--color-bg);
-  margin-bottom: 2px;
-  padding: 2rem 2rem;
+  border: 1px solid var(--color-bg);
+  margin-bottom: 0.75rem;
+  padding: 1.75rem;
   border-radius: 0.75rem;
 }
 
 .content-btn:hover {
-  background-color: var(--color-highlight);
+  /* background-color: var(--color-highlight); */
+  border: 1px solid var(--color-primary);
   cursor: pointer;
 }
 

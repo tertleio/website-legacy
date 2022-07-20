@@ -6,10 +6,9 @@
   align-items: center;
   border-radius: 0.3rem;
   cursor: pointer;
-  pointer-events: none;
 }
 
-.ico svg > * { fill: var(--color-nav); -events: none; }
+.ico svg > * { fill: var(--color-nav); }
 .ico:hover, .ico:focus { background: var(--color-highlight); } 
 /* .ico-burger { display: flex; align-items: center; justify-content: center; } */
 

@@ -53,11 +53,12 @@ p, .p {
 
 .fs-sm {
   font-size: 1rem;
+  line-height: 1.2em;
 }
 
 .fs-md {
-  font-size: 1.1rem;
-  line-height: 1.5em;
+  font-size: 1.05rem;
+  line-height: 1.2em;
 }
 
 .fs-lg {

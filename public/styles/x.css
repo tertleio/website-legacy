@@ -45,7 +45,7 @@ input:checked + .slider:before {
   align-items: center;
   text-align: center;
   justify-content: center;
-  height: 80vh;
+  height: 90vh;
   /* background: radial-gradient(15em at center, #373737, #000) no-repeat; */
   /* margin-top: 1em; */
 }
@@ -146,7 +146,7 @@ input:checked + .slider:before {
 }
 
 .content .__single {
-  max-width: 25rem;
+  max-width: 25em;
   margin: 0 auto;
   padding-bottom: 2em;
 }

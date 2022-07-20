@@ -1,25 +1,33 @@
 'use strict';
 const doc = document;
 
-const elBurger = doc.querySelector('#burger-ico');
-const elMenu = doc.querySelector('#burger-menu');
+const elBurger = doc.querySelector('#burger');
+let isShowing = false;
 
-console.log(elMenu);
-console.log(elBurger);
+// console.log(elBurger);
 
-function closeMenu(e) {
-  if (e.target.className.includes('burger')) return;
-  elMenu.style = 'display: none';
-  show = false;
-  window.removeEventListener('click', closeMenu);
-}
+// function closeMenu() {
+//   console.log('closing');
+//   // elMenu.style = 'display: none;';
+//   isShowing = false;
+//   window.removeEventListener('click', closeMenu);
+// }
 
-function openMenu(e) {
-  console.log(e.target);
-  elMenu.style = 'display: block';
-  if (show) window.addEventListener('click', closeMenu);
-}
+// function toggleMenu() {
+//   console.log('clicked');
+//   if (isShowing === false) {
+//     console.log('yes');
+//     // elMenu.style = 'display: block;';
+//     window.addEventListener('click', () => closeMenu);
+//     isShowing = true;
+//     return;
+//   } else closeMenu();
 
-const menu = () => elBurger.addEventListener('click', openMenu);
+//   var styles = window.getComputedStyle(elBurger, '::after');
+//   var content = styles['content'];
+//   console.log(content);
+// }
+
+// const menu = () => elBurger.addEventListener('click', toggleMenu);
 
 export default menu;
