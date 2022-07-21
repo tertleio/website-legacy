@@ -1,4 +1,4 @@
-var tileSize = 16;
+var tileSize = 18;
 // a higher fade factor will make the characters fade quicker
 // var fadeFactor = 0.05;
 var fadeFactor = 0.1;

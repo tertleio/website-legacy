@@ -6,7 +6,6 @@
 @import './components/footer.css';
 @import './components/features.css';
 @import 'responsive.css';
-@import './hover.css';
 
 :root {
   scroll-behavior: auto;
@@ -62,7 +61,7 @@
 
 .container {
   /* padding: 5vh 2rem; */
-  padding: 5rem 2rem;
+  padding: 6rem 2rem;
   max-width: 1150px;
   margin-inline: auto;
 }

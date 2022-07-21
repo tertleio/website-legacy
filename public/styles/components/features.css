@@ -4,12 +4,10 @@
 
 .content-wrapper {
   display: flex;
+  position: relative;
+  justify-content: space-around;
   transition: all 0.25s;
   gap: 0.75rem;
-}
-
-.content-left {
-  margin-right: 2px;
 }
 
 .demo {
@@ -22,29 +20,81 @@
 
 .content-btn {
   display: flex;
+  position: relative;
   flex-direction: column;
+  pointer-events: auto;
   cursor: pointer;
   border: 1px solid var(--color-bg);
   margin-bottom: 0.75rem;
   padding: 1.75rem;
+  padding-top: calc(1.75em + 3px);
   border-radius: 0.75rem;
 }
 
-.content-btn:hover {
-  /* background-color: var(--color-highlight); */
+.content-btn:after {
+  visibility: hidden;
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border: 1px solid var(--color-highlight);
+  border-top: 3px solid var(--color-primary);
+}
+
+.content-btn:focus.content-btn:after,
+.content-btn:active.content-btn:after,
+.content-btn:hover,
+.content-btn:focus
+.--active {
+  visibility: visible;
+}
+
+/* .content-btn:hover, .content-btn:focus {
+  border: 1px solid var(--color-highlight);
+} */
+/* .content-btn:active, .content-btn:focus, .--active {
+  border-top: 3px solid var(--color-primary);
+} */
+/* .content-btn:hover h3, .content-btn:focus h3 { color: var(--color-primary); } */
+
+
+
+/* .content-left {
+  position: relative;
+} */
+
+/* .content-btn:after {
+  display: block;
+  pointer-events: none;
+  visibility: hidden;
+  position: absolute;
+  content: "";
+  height: 32.33%;
+  width: 100%;
   border: 1px solid var(--color-primary);
-  cursor: pointer;
-}
+  border-radius: 0.75rem;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity .25s ease-out;
+  transition: all 0.25s;
+} */
 
-.content-btn.--active {
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-primary);
-}
+/* .content-btn.__f1:hover.content-btn:after { top: 0; visibility: visible; }
+.content-btn.__f2:hover.content-btn:after { top: 33%;visibility: visible; }
+.content-btn.__f3:hover.content-btn:after { visibility: visible; top: 66%; } */
 
-.--active { 
-  color: var(--color-primary);
-}
+/* @keyframes slider {
+  from { top: var(--current-pos); }
+  to { top:  var(--new-pos); }
+} */
 
-/* .content .--btn:hover, .content .--btn:focus {
-
+/* .__f2:hover.content-btn:after {
+  background: red !important;
 } */

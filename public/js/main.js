@@ -66,7 +66,19 @@ function onScroll() {
   }
 })();
 
+function feature() {
+  // const elContent = document.querySelector('.content-left');
+  // console.log(elContent);
+  // doc.querySelectorAll('.content-btn').forEach((feature) => {
+  //   feature.addEventListener('click', () => {
+  //     console.log('feature', feature);
+  //     feature.className = 'content-btn --active';
+  //   });
+  // });
+}
+
 // menu();
+feature();
 onScroll();
 init();
 
