@@ -67,14 +67,15 @@ function onScroll() {
 })();
 
 function feature() {
-  // const elContent = document.querySelector('.content-left');
-  // console.log(elContent);
-  // doc.querySelectorAll('.content-btn').forEach((feature) => {
-  //   feature.addEventListener('click', () => {
-  //     console.log('feature', feature);
-  //     feature.className = 'content-btn --active';
-  //   });
-  // });
+  const elContent = document.querySelector('.content-left');
+
+  doc.querySelectorAll('.content-btn').forEach((elFeature) => {
+    elFeature.addEventListener('click', () => {
+      const elCurrentActive = elContent.querySelector('.--active');
+      elFeature.classList.add('--active');
+      elCurrentActive.classList.remove('--active');
+    });
+  });
 }
 
 // menu();
