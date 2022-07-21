@@ -62,18 +62,30 @@ function onScroll() {
   resizeCanvas();
 
   function drawStuff() {
+    2;
     // do your drawing stuff here
   }
 })();
 
 function feature() {
-  const elContent = document.querySelector('.content-main');
+  const elContent = document.querySelector('.content-container');
+  const elDemos = document.querySelectorAll('.demo');
+  console.log(elDemos);
 
   doc.querySelectorAll('.content-btn').forEach((elFeature) => {
-    elFeature.addEventListener('click', () => {
+    elFeature.addEventListener('click', (e) => {
       const elCurrentActive = elContent.querySelector('.--active');
       elFeature.classList.add('--active');
       elCurrentActive.classList.remove('--active');
+
+      const targetNum = e.target.id.split('-')[1];
+      const elDemo = elDemos[targetNum - 1];
+      console.log('elDemo', elDemo);
+
+      elDemos.forEach((elD) => {
+        elD.classList.remove('--active');
+      });
+      elDemo.classList.add('--active');
     });
   });
 }

@@ -1,14 +1,26 @@
-/* #features {
-  height: 90vh;
-} */
-
 .content-wrapper {
   display: flex;
   justify-content: space-around;
   transition: all 0.25s;
+  border: 1px solid red;
+  /* flex-wrap: wrap; */
 }
 
-.content-main .content-btn:last-child { margin-bottom: 0; }
+@media (max-width: 500px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+}
+
+
+/* main content */
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid blue;
+}
+
+.content-container .content-btn:last-child { margin-bottom: 0; }
 
 .content-btn {
   display: flex;
@@ -24,6 +36,8 @@
   margin: 0rem 0.75rem 0.75rem 0; /* wide */
 }
 
+
+/* active border */
 .content-btn:after {
   visibility: hidden;
   content: "";
@@ -40,11 +54,39 @@
   border-top: 3px solid var(--color-primary);
 }
 
+.content-btn > * { pointer-events: none; }
+
 .--active { pointer-events: none; }
 .content-btn:hover { border: 1px solid var(--color-highlight); }
 .content-btn.--active:after {
   visibility: visible;
 }
+
+
+/* aside demo */
+.demo-container {
+  border: 1px solid var(--color-highlight);
+  border-radius: 0.75rem;
+  width: 68rem;
+}
+
+.demo {
+  opacity: 0;
+}
+
+.demo.--active {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.75rem;
+  visibility: hidden; 
+}
+
+
+.demo.--active { visibility: visible; }
+#d-1 { background: grey; }
+#d-2 { background: blue; }
+#d-3 { background: grey; }
 
 @keyframes peekaboo {
   from { bottom: -1rem; }
@@ -77,25 +119,19 @@
  }
 .--active + .content-btn .next { display: inline; }
 
-
-.aside {
-  background-color: var(--color-highlight);
-  border: var(--color-highlight);
-  border-radius: 0.75rem;
-  width: 68rem;
-}
-
-.demo {
-  display: flex;
-  height: 100%;
-  border-radius: 0.75rem;
-  background: blue;
-  }
-
-.demo-f1, .demo-f2 { display: none; }
-.aside .demo-f1 { background: red; }
-.aside .demo-f2 { background: blue; }
-.aside .demo-f3 { background: green; }
+/* active arrow */
+/* .content-btn:before { 
+  position: absolute;
+  visibility: hidden;
+  content: "";
+  border-left: 0.5rem solid var(--color-primary);
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid var(--color-primary);
+  border-bottom: 0.5rem solid transparent;
+  transform: rotate(135deg);
+  right: -0.5rem;
+  top: 42%;
+} */
 
 
 /* .content-btn:focus.content-btn:after,
