@@ -67,7 +67,7 @@ function onScroll() {
 })();
 
 function feature() {
-  const elContent = document.querySelector('.content-left');
+  const elContent = document.querySelector('.content-main');
 
   doc.querySelectorAll('.content-btn').forEach((elFeature) => {
     elFeature.addEventListener('click', () => {

@@ -4,18 +4,11 @@
 
 .content-wrapper {
   display: flex;
-  position: relative;
   justify-content: space-around;
   transition: all 0.25s;
 }
 
-.demo {
-  background-color: var(--color-highlight);
-  border: var(--color-highlight);
-  border-radius: 0.75rem;
-  height: 100%;
-  width: 37.5rem;
-}
+.content-main .content-btn:last-child { margin-bottom: 0; }
 
 .content-btn {
   display: flex;
@@ -26,12 +19,10 @@
   cursor: pointer;
   border: 1px solid var(--color-bg);
   padding: 1.75rem;
-  padding-top: calc(1.75rem - 3px);
+  padding-top: calc(1.75rem + 3px);
   border-radius: 0.75rem;
   margin: 0rem 0.75rem 0.75rem 0; /* wide */
 }
-
-.content-left .content-btn:last-child { margin-bottom: 0; }
 
 .content-btn:after {
   visibility: hidden;
@@ -49,14 +40,66 @@
   border-top: 3px solid var(--color-primary);
 }
 
+.--active { pointer-events: none; }
 .content-btn:hover { border: 1px solid var(--color-highlight); }
-
-/* .content-btn:focus.content-btn:after,
-.content-btn:active.content-btn:after, */
-
 .content-btn.--active:after {
   visibility: visible;
 }
+
+@keyframes peekaboo {
+  from { bottom: -1rem; }
+  to { bottom: 0; }
+}
+
+.next {
+  position: relative;
+  width: 100%;
+  background: red;
+  display: none;
+  margin-left: 0.6ch;
+ }
+ .next:before {
+  position: absolute;
+  content: "🐰";
+  animation-name: peekaboo;
+  animation-duration: 0.25s;
+  width: 2ch;
+  text-align: center;
+ }
+ .next:after { 
+  position: absolute;
+  content: "";
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-text);
+  top: 1.1rem;
+  width: 2ch;
+  height: 1rem;
+ }
+.--active + .content-btn .next { display: inline; }
+
+
+.aside {
+  background-color: var(--color-highlight);
+  border: var(--color-highlight);
+  border-radius: 0.75rem;
+  width: 68rem;
+}
+
+.demo {
+  display: flex;
+  height: 100%;
+  border-radius: 0.75rem;
+  background: blue;
+  }
+
+.demo-f1, .demo-f2 { display: none; }
+.aside .demo-f1 { background: red; }
+.aside .demo-f2 { background: blue; }
+.aside .demo-f3 { background: green; }
+
+
+/* .content-btn:focus.content-btn:after,
+.content-btn:active.content-btn:after, */
 
 /* .content-btn:hover, .content-btn:focus {
   border: 1px solid var(--color-highlight);
