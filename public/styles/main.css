@@ -6,6 +6,7 @@
 @import './components/footer.css';
 @import './components/features.css';
 @import 'responsive.css';
+@import 'x.css';
 
 :root {
   scroll-behavior: auto;

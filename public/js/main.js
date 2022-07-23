@@ -5,12 +5,12 @@ import init from './matrix.js';
 
 const navCta = doc.getElementById('nav-cta');
 const overlay = doc.getElementById('overlay');
-const rocket = doc.querySelector('.rocket');
+// const rocket = doc.querySelector('.rocket');
 const matrix = doc.getElementById('matrix');
 const toggles = doc.querySelectorAll('#toggle-theme');
 
 function changeTheme(theme) {
-  rocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
+  // rocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
   doc.documentElement.setAttribute('theme', theme);
   matrix.style = theme === 'dark' ? 'display: block;' : 'display: none;';
   localStorage.setItem('theme', theme);
@@ -29,17 +29,17 @@ doc.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function onScroll() {
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 500) {
-      navCta.className = 'btn btn--primary';
-      overlay.style['animation-name'] = 'hide-rabbit';
-    } else {
-      navCta.className = 'btn btn--secondary';
-      overlay.style['animation-name'] = 'show-rabbit';
-    }
-  });
-}
+// function onScroll() {
+//   window.addEventListener('scroll', () => {
+//     if (window.pageYOffset > 500) {
+//       navCta.className = 'btn btn--primary';
+//       overlay.style['animation-name'] = 'hide-rabbit';
+//     } else {
+//       navCta.className = 'btn btn--secondary';
+//       overlay.style['animation-name'] = 'show-rabbit';
+//     }
+//   });
+// }
 
 (function () {
   const canvas = document.getElementById('canvas');
@@ -67,6 +67,12 @@ function onScroll() {
   }
 })();
 
+const FileSystem = (window.requestFileSystem =
+  window.requestFileSystem || window.webkitRequestFileSystem);
+
+// let rootDirEntry = fileEntry.filesystem.root;
+// console.log('here', rootDirEntry);
+
 function feature() {
   const elContent = document.querySelector('.content-container');
   const elDemos = document.querySelectorAll('.demo');
@@ -90,7 +96,7 @@ function feature() {
 
 // menu();
 feature();
-onScroll();
+// onScroll();
 init();
 
 // URLS ---------------------------------------------------------
