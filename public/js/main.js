@@ -4,22 +4,11 @@ import initComponents from './build.js';
 // import menu from './menu.js';
 import initMatrix from './matrix.js';
 
-let elNavCta;
-let elOverlay;
-let elMatrix;
-let elsToggles;
-let elRocket;
-
-function assignEls() {
-  console.log('assigning doms');
-  elNavCta = doc.getElementById('nav-cta');
-  elOverlay = doc.getElementById('overlay');
-  elMatrix = doc.getElementById('matrix');
-  elsToggles = doc.querySelectorAll('#toggle-theme');
-  elRocket = doc.querySelector('.rocket');
-}
-
 const toggleTheme = () => {
+  const elsToggle = doc.querySelectorAll('#toggle-theme');
+  const elRocket = doc.querySelector('.rocket');
+  const elMatrix = doc.getElementById('matrix');
+
   function changeTheme(theme) {
     elRocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
     doc.documentElement.setAttribute('theme', theme);
@@ -30,7 +19,7 @@ const toggleTheme = () => {
   const localTheme = localStorage.getItem('theme');
   if (localTheme) changeTheme(localTheme);
 
-  elsToggles.forEach((elToggle) => {
+  elsToggle.forEach((elToggle) => {
     elToggle.onclick = () => {
       const fromTheme = doc.documentElement.getAttribute('theme');
       const toTheme = fromTheme === 'dark' ? 'light' : 'dark';
@@ -62,6 +51,9 @@ function initFeatures() {
 }
 
 function onScroll() {
+  const elNavCta = doc.getElementById('nav-cta');
+  const elOverlay = doc.getElementById('overlay');
+
   window.addEventListener('scroll', () => {
     if (window.pageYOffset > 500) {
       elNavCta.className = 'btn btn--primary';
@@ -75,7 +67,6 @@ function onScroll() {
 
 // Essential
 initComponents();
-assignEls();
 // menu();
 initFeatures();
 onScroll();
