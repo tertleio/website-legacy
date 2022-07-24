@@ -1,3 +1,29 @@
+function resizeMatrix() {
+  const canvas = document.getElementById('canvas');
+  const context = canvas.getContext('2d');
+
+  // resize the canvas to fill browser window dynamically
+  window.addEventListener('resize', resizeCanvas, false);
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight;
+
+    /**
+     * Your drawings need to be inside this function otherwise they will be reset when
+     * you resize the browser window and the canvas goes will be cleared.
+     */
+    drawStuff();
+  }
+
+  resizeCanvas();
+
+  function drawStuff() {
+    2;
+    // do your drawing stuff here
+  }
+}
+
 var tileSize = 18;
 // a higher fade factor will make the characters fade quicker
 // var fadeFactor = 0.05;
@@ -9,17 +35,17 @@ var ctx;
 var columns = [];
 var maxStackHeight;
 
-function init() {
+function initMatrix() {
   canvas = document.getElementById('canvas');
   ctx = canvas.getContext('2d');
 
-  initMatrix();
+  defineDimensions();
 
   // start the main loop
   tick();
 }
 
-function initMatrix() {
+function defineDimensions() {
   maxStackHeight = Math.ceil(canvas.height / tileSize);
 
   // divide the canvas into columns
@@ -69,4 +95,5 @@ function tick() {
   setTimeout(tick, 50);
 }
 
-export default init;
+resizeMatrix();
+export default initMatrix;

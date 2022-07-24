@@ -1,79 +1,43 @@
 'use strict';
 const doc = document;
+import initComponents from './build.js';
 // import menu from './menu.js';
-import init from './matrix.js';
+import initMatrix from './matrix.js';
 
-const navCta = doc.getElementById('nav-cta');
-const overlay = doc.getElementById('overlay');
-// const rocket = doc.querySelector('.rocket');
-const matrix = doc.getElementById('matrix');
-const toggles = doc.querySelectorAll('#toggle-theme');
+let elNavCta;
+let elOverlay;
+let elMatrix;
+let elsToggles;
+let elRocket;
 
-function changeTheme(theme) {
-  // rocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
-  doc.documentElement.setAttribute('theme', theme);
-  matrix.style = theme === 'dark' ? 'display: block;' : 'display: none;';
-  localStorage.setItem('theme', theme);
+function assignEls() {
+  console.log('assigning doms');
+  elNavCta = doc.getElementById('nav-cta');
+  elOverlay = doc.getElementById('overlay');
+  elMatrix = doc.getElementById('matrix');
+  elsToggles = doc.querySelectorAll('#toggle-theme');
+  elRocket = doc.querySelector('.rocket');
 }
 
-doc.addEventListener('DOMContentLoaded', () => {
+function toggleTheme() {
   const localTheme = localStorage.getItem('theme');
   if (localTheme) changeTheme(localTheme);
 
-  toggles.forEach((toggle) => {
-    toggle.onclick = () => {
+  elsToggles.forEach((elToggle) => {
+    elToggle.onclick = () => {
       const fromTheme = doc.documentElement.getAttribute('theme');
       const toTheme = fromTheme === 'dark' ? 'light' : 'dark';
-      changeTheme(toTheme);
+
+      // change theme
+      elRocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
+      doc.documentElement.setAttribute('theme', theme);
+      elMatrix.style = theme === 'dark' ? 'display: block;' : 'display: none;';
+      localStorage.setItem('theme', theme);
     };
   });
-});
+}
 
-// function onScroll() {
-//   window.addEventListener('scroll', () => {
-//     if (window.pageYOffset > 500) {
-//       navCta.className = 'btn btn--primary';
-//       overlay.style['animation-name'] = 'hide-rabbit';
-//     } else {
-//       navCta.className = 'btn btn--secondary';
-//       overlay.style['animation-name'] = 'show-rabbit';
-//     }
-//   });
-// }
-
-(function () {
-  const canvas = document.getElementById('canvas');
-  const context = canvas.getContext('2d');
-
-  // resize the canvas to fill browser window dynamically
-  window.addEventListener('resize', resizeCanvas, false);
-
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    // canvas.height = window.innerHeight;
-
-    /**
-     * Your drawings need to be inside this function otherwise they will be reset when
-     * you resize the browser window and the canvas goes will be cleared.
-     */
-    drawStuff();
-  }
-
-  resizeCanvas();
-
-  function drawStuff() {
-    2;
-    // do your drawing stuff here
-  }
-})();
-
-const FileSystem = (window.requestFileSystem =
-  window.requestFileSystem || window.webkitRequestFileSystem);
-
-// let rootDirEntry = fileEntry.filesystem.root;
-// console.log('here', rootDirEntry);
-
-function feature() {
+function initFeatures() {
   const elContent = document.querySelector('.content-container');
   const elDemos = document.querySelectorAll('.demo');
 
@@ -94,10 +58,28 @@ function feature() {
   });
 }
 
+function onScroll() {
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 500) {
+      elNavCta.className = 'btn btn--primary';
+      elOverlay.style['animation-name'] = 'hide-rabbit';
+    } else {
+      elNavCta.className = 'btn btn--secondary';
+      elOverlay.style['animation-name'] = 'show-rabbit';
+    }
+  });
+}
+
+// Essential
+initComponents();
+assignEls();
 // menu();
-feature();
-// onScroll();
-init();
+initFeatures();
+onScroll();
+
+// Nice to have
+toggleTheme();
+initMatrix();
 
 // URLS ---------------------------------------------------------
 // const signupSubmitUrl = '/signup-submit';

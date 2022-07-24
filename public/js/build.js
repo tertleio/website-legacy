@@ -1,3 +1,4 @@
+'use strict';
 import loadHtml from './utils/loadHtml.js';
 
 const headerHtml = await loadHtml('../components/header.html', import.meta.url);
@@ -23,5 +24,9 @@ class Footer extends HTMLElement {
   }
 }
 
-customElements.define('component-header', Header);
-customElements.define('component-footer', Footer);
+function initComponents() {
+  customElements.define(`component-header`, Header);
+  customElements.define(`component-footer`, Footer);
+}
+
+export default initComponents;
