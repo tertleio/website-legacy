@@ -19,7 +19,14 @@ function assignEls() {
   elRocket = doc.querySelector('.rocket');
 }
 
-function toggleTheme() {
+const toggleTheme = () => {
+  function changeTheme(theme) {
+    elRocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
+    doc.documentElement.setAttribute('theme', theme);
+    elMatrix.style = theme === 'dark' ? 'display: block;' : 'display: none;';
+    localStorage.setItem('theme', theme);
+  }
+
   const localTheme = localStorage.getItem('theme');
   if (localTheme) changeTheme(localTheme);
 
@@ -28,14 +35,10 @@ function toggleTheme() {
       const fromTheme = doc.documentElement.getAttribute('theme');
       const toTheme = fromTheme === 'dark' ? 'light' : 'dark';
 
-      // change theme
-      elRocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
-      doc.documentElement.setAttribute('theme', theme);
-      elMatrix.style = theme === 'dark' ? 'display: block;' : 'display: none;';
-      localStorage.setItem('theme', theme);
+      changeTheme(toTheme);
     };
   });
-}
+};
 
 function initFeatures() {
   const elContent = document.querySelector('.content-container');
