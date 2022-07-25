@@ -10,6 +10,7 @@ class Header extends HTMLElement {
   }
 
   connectedCallback() {
+    console.log(headerHtml);
     this.innerHTML = headerHtml;
   }
 }
@@ -24,9 +25,9 @@ class Footer extends HTMLElement {
   }
 }
 
-function initComponents() {
+const initComponents = () => {
   customElements.define(`component-header`, Header);
   customElements.define(`component-footer`, Footer);
-}
+};
 
 export default initComponents;

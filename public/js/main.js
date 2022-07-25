@@ -1,7 +1,7 @@
 'use strict';
 const doc = document;
 import initComponents from './build.js';
-// import menu from './menu.js';
+import initMenu from './menu.js';
 import initMatrix from './matrix.js';
 
 const toggleTheme = () => {
@@ -29,22 +29,20 @@ const toggleTheme = () => {
   });
 };
 
-function initFeatures() {
+function initDemos() {
   const elContent = document.querySelector('.content-container');
-  const elDemos = document.querySelectorAll('.demo');
+  const elsDemo = document.querySelectorAll('.demo');
 
-  doc.querySelectorAll('.content-btn').forEach((elFeature) => {
-    elFeature.addEventListener('click', (e) => {
+  doc.querySelectorAll('.content-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
       const elCurrentActive = elContent.querySelector('.--active');
-      elFeature.classList.add('--active');
+      btn.classList.add('--active');
       elCurrentActive.classList.remove('--active');
 
       const targetId = e.target.id.split('-')[1];
-      const targetEl = elDemos[targetId - 1];
+      const targetEl = elsDemo[targetId - 1];
 
-      elDemos.forEach((elD) => {
-        elD.classList.remove('--active');
-      });
+      elsDemo.forEach((demo) => demo.classList.remove('--active'));
       targetEl.classList.add('--active');
     });
   });
@@ -67,11 +65,11 @@ function onScroll() {
 
 // Essential
 initComponents();
-// menu();
-initFeatures();
-onScroll();
+// initMenu();
+initDemos();
 
 // Nice to have
+onScroll();
 toggleTheme();
 initMatrix();
 

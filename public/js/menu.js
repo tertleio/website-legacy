@@ -1,7 +1,6 @@
 'use strict';
 const doc = document;
 
-const elBurger = doc.querySelector('#burger');
 let isShowing = false;
 
 function closeMenu() {
@@ -26,6 +25,9 @@ function toggleMenu() {
   console.log(content);
 }
 
-const menu = () => elBurger.addEventListener('click', toggleMenu);
+const menu = () => {
+  const elBurger = doc.querySelector('#burger');
+  elBurger.addEventListener('click', toggleMenu);
+};
 
 export default menu;
