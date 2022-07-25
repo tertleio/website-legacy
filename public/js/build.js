@@ -1,8 +1,8 @@
 'use strict';
 import loadHtml from './utils/loadHtml.js';
 
-const headerHtml = await loadHtml('../components/header.html', import.meta.url);
-const footerHtml = await loadHtml('../components/footer.html', import.meta.url);
+const headerHtml = await loadHtml('../components/header.xml', import.meta.url);
+const footerHtml = await loadHtml('../components/footer.xml', import.meta.url);
 
 class Header extends HTMLElement {
   constructor() {
