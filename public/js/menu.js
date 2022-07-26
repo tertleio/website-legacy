@@ -1,33 +1,29 @@
 'use strict';
 const doc = document;
 
-let isShowing = false;
-
-function closeMenu() {
-  console.log('closing');
-  // elMenu.style = 'display: none;';
-  isShowing = false;
-  window.removeEventListener('click', closeMenu);
-}
-
-function toggleMenu() {
-  console.log('clicked');
-  if (isShowing === false) {
-    console.log('yes');
-    // elMenu.style = 'display: block;';
-    window.addEventListener('click', () => closeMenu);
-    isShowing = true;
-    return;
-  } else closeMenu();
-
-  var styles = window.getComputedStyle(elBurger, '::after');
-  var content = styles['content'];
-  console.log(content);
-}
-
 const menu = () => {
   const elBurger = doc.querySelector('#burger');
-  elBurger.addEventListener('click', toggleMenu);
+  const elMenu = doc.querySelector('.menu-burger');
+  const elsMenuLink = doc.querySelectorAll('.menu-link');
+
+  elBurger.addEventListener('touchstart', openMenu);
+  // elsMenuLink.forEach((link) => link.addEventListener('click', closeMenu));
+
+  function openMenu(e) {
+    elMenu.style = 'display: block;';
+    window.addEventListener('touchstart', closeMenu, {
+      capture: true,
+      once: true,
+    });
+  }
+
+  function closeMenu(e) {
+    e.stopPropagation();
+
+    setTimeout(() => {
+      elMenu.style = 'display: none;';
+    }, 100);
+  }
 };
 
 export default menu;
