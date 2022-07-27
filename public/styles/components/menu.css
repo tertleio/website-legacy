@@ -16,7 +16,7 @@
 
 .menu-root { position: relative; }
 /* arrow */
-.menu-root:after { 
+.menu-root::after { 
   position: absolute;
   display: none;
   /* visibility: hidden; */
@@ -33,9 +33,9 @@
 
 
 /* hover filler */
-.menu-root:before {
+.menu-root::before {
   position: absolute;
-  visibility: hidden;
+  /* visibility: hidden; */
   top: 1.6rem;
   content: '';
   width: 100%;
@@ -106,7 +106,7 @@ ul li ul:focus {
     font-size: 1.1rem;
     width: 100%;
     flex-direction: column;
-    color: var(--color-text);
+    color: var(--color-text)
     margin-top: -2px;
   }
 

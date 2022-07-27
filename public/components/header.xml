@@ -61,7 +61,7 @@
           </nav>
         </ul>
 
-        <ul>
+        <ul class="menu-wrapper">
           <li><a href="#">Blog</a></li>
         </ul>
       </nav>

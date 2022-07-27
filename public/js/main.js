@@ -66,7 +66,7 @@ function onScroll() {
 
 // Essential
 initComponents();
-initMenu();
+// initMenu();
 initDemos();
 
 // Nice to have

@@ -38,13 +38,14 @@
 
   .header__mid  {
     display: flex;
+    position: relative;
     justify-content: center;
-    flex: 2;
+    /* width: 10em; */
     /* max-width: 20em; */
     /* position: relative; */
   }
 
-  .header__mid ul, .header__right ul {
+  ul.menu-wrapper {
     display: inline-block;
     /* display: inline-flex;
     align-items: center; */
