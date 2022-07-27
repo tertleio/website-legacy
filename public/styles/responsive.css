@@ -1,7 +1,6 @@
 /* desktop */
 @media screen and (min-width: 1024px) {
 :root { font-size: 18px; }
-.tb { display: none; }
 .mb { display: none; }
 }
 
@@ -9,7 +8,6 @@
 @media screen and (max-width: 1024px) {
   :root { font-size: 17px; }
   .mb { display: none; }
-  .dt { display: none !important; }
 }
 
 /* mobile */

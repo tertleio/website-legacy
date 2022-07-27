@@ -36,7 +36,7 @@
     </div>
 
     <div class="header__mid">
-      <nav class="dt">
+      <nav class="dt tb">
         <ul class="menu-wrapper">
           <li class="menu-root"><a href="#">Overview</a></li>
           <nav class="menu">
@@ -81,7 +81,7 @@
             </a>
           </li>
 
-          <div class="menu-wrapper">
+        <div class="menu-wrapper mb">
           <div id="burger" class="ico menu-root">
             <svg
               width="19px"

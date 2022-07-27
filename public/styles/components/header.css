@@ -17,14 +17,14 @@
   .header__left {
     display: flex; 
     /* position: relative; */
-    gap: 1em;
+    justify-content: flex-start;
     align-items: center;
     flex: 1;
-    flex-shrink: 5;
+    max-width: 20%;
   }
 
   .header__left > * {
-    /* margin-left: 1rem; */
+    margin-left: 1rem;
   }
   
   #header .logo { 
@@ -40,7 +40,7 @@
     display: flex;
     justify-content: center;
     flex: 2;
-    max-width: 20em;
+    /* max-width: 20em; */
     /* position: relative; */
   }
 
@@ -69,8 +69,7 @@
 
     .header__right {
       justify-content: flex-end;
-      justify-content: space-between;
-      flex: 1;
+      /* flex: 1; */
     } .header__right ul {
       display: flex;
       justify-content: center;
@@ -79,12 +78,11 @@
 
     .header__right .btn {
       font-size: 0.8em;
-      color: var(--color-primary) !important;
     }
 
   
 @media screen and (max-width: 900px) {
-  /* .header__left {
+  .header__left {
     flex: 0;
-  } */
+  }
 }

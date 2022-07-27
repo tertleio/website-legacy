@@ -28,13 +28,13 @@ a:hover {
 
 .btn--primary {
     border: 1px solid var(--color-primary);
-    color: var(--color-bg);
+    color: var(--color-bg) !important;
     background: var(--color-primary);
   } 
 .btn--secondary {
   border: 1px solid var(--color-primary);
   background: none;
-  /* color: var(--color-primary); */
+  color: var(--color-primary) !important;
 }
 .btn.btn__lg {
   padding: 1.2em 2em;
