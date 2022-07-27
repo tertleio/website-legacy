@@ -50,6 +50,7 @@ function initDemos() {
 
 function onScroll() {
   const elNavCta = doc.getElementById('nav-cta');
+  console.log(elNavCta);
   const elOverlay = doc.getElementById('overlay');
 
   window.addEventListener('scroll', () => {
@@ -65,7 +66,7 @@ function onScroll() {
 
 // Essential
 initComponents();
-// initMenu();
+initMenu();
 initDemos();
 
 // Nice to have

@@ -10,7 +10,6 @@ class Header extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log(headerHtml);
     this.innerHTML = headerHtml;
   }
 }

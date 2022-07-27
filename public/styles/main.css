@@ -1,11 +1,11 @@
 @import '_reset.css';
 @import 'typography.css';
-@import 'buttons.css';
 @import './components/menu.css';
 @import './components/header.css';
 @import './components/footer.css';
 @import './components/features.css';
 @import 'responsive.css';
+@import 'buttons.css';
 @import 'x.css';
 
 :root {

@@ -1,37 +1,41 @@
 .ico {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0.3rem;
+  pointer-events: all;
   cursor: pointer;
 }
 
+.ico svg { pointer-events: none; }
 .ico svg > * { fill: var(--color-nav); }
 .ico:hover, .ico:focus { background: var(--color-highlight); } 
 /* .ico-burger { display: flex; align-items: center; justify-content: center; } */
 
 .menu-root { position: relative; }
 /* arrow */
-.menu-root::after { 
+.menu-root:after { 
   position: absolute;
-  visibility: hidden;
+  display: none;
+  /* visibility: hidden; */
   content: "";
   border-left: 0.5rem solid var(--color-link);
   border-right: 0.5rem solid transparent;
   border-top: 0.5rem solid var(--color-link);
   border-bottom: 0.5rem solid transparent;
   transform: rotate(45deg);
-  left: 40%;
-  top: 2.9rem;
-  z-index: -99;
+  left: calc(50% - 0.5rem);
+  top: 2.5rem;
+  z-index: 999;
 }
 
 
 /* hover filler */
-.menu-root::before {
+.menu-root:before {
   position: absolute;
+  visibility: hidden;
   top: 1.6rem;
   content: '';
   width: 100%;
@@ -44,26 +48,24 @@
 .menu-root { position: relative; }
 
 .menu-wrapper:hover .menu,
-.menu-wrapper:hover > .menu-root::after { visibility: visible; z-index: 1; };
+.menu-wrapper:hover > .menu-root:after { visibility: visible; z-index: 1; };
 
 .menu-wrapper:focus > .menu,
-.menu-wrapper:focus > .menu-root::after { visibility: visible; z-index: 1;}
+.menu-wrapper:focus > .menu-root:after { visibility: visible; z-index: 1;}
 
 .menu-wrapper:focus-within > .menu,
-.menu-wrapper:focus-within > .menu-root::after { visibility: visible; z-index: 1; } */
+.menu-wrapper:focus-within > .menu-root:after { visibility: visible; z-index: 1; } */
 
 
 .menu-wrapper:hover .menu,
-.menu-wrapper:hover > .menu-root::after,
+.menu-wrapper:hover > .menu-root:after,
 .menu-wrapper:focus > .menu,
-.menu-wrapper:focus > .menu-root::after,
+.menu-wrapper:focus > .menu-root:after,
 .menu-wrapper:focus-within > .menu,
-.menu-wrapper:focus-within > .menu-root::after {
-  visibility: visible;
+.menu-wrapper:focus-within > .menu-root:after {
+  /* visibility: visible; */
   display: block;
 }
-
-
 
 /* ul.item:hover > .menu,
 ul.item li:focus-within > .menu,
@@ -79,7 +81,7 @@ ul li ul:focus {
   /* visibility: hidden; */
   display: none;
   left: 0;
-  top: 3.3rem;
+  top: 2.9rem;
   width: 100%;
   min-width: 12em;
   background: var(--color-bg);
@@ -181,9 +183,9 @@ ul li ul:focus {
 }
 
 /* burger menu tappable area */
-.slider-cover::after {
+.slider-cover:after {
   position: absolute;
-  width: 18rem;
+  min-width: 21.5em;
   height: 3.9rem;
   /* border: 1px solid red; */
   content: "";
