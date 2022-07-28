@@ -44,7 +44,7 @@
 }
 
 .hero__header {
-  margin-top: -10rem;
+  margin-top: -20vh;
 } 
 
 .hero__body {
@@ -82,7 +82,7 @@
 
 
 @media (max-width: 600px) {
-  .hero__header { margin-top: 0rem; }
+  .hero__header { margin-top: -12vh; }
   .hero__header h1 { line-height: 1.1em; }
   .hero__header h2 {
     font-size: 1.9rem;

@@ -1,15 +1,23 @@
 .ico {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* border-radius: 0.3rem; */
+  /* padding: 0.5rem 0.8rem; */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  border-radius: 0.2em;
   pointer-events: all;
   cursor: pointer;
 }
 
-.ico svg { pointer-events: none; }
+.ico svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.6em;
+  pointer-events: none;
+}
+
 .ico svg > * { fill: var(--color-nav); }
-.ico:hover, .ico:focus { background: var(--color-highlight); } 
+/* .ico:hover, .ico:focus { background: var(--color-highlight); }  */
 /* .ico-burger { display: flex; align-items: center; justify-content: center; } */
 
 
@@ -17,31 +25,30 @@
 .menu-root { position: relative; } 
 
 /* arrow */
-.menu-root::after { 
-  position: absolute;
-  display: none;
-  /* visibility: hidden; */
-  content: "";
-  border-left: 0.5rem solid var(--color-link);
-  border-right: 0.5rem solid transparent;
-  border-top: 0.5rem solid var(--color-link);
-  border-bottom: 0.5rem solid transparent;
-  transform: rotate(45deg);
-  left: calc(50% - 0.5rem);
-  top: 2.5rem;
-  z-index: 999;
+@media (min-width: 600px) {
+  .menu-root::after { 
+    position: absolute;
+    display: none;
+    content: "";
+    border-left: 0.5rem solid var(--color-link);
+    border-right: 0.5rem solid transparent;
+    border-top: 0.5rem solid var(--color-link);
+    border-bottom: 0.5rem solid transparent;
+    transform: rotate(45deg);
+    left: calc(50% - 0.5rem);
+    top: 2.5rem;
+    z-index: 999;
+  }
 }
 
 
 /* hover filler */
 .menu-root::before {
   position: absolute;
-  /* visibility: hidden; */
   top: 1.6rem;
   content: '';
   width: 100%;
   display: flex;
-  justify-content: center;
   height: 2rem;
 }
 
@@ -62,8 +69,14 @@
 .menu-wrapper:focus > .menu-root:after,
 .menu-wrapper:focus-within > .menu,
 .menu-wrapper:focus-within > .menu-root:after {
-  /* visibility: visible; */
+  visibility: visible;
   display: block;
+}
+
+.menu.--active  {
+  display: block;
+  pointer-events: all;
+  visibility: visible;
 }
 
 /* ul.item:hover > .menu,
@@ -77,12 +90,12 @@ ul li ul:focus {
 
 .menu {
   position: absolute;
-  /* visibility: hidden; */
+  visibility: hidden;
   display: none;
   right: 0;
   top: 2.9rem;
+  min-width: 15rem;
   width: 100%;
-  min-width: 12em;
   background: var(--color-bg);
   border-radius: 0 0 0.6em 0.6em;
   border-radius: 0.6em;
@@ -100,10 +113,8 @@ ul li ul:focus {
 
 
   .menu ul {
-    text-align: right;
-    display: flex;
+    min-width: 15rem;
     font-size: 1.1rem;
-    width: 100%;
     flex-direction: column;
     color: var(--color-text);
     margin-top: -2px;
@@ -116,6 +127,7 @@ ul li ul:focus {
     justify-content: space-around;
     width: 100%;
     padding: 1em 1em;
+    text-align: right;
   }
   
   .header .menu a:hover, .header .menu a:focus, .menu a.fill { 
@@ -138,7 +150,6 @@ ul li ul:focus {
 
 .switch-wrapper { 
   width: 100%;
-  background: blue;
 }
 
 /* The switch - the box around the slider */

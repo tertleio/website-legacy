@@ -28,9 +28,8 @@
 }
 
   .header__left {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    width: 25%;
   }
 
   a.logo__link { 
@@ -52,18 +51,14 @@
     justify-content: space-around;
   }
 
-    .header__right {
+    .header__right > * {
+      display: flex;
+      align-items: center;
       position: relative;
       /* display: flex; */
       /* align-items: center; */
     } 
     
-    .header__right ul {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    } 
-
     .header__right .btn {
       /* display: flex; */
       margin-left: 0.1rem;
@@ -71,7 +66,6 @@
       padding: 0.66rem 1rem;
     }
 
-    #burger { margin-left: 1rem;  }
 
   
 @media screen and (max-width: 1000px) {

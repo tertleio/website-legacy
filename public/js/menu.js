@@ -4,25 +4,13 @@ const doc = document;
 const menu = () => {
   const elBurger = doc.querySelector('#burger');
   const elMenu = doc.querySelector('.menu-burger');
-  const elsMenuLink = doc.querySelectorAll('.menu-link');
+  // const elsMenuLink = doc.querySelectorAll('.menu-link');
 
-  elBurger.addEventListener('touchstart', openMenu);
-  // elsMenuLink.forEach((link) => link.addEventListener('click', closeMenu));
+  elBurger.addEventListener('click', toggleMenu);
 
-  function openMenu(e) {
-    elMenu.style = 'display: block;';
-    window.addEventListener('touchstart', closeMenu, {
-      capture: true,
-      once: true,
-    });
-  }
-
-  function closeMenu(e) {
-    e.stopPropagation();
-
-    setTimeout(() => {
-      elMenu.style = 'display: none;';
-    }, 100);
+  function toggleMenu() {
+    console.log('clicked');
+    elMenu.classList.toggle('--active');
   }
 };
 
