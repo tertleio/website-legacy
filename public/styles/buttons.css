@@ -5,7 +5,8 @@ a:visited {
 
 a {
   color: var(--color-link);
-} a:hover {
+} a:hover, a:focus {
+    color: var(--color-link);
     transition: all 0.25s;
     text-decoration: underline;
   }

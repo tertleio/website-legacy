@@ -1,6 +1,4 @@
 .ico {
-  /* width: 3rem;
-  height: 3rem; */
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
@@ -81,7 +79,7 @@ ul li ul:focus {
   position: absolute;
   /* visibility: hidden; */
   display: none;
-  left: 0;
+  right: 0;
   top: 2.9rem;
   width: 100%;
   min-width: 12em;
@@ -95,7 +93,7 @@ ul li ul:focus {
 }
 
 @media (max-width: 600px) {
-  .menu { max-width: 80vw !important } 
+  /* .menu { max-width: 80vw !important }  */
 }
 
 .menu a span { margin-right: auto; padding-right: 1rem;  }
@@ -119,6 +117,7 @@ ul li ul:focus {
     width: 100%;
     padding: 1em 1em;
   }
+  
   .header .menu a:hover, .header .menu a:focus, .menu a.fill { 
     background: var(--color-link);
     color: var(--color-bg);
@@ -139,7 +138,6 @@ ul li ul:focus {
 
 .switch-wrapper { 
   width: 100%;
-
 }
 
 .switch {

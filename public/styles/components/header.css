@@ -20,17 +20,11 @@
   color: var(--color-nav);
   text-decoration: none;
   padding: 0.5rem 0.75rem;
-}
-
-.header .active { 
+} .header ul a:hover {
+  color: var(--color-link);
+} .header .active { 
   color: var(--color-fg);
 }
-
-.header a:hover, .header a:focus {
-  text-decoration: none;
-  color: var(--color-link);
-}
-
 
   .header__left {
     display: flex;
@@ -58,12 +52,15 @@
 
     .header__right {
       position: relative;
-    } .header__right ul {
+    } 
+    
+    .header__right ul {
       display: flex;
       justify-content: flex-end;
     } 
+
     .header__right .btn {
-      /* font-size: 0.8em; */
+      font-size: 0.8em;
       padding: 0.6rem 1rem;
     }
 
