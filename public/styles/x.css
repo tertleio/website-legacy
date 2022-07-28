@@ -26,13 +26,6 @@
   0% { background-position: center bottom -2.3rem; }
   100% { background-position: center bottom -10rem; }
 }
-
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(1.29rem);
-  -ms-transform: translateX(1.29rem);
-  transform: translateX(1.29rem);
-}
                     
 #hero.wrapper { 
   background-image: none;

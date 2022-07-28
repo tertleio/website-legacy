@@ -138,77 +138,74 @@ ul li ul:focus {
 
 .switch-wrapper { 
   width: 100%;
+  background: blue;
 }
 
+/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
-  border-radius: 4rem;
-  width: 2.4rem;
-  height: 1.4rem;
+  width: 2.3rem;
+  height: 1.25rem;
 }
 
-/* hide default HTML checkbox */
+/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-
-/* slider outline */
+/* The slider */
 .slider {
+  padding: 0;
+  margin: 0;
   position: absolute;
   cursor: pointer;
   top: 0;
   left: 0;
+  right: 0;
   bottom: 0;
-  right: -5px;
-  -webkit-transition: .4s;
-  transition: .1s;
   border: 3px solid var(--color-nav);
+  /* background-color: #ccc; */
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
-/* slider circle */
 .slider:before {
   position: absolute;
   content: "";
-  width: 0.75rem;
-  height: 0.75rem;
-  left: 3px;
-  bottom: 0.15rem;
+  height: 0.7rem;
+  width: 0.7rem;
+  left: 0.1rem;
+  top: 0.1rem;
   background-color: var(--color-fg);
   -webkit-transition: .4s;
-  transition: .1s;
+  transition: .2s;
 }
 
-/* burger menu tappable area */
-.slider-cover:after {
-  position: absolute;
-  min-width: 21.5em;
-  height: 3.9rem;
-  /* border: 1px solid red; */
-  content: "";
-  left: -1.8rem;
-  bottom: -1.4rem;
-  -webkit-transition: .4s;
-  transition: .1s;
-}
-
-/* input:checked + .slider {
-  background-color: var(--color-bg)
-} */
-
-/* input:focus + .slider {
-  box-shadow: 0 0 1px white;
-} */
-
-/* rounded outline */
+/* Rounded sliders */
 .slider.round {
-  border-radius: 2rem;
+  border-radius: 34px;
 }
 
-/* rounded inner */
 .slider.round:before {
   border-radius: 50%;
 }
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(0.95rem);
+  -ms-transform: translateX(0.95rem);
+  transform: translateX(0.95rem);
+}
+
+
+/* .slider-cover:after {
+  position: absolute;
+  height: 3.9rem;
+  border: 1px solid red;
+  content: "";
+  bottom: -1.4rem;
+  -webkit-transition: .4s;
+  transition: .1s;
+} *
