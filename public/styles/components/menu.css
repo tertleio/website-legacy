@@ -1,10 +1,10 @@
 .ico {
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.3rem;
+  /* width: 3rem;
+  height: 3rem; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* border-radius: 0.3rem; */
   pointer-events: all;
   cursor: pointer;
 }
@@ -14,7 +14,10 @@
 .ico:hover, .ico:focus { background: var(--color-highlight); } 
 /* .ico-burger { display: flex; align-items: center; justify-content: center; } */
 
-.menu-root { position: relative; }
+
+/* .menu-wrapper { position: relative; } */
+.menu-root { position: relative; } 
+
 /* arrow */
 .menu-root::after { 
   position: absolute;
@@ -44,9 +47,7 @@
   height: 2rem;
 }
 
-/* .menu-wrapper { position: relative; }
-.menu-root { position: relative; }
-
+/*
 .menu-wrapper:hover .menu,
 .menu-wrapper:hover > .menu-root:after { visibility: visible; z-index: 1; };
 
@@ -94,7 +95,7 @@ ul li ul:focus {
 }
 
 @media (max-width: 600px) {
-  .menu { width: 80vw; } 
+  .menu { max-width: 80vw !important } 
 }
 
 .menu a span { margin-right: auto; padding-right: 1rem;  }
@@ -106,16 +107,17 @@ ul li ul:focus {
     font-size: 1.1rem;
     width: 100%;
     flex-direction: column;
-    color: var(--color-text)
+    color: var(--color-text);
     margin-top: -2px;
   }
 
   .menu li:not(:last-child) { border-bottom: 1px solid var(--color-highlight); }
 
   .header .menu a {
-    padding: 1em 1em;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1em 1em;
   }
   .header .menu a:hover, .header .menu a:focus, .menu a.fill { 
     background: var(--color-link);
@@ -142,7 +144,7 @@ ul li ul:focus {
 
 .switch {
   position: relative;
-  display: flex;
+  display: inline-block;
   border-radius: 4rem;
   width: 2.4rem;
   height: 1.4rem;
