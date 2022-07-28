@@ -15,8 +15,8 @@
 }
 
 
-.header a,
-.header a:visited {
+.header ul a,
+.header ul a:visited {
   color: var(--color-nav);
   text-decoration: none;
   padding: 0.5rem 0.75rem;
@@ -38,10 +38,13 @@
     width: 20%;
   }
 
-  .logo a { padding-left: 0; }
+  a.logo__link { 
+    margin-right: 0.5rem;
+    display: flex;
+    border-radius: 50%;
+  }
   .logo svg {
     width: 2.5rem;
-    margin-top: 0.1rem;
   }
   .logo-emblem > * { fill: var(--color-fg); }
 

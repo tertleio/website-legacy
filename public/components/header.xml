@@ -3,6 +3,7 @@
     <div class="header__left">
       <div class="logo">
         <a
+          class="logo__link"
           alt="Tertle logo"
           title="Tertle logo"
           href="https://tertle.io"
