@@ -30,6 +30,10 @@
   .header__left {
     display: inline-flex;
     align-items: center;
+    background: red;
+    width: 100%;
+    max-width: 25%;
+    flex-shrink: 4;
   }
 
   a.logo__link { 
@@ -43,32 +47,30 @@
   .logo-emblem > * { fill: var(--color-fg); }
 
   .header__mid  {
+    background: blue;
     position: relative;
   }
 
-  .header__mid ul {
+  .menu-list {
     display: inline-flex;
-    justify-content: space-around;
+    background: yellow;
   }
 
-    .header__right > * {
-      display: flex;
-      align-items: center;
-      position: relative;
-      /* display: flex; */
-      /* align-items: center; */
-    } 
-    
+
+  .header__right {
+    background: purple;
+    /* width: 100%; */
+    /* max-width: 25%; */
+  }
+
     .header__right .btn {
       /* display: flex; */
       margin-left: 0.1rem;
       font-size: 0.8em;
       padding: 0.66rem 1rem;
     }
-
-
   
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 650px) {
   .header__left {
     flex: 0;
   }

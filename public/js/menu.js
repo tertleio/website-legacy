@@ -9,7 +9,6 @@ const menu = () => {
   elBurger.addEventListener('click', toggleMenu);
 
   function toggleMenu() {
-    console.log('clicked');
     elMenu.classList.toggle('--active');
   }
 };
