@@ -1,12 +1,22 @@
 .ico {
   /* padding: 0.5rem 0.8rem; */
+  position: relative;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   border-radius: 0.2em;
   pointer-events: all;
-  background: red;
   cursor: pointer;
+}
+
+/* larger touch area */
+.mb .ico::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3.5rem;
+  height: 3rem
 }
 
 .ico svg {
@@ -19,30 +29,37 @@
 }
 
 .ico svg > * { fill: var(--color-nav); }
+#nav-close { display: none; }
+/* #nav-open { display: block; } */
 /* .ico:hover, .ico:focus { background: var(--color-highlight); }  */
 /* .ico-burger { display: flex; align-items: center; justify-content: center; } */
+
+.menu-list.--active #nav-open { display: none; }
+.menu-list.--active .menu, .menu-list.--active #nav-close  {
+  display: block;
+  visibility: visible;
+  pointer-events: all;
+}
 
 
 /* .menu-list { position: relative; } */
 .menu-root { position: relative; } 
+.mb .menu { width: 75vw; margin-right: 0.5rem; margin-top: 1em; }
 
 /* arrow */
-@media (min-width: 600px) {
-  .menu-root::after { 
-    position: absolute;
-    display: none;
-    content: "";
-    border-left: 0.5rem solid var(--color-link);
-    border-right: 0.5rem solid transparent;
-    border-top: 0.5rem solid var(--color-link);
-    border-bottom: 0.5rem solid transparent;
-    transform: rotate(45deg);
-    left: calc(50% - 0.5rem);
-    top: 2.5rem;
-    z-index: 999;
-  }
+.menu-root::after { 
+  position: absolute;
+  display: none;
+  content: "";
+  border-left: 0.5rem solid var(--color-link);
+  border-right: 0.5rem solid transparent;
+  border-top: 0.5rem solid var(--color-link);
+  border-bottom: 0.5rem solid transparent;
+  transform: rotate(45deg);
+  left: calc(50% - 0.5rem);
+  top: 2.5rem;
+  z-index: 999;
 }
-
 
 /* hover filler */
 .menu-root::before {
@@ -54,41 +71,15 @@
   height: 2rem;
 }
 
-/*
-.menu-list:hover .menu,
-.menu-list:hover > .menu-root:after { visibility: visible; z-index: 1; };
-
-.menu-list:focus > .menu,
-.menu-list:focus > .menu-root:after { visibility: visible; z-index: 1;}
-
-.menu-list:focus-within > .menu,
-.menu-list:focus-within > .menu-root:after { visibility: visible; z-index: 1; } */
-
-
-.menu-list:hover .menu,
-.menu-list:hover > .menu-root:after,
-.menu-list:focus > .menu,
-.menu-list:focus > .menu-root:after,
-.menu-list:focus-within > .menu,
-.menu-list:focus-within > .menu-root:after {
+.menu-list:not(.mb):hover .menu,
+.menu-list:not(.mb):hover > .menu-root:after,
+.menu-list:not(.mb):focus > .menu,
+.menu-list:not(.mb):focus > .menu-root:after,
+.menu-list:not(.mb):focus-within > .menu,
+.menu-list:not(.mb):focus-within > .menu-root:after {
   visibility: visible;
   display: block;
 }
-
-.menu.--active  {
-  display: block;
-  pointer-events: all;
-  visibility: visible;
-}
-
-/* ul.item:hover > .menu,
-ul.item li:focus-within > .menu,
-ul.item li:hover,
-ul li ul:focus {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-} */
 
 .menu {
   position: absolute;

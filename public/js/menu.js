@@ -2,13 +2,12 @@
 const doc = document;
 
 const menu = () => {
-  const elBurger = doc.querySelector('#burger');
-  const elMenu = doc.querySelector('.menu-burger');
-  // const elsMenuLink = doc.querySelectorAll('.menu-link');
+  const elBurger = doc.querySelector('#burger-ico');
+  const elMenu = doc.querySelector('#burger-list');
+  elBurger.addEventListener('touchstart', toggleMenu);
 
-  elBurger.addEventListener('click', toggleMenu);
-
-  function toggleMenu() {
+  function toggleMenu(e) {
+    e.preventDefault();
     elMenu.classList.toggle('--active');
   }
 };

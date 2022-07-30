@@ -63,7 +63,7 @@
     </nav>
 
     <div class="header__right">
-      <ul class="menu-list">
+      <ul class="list-x">
         <li class="dt"><a href="#">For Hirers</a></li>
         <li class="dt">
           <a
@@ -74,13 +74,12 @@
             Join Wailist
           </a>
         </li>
-      </ul>
 
-      <nav class="menu menu-burger">
-        <!-- prettier-ignore -->
-        <ul class="menu-list">
-          <li id="burger" class="menu-root">
+        <nav class="">
+          <ul id="burger-list" class="menu-list mb">
+            <li id="burger-ico" class="ico menu-root">
               <svg
+                id="nav-open"
                 viewBox="0 0 22 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,28 +88,57 @@
                 <rect y="7" width="100%" height="2" rx="1.5" fill="white" />
                 <rect y="0" width="100%" height="2" rx="1.5" fill="white" />
               </svg>
-          </li>
-          <li>
-            <a class="switch-wrapper fill">
-              <span>
-                <div tabindex="0">
+
+              <svg
+                id="nav-close"
+                width="19"
+                height="19"
+                viewBox="0 0 19 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  y="16.1421"
+                  width="22.753"
+                  height="2"
+                  rx="1.5"
+                  transform="rotate(-45 0 16.1421)"
+                  fill="none"
+                />
+                <rect
+                  x="2.12109"
+                  width="22.753"
+                  height="2"
+                  rx="1.5"
+                  transform="rotate(45 2.12109 0)"
+                  fill="none"
+                />
+              </svg>
+            </li>
+
+            <!-- prettier-ignore -->
+            <div class="menu menu-burger">
+            <li>
+              <a class="switch-wrapper fill">
+                <span>
                   <label class="switch">
                     <input id="toggle-theme" type="checkbox" />
                     <span class="slider round slider-cover"></span>
                   </label>
-                </div>
-              </span>
-              Switch Theme
-            </a>
-          </li>
-          <li><a href="#features"><span>📦</span>Features</a></li>
-          <li><a href="#why-tertle"><span>🐢</span>Why Tertle</a></li>
-          <li><a href="#faq"><span>❓</span>FAQ</a></li>
-          <li><a href="#"><span>📝</span>Blog</a></li>
-          <li><a href="/index.html"><span>🐣</span>For Founders</a></li>
-          <li><a href="#"><span>🐣</span>For Investors</a></li>
-        </ul>
-      </nav>
+                </span>
+                Switch Theme
+              </a>
+            </li>
+            <li><a href="#features"><span>📦</span>Features</a></li>
+            <li><a href="#why-tertle"><span>🐢</span>Why Tertle</a></li>
+            <li><a href="#faq"><span>❓</span>FAQ</a></li>
+            <li><a href="#"><span>📝</span>Blog</a></li>
+            <li><a href="/index.html"><span>🐣</span>For Founders</a></li>
+            <li><a href="#"><span>🐣</span>For Investors</a></li>
+          </div>
+          </ul>
+        </nav>
+      </ul>
     </div>
   </header>
 </div>
