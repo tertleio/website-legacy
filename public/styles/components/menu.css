@@ -34,6 +34,7 @@
 }
 
 .ico svg > * { fill: var(--color-nav); }
+/* .--active .ico svg > * { fill: var(--color-fg); } /* active */
 #nav-close { display: none; }
 
 
