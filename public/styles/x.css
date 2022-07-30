@@ -44,18 +44,12 @@
 }
 
 .hero__header {
-  padding-top: 5em;
-  margin-bottom: 2em;
-  /* margin-top: -20vh; */
-  /* margin-top: -5em; */
-  /* height: 40vh; */
+  margin-bottom: 1em;
 } 
 
 .hero__body {
-  height: 30vh;
+  height: 40vh;
   /* background: url('../assets/terminal.svg') no-repeat center top; */
-  /* margin: 3em 1em 2rem 1em; */
-  /* max-height: 20em; */
 }
 
 
@@ -92,11 +86,9 @@
 
 
 @media (max-width: 600px) {
-  .hero__header { margin-top: -12vh; padding-left: 5rem; padding-right: 5rem;}
-  .hero__header h1 { line-height: 1.25em; }
+  .hero__header { padding-left: 1rem; padding-right: 1rem;}
   .hero__header h2 {
     font-size: 1.9rem;
-    width: 70vw;
     line-height: 1.3em;
     margin-top: 0.8rem;
   }
