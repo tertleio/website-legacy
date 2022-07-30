@@ -86,7 +86,11 @@
 
 
 @media (max-width: 600px) {
-  .hero__header { padding-left: 1rem; padding-right: 1rem;}
+  .hero__header { 
+    padding-left: 1rem; 
+    padding-right: 1rem;
+  }
+  
   .hero__header h2 {
     font-size: 1.9rem;
     line-height: 1.3em;

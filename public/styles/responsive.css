@@ -13,7 +13,7 @@
 /* mobile */
 @media screen and (max-width: 600px) {
   :root { font-size: 15px; }
-  .mb { display: block; }
+  .mb { display: block; visibility: visible;}
   .dt { display: none !important; }
 }
 

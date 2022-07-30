@@ -36,9 +36,19 @@
       </div>
     </div>
 
-    <nav class="header__mid dt tb">
-      <ul class="menu-list dt tb">
-        <li class="menu-root"><a href="#">Overview</a></li>
+    <nav class="header__mid">
+      <ul class="menu-list">
+        <li class="menu-root">
+          <a href="#">
+            Overview
+            <span class="--dropdown">
+              <svg width="19" height="13" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="7.00684" y="10.5" width="12" height="2" rx="1.5" transform="rotate(-45 7.00684 10.1345)" fill="white"/>
+                <rect x="2.12109" y="2" width="12" height="2" rx="1.5" transform="rotate(45 2.12109 1)" fill="white"/>
+              </svg>
+            </span>
+          </a>
+        </li>
         <!-- prettier-ignore -->
         <div class="menu">
             <li><a href="#features"><span>📦</span>Features</a></li>
@@ -47,7 +57,7 @@
           </div>
       </ul>
 
-      <ul class="menu-list">
+      <ul class="menu-list dt tb">
         <li class="menu-root"><a href="#">Products</a></li>
         <!-- prettier-ignore -->
         <div class="menu">
@@ -57,7 +67,7 @@
         </div>
       </ul>
 
-      <ul class="menu-list">
+      <ul class="menu-list dt tb">
         <li><a href="#">Blog</a></li>
       </ul>
     </nav>
@@ -75,7 +85,7 @@
           </a>
         </li>
 
-        <nav class="">
+        <nav>
           <ul id="burger-list" class="menu-list mb">
             <li id="burger-ico" class="ico menu-root">
               <svg
