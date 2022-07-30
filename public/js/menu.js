@@ -4,10 +4,10 @@ const doc = document;
 const menu = () => {
   const elBurger = doc.querySelector('#burger-ico');
   const elMenu = doc.querySelector('#burger-list');
-  elBurger.addEventListener('touchstart', toggleMenu);
+  elBurger.addEventListener('click', toggleMenu);
 
   function toggleMenu(e) {
-    e.preventDefault();
+    // e.preventDefault();
     elMenu.classList.toggle('--active');
   }
 };

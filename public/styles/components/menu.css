@@ -7,6 +7,13 @@
   border-radius: 0.2em;
   pointer-events: all;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* larger touch area */
@@ -44,7 +51,7 @@
 
 /* .menu-list { position: relative; } */
 .menu-root { position: relative; } 
-.mb .menu { width: 75vw; margin-right: 0.5rem; margin-top: 1em; }
+.mb .menu { width: 70vw; margin-right: 0.5rem; margin-top: 1em; }
 
 /* arrow */
 .menu-root::after { 
@@ -74,7 +81,7 @@
 .menu-list:not(.mb):hover .menu,
 .menu-list:not(.mb):hover > .menu-root:after,
 .menu-list:not(.mb):focus > .menu,
-.menu-list:not(.mb):focus > .menu-root:after,
+.menu-list:focus > .menu-root:after,
 .menu-list:not(.mb):focus-within > .menu,
 .menu-list:not(.mb):focus-within > .menu-root:after {
   visibility: visible;
