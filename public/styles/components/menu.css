@@ -1,9 +1,8 @@
 .ico {
   /* padding: 0.5rem 0.8rem; */
   position: relative;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
   border-radius: 0.2em;
   pointer-events: all;
   cursor: pointer;
@@ -41,17 +40,6 @@
 /* .ico:hover, .ico:focus { background: var(--color-highlight); }  */
 /* .ico-burger { display: flex; align-items: center; justify-content: center; } */
 
-.menu-list.--active #nav-open { display: none; }
-.menu-list.--active .menu, .menu-list.--active #nav-close  {
-  display: block;
-  visibility: visible;
-  pointer-events: all;
-}
-
-
-/* .menu-list { position: relative; } */
-.menu-root { position: relative; } 
-.mb .menu { width: 70vw; margin-right: 0.5rem; margin-top: 1em; }
 
 /* arrow */
 .menu-root::after { 
@@ -64,8 +52,7 @@
   border-bottom: 0.5rem solid transparent;
   transform: rotate(45deg);
   left: calc(50% - 0.5rem);
-  top: 2.5rem;
-  z-index: 999;
+  top: 2.55rem;
 }
 
 /* hover filler */
@@ -78,15 +65,31 @@
   height: 2rem;
 }
 
+/* deskttop */
 .menu-list:not(.mb):hover .menu,
 .menu-list:not(.mb):hover > .menu-root:after,
 .menu-list:not(.mb):focus > .menu,
-.menu-list:focus > .menu-root:after,
+.menu-list:not(.mb):focus > .menu-root:after,
 .menu-list:not(.mb):focus-within > .menu,
 .menu-list:not(.mb):focus-within > .menu-root:after {
   visibility: visible;
   display: block;
 }
+
+/* touch */
+.menu-list.--active #nav-open { display: none; }
+.menu-list.--active .menu,
+.menu-list.--active .menu-root::after,
+.menu-list.--active #nav-close  {
+  display: block;
+  visibility: visible;
+  pointer-events: all;
+}
+
+
+/* .menu-list { position: relative; } */
+.menu-root { position: relative; } 
+.mb .menu { width: 70vw; margin-right: 0.5rem; margin-top: 1em; }
 
 .menu {
   position: absolute;
@@ -97,19 +100,16 @@
   min-width: 15rem;
   width: 100%;
   background: var(--color-bg);
-  border-radius: 0 0 0.6em 0.6em;
-  border-radius: 0.6em;
-  border-top: 3px solid var(--color-link);
-  border-right: 1px solid var(--color-highlight); 
-  border-bottom: 1px solid var(--color-highlight);
-  border-left: 1px solid var(--color-highlight);
+  border-radius: 0.6rem;
+  border: 1px solid var(--color-highlight);
+  border-top: none;
 }
 
 @media (max-width: 600px) {
   /* .menu { max-width: 80vw !important }  */
 }
 
-.menu a span { margin-right: auto; padding-right: 1rem;  }
+.menu a span { margin-right: auto; padding-right: 1rem; }
 
 
   .menu ul {
@@ -138,6 +138,7 @@
    }
 
   .menu li:first-child a { 
+    border-top: 3px solid var(--color-link);
     border-radius: 0.6rem 0.6rem 0 0; 
     padding-top: 1.5em;
   }
