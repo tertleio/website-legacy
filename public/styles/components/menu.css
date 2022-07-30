@@ -1,7 +1,6 @@
 .ico {
   /* padding: 0.5rem 0.8rem; */
   position: relative;
-  margin-bottom: 0.5rem;
   margin-left: 1rem;
   border-radius: 0.2em;
   pointer-events: all;
@@ -49,7 +48,7 @@
   border-bottom: 0.5rem solid transparent;
   transform: rotate(45deg);
   left: calc(50% - 0.5rem);
-  top: 2.55rem;
+  top: 2.5rem;
 }
 
 /* hover filler */
@@ -206,10 +205,10 @@ input:checked + .slider:before {
 
 .slider-cover:after {
   position: absolute;
+  content: "";
   height: 3.9rem;
   left: -1.2rem;
   width: 70vw;
-  content: "";
   bottom: -1.4rem;
   -webkit-transition: .4s;
   transition: .1s;
