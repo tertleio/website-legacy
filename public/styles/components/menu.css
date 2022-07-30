@@ -36,9 +36,6 @@
 
 .ico svg > * { fill: var(--color-nav); }
 #nav-close { display: none; }
-/* #nav-open { display: block; } */
-/* .ico:hover, .ico:focus { background: var(--color-highlight); }  */
-/* .ico-burger { display: flex; align-items: center; justify-content: center; } */
 
 
 /* arrow */
@@ -105,12 +102,7 @@
   border-top: none;
 }
 
-@media (max-width: 600px) {
-  /* .menu { max-width: 80vw !important }  */
-}
-
 .menu a span { margin-right: auto; padding-right: 1rem; }
-
 
   .menu ul {
     min-width: 15rem;
@@ -212,12 +204,13 @@ input:checked + .slider:before {
 }
 
 
-/* .slider-cover:after {
+.slider-cover:after {
   position: absolute;
   height: 3.9rem;
-  border: 1px solid red;
+  left: -1.2rem;
+  width: 70vw;
   content: "";
   bottom: -1.4rem;
   -webkit-transition: .4s;
   transition: .1s;
-} *
+} 
