@@ -4,11 +4,27 @@ const doc = document;
 const menu = () => {
   const elBurger = doc.querySelector('#burger-ico');
   const elMenu = doc.querySelector('#burger-list');
-  elBurger.addEventListener('click', toggleMenu);
+  const elDropdown = doc.querySelector('#dropdown');
+  const elsItem = doc.querySelectorAll('.closeOnE');
 
-  function toggleMenu(e) {
-    // e.preventDefault();
-    elMenu.classList.toggle('--active');
+  elBurger.addEventListener('click', (e) => toggleActive(elMenu, e));
+  elDropdown.addEventListener('click', (e) => toggleActive(elDropdown, e));
+  elsItem.forEach((elItem) =>
+    elItem.addEventListener('click', () =>
+      elDropdown.classList.remove('--active')
+    )
+  );
+
+  function toggleActive(argEl, e) {
+    if (argEl.classList.contains('--active')) {
+      console.log('adding active');
+      argEl.classList.remove('--active');
+      doc.activeElement.blur();
+    } else {
+      console.log('removing active');
+      argEl.classList.add('--active');
+      doc.activeElement.blur();
+    }
   }
 };
 

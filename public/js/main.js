@@ -50,7 +50,6 @@ function initDemos() {
 
 function onScroll() {
   const elNavCta = doc.getElementById('nav-cta');
-  console.log(elNavCta);
   const elOverlay = doc.getElementById('overlay');
 
   window.addEventListener('scroll', () => {
