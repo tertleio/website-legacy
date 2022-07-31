@@ -91,6 +91,8 @@
     display: block;  
   }
 }
+/* .menu-root:focus .menu,
+.menu-root:focus .menu-root::after, */
 .menu-root.--active + .menu,
 .menu-root.--active::after {
   visibility: visible;

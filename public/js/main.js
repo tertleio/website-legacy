@@ -1,6 +1,7 @@
 'use strict';
 const doc = document;
 import initComponents from './build.js';
+import initScroll from './scroll.js';
 import initMenu from './menu.js';
 import initMatrix from './matrix.js';
 
@@ -48,28 +49,13 @@ function initDemos() {
   });
 }
 
-function onScroll() {
-  const elNavCta = doc.getElementById('nav-cta');
-  const elOverlay = doc.getElementById('overlay');
-
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 500) {
-      elNavCta.className = 'btn btn--primary';
-      elOverlay.style['animation-name'] = 'hide-rabbit';
-    } else {
-      elNavCta.className = 'btn btn--secondary';
-      elOverlay.style['animation-name'] = 'show-rabbit';
-    }
-  });
-}
-
 // Essential
 initComponents();
 initMenu();
 initDemos();
 
 // Nice to have
-onScroll();
+initScroll();
 toggleTheme();
 initMatrix();
 
