@@ -23,6 +23,7 @@ const doc = document;
 const scroll = () => {
   const elNavCta = doc.getElementById('nav-cta');
   const elOverlay = doc.getElementById('overlay');
+  const menuRoot = doc.querySelector('#menu-content');
   const els = doc.querySelectorAll('.container');
   const heights = [...els].map((el) => el.offsetHeight);
   const len = els.length;
@@ -30,6 +31,8 @@ const scroll = () => {
   const footerHeight = els[els.length - 1];
   console.log(els);
   console.log(heights);
+
+  console.log('menutRoot', menuRoot);
 
   // el.style.height = `${el.scrollHeight}px`;
   // el.pageYOffset = el.offsetTop
@@ -63,31 +66,40 @@ const scroll = () => {
     const featuresTop = hero + padding * 2;
     const faqTop = hero + features + padding * 2;
 
+    function replaceActive(i) {
+      const elCurrentActive = menuRoot.querySelector('.--active');
+      const elItem = menuRoot.querySelector(`li:nth-of-type(${i}) a`);
+      const elTitle = doc.querySelector('#dropdown a span.title');
+
+      console.log('elItem', elItem);
+      console.log('elTitle', elTitle);
+
+      if (elCurrentActive && elItem) {
+        elCurrentActive.className = '';
+        elItem.className = '--active';
+        elTitle.textContent = elItem.dataset.title;
+      }
+    }
+
     if (yPos === 0) {
-      console.log('is at top');
+      console.log('at top ');
+      replaceActive(0);
     }
 
     if (yPos > heroTop && yPos < featuresTop) {
       console.log('at hero');
+      replaceActive(1);
     }
 
     if (yPos > featuresTop && yPos < faqTop) {
       console.log('at features');
+      replaceActive(2);
     }
 
     if (yPos > faqTop) {
       console.log('at faq');
+      replaceActive(3);
     }
-
-    // if (yPos > heights[2]) {
-    //   console.log('at faq');
-    // }
-
-    // for (let i = 1; i < len - 1; i++) {
-    //   if (yPos > heights[i] && yPos < heights[i + 1]) {
-    //     els[i].classList.add('--active');
-    //   } else els[i].classList.remove('--active');
-    // }
   }
 
   // function onView() {

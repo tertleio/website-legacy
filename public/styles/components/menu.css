@@ -168,6 +168,13 @@
     text-decoration: none;
     border-radius: none;
    }
+  
+   .header ul a.--active:not(:hover) {
+    background: var(--color-link);
+    color: var(--color-bg);
+    /* color: #A2DFA3; dark alternative */
+    /* background: #001600; dark latneriatve */
+   }
 
   .menu li:first-child a { 
     border-top: 3px solid var(--color-link);

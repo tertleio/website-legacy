@@ -39,8 +39,8 @@
     <nav class="header__mid">
       <ul class="menu-list">
         <li id="dropdown" class="menu-root">
-          <a href="#">
-            Overview
+          <a>
+            <span class="title">Overview</span>
             <span class="dropdown --open">
               <svg width="19" height="13" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="7.00684" y="10.5" width="12" height="2" rx="1.5" transform="rotate(-45 7.00684 10.1345)" fill="white"/>
@@ -62,7 +62,7 @@
                     rx="1.5"
                     transform="rotate(-45 0 16.1421)"
                     fill="none"
-                  />
+                  /> 
                   <rect
                     x="2.12109"
                     width="22.753"
@@ -76,10 +76,12 @@
           </a>
         </li>
         <!-- prettier-ignore -->
-        <div class="menu">
-            <li class="closeOnE"><a href="#features"><span>📦</span>Features</a></li>
-            <li class="closeOnE"><a href="#why-tertle"><span>🐢</span>Why Tertle</a></li>
-            <li class="closeOnE"><a href="#faq"><span>❓</span>Frequently Asked Questions</a></li>
+        <div id="menu-content" class="menu">
+            <li class="closeOnE"><a class="--active" data-title="Overview" href="#"><span>⬆️</span>Top of Page</a></li>
+            <li class="closeOnE"><a data-title="Features" href="#features"><span>📦</span>Features</a></li>
+            <li class="closeOnE"><a data-title="FAQ" href="#faq"><span>❓</span>Frequently Asked Questions</a></li>
+            <!-- <li class="closeOnE"><a data-title="Why" href="#why-tertle"><span>🐢</span>Why Tertle</a></li> -->
+            <!-- <li class="closeOnE"><a data-title="FAQ" href="#faq"><span>🐰</span>Join Waitlist</a></li> -->
           </div>
       </ul>
 
