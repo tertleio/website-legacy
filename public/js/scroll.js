@@ -6,26 +6,37 @@ const scroll = () => {
   const elOverlay = doc.getElementById('overlay');
   const menuRoot = doc.querySelector('#menu-content');
 
-  function getDimensions() {
+  function getHeights() {
     const els = doc.querySelectorAll('.container');
-    const heights = [...els].map((el) => el.offsetHeight);
-    const sumHeights = heights.map((height, idx) => height * idx);
+    const allHeights = [...els].map((el) => el.offsetHeight);
 
-    return [heights, sumHeights];
+    const header = allHeights.shift();
+    const footer = allHeights.pop();
+    const sections = [...allHeights];
+    const sectionSums = [];
+
+    while (allHeights.length) {
+      const sum = allHeights.reduce((acc, curr) => acc + curr);
+      sectionSums.unshift(sum);
+      allHeights.pop();
+    }
+
+    return [sections, sectionSums, header, footer];
   }
 
-  function replaceTitle(atSectionIdx) {
+  function replaceTitle(at1BaseIdx) {
+    console.log('REPLACING AT SECTION', at1BaseIdx);
     const elCurrentActive = menuRoot.querySelector('.--active');
-    const elItem = menuRoot.querySelector(`li:nth-of-type(${atSectionIdx}) a`);
+    const elItem = menuRoot.querySelector(`li:nth-of-type(${at1BaseIdx}) a`);
     const elTitle = doc.querySelector('#dropdown a span.title');
+
+    console.log('EL__ITEM', elItem);
 
     if (elItem) {
       elCurrentActive.className = '';
       elItem.className = '--active';
       elTitle.textContent = elItem.dataset.title;
     }
-
-    return atSectionIdx;
   }
 
   function showRabbitAndCta(shouldShow) {
@@ -39,31 +50,58 @@ const scroll = () => {
   }
 
   (() => {
-    const [heights, triggers] = getDimensions();
-    const headlessTriggers = triggers.slice(0, -1);
-    const headerHeight = heights[0];
-    const sectionCount = headlessTriggers.length;
-    window.addEventListener('scroll', () => handler(window.scrollY));
+    const [sections, sectionSums, header, footer] = getHeights();
+    const sectionCount = sections.length;
+    console.log('SECTIONS', sections);
+    console.log('SECTION_SUMS', sectionSums);
+    console.log('HEADER', header);
+    console.log('FOOTER', footer);
+    console.log('SECTION_COUNT', sectionCount);
 
     function handler(yPos) {
       let activeIdx = 0;
+      console.log(yPos);
 
       for (let i = 0; i < sectionCount; i++) {
-        if (i === activeIdx) continue;
+        // if (i === activeIdx) continue;
 
-        const isBeforeSectionCut = yPos + headerHeight < triggers[i];
-        let isAfterPrevSectionCut = yPos - headerHeight > triggers[i - 1];
-        const isHeroVisibile = yPos > 500 ? false : true;
+        const min = sectionSums[i - 1] + header;
+        const max = sectionSums[i] + header;
+        const isAfterMinPos = i === 0 ? true : yPos > min;
+        const isBeforeMaxPos = i === sectionCount ? true : yPos < max;
 
-        if (isHeroVisibile) showRabbitAndCta(isHeroVisibile);
+        console.log('min', min);
+        console.log('max', max);
+        // const isHeroVisibile = yPos > sections[1] ? false : false;
 
-        if (isBeforeSectionCut && isAfterPrevSectionCut) {
-          activeIdx = replaceTitle(i);
+        // if (isHeroVisibile) {
+        //   console.log('running');
+        //   showRabbitAndCta(isHeroVisibile);
+        // }
 
+        if (isAfterMinPos && isBeforeMaxPos) {
+          console.log('CHAING AT PX', yPos);
+          replaceTitle(i + 1);
+          activeIdx = i;
           break;
         }
       }
     }
+
+    function addListeners() {
+      window.addEventListener('scroll', () => handler(window.scrollY));
+      window.addEventListener(
+        'resize',
+        () => {
+          console.log('resized');
+          window.removeEventListener('scroll', () => handler(window.scrollY));
+          addListeners();
+        },
+        { once: true, passive: true }
+      );
+    }
+
+    addListeners();
   })();
 };
 

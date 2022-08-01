@@ -8,6 +8,10 @@
 @import 'buttons.css';
 @import 'x.css';
 
+/* * {
+  border: 1px solid red !important;
+} */
+
 :root {
   scroll-behavior: auto;
   scroll-behavior: smooth;
