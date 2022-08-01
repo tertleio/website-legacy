@@ -9,7 +9,6 @@ const scroll = () => {
   function getHeights() {
     const els = doc.querySelectorAll('.container');
     const allHeights = [...els].map((el) => el.offsetHeight);
-    console.log(allHeights);
 
     const header = allHeights.shift();
     const footer = allHeights.pop();
@@ -90,7 +89,6 @@ const scroll = () => {
       window.addEventListener(
         'resize',
         () => {
-          console.log('resized');
           window.removeEventListener('scroll', () => handler(window.scrollY));
 
           setTimeout(() => {
