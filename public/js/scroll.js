@@ -40,65 +40,63 @@ const scroll = () => {
   }
 
   function showRabbitAndCta(shouldShow) {
+    console.log('changing');
     if (shouldShow) {
+      console.log('show');
       elNavCta.className = 'btn btn--secondary';
       elOverlay.style['animation-name'] = 'show-rabbit';
     } else {
+      console.log('hide');
       elNavCta.className = 'btn btn--primary';
       elOverlay.style['animation-name'] = 'hide-rabbit';
     }
   }
 
   (() => {
-    const [sections, sectionSums, header, footer] = getHeights();
+    const [sections, sectionSums, header] = getHeights();
     const sectionCount = sections.length;
-    console.log('SECTIONS', sections);
-    console.log('SECTION_SUMS', sectionSums);
-    console.log('HEADER', header);
-    console.log('FOOTER', footer);
-    console.log('SECTION_COUNT', sectionCount);
+    let activeIdx = 0;
+    let isRabbitShowing = true;
 
     function handler(yPos) {
-      let activeIdx = 0;
-      console.log(yPos);
-
       for (let i = 0; i < sectionCount; i++) {
-        // if (i === activeIdx) continue;
+        if (i === activeIdx) continue;
+
+        const isHeroVis = yPos > sectionSums[0] - 400 ? false : true;
+        if (!isHeroVis && isRabbitShowing) {
+          showRabbitAndCta(isHeroVis);
+          isRabbitShowing = false;
+        }
+        if (isHeroVis && !isRabbitShowing) {
+          showRabbitAndCta(isHeroVis);
+          isRabbitShowing = true;
+        }
 
         const min = sectionSums[i - 1] + header;
-        const max = sectionSums[i] + header;
         const isAfterMinPos = i === 0 ? true : yPos > min;
+        if (!isAfterMinPos) continue;
+
+        const max = sectionSums[i] + header;
         const isBeforeMaxPos = i === sectionCount ? true : yPos < max;
+        if (!isBeforeMaxPos) continue;
 
-        console.log('min', min);
-        console.log('max', max);
-        // const isHeroVisibile = yPos > sections[1] ? false : false;
-
-        // if (isHeroVisibile) {
-        //   console.log('running');
-        //   showRabbitAndCta(isHeroVisibile);
-        // }
-
-        if (isAfterMinPos && isBeforeMaxPos) {
-          console.log('CHAING AT PX', yPos);
-          replaceTitle(i + 1);
-          activeIdx = i;
-          break;
-        }
+        console.log('CHAING AT PX', yPos);
+        replaceTitle(i + 1);
+        activeIdx = i;
       }
     }
 
     function addListeners() {
       window.addEventListener('scroll', () => handler(window.scrollY));
-      window.addEventListener(
-        'resize',
-        () => {
-          console.log('resized');
-          window.removeEventListener('scroll', () => handler(window.scrollY));
-          addListeners();
-        },
-        { once: true, passive: true }
-      );
+      // window.addEventListener(
+      //   'resize',
+      //   () => {
+      //     console.log('resized');
+      //     window.removeEventListener('scroll', () => handler(window.scrollY));
+      //     addListeners();
+      //   },
+      //   { once: true, passive: true }
+      // );
     }
 
     addListeners();
