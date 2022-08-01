@@ -6,24 +6,26 @@ const scroll = () => {
   const elOverlay = doc.getElementById('overlay');
   const menuRoot = doc.querySelector('#menu-content');
 
-  function getHeights() {
+  function getDimensions() {
     const els = doc.querySelectorAll('.container');
-    const elsHeight = [...els].map((el) => el.offsetHeight);
-    return elsHeight;
+    const heights = [...els].map((el) => el.offsetHeight);
+    const sumHeights = heights.map((height, idx) => height * idx);
+
+    return [heights, sumHeights];
   }
 
-  function replaceTitle(i) {
+  function replaceTitle(atSectionIdx) {
     const elCurrentActive = menuRoot.querySelector('.--active');
-    const elItem = menuRoot.querySelector(`li:nth-of-type(${i}) a`);
+    const elItem = menuRoot.querySelector(`li:nth-of-type(${atSectionIdx}) a`);
     const elTitle = doc.querySelector('#dropdown a span.title');
 
-    if (elCurrentActive && elItem) {
+    if (elItem) {
       elCurrentActive.className = '';
       elItem.className = '--active';
       elTitle.textContent = elItem.dataset.title;
     }
 
-    return i;
+    return atSectionIdx;
   }
 
   function showRabbitAndCta(shouldShow) {
@@ -37,43 +39,45 @@ const scroll = () => {
   }
 
   (() => {
-    let activeIdx = 0;
+    const [heights, triggers] = getDimensions();
+    const headlessTriggers = triggers.slice(0, -1);
+    const headerHeight = heights[0];
+    const sectionCount = headlessTriggers.length;
     window.addEventListener('scroll', () => handler(window.scrollY));
 
-    let heights = getHeights();
-    // const len = heights.length;
-    const hero = heights[1];
-    const features = heights[2];
-    // const faq = heights[3];
-
-    const padding = 90;
-    const heroTop = 0;
-    const featuresTop = hero + padding * 2;
-    const faqTop = hero + features + padding * 2;
-
     function handler(yPos) {
-      if (activeIdx !== 0) {
-        if (yPos === 0 || yPos < featuresTop) activeIdx = replaceTitle(0);
+      let activeIdx = 0;
+
+      for (let i = 0; i < sectionCount; i++) {
+        if (i === activeIdx) continue;
+
+        const isBeforeSectionCut = yPos + headerHeight < triggers[i];
+        let isAfterPrevSectionCut = yPos - headerHeight > triggers[i - 1];
         const isHeroVisibile = yPos > 500 ? false : true;
-        showRabbitAndCta(isHeroVisibile);
-      }
 
-      if (activeIdx !== 1) {
-        if (yPos > heroTop && yPos < featuresTop) activeIdx = replaceTitle(1);
-      }
+        if (isHeroVisibile) showRabbitAndCta(isHeroVisibile);
 
-      if (activeIdx !== 2) {
-        if (yPos > featuresTop && yPos < faqTop) activeIdx = replaceTitle(2);
-      }
+        if (isBeforeSectionCut && isAfterPrevSectionCut) {
+          activeIdx = replaceTitle(i);
 
-      if (activeIdx !== 3) {
-        if (yPos > faqTop) activeIdx = replaceTitle(3);
+          break;
+        }
       }
     }
   })();
 };
 
 export default scroll;
+
+// const calcInViewport = (scrollY) => {
+//   const scrollY = window.scrollY;
+//   const heights = getHeights();
+//   const heightsSum = heights.reduce((acc, curr) => acc + curr, 0);
+//   const heightsSumMinusLast = heightsSum - heights[heights.length - 1];
+//   const scrollYMinusLast = scrollY - heights[heights.length - 1];
+//   const scrollYPercent = scrollYMinusLast / heightsSumMinusLast;
+//   const scrollYPercentRounded = Math.round(scrollYPercent * 100);
+// };
 
 // class Scroll {
 //   constructor() {
