@@ -9,6 +9,7 @@ const scroll = () => {
   function getHeights() {
     const els = doc.querySelectorAll('.container');
     const allHeights = [...els].map((el) => el.offsetHeight);
+    console.log(allHeights);
 
     const header = allHeights.shift();
     const footer = allHeights.pop();
@@ -46,7 +47,7 @@ const scroll = () => {
     }
   }
 
-  (() => {
+  function init() {
     const [sections, sectionSums, header] = getHeights();
     const sectionCount = sections.length;
     let activeIdx = 0;
@@ -56,6 +57,7 @@ const scroll = () => {
       for (let i = 0; i < sectionCount; i++) {
         if (i === activeIdx) continue;
 
+        // Hero Handler
         const isHeroVis = yPos > sectionSums[0] - 400 ? false : true;
         if (!isHeroVis && isRabbitShowing) {
           showRabbitAndCta(isHeroVis);
@@ -66,6 +68,7 @@ const scroll = () => {
           isRabbitShowing = true;
         }
 
+        // Title handler
         const min = sectionSums[i - 1] + header;
         const isAfterMinPos = i === 0 ? true : yPos > min;
         if (!isAfterMinPos) continue;
@@ -74,75 +77,36 @@ const scroll = () => {
         const isBeforeMaxPos = i === sectionCount ? true : yPos < max;
         if (!isBeforeMaxPos) continue;
 
-        // console.log('CHAING AT PX', yPos);
         replaceTitle(i + 1);
         activeIdx = i;
       }
     }
 
-    function addListeners() {
-      window.addEventListener('scroll', () => handler(window.scrollY));
-      // window.addEventListener(
-      //   'resize',
-      //   () => {
-      //     console.log('resized');
-      //     window.removeEventListener('scroll', () => handler(window.scrollY));
-      //     addListeners();
-      //   },
-      //   { once: true, passive: true }
-      // );
-    }
+    (() => {
+      const passive = { passive: true };
+      const once = { once: true };
 
-    addListeners();
-  })();
+      window.addEventListener('scroll', () => handler(window.scrollY), passive);
+      window.addEventListener(
+        'resize',
+        () => {
+          console.log('resized');
+          window.removeEventListener('scroll', () => handler(window.scrollY));
+
+          setTimeout(() => {
+            init();
+            // TODO:
+            // reinitializing hero flex height sometimes
+            // reading wrong values in handler
+          }, 3000);
+        },
+        once,
+        passive
+      );
+    })();
+  }
+
+  init();
 };
 
 export default scroll;
-
-// const calcInViewport = (scrollY) => {
-//   const scrollY = window.scrollY;
-//   const heights = getHeights();
-//   const heightsSum = heights.reduce((acc, curr) => acc + curr, 0);
-//   const heightsSumMinusLast = heightsSum - heights[heights.length - 1];
-//   const scrollYMinusLast = scrollY - heights[heights.length - 1];
-//   const scrollYPercent = scrollYMinusLast / heightsSumMinusLast;
-//   const scrollYPercentRounded = Math.round(scrollYPercent * 100);
-// };
-
-// class Scroll {
-//   constructor() {
-//     this.el = doc.querySelector('.container');
-//     this.el.addEventListener('scroll', () => this.handleScroll());
-//   }
-
-//   handleScroll() {
-//     console.timeLog('handling');
-//     const scrollTop = this.el.scrollTop;
-//     const scrollHeight = this.el.scrollHeight;
-//     const clientHeight = this.el.clientHeight;
-//     const isAtBottom = scrollTop + clientHeight >= scrollHeight;
-
-//     if (isAtBottom) {
-//       console.log('at bottom');
-//     }
-//   }
-// }
-
-// function onView() {
-//   for (let i = 0; i < els.length; i++) {
-//     if (
-//       els[i].getBoundingClientRect().top < window.innerHeight * 0.5 &&
-//       els[i].getBoundingClientRect().bottom > window.innerHeight * 0.5
-//     ) {
-//       els[i].classList.add('active');
-//     } else {
-//       els[i].classList.remove('active');
-//     }
-//   }
-// }
-
-// el.style.height = `${el.scrollHeight}px`;
-// el.pageYOffset = el.offsetTop
-// const elContentHeight = elContent.offsetHeight;
-// const elContentTop = elContent.offsetTop;
-// const elContentBottom = elContentHeight - elContentTop;
