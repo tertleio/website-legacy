@@ -25,12 +25,9 @@ const scroll = () => {
   }
 
   function replaceTitle(at1BaseIdx) {
-    console.log('REPLACING AT SECTION', at1BaseIdx);
     const elCurrentActive = menuRoot.querySelector('.--active');
     const elItem = menuRoot.querySelector(`li:nth-of-type(${at1BaseIdx}) a`);
     const elTitle = doc.querySelector('#dropdown a span.title');
-
-    console.log('EL__ITEM', elItem);
 
     if (elItem) {
       elCurrentActive.className = '';
@@ -40,13 +37,10 @@ const scroll = () => {
   }
 
   function showRabbitAndCta(shouldShow) {
-    console.log('changing');
     if (shouldShow) {
-      console.log('show');
       elNavCta.className = 'btn btn--secondary';
       elOverlay.style['animation-name'] = 'show-rabbit';
     } else {
-      console.log('hide');
       elNavCta.className = 'btn btn--primary';
       elOverlay.style['animation-name'] = 'hide-rabbit';
     }
@@ -80,7 +74,7 @@ const scroll = () => {
         const isBeforeMaxPos = i === sectionCount ? true : yPos < max;
         if (!isBeforeMaxPos) continue;
 
-        console.log('CHAING AT PX', yPos);
+        // console.log('CHAING AT PX', yPos);
         replaceTitle(i + 1);
         activeIdx = i;
       }
