@@ -1,6 +1,80 @@
 'use strict';
 const doc = document;
 
+const scroll = () => {
+  const elNavCta = doc.getElementById('nav-cta');
+  const elOverlay = doc.getElementById('overlay');
+  const menuRoot = doc.querySelector('#menu-content');
+
+  function getHeights() {
+    const els = doc.querySelectorAll('.container');
+    const elsHeight = [...els].map((el) => el.offsetHeight);
+    return elsHeight;
+  }
+
+  function replaceTitle(i) {
+    const elCurrentActive = menuRoot.querySelector('.--active');
+    const elItem = menuRoot.querySelector(`li:nth-of-type(${i}) a`);
+    const elTitle = doc.querySelector('#dropdown a span.title');
+
+    if (elCurrentActive && elItem) {
+      elCurrentActive.className = '';
+      elItem.className = '--active';
+      elTitle.textContent = elItem.dataset.title;
+    }
+
+    return i;
+  }
+
+  function showRabbitAndCta(shouldShow) {
+    if (shouldShow) {
+      elNavCta.className = 'btn btn--secondary';
+      elOverlay.style['animation-name'] = 'show-rabbit';
+    } else {
+      elNavCta.className = 'btn btn--primary';
+      elOverlay.style['animation-name'] = 'hide-rabbit';
+    }
+  }
+
+  (() => {
+    let activeIdx = 0;
+    window.addEventListener('scroll', () => handler(window.scrollY));
+
+    let heights = getHeights();
+    // const len = heights.length;
+    const hero = heights[1];
+    const features = heights[2];
+    // const faq = heights[3];
+
+    const padding = 90;
+    const heroTop = 0;
+    const featuresTop = hero + padding * 2;
+    const faqTop = hero + features + padding * 2;
+
+    function handler(yPos) {
+      if (activeIdx !== 0) {
+        if (yPos === 0 || yPos < featuresTop) activeIdx = replaceTitle(0);
+        const isHeroVisibile = yPos > 500 ? false : true;
+        showRabbitAndCta(isHeroVisibile);
+      }
+
+      if (activeIdx !== 1) {
+        if (yPos > heroTop && yPos < featuresTop) activeIdx = replaceTitle(1);
+      }
+
+      if (activeIdx !== 2) {
+        if (yPos > featuresTop && yPos < faqTop) activeIdx = replaceTitle(2);
+      }
+
+      if (activeIdx !== 3) {
+        if (yPos > faqTop) activeIdx = replaceTitle(3);
+      }
+    }
+  })();
+};
+
+export default scroll;
+
 // class Scroll {
 //   constructor() {
 //     this.el = doc.querySelector('.container');
@@ -20,102 +94,21 @@ const doc = document;
 //   }
 // }
 
-const scroll = () => {
-  const elNavCta = doc.getElementById('nav-cta');
-  const elOverlay = doc.getElementById('overlay');
-  const menuRoot = doc.querySelector('#menu-content');
-  const els = doc.querySelectorAll('.container');
-  const heights = [...els].map((el) => el.offsetHeight);
-  const len = els.length;
-  const headerHeight = els[0];
-  const footerHeight = els[els.length - 1];
-  console.log(els);
-  console.log(heights);
+// function onView() {
+//   for (let i = 0; i < els.length; i++) {
+//     if (
+//       els[i].getBoundingClientRect().top < window.innerHeight * 0.5 &&
+//       els[i].getBoundingClientRect().bottom > window.innerHeight * 0.5
+//     ) {
+//       els[i].classList.add('active');
+//     } else {
+//       els[i].classList.remove('active');
+//     }
+//   }
+// }
 
-  console.log('menutRoot', menuRoot);
-
-  // el.style.height = `${el.scrollHeight}px`;
-  // el.pageYOffset = el.offsetTop
-  // const elContentHeight = elContent.offsetHeight;
-  // const elContentTop = elContent.offsetTop;
-  // const elContentBottom = elContentHeight - elContentTop;
-
-  // Rabbit & cta
-  function scrollListener() {
-    window.addEventListener('scroll', () => {
-      onScroll(window.scrollY);
-
-      // if (window.pageYOffset > 500) {
-      //   elNavCta.className = 'btn btn--primary';
-      //   elOverlay.style['animation-name'] = 'hide-rabbit';
-      // } else {
-      //   elNavCta.className = 'btn btn--secondary';
-      //   elOverlay.style['animation-name'] = 'show-rabbit';
-      // }
-    });
-  }
-
-  function onScroll(yPos) {
-    const padding = 90;
-
-    const hero = heights[1];
-    const features = heights[2];
-    // const faq = heights[3];
-
-    const heroTop = 0;
-    const featuresTop = hero + padding * 2;
-    const faqTop = hero + features + padding * 2;
-
-    function replaceActive(i) {
-      const elCurrentActive = menuRoot.querySelector('.--active');
-      const elItem = menuRoot.querySelector(`li:nth-of-type(${i}) a`);
-      const elTitle = doc.querySelector('#dropdown a span.title');
-
-      console.log('elItem', elItem);
-      console.log('elTitle', elTitle);
-
-      if (elCurrentActive && elItem) {
-        elCurrentActive.className = '';
-        elItem.className = '--active';
-        elTitle.textContent = elItem.dataset.title;
-      }
-    }
-
-    if (yPos === 0) {
-      console.log('at top ');
-      replaceActive(0);
-    }
-
-    if (yPos > heroTop && yPos < featuresTop) {
-      console.log('at hero');
-      replaceActive(1);
-    }
-
-    if (yPos > featuresTop && yPos < faqTop) {
-      console.log('at features');
-      replaceActive(2);
-    }
-
-    if (yPos > faqTop) {
-      console.log('at faq');
-      replaceActive(3);
-    }
-  }
-
-  // function onView() {
-  //   for (let i = 0; i < els.length; i++) {
-  //     if (
-  //       els[i].getBoundingClientRect().top < window.innerHeight * 0.5 &&
-  //       els[i].getBoundingClientRect().bottom > window.innerHeight * 0.5
-  //     ) {
-  //       els[i].classList.add('active');
-  //     } else {
-  //       els[i].classList.remove('active');
-  //     }
-  //   }
-  // }
-
-  scrollListener();
-};
-
-export default scroll;
+// el.style.height = `${el.scrollHeight}px`;
+// el.pageYOffset = el.offsetTop
+// const elContentHeight = elContent.offsetHeight;
+// const elContentTop = elContent.offsetTop;
+// const elContentBottom = elContentHeight - elContentTop;
