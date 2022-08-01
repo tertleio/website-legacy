@@ -17,11 +17,9 @@ const menu = () => {
 
   function toggleActive(argEl, e) {
     if (argEl.classList.contains('--active')) {
-      console.log('adding active');
       argEl.classList.remove('--active');
       doc.activeElement.blur();
     } else {
-      console.log('removing active');
       argEl.classList.add('--active');
       doc.activeElement.blur();
     }
