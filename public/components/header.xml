@@ -39,7 +39,7 @@
     <nav class="header__mid">
       <ul class="menu-list">
         <li id="dropdown" class="menu-root">
-          <a>
+          <a tabindex="0">
             <span class="title">Content</span>
             <span class="dropdown --open">
               <svg width="19" height="13" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">

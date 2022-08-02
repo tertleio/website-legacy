@@ -83,16 +83,18 @@
 .menu-list .--active  .dropdown.--close { display: inline-flex; }
 .menu-list:hover .dropdown.--open svg > * { fill: var(--color-link); }
 
-/* show & hide menu + pointer */
+/* how & hide menu & pointer (dt only so doesnt mess with mb js)  */
 @media screen and (min-width: 600px) { 
   .menu-list:hover .menu,
-  .menu-list:hover .menu-root:after {
+  .menu-list:hover .menu-root:after,
+  .menu-list:focus > .menu,
+  .menu-list:focus > .menu-root::after,
+  .menu-list:focus-within > .menu,
+  .menu-list:focus-within > .menu-root::after {
     visibility: visible;
     display: block;  
   }
 }
-/* .menu-root:focus .menu,
-.menu-root:focus .menu-root::after, */
 .menu-root.--active + .menu,
 .menu-root.--active::after {
   visibility: visible;
