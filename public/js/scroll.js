@@ -96,7 +96,7 @@ const scroll = () => {
             // TODO:
             // reinitializing hero flex height sometimes
             // reading wrong values in handler
-          }, 3000);
+          }, 2000);
         },
         once,
         passive
