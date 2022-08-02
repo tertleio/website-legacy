@@ -55,6 +55,9 @@
   .logo-emblem > * { fill: var(--color-fg); }
 
   .header__mid  {
+    display: flex;
+    justify-content: center;
+    width: 16em;
     position: relative;
   }
 
