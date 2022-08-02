@@ -1,9 +1,9 @@
 'use strict';
 const doc = document;
-import initComponents from './build.js';
+// import initComponents from './build.js';
 import initScroll from './scroll.js';
-import initMenu from './menu.js';
-import initMatrix from './matrix.js';
+// import initMenu from './menu.js';
+// import initMatrix from './matrix.js';
 
 const toggleTheme = () => {
   const elsToggle = doc.querySelectorAll('#toggle-theme');
@@ -49,15 +49,17 @@ function initDemos() {
   });
 }
 
+console.log('test');
+
 // Essential
-initComponents();
-initMenu();
+// initComponents();
+// initMenu();
 initDemos();
 
 // Nice to have
 initScroll();
-toggleTheme();
-initMatrix();
+// toggleTheme();
+// initMatrix();
 
 // URLS ---------------------------------------------------------
 // const signupSubmitUrl = '/signup-submit';
