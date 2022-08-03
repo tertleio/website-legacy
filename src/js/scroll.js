@@ -47,10 +47,13 @@ const scroll = () => {
   }
 
   function init() {
+    console.log('inited');
     const [sections, sectionSums, header] = getHeights();
     const sectionCount = sections.length;
     let activeIdx = 0;
     let isRabbitShowing = true;
+
+    console.log(sectionCount);
 
     function handler(yPos) {
       for (let i = 0; i < sectionCount; i++) {
@@ -58,6 +61,7 @@ const scroll = () => {
 
         // Hero Handler
         const isHeroVis = yPos > sectionSums[0] - 400 ? false : true;
+        console.log('nop');
         if (!isHeroVis && isRabbitShowing) {
           showRabbitAndCta(isHeroVis);
           isRabbitShowing = false;

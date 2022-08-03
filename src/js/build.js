@@ -11,7 +11,7 @@ const initComponents = () => {
   const elHeader = doc.getElementById('header');
   const elFooter = doc.getElementById('footerlol');
 
-  console.log(elFooter);
+  // console.log(elFooter);
 
   elHeader.innerHTML = headerHtml;
   elFooter.innerHTML = footerHtml;

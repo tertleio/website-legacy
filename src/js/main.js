@@ -1,65 +1,25 @@
 'use strict';
 const doc = document;
-// import initComponents from './build.js';
+
+console.log('logging');
+
+import initComponents from './build.js';
 import initScroll from './scroll.js';
 // import initMenu from './menu.js';
 // import initMatrix from './matrix.js';
+import initDemos from './demo.js';
 
-const toggleTheme = () => {
-  const elsToggle = doc.querySelectorAll('#toggle-theme');
-  const elRocket = doc.querySelector('.rocket');
-  const elMatrix = doc.getElementById('matrix');
-
-  function changeTheme(theme) {
-    elRocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
-    doc.documentElement.setAttribute('theme', theme);
-    elMatrix.style = theme === 'dark' ? 'display: block;' : 'display: none;';
-    localStorage.setItem('theme', theme);
-  }
-
-  const localTheme = localStorage.getItem('theme');
-  if (localTheme) changeTheme(localTheme);
-
-  elsToggle.forEach((elToggle) => {
-    elToggle.onclick = () => {
-      const fromTheme = doc.documentElement.getAttribute('theme');
-      const toTheme = fromTheme === 'dark' ? 'light' : 'dark';
-
-      changeTheme(toTheme);
-    };
-  });
-};
-
-function initDemos() {
-  const elContent = document.querySelector('.content-container');
-  const elsDemo = document.querySelectorAll('.demo');
-
-  doc.querySelectorAll('.content-btn').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const elCurrentActive = elContent.querySelector('.--active');
-      btn.classList.add('--active');
-      elCurrentActive.classList.remove('--active');
-
-      const targetId = e.target.id.split('-')[1];
-      const targetEl = elsDemo[targetId - 1];
-
-      elsDemo.forEach((demo) => demo.classList.remove('--active'));
-      targetEl.classList.add('--active');
-    });
-  });
-}
-
-console.log('test');
-
-// Essential
-// initComponents();
+// ESSENTIAL
+initComponents();
 // initMenu();
 initDemos();
 
-// Nice to have
-initScroll();
+// NICE TO HAVE
+// initScroll();
 // toggleTheme();
 // initMatrix();
+
+// LEGACY ////////////////////////////////////
 
 // URLS ---------------------------------------------------------
 // const signupSubmitUrl = '/signup-submit';
