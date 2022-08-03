@@ -8,11 +8,11 @@ import demos from './demo.js';
 
 async function initPrio1() {
   await components();
-  menu();
-  demos();
 }
 
 function initPrio2() {
+  menu();
+  demos();
   scroll();
 }
 
@@ -21,9 +21,10 @@ function initPrio3() {
   matrix();
 }
 
-initPrio1();
-initPrio2();
-initPrio3();
+initPrio1().then((_) => {
+  initPrio2();
+  initPrio3();
+});
 
 // LEGACY ////////////////////////////////////
 

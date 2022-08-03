@@ -8,7 +8,7 @@ const compose = async () => {
   const footerHtml = await loadHtml(`${path}/footer.xml`, import.meta.url);
 
   const elHeader = doc.getElementById('header');
-  const elFooter = doc.getElementById('footerlol');
+  const elFooter = doc.getElementById('footer');
 
   elHeader.innerHTML = headerHtml;
   elFooter.innerHTML = footerHtml;
