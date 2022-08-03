@@ -58,7 +58,6 @@ const scroll = () => {
 
         // Hero Handler
         const isHeroVis = yPos > sectionSums[0] - 400 ? false : true;
-        console.log('nop');
         if (!isHeroVis && isRabbitShowing) {
           showRabbitAndCta(isHeroVis);
           isRabbitShowing = false;
