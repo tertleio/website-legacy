@@ -1,4 +1,4 @@
-<footer class="wrapper">
+<footer class="container">
   <div class="footer__chunk">
     <!-- <img class="emblem" src="./assets/logo-emblem.svg" /> -->
     <div id="copyright">
@@ -25,7 +25,7 @@
         theme="light"
         class="rocket"
         title="Whoooosh!"
-        alt="Tertle rocket"
+      alt="Tertle rocket"
         src="./assets/tertle_rocket-dark-sm.gif"
       />
     </div>
