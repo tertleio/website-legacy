@@ -1,23 +1,31 @@
 'use strict';
-const doc = document;
+import components from './build.js';
+import scroll from './scroll.js';
+import menu from './menu.js';
+import toggleTheme from './theme.js';
+import matrix from './matrix.js';
+import demos from './demo.js';
 
-console.log('logging');
+async function initPrio1() {
+  await components();
+  menu();
+  demos();
 
-import initComponents from './build.js';
-import initScroll from './scroll.js';
-// import initMenu from './menu.js';
-// import initMatrix from './matrix.js';
-import initDemos from './demo.js';
+  return Promise.resolve();
+}
 
-// ESSENTIAL
-initComponents();
-// initMenu();
-initDemos();
+function initPrio2() {
+  scroll();
 
-// NICE TO HAVE
-// initScroll();
-// toggleTheme();
-// initMatrix();
+  return Promise.resolve();
+}
+
+function initPrio3() {
+  toggleTheme();
+  matrix();
+}
+
+initPrio1().then(() => initPrio2().then(() => initPrio3()));
 
 // LEGACY ////////////////////////////////////
 

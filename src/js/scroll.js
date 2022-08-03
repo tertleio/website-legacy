@@ -47,13 +47,10 @@ const scroll = () => {
   }
 
   function init() {
-    console.log('inited');
     const [sections, sectionSums, header] = getHeights();
     const sectionCount = sections.length;
     let activeIdx = 0;
     let isRabbitShowing = true;
-
-    console.log(sectionCount);
 
     function handler(yPos) {
       for (let i = 0; i < sectionCount; i++) {

@@ -1,3 +1,6 @@
+'use strict';
+const doc = document;
+
 const toggleTheme = () => {
   const elsToggle = doc.querySelectorAll('#toggle-theme');
   const elRocket = doc.querySelector('.rocket');

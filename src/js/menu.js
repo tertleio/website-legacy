@@ -7,14 +7,6 @@ const menu = () => {
   const elDropdown = doc.querySelector('#dropdown');
   const elsItem = doc.querySelectorAll('.closeOnE');
 
-  elBurger.addEventListener('click', (e) => toggleActive(elMenu, e));
-  elDropdown.addEventListener('click', (e) => toggleActive(elDropdown, e));
-  elsItem.forEach((elItem) =>
-    elItem.addEventListener('click', () =>
-      elDropdown.classList.remove('--active')
-    )
-  );
-
   function toggleActive(argEl, e) {
     if (argEl.classList.contains('--active')) {
       argEl.classList.remove('--active');
@@ -24,6 +16,14 @@ const menu = () => {
       doc.activeElement.blur();
     }
   }
+
+  elBurger.addEventListener('click', (e) => toggleActive(elMenu, e));
+  elDropdown.addEventListener('click', (e) => toggleActive(elDropdown, e));
+  elsItem.forEach((elItem) =>
+    elItem.addEventListener('click', () =>
+      elDropdown.classList.remove('--active')
+    )
+  );
 };
 
 export default menu;
