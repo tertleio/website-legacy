@@ -2,7 +2,7 @@
 const doc = document;
 import loadHtml from './utils/loadHtml.js';
 
-const components = async () => {
+const compose = async () => {
   const path = '../components';
   const headerHtml = await loadHtml(`${path}/header.xml`, import.meta.url);
   const footerHtml = await loadHtml(`${path}/footer.xml`, import.meta.url);
@@ -39,4 +39,4 @@ const components = async () => {
 //   customElements.define(`component-footer`, Footer);
 // };
 
-export default components;
+export default compose;

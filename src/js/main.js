@@ -1,5 +1,5 @@
 'use strict';
-import components from './build.js';
+import components from './compose.js';
 import scroll from './scroll.js';
 import menu from './menu.js';
 import toggleTheme from './theme.js';
@@ -10,14 +10,10 @@ async function initPrio1() {
   await components();
   menu();
   demos();
-
-  return Promise.resolve();
 }
 
 function initPrio2() {
   scroll();
-
-  return Promise.resolve();
 }
 
 function initPrio3() {
@@ -25,7 +21,9 @@ function initPrio3() {
   matrix();
 }
 
-initPrio1().then(() => initPrio2().then(() => initPrio3()));
+initPrio1();
+initPrio2();
+initPrio3();
 
 // LEGACY ////////////////////////////////////
 
