@@ -10,6 +10,8 @@ async function initPrio1() {
   await components();
 }
 
+console.log(window.location.pathname);
+
 function initPrio2() {
   menu();
   demos();
@@ -18,7 +20,7 @@ function initPrio2() {
 
 function initPrio3() {
   toggleTheme();
-  matrix();
+  // matrix();
 }
 
 initPrio1().then((_) => {

@@ -2,6 +2,26 @@
 const doc = document;
 import loadHtml from './utils/loadHtml.js';
 
+// get all the h2's in the document
+const h2s = doc.querySelectorAll('h2');
+// edit components.xml to add the new component
+// render innerHtml of the new component
+// OR
+// create a pre-build step to rennder all variations of the new component
+
+// Conditional Rendering
+function conditionalRendering() {
+  const elsH2 = doc.querySelectorAll('h2');
+
+  // content menu
+
+  // cta's
+
+  // logo
+
+  // matrix
+}
+
 const compose = async () => {
   const path = '../components';
   const headerHtml = await loadHtml(`${path}/header.xml`, import.meta.url);

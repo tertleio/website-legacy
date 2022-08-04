@@ -2,7 +2,7 @@
 <html lang="en" theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <title>Tertle - Scale</title>
+    <title>Tertle - Hatch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
@@ -27,8 +27,14 @@
     <section id="hero" class="wrapper">
       <div class="hero container">
         <div class="hero__header">
-          <h1>Contract Matching</h1>
-          <h2 class="p fs-lg">Developer & Design Job Matcher 🚀</h2>
+          <img
+            id="hero-img"
+            src="./assets/match-puzzle.svg"
+            alt="Find a co-founder"
+            title="Find a co-founder"
+          />
+          <h1>Co-founder Mathcer</h1>
+          <h2 class="p fs-lg">1 to 1 intros to like-minded innovators 🚀</h2>
         </div>
         <div class="hero__body">
           <form>
@@ -46,7 +52,7 @@
                 class="btn btn--primary"
                 href="https://app.tertle.io/join"
               >
-                Join Waitlist
+                Join Tertle
               </button>
             </div>
           </form>
@@ -57,7 +63,7 @@
     </section>
 
     <main>
-      <section id="features" class="wrapper">
+      <!-- <section id="features" class="wrapper">
         <div class="content container">
           <h2>Features</h2>
 
@@ -117,6 +123,36 @@
             </aside>
           </div>
         </div>
+      </section> -->
+
+      <section id="faq" class="wrapper">
+        <div class="content container">
+          <h2>How it Works</h2>
+
+          <div class="content __single">
+            <h3>1. Create your profile</h3>
+            <p>
+              Tell Tertle a little bit more about you and what you’re looking
+              for in a co-founder.
+            </p>
+          </div>
+
+          <div class="content __single">
+            <h3>2. Vetted matching</h3>
+            <p>
+              Tertle will match you up based on things you both care about -
+              like your skillsets, location, values and interests.
+            </p>
+          </div>
+
+          <div class="content __single">
+            <h3>3. Connect and chat</h3>
+            <p>
+              Receive weekly 1:1 video chat calendar invitations at a time that
+              suits you.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section id="faq" class="wrapper">
@@ -139,9 +175,14 @@
 
           <div class="content __single">
             <h3>How much does it cost?</h3>
+            <p>It's FREE for all our beta user.</p>
+          </div>
+
+          <div class="content __single">
+            <h3>Where did you learn how to spell?</h3>
             <p>
-              Completely free for you. We charge 3% commission to each invoice
-              to the hirer.
+              Spellchecker bugged out when we came up with the name (and
+              'turtle.io' was taken).
             </p>
           </div>
 
@@ -157,9 +198,5 @@
     </main>
 
     <div id="footer" class="wrapper"></div>
-
-    <div id="matrix" style="display: none">
-      <canvas id="canvas" height="400"></canvas>
-    </div>
   </body>
 </html>

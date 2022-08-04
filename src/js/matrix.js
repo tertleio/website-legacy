@@ -39,6 +39,7 @@ function initMatrix() {
   canvas = document.getElementById('canvas');
   ctx = canvas.getContext('2d');
 
+  resizeMatrix();
   defineDimensions();
 
   // start the main loop
@@ -95,5 +96,4 @@ function tick() {
   setTimeout(tick, 50);
 }
 
-resizeMatrix();
 export default initMatrix;

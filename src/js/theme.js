@@ -1,15 +1,18 @@
 'use strict';
 const doc = document;
 
+function toggleFooter() {
+  const elMatrix = doc.getElementById('matrix');
+  elMatrix.style = theme === 'dark' ? 'display: block;' : 'display: none;';
+}
+
 const toggleTheme = () => {
   const elsToggle = doc.querySelectorAll('#toggle-theme');
   const elRocket = doc.querySelector('.rocket');
-  const elMatrix = doc.getElementById('matrix');
 
   function changeTheme(theme) {
     elRocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
     doc.documentElement.setAttribute('theme', theme);
-    elMatrix.style = theme === 'dark' ? 'display: block;' : 'display: none;';
     localStorage.setItem('theme', theme);
   }
 
