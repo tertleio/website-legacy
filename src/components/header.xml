@@ -78,10 +78,6 @@
       <div id="menu-content" class="menu">
           <li class="closeOnE"><a class="--active" data-short="Content" data-long="Content" href="#"><span>⬆️</span>Top of Page</a></li>
           <!-- remaining li's will be generated in compose.js -->
-          <!-- <li class="closeOnE"><a data-title="Features" href="#features"><span>📦</span>Features</a></li>
-          <li class="closeOnE"><a data-title="FAQ" href="#faq"><span>❓</span>Frequently Asked Questions</a></li> -->
-          <!-- <li class="closeOnE"><a data-title="Why" href="#why-tertle"><span>🐢</span>Why Tertle</a></li> -->
-          <!-- <li class="closeOnE"><a data-title="FAQ" href="#faq"><span>🐰</span>Join Waitlist</a></li> -->
         </div>
     </ul>
 
@@ -89,9 +85,10 @@
       <li class="menu-root"><a href="#">Products</a></li>
       <!-- prettier-ignore -->
       <div class="menu">
-        <li><a href="#"><span>💼</span>For Hirers</a></li>
-        <li><a href="./index.html"><span>🐣</span>For Founders</a></li>
-        <li><a href="#"><span>🐣</span>For Investors</a></li>
+        <li><a class="--active" href="./contractors.html"><span>💼</span>For Contractors</a></li>
+        <li><a href="./hirers.html"><span>💼</span>For Hirers</a></li>
+        <li><a href="./founders.html"><span>🐣</span>For Founders</a></li>
+        <li><a href="./investors.html"><span>🐣</span>For Investors</a></li>
       </div>
     </ul>
 
