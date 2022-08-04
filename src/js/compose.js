@@ -42,7 +42,7 @@ function render(vars) {
   elsH2.forEach((h2, i) => {
     if (i === 0) return; // skip first hero h2
 
-    const hashTag = '#' + h2.textContent.toLowerCase();
+    const hashTag = '#' + h2.innerText.split(' ').join('-').toLowerCase();
     const h2D = h2.dataset;
     const newLi = `
                   <li class="closeOnE">

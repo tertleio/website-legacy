@@ -32,7 +32,7 @@ const scroll = () => {
     if (elItem) {
       elCurrentActive.className = '';
       elItem.className = '--active';
-      elTitle.textContent = elItem.dataset.short;
+      elTitle.innerText = elItem.dataset.short;
     }
   }
 
