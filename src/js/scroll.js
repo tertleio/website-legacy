@@ -27,12 +27,12 @@ const scroll = () => {
   function replaceTitle(at1BaseIdx) {
     const elCurrentActive = menuRoot.querySelector('.--active');
     const elItem = menuRoot.querySelector(`li:nth-of-type(${at1BaseIdx}) a`);
-    const elTitle = doc.querySelector('#dropdown a span.title');
+    const elTitle = doc.querySelector('#dropdown a span');
 
     if (elItem) {
       elCurrentActive.className = '';
       elItem.className = '--active';
-      elTitle.textContent = elItem.dataset.title;
+      elTitle.textContent = elItem.dataset.short;
     }
   }
 

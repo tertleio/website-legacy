@@ -2,18 +2,61 @@
 const doc = document;
 import loadHtml from './utils/loadHtml.js';
 
-// get all the h2's in the document
-const h2s = doc.querySelectorAll('h2');
-// edit components.xml to add the new component
-// render innerHtml of the new component
-// OR
-// create a pre-build step to rennder all variations of the new component
+function getVarsFor(page) {
+  switch (page) {
+    case 'founders':
+      return {
+        logoSrc: './assets/logo.svg',
+        showFooterVisual: false,
+        primaryCtaTxt: 'JOIN TERTLE',
+        secondaryCtaTxt: 'For Investors',
+      };
+    case 'investors':
+      return {
+        logoSrc: './assets/logo.svg',
+        showFooterVisual: false,
+        primaryCtaTxt: 'JOIN TERTLE',
+        secondaryCtaTxt: 'For Founders',
+      };
+    case 'seekers':
+      return {
+        logoSrc: './assets/logo.svg',
+        showFooterVisual: false,
+        primaryCtaTxt: 'JOIN WAITLIST',
+        secondaryCtaTxt: 'For Hirers',
+      };
+    case 'hirers':
+      return {
+        logoSrc: './assets/logo.svg',
+        showFooterVisual: false,
+        primaryCtaTxt: 'JOIN WAITLIST',
+        secondaryCtaTxt: 'For Contractors',
+      };
+  }
+}
 
-// Conditional Rendering
-function conditionalRendering() {
+function render(vars) {
   const elsH2 = doc.querySelectorAll('h2');
+  const elMenu = doc.getElementById('menu-content');
 
-  // content menu
+  elsH2.forEach((h2, i) => {
+    if (i === 0) return; // skip first hero h2
+
+    const hashTag = '#' + h2.textContent.toLowerCase();
+    const h2D = h2.dataset;
+    const newLi = `
+                  <li class="closeOnE">
+                    <a 
+                      href="${hashTag}" 
+                      data-short="${h2D.short}"
+                      data-long="${h2D.long}"
+                      >
+                      <span>${h2D.emoji}</span>${h2D.long}
+                    </a>
+                  </li>`;
+
+    elMenu.innerHTML += newLi;
+  });
 
   // cta's
 
@@ -32,6 +75,11 @@ const compose = async () => {
 
   elHeader.innerHTML = headerHtml;
   elFooter.innerHTML = footerHtml;
+
+  const filename = window.location.pathname.split('/')[2];
+  const pagename = filename.split('.', [1]);
+  const vars = getVarsFor(pagename);
+  render(vars);
 };
 
 // class Header extends HTMLElement {

@@ -10,8 +10,6 @@ async function initPrio1() {
   await components();
 }
 
-console.log(window.location.pathname);
-
 function initPrio2() {
   menu();
   demos();

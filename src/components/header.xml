@@ -76,9 +76,10 @@
       </li>
       <!-- prettier-ignore -->
       <div id="menu-content" class="menu">
-          <li class="closeOnE"><a class="--active" data-title="Content" href="#"><span>⬆️</span>Top of Page</a></li>
-          <li class="closeOnE"><a data-title="Features" href="#features"><span>📦</span>Features</a></li>
-          <li class="closeOnE"><a data-title="FAQ" href="#faq"><span>❓</span>Frequently Asked Questions</a></li>
+          <li class="closeOnE"><a class="--active" data-short="Content" data-long="Content" href="#"><span>⬆️</span>Top of Page</a></li>
+          <!-- remaining li's will be generated in compose.js -->
+          <!-- <li class="closeOnE"><a data-title="Features" href="#features"><span>📦</span>Features</a></li>
+          <li class="closeOnE"><a data-title="FAQ" href="#faq"><span>❓</span>Frequently Asked Questions</a></li> -->
           <!-- <li class="closeOnE"><a data-title="Why" href="#why-tertle"><span>🐢</span>Why Tertle</a></li> -->
           <!-- <li class="closeOnE"><a data-title="FAQ" href="#faq"><span>🐰</span>Join Waitlist</a></li> -->
         </div>
