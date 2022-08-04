@@ -73,12 +73,13 @@ const compose = async () => {
   const elHeader = doc.getElementById('header');
   const elFooter = doc.getElementById('footer');
 
-  elHeader.innerHTML = headerHtml;
-  elFooter.innerHTML = footerHtml;
-
-  const filename = window.location.pathname.split('/')[2];
+  const pathname = window.location.pathname.split('/');
+  const filename = pathname[pathname.length - 1];
   const pagename = filename.split('.', [1]);
   const vars = getVarsFor(pagename);
+
+  elHeader.innerHTML = headerHtml;
+  elFooter.innerHTML = footerHtml;
   render(vars);
 };
 
