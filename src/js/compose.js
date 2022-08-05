@@ -44,7 +44,6 @@ function getVarsFor(page) {
 }
 
 function render(vars) {
-  // Els
   const elsH2 = doc.querySelectorAll('h2');
   const elMenu = doc.getElementById('menu-content');
   const elsPrimaryCta = doc.querySelectorAll('.ctaOne');
