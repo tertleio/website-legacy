@@ -40,9 +40,7 @@
   .header__left {
     display: inline-flex;
     align-items: center;
-    width: 100%;
-    max-width: 25%;
-    flex-shrink: 4;
+    width: 15em;
   }
 
   a.logo__link { 
@@ -57,8 +55,9 @@
 
   .header__mid  {
     display: flex;
+    margin-left: 0.5em;
     justify-content: center;
-    width: 16em;
+    min-width: 16em;
     position: relative;
   }
 
@@ -66,7 +65,8 @@
   .header__right {
     display: inline-flex;
     /* width: 100%; */
-    /* max-width: 25%; */
+    justify-content: flex-end;
+    width: 15em;
   }
 
     .header__right .btn {

@@ -8,14 +8,14 @@ function getVarsFor(page) {
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
-        primaryCtaTxt: 'FOUNDER CTA',
+        primaryCtaTxt: 'get started',
         secondaryCtaTxt: 'Login',
       };
     case 'investors':
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
-        primaryCtaTxt: 'INVESTOR CTA',
+        primaryCtaTxt: 'JOIN WAITLIST',
         secondaryCtaTxt: 'For Founders',
       };
     case 'contractors':
