@@ -2,7 +2,7 @@
 const doc = document;
 
 const scroll = () => {
-  const elNavCta = doc.getElementById('nav-cta');
+  const elNavCta = doc.querySelector('.header .ctaOne');
   const elOverlay = doc.getElementById('overlay');
   const menuRoot = doc.querySelector('#menu-content');
 
