@@ -52,7 +52,7 @@ function render(vars) {
   // const elLogo = doc.querySelector('');
 
   elsH2.forEach((h2, i) => {
-    // Content Menu
+    // CONTENT MENU
     if (i === 0) return; // skip first hero h2
 
     const hashTag = '#' + h2.innerText.split(' ').join('-').toLowerCase();
@@ -71,12 +71,8 @@ function render(vars) {
     elMenu.innerHTML += newLi;
   });
 
-  // CTA
-  // Primary
-  elsPrimaryCta.forEach((pCta) => {
-    pCta.innerText = vars.primaryCtaTxt;
-  });
-  // Secondary
+  // CTAs
+  elsPrimaryCta.forEach((pCta) => (pCta.innerText = vars.primaryCtaTxt));
   elSecondaryCta.innerText = vars.secondaryCtaTxt;
   elSecondaryCta.href = vars.secondaryCtaLink;
 
