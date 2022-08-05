@@ -71,12 +71,14 @@ function render(vars) {
     elMenu.innerHTML += newLi;
   });
 
-  // CTA's
+  // CTA
+  // Primary
   elsPrimaryCta.forEach((pCta) => {
     pCta.innerText = vars.primaryCtaTxt;
   });
-
+  // Secondary
   elSecondaryCta.innerText = vars.secondaryCtaTxt;
+  elSecondaryCta.href = vars.secondaryCtaLink;
 
   // TODO:
   // Logo
