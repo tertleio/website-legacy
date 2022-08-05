@@ -61,8 +61,7 @@ const scroll = () => {
         if (!isHeroVis && isRabbitShowing) {
           showRabbitAndCta(isHeroVis);
           isRabbitShowing = false;
-        }
-        if (isHeroVis && !isRabbitShowing) {
+        } else if (isHeroVis && !isRabbitShowing) {
           showRabbitAndCta(isHeroVis);
           isRabbitShowing = true;
         }

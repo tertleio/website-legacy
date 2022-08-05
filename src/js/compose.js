@@ -9,28 +9,36 @@ function getVarsFor(page) {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'get started',
+        primaryCtaLink: '',
         secondaryCtaTxt: 'Login',
+        secondaryCtaLink: 'https://app.tertle.io/join',
       };
     case 'investors':
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'JOIN WAITLIST',
+        primaryCtaLink: '',
         secondaryCtaTxt: 'For Founders',
+        secondaryCtaLink: './founders.html',
       };
     case 'contractors':
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'CONTRACTOR CTA',
+        primaryCtaLink: '',
         secondaryCtaTxt: 'For Hirers',
+        secondaryCtaLink: '',
       };
     case 'hirers':
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'HIRER CTA',
+        primaryCtaLink: '',
         secondaryCtaTxt: 'For Contractors',
+        secondaryCtaLink: '',
       };
   }
 }
@@ -67,8 +75,6 @@ function render(vars) {
   elsPrimaryCta.forEach((pCta) => {
     pCta.innerText = vars.primaryCtaTxt;
   });
-
-  console.log(elSecondaryCta);
 
   elSecondaryCta.innerText = vars.secondaryCtaTxt;
 

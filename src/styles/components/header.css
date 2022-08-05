@@ -40,7 +40,7 @@
   .header__left {
     display: inline-flex;
     align-items: center;
-    width: 15em;
+    width: 100%;
   }
 
   a.logo__link { 
@@ -55,7 +55,7 @@
 
   .header__mid  {
     display: flex;
-    margin-left: 0.5em;
+    margin-left: 0.25em;
     justify-content: center;
     min-width: 16em;
     position: relative;
@@ -64,19 +64,20 @@
 
   .header__right {
     display: inline-flex;
-    /* width: 100%; */
+    width: 100%;
     justify-content: flex-end;
-    width: 15em;
+  }
+  .header__right ul a {
+    padding-left: 0.25em;
   }
 
     .header__right .btn {
       display: flex;
-      margin-left: 0.1rem;
       font-size: 0.8em;
       padding: 0.66rem 1rem;
     }
   
-@media screen and (min-width: 600px) and (max-width: 700px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
   .header__left {
     flex: 0;
   }
