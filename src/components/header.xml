@@ -99,11 +99,10 @@
 
   <div class="header__right">
     <ul class="list-x">
-      <li class="dt"><a href="#">For Hirers</a></li>
+      <li class="dt"><a class="ctaTwo" href="#">For Hirers</a></li>
       <li class="dt">
         <a
-          id="nav-cta"
-          class="btn btn--secondary"
+          class="btn btn--secondary ctaOne"
           href="https://app.tertle.io/join"
         >
           Join Wailist

@@ -8,38 +8,43 @@ function getVarsFor(page) {
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
-        primaryCtaTxt: 'JOIN TERTLE',
-        secondaryCtaTxt: 'For Investors',
+        primaryCtaTxt: 'FOUNDER CTA',
+        secondaryCtaTxt: 'Login',
       };
     case 'investors':
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
-        primaryCtaTxt: 'JOIN TERTLE',
+        primaryCtaTxt: 'INVESTOR CTA',
         secondaryCtaTxt: 'For Founders',
       };
-    case 'seekers':
+    case 'contractors':
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
-        primaryCtaTxt: 'JOIN WAITLIST',
+        primaryCtaTxt: 'CONTRACTOR CTA',
         secondaryCtaTxt: 'For Hirers',
       };
     case 'hirers':
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
-        primaryCtaTxt: 'JOIN WAITLIST',
+        primaryCtaTxt: 'HIRER CTA',
         secondaryCtaTxt: 'For Contractors',
       };
   }
 }
 
 function render(vars) {
+  // Els
   const elsH2 = doc.querySelectorAll('h2');
   const elMenu = doc.getElementById('menu-content');
+  const elsPrimaryCta = doc.querySelectorAll('.ctaOne');
+  const elSecondaryCta = doc.querySelector('.ctaTwo');
+  // const elLogo = doc.querySelector('');
 
   elsH2.forEach((h2, i) => {
+    // Content Menu
     if (i === 0) return; // skip first hero h2
 
     const hashTag = '#' + h2.innerText.split(' ').join('-').toLowerCase();
@@ -58,11 +63,18 @@ function render(vars) {
     elMenu.innerHTML += newLi;
   });
 
-  // cta's
+  // CTA's
+  elsPrimaryCta.forEach((pCta) => {
+    pCta.innerText = vars.primaryCtaTxt;
+  });
 
-  // logo
+  console.log(elSecondaryCta);
 
-  // matrix
+  elSecondaryCta.innerText = vars.secondaryCtaTxt;
+
+  // TODO:
+  // Logo
+  // Footer Image
 }
 
 const compose = async () => {
@@ -75,7 +87,7 @@ const compose = async () => {
 
   const pathname = window.location.pathname.split('/');
   const filename = pathname[pathname.length - 1];
-  const pagename = filename.split('.', [1]);
+  const [pagename] = filename.split('.', [1]); // TODO: remove when ext is removed
   const vars = getVarsFor(pagename);
 
   elHeader.innerHTML = headerHtml;
