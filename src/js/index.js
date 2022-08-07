@@ -21,10 +21,15 @@ function initPrio3() {
   // matrix();
 }
 
-initPrio1().then((_) => {
-  initPrio2();
-  initPrio3();
-});
+// TODO: separate out init dependencies and non-dependencies and handle err
+initPrio1()
+  .then((_) => {
+    initPrio2();
+    initPrio3();
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 // LEGACY ////////////////////////////////////
 
