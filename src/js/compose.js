@@ -52,7 +52,7 @@ function render(vars) {
   const elMenu = doc.getElementById('menu-content');
   const elsPrimaryCta = doc.querySelectorAll('.ctaOne');
   const elSecondaryCta = doc.querySelector('.ctaTwo');
-  // const elLogo = doc.querySelector('');)
+  // const elLogo = doc.querySelector('');
 
   elsH2.forEach((h2, i) => {
     // CONTENT MENU
@@ -72,7 +72,6 @@ function render(vars) {
                   </li>`;
 
     elMenu.innerHTML += newLi;
-    // console.log(newLi);
   });
 
   // CTA
