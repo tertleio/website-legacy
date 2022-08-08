@@ -1,14 +1,15 @@
 @font-face {
   font-family: 'Poppins';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   src: url('../assets/fonts/poppins-bold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Proxima-Nova';
-  font-weight: normal;
   font-style: normal;
+  font-stretch: normal;
+  font-weight: 700;
   src: url('../assets/fonts/proxima-nova-regular.woff2') format('woff2');
 }
 
@@ -19,7 +20,6 @@
   font-style: normal;
   src: url('../assets/fonts/ubuntu-mono-regular.woff2') format('woff2');
 }
-
 
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -56,7 +56,7 @@ h6, .h6 {
 }
 
 p, .p {
-  font-family: 'Proxima-Nova', sans-serif;
+  font-family: 'Proxima-Nova', Verdana, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.1rem;
@@ -66,7 +66,7 @@ p, .p {
 }
 
 .bold {
-  /* font-family: proxima-nova, sans-serif; */
+  font-family: proxima-nova, sans-serif;
   font-weight: 700;
   font-style: normal;
 }

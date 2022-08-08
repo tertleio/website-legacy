@@ -54,6 +54,15 @@
   --logo-letters: url('../assets/logo-letters-light.svg');
 }
 
+html, body {
+  font-family: 'Proxima-Nova', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
 #matrix {
   height: 100%;
   width: 100%;
@@ -116,14 +125,6 @@
   display: block; 
 }
 
-html, body {
-  font-family: 'Porxima-Nova', sans-serif;
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--color-text);
-  background-color: var(--color-bg);
-}
 
 /* @media (prefers-color-scheme: dark) {
   :root {
