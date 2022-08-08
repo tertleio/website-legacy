@@ -29,11 +29,9 @@ const scroll = () => {
     const elItem = menuRoot.querySelector(`li:nth-of-type(${at1BaseIdx}) a`);
     const elTitle = doc.querySelector('#dropdown a span');
 
-    if (elItem) {
-      elCurrentActive.className = '';
-      elItem.className = '--active';
-      elTitle.innerText = elItem.dataset.short;
-    }
+    elCurrentActive.className = '';
+    elItem.className = '--active';
+    elTitle.innerText = elItem.dataset.short;
   }
 
   function showRabbitAndCta(shouldShow) {
@@ -67,7 +65,7 @@ const scroll = () => {
         }
 
         // Title handler
-        const min = sectionSums[i - 1] + header;
+        const min = sectionSums[i - 1] - 1;
         const isAfterMinPos = i === 0 ? true : yPos > min;
         if (!isAfterMinPos) continue;
 

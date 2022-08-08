@@ -52,7 +52,7 @@ function render(vars) {
   const elMenu = doc.getElementById('menu-content');
   const elsPrimaryCta = doc.querySelectorAll('.ctaOne');
   const elSecondaryCta = doc.querySelector('.ctaTwo');
-  // const elLogo = doc.querySelector('');
+  // const elLogo = doc.querySelector('');)
 
   elsH2.forEach((h2, i) => {
     // CONTENT MENU
@@ -72,6 +72,7 @@ function render(vars) {
                   </li>`;
 
     elMenu.innerHTML += newLi;
+    // console.log(newLi);
   });
 
   // CTA
@@ -79,7 +80,7 @@ function render(vars) {
   elSecondaryCta.innerText = vars.secondaryCtaTxt;
   elSecondaryCta.href = vars.secondaryCtaLink;
 
-  // ACTIVE PRODUCT
+  // ACTIVE PRODUCT MENU
   const elProductMenu = doc.getElementById('menu-products');
   const elPMenu = elProductMenu.querySelector(`li:nth-of-type(${vars.idx}) a`);
   elPMenu.classList.add('--active');
