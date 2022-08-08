@@ -8,16 +8,16 @@ function getVarsFor(page) {
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
-        primaryCtaTxt: 'get started',
-        primaryCtaLink: '',
+        primaryCtaTxt: 'Get Started',
+        primaryCtaLink: 'https://app.tertle.io/join',
         secondaryCtaTxt: 'Login',
-        secondaryCtaLink: 'https://app.tertle.io/join',
+        secondaryCtaLink: 'https://app.tertle.io/login',
       };
     case 'investors':
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
-        primaryCtaTxt: 'JOIN WAITLIST',
+        primaryCtaTxt: 'Join Waitlist',
         primaryCtaLink: '',
         secondaryCtaTxt: 'For Founders',
         secondaryCtaLink: './founders.html',
@@ -26,7 +26,7 @@ function getVarsFor(page) {
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
-        primaryCtaTxt: 'CONTRACTOR CTA',
+        primaryCtaTxt: 'Join Waitlist',
         primaryCtaLink: '',
         secondaryCtaTxt: 'For Hirers',
         secondaryCtaLink: '',
@@ -35,7 +35,7 @@ function getVarsFor(page) {
       return {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
-        primaryCtaTxt: 'HIRER CTA',
+        primaryCtaTxt: 'Join Waitlist',
         primaryCtaLink: '',
         secondaryCtaTxt: 'For Contractors',
         secondaryCtaLink: '',
