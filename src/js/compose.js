@@ -6,6 +6,7 @@ function getVarsFor(page) {
   switch (page) {
     case 'founders':
       return {
+        idx: 1,
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'Get Started',
@@ -15,6 +16,7 @@ function getVarsFor(page) {
       };
     case 'investors':
       return {
+        idx: 2,
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'Join Waitlist',
@@ -24,6 +26,7 @@ function getVarsFor(page) {
       };
     case 'contractors':
       return {
+        idx: 3,
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'Join Waitlist',
@@ -33,6 +36,7 @@ function getVarsFor(page) {
       };
     case 'hirers':
       return {
+        idx: 4,
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'Join Waitlist',
@@ -70,10 +74,17 @@ function render(vars) {
     elMenu.innerHTML += newLi;
   });
 
-  // CTAs
+  // CTA
   elsPrimaryCta.forEach((pCta) => (pCta.innerText = vars.primaryCtaTxt));
   elSecondaryCta.innerText = vars.secondaryCtaTxt;
   elSecondaryCta.href = vars.secondaryCtaLink;
+
+  // ACTIVE PRODUCT
+  const elProductMenu = doc.getElementById('menu-products');
+  const elProductMenuA = elProductMenu.querySelector(
+    `li:nth-of-type(${vars.idx}) a`
+  );
+  elProductMenuA.classList.add('--active');
 
   // TODO:
   // Logo

@@ -84,11 +84,11 @@
     <ul class="menu-list dt tb">
       <li class="menu-root"><a href="#">Products</a></li>
       <!-- prettier-ignore -->
-      <div class="menu">
-        <li><a class="--active" href="./contractors.html"><span>💼</span>For Contractors</a></li>
-        <li><a href="./hirers.html"><span>💼</span>For Hirers</a></li>
+      <div id="menu-products" class="menu">
         <li><a href="./founders.html"><span>🐣</span>For Founders</a></li>
         <li><a href="./investors.html"><span>🐣</span>For Investors</a></li>
+        <li><a href="./contractors.html"><span>💼</span>For Contractors</a></li>
+        <li><a href="./hirers.html"><span>💼</span>For Hirers</a></li>
       </div>
     </ul>
 
