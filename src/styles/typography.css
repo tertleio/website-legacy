@@ -1,14 +1,26 @@
-/* @font-face {
-  font-family: 'proxima-nova';
-  src: url('/fonts/proxima-nova-v2-latin-regular.eot');
-  src: url('/fonts/proxima-nova-v2-latin-regular.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/proxima-nova-v2-latin-regular.woff2') format('woff2'),
-       url('/fonts/proxima-nova-v2-latin-regular.woff') format('woff'),
-       url('/fonts/proxima-nova-v2-latin-regular.ttf') format('truetype'),
-       url('/fonts/proxima-nova-v2-latin-regular.svg#proxima-nova') format('svg');
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/poppins-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Proxima-Nova';
   font-weight: normal;
   font-style: normal;
-} */
+  src: url('../assets/fonts/proxima-nova-regular.woff2') format('woff2');
+}
+
+
+@font-face {
+  font-family: 'Ubuntu-Mono';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../assets/fonts/ubuntu-mono-regular.woff2') format('woff2');
+}
+
+
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: 'Poppins', sans-serif;
@@ -44,7 +56,7 @@ h6, .h6 {
 }
 
 p, .p {
-  font-family: proxima-nova, sans-serif;
+  font-family: 'Proxima-Nova', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.1rem;

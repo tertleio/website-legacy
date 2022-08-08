@@ -108,8 +108,7 @@
 }
 
 .typer p {
-  font-family: 'Metrophobic', sans-serif;
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Ubuntu-Mono', monospace;
   overflow: hidden; 
   border-right: 1px solid; 
   white-space: nowrap; /* Keeps the content on a single line */

@@ -8,10 +8,6 @@
 @import 'buttons.css';
 @import 'x.css';
 
-/* * {
-  border: 1px solid red !important;
-} */
-
 :root {
   scroll-behavior: auto;
   scroll-behavior: smooth;
@@ -121,7 +117,7 @@
 }
 
 html, body {
-  font-family: proxima-nova, sans-serif;
+  font-family: 'Porxima-Nova', sans-serif;
   font-style: normal;
   font-size: 1rem;
   font-weight: 400;
