@@ -11,7 +11,7 @@ const toggleTheme = () => {
   const elRocket = doc.querySelector('.rocket');
 
   function changeTheme(theme) {
-    elRocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
+    elRocket.src = `../assets/tertle_rocket-${theme}-sm.gif`;
     doc.documentElement.setAttribute('theme', theme);
     localStorage.setItem('theme', theme);
   }

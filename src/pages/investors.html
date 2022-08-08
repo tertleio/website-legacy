@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" theme="dark">
+<html lang="en" theme="light">
   <head>
     <meta charset="UTF-8" />
-    <title>Tertle - Scale</title>
+    <title>Tertle - Hatch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
@@ -16,8 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Metrophobic&family=Ubuntu+Mono&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <script src="./js/index.js" type="module" defer></script>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <script src="../js/index.js" type="module" defer></script>
   </head>
 
   <body>
@@ -27,11 +27,18 @@
     <section id="hero" class="wrapper">
       <div class="hero container">
         <div class="hero__header">
-          <h1>Contract Matching</h1>
-          <h2 class="p fs-lg">Developer & Design Job Matcher 🚀</h2>
+          <!-- <img
+            id="hero-img"
+            src="./assets/match-puzzle.svg"
+            alt="Find a co-founder"
+            title="Find a co-founder"
+            style="margin-bottom: 1em"
+          /> -->
+          <h1>Seed Matcher</h1>
+          <h2 class="p fs-lg">Scout & invest in vetted tech startups 🚀</h2>
         </div>
         <div class="hero__body">
-          <form>
+          <!-- <form>
             <div class="signup">
               <input
                 class="email"
@@ -46,10 +53,10 @@
                 class="btn btn--primary ctaOne"
                 href="https://app.tertle.io/join"
               >
-                Join Waitlist
+                Join Tertle
               </button>
             </div>
-          </form>
+          </form> -->
 
           <div class="typer"><p>Follow the white rabbit...</p></div>
         </div>
@@ -57,7 +64,7 @@
     </section>
 
     <main>
-      <section id="features" class="wrapper">
+      <!-- <section id="features" class="wrapper">
         <div class="content container">
           <h2 data-short="Features" data-long="Features" data-emoji="📦">
             Features
@@ -119,6 +126,32 @@
             </aside>
           </div>
         </div>
+      </section> -->
+
+      <section id="how-it-works" class="wrapper">
+        <div class="content container">
+          <h2 data-short="How" data-long="How it Works" data-emoji="🤔">
+            How it Works
+          </h2>
+
+          <div class="content __single">
+            <h3>1. Step one</h3>
+            <p>
+              Tell Tertle a little bit more about you and what you’re looking
+              for in a co-founder.
+            </p>
+          </div>
+
+          <div class="content __single">
+            <h3>2. Step two</h3>
+            <p>Some step two content here</p>
+          </div>
+
+          <div class="content __single">
+            <h3>3. Step three</h3>
+            <p>Receive intros to promising tech startups.</p>
+          </div>
+        </div>
       </section>
 
       <section id="faq" class="wrapper">
@@ -147,9 +180,14 @@
 
           <div class="content __single">
             <h3>How much does it cost?</h3>
+            <p>It's FREE for all our beta user.</p>
+          </div>
+
+          <div class="content __single">
+            <h3>Where did you learn how to spell?</h3>
             <p>
-              Completely free for you. We charge 3% commission to each invoice
-              to the hirer.
+              Spellchecker bugged out when we came up with the name (and
+              'turtle.io' was taken).
             </p>
           </div>
 
@@ -165,9 +203,5 @@
     </main>
 
     <div id="footer" class="wrapper"></div>
-
-    <div id="matrix" style="display: none">
-      <canvas id="canvas" height="400"></canvas>
-    </div>
   </body>
 </html>
