@@ -81,10 +81,8 @@ function render(vars) {
 
   // ACTIVE PRODUCT
   const elProductMenu = doc.getElementById('menu-products');
-  const elProductMenuA = elProductMenu.querySelector(
-    `li:nth-of-type(${vars.idx}) a`
-  );
-  elProductMenuA.classList.add('--active');
+  const elPMenu = elProductMenu.querySelector(`li:nth-of-type(${vars.idx}) a`);
+  elPMenu.classList.add('--active');
 
   // TODO:
   // Logo
