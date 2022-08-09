@@ -1,6 +1,6 @@
 <div class="modal-container">
   <div id="titlebar">
-    <h6>Sign-Up</h6>
+    <h3>Join Waitlist</h3>
     <button
       id="close-modal"
       class="close"
@@ -9,27 +9,26 @@
     ></button>
   </div>
 
-  <div class="container">
+  <div class="modal-input-container">
     <form id="signup-form">
-      <div class="flex-row header">
+      <!-- <div class="flex-row modal-header">
         <p class="info">
-          To help us find you the right match, we need to know a little more
-          about you.
+          Now let's put a name to it.
         </p>
-      </div>
-      <div id="signup-body">
-        <div class="flex-col" style="display: none">
+      </div> -->
+      <div id="modal-body">
+        <div class="flex-col">
           <div class="flex-item">
             <input
               id="email"
               name="email"
-              class="field disabled valid"
+              class="field valid"
               placeholder="joe@domain.com"
               type="text"
               value=""
               tabindex="-1"
             />
-            <label class="disabled" for="email">Your Email</label>
+            <label class="disabled" for="email">Email</label>
           </div>
         </div>
 
@@ -43,9 +42,9 @@
               type="text"
               value=""
             />
-            <label for="first-name">First Name</label>
+            <label for="first-name">First name</label>
           </div>
-          <div class="flex-item">
+          <!-- <div class="flex-item">
             <input
               id="last-name"
               name="last-name"
@@ -55,54 +54,13 @@
               value=""
             />
             <label for="last-name">Last Name</label>
-          </div>
+          </div> -->
         </div>
 
-        <div class="flex-col">
-          <div class="flex-item">
-            <input
-              id="postcode"
-              class="field"
-              type="text"
-              placeholder="Something2"
-            />
-            <label for="postcode" method="Postcode" value="">Postcode</label>
-          </div>
-        </div>
-
-        <div id="skillset-wrapper" class="flex-col select">
+        <div class="flex-col select">
           <div class="flex-item select">
             <select
-              id="skillset"
-              class="field dropdown"
-              name="skillset"
-              placeholder="something"
-              value=""
-            >
-              <option value=""></option>
-              <option value="Software Developer">Software Developer</option>
-              <option value="Designer">Designer</option>
-              <option value="User Researcher">User Researcher</option>
-              <option value="Product Manager">Product Manager</option>
-              <option value="Other skillset">Other...</option>
-            </select>
-            <label for="skillset">I am a...</label>
-          </div>
-          <div style="display: none" class="flex-item other">
-            <input
-              id="skillset-other"
-              class="field inactive"
-              type="text"
-              placeholder="Other"
-              value=""
-            />
-          </div>
-        </div>
-
-        <div id="lookingfor-wrapper" class="flex-col select">
-          <div class="flex-item select">
-            <select
-              id="looking-for"
+              id="location"
               class="field dropdown"
               name="looking-for"
               value=""
@@ -116,7 +74,7 @@
               <option value="Undecided">Undecided</option>
               <option value="Looking for other">Other...</option>
             </select>
-            <label for="looking-for">Looking for a...</label>
+            <label for="location">Country</label>
           </div>
 
           <div style="display: none" class="flex-item other two">
@@ -127,18 +85,6 @@
               placeholder="Other"
               value=""
             />
-          </div>
-        </div>
-        <div class="flex-col">
-          <div class="flex-item">
-            <input
-              id="linkedin"
-              class="field"
-              type="text"
-              placeholder="Somethinglol"
-              value=""
-            />
-            <label for="linkedin">Your LinkedIn Url (optional)</label>
           </div>
         </div>
       </div>
