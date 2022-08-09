@@ -77,17 +77,18 @@
   border: 0;
   border-bottom: 1px solid #d7d7d7;
   width: 100%;
+  background: none;
   font-size: 1rem;
   padding: 0.5em 0;
 }
 .field:focus {
   outline: none;
-  background: url('../../assets/focused-anim.gif') no-repeat bottom 15px right;
+  /* background: url('../../assets/focused-anim.gif') no-repeat bottom 15px right; */
   background-size: 22px;
   border-bottom: 1px solid var(--color-orange);
 } 
 .field.valid {
-  /* border-bottom: 1px solid $color-green; */
+  /* border-bottom: 1px solid var(--color-primary); */
   background: url('../../assets/valid.svg') no-repeat center right;
   background-size: 0.8em;
 }
@@ -120,6 +121,16 @@
     transition: all 0.05s;
     font-weight: 700;
   }
+
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.select {
+  background: url('../../assets/dropdown.svg') no-repeat bottom 1em right;
+}
 
   option:first-child { color: red; }
   select:invalid {
@@ -168,13 +179,3 @@ p.modal-info {
   justify-content: space-between;
   flex-wrap: wrap;
 } */
-
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: solid 1px #555;
-  border-radius: 3px;
-  padding: 5px;
-  outline: none;
-  background: url('../../assets/dropdown.svg') no-repeat bottom 1.1em right 0.2em;
-}
