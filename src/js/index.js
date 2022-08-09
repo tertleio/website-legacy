@@ -5,6 +5,7 @@ import menu from './menu.js';
 import toggleTheme from './theme.js';
 import matrix from './matrix.js';
 import demos from './demo.js';
+import modal from './modal.js';
 
 async function initPrio1() {
   await components();
@@ -18,6 +19,7 @@ function initPrio2() {
 
 function initPrio3() {
   toggleTheme();
+  modal();
   // matrix();
 }
 
