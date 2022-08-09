@@ -8,14 +8,14 @@
   right: 0;
   bottom: 0;
   z-index: 1001;
+  background: rgba(0, 0, 0, 0.7);
 }
   .modal-container {
     /* scrollable area */
     position: absolute;
     border-radius: 0rem 0 1.2rem 1.2rem;
     max-width: 450px;
-    width: 90%;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: var(--color-bg);
@@ -25,11 +25,11 @@
   #titlebar {
     margin-top: -3.9em;
     display: flex;
-    background: var(--color-link);
+    background: var(--color-fg);
     justify-content: space-between;
     align-items: center;
     height: 4rem;
-    padding: 2em;
+    padding: 2em 1.5em;
     border-radius: 1.2rem 1.2em 0 0;
     left: 0;
     top: 0;
@@ -145,6 +145,7 @@ p.modal-info {
   font-size: 1.2em;
 }
 
+/* scroll */
 .modal-open {
   overflow: hidden;
 }
@@ -160,10 +161,9 @@ p.modal-info {
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: blue;
   border: solid 1px #555;
   border-radius: 3px;
   padding: 5px;
   outline: none;
-  background: url('../img/dropdown.svg') no-repeat bottom 1.1em right 0.2em !important;
+  background: url('../../assets/dropdown.svg') no-repeat bottom 1.1em right 0.2em;
 }

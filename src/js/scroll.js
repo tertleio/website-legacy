@@ -3,7 +3,7 @@ const doc = document;
 
 const scroll = () => {
   const elNavCta = doc.querySelector('.header .ctaOne');
-  const elOverlay = doc.getElementById('overlay');
+  const elOverlay = doc.getElementById('overlay-peekaboo');
   const menuRoot = doc.querySelector('#menu-content');
 
   function getHeights() {
