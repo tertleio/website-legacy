@@ -18,10 +18,9 @@
               id="email"
               name="email"
               class="field valid"
-              placeholder="joe@domain.com"
+              placeholder="example@domain.com"
               type="text"
               value=""
-              tabindex="-1"
             />
             <label class="disabled" for="email">Email</label>
           </div>
@@ -56,20 +55,18 @@
           <div class="flex-item select">
             <select
               id="location"
+              name="location"
               class="field dropdown"
-              name="looking-for"
+              placeholder=""
               value=""
+              required
             >
-              <option value=""></option>
-              <option value="Software Developer">Software Developer</option>
-              <option value="Designer">Designer</option>
-              <option value="User Researcher">User Researcher</option>
-              <option value="Product Manager">Product Manager</option>
-              <option value="Any skillset">Any skillset</option>
-              <option value="Undecided">Undecided</option>
-              <option value="Looking for other">Other...</option>
+              <option value="">Select a country...</option>
+              <option value="GB">🇬🇧 United Kingdom</option>
+              <option value="US">🇺🇸 United States</option>
+              <option value="Looking for other">❓ Other...</option>
             </select>
-            <label for="location">Country</label>
+            <label id="location-label" for="location">Country</label>
           </div>
 
           <div style="display: none" class="flex-item other two">
