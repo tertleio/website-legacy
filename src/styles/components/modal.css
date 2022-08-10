@@ -106,7 +106,7 @@
     position: absolute;
     left: 0;
     bottom: 1.4em;
-    font-size: 0.9em;
+    font-size: 1em;
     transition: all 0.05s;
   }
 
@@ -135,6 +135,13 @@ select {
   option:first-child { color: red; }
   select:invalid {
     color: var(--color-nav);
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 1rem;
+  }
+  select:invalid::after {
+    content: 'Please select an option';
+    height: 3em;
+    background: red;
   }
   #location-label {
     visibility: hidden;
@@ -151,7 +158,7 @@ select {
 }
 
 
-.close {
+.modal-close {
   background: url('../../assets/close-thin.svg') no-repeat center center;
   background-size: 875;
   border: none;
