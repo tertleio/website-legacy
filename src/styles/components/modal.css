@@ -34,7 +34,7 @@ input:autofill {
     left: 50%;
     transform: translate(-50%, -50%);
     background: var(--color-bg);
-    box-shadow: 0px 39px 90px var(--color-grey6);
+    box-shadow: 0px 0px 400px var(--color-grey6);
     /* border-bottom: 3px solid var(--color-primary); */
   }
   
