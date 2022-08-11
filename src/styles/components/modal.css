@@ -1,3 +1,18 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+input:autofill {
+  background: none !important;
+  fill: none !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 #overlay-modal {
   position: fixed;
   z-index: 1000;
@@ -30,7 +45,7 @@
     justify-content: space-between;
     align-items: center;
     height: 4rem;
-    padding: 2em 1.8em;
+    padding: 2.25em 1.5em 2em 1.5em;
     border-radius: 1.2rem 1.2em 0 0;
     left: 0;
     top: 0;
@@ -155,7 +170,7 @@ select {
   /* show label when selected option */
   select:valid + #location-label {
     visibility: visible;
-    bottom: 1.25rem;
+    bottom: 1.2rem;
   }
   
 
@@ -167,12 +182,23 @@ select {
 
 
 .modal-close {
-  background: url('../../assets/close-thin.svg') no-repeat center center;
-  background-size: 875;
+  /* display: flex; */
+  /* align-items: center; */
+  background: none;
   border: none;
   cursor: pointer;
+  padding-right: 0;
   width: 2.5em;
-  height: 2.5em;
+  height: 2.5em; 
+} 
+
+.modal-close svg { 
+  width: 1.5em; 
+  height: 1.5em; 
+  float: right;
+}
+.modal-close svg > * {
+  fill: var(--color-bg)
 }
 
 p.modal-info {
