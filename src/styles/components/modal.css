@@ -28,13 +28,14 @@ input:autofill {
   .modal-container {
     position: absolute;
     border-radius: 0rem 0 1.2rem 1.2rem;
-    max-width: 375px;
+    max-width: 400px;
     width: 93%;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: var(--color-bg);
     box-shadow: 0px 0px 400px var(--color-grey6);
+    border-top: 3px solid var(--color-primary);
     /* border-bottom: 3px solid var(--color-primary); */
   }
   
@@ -55,17 +56,17 @@ input:autofill {
 
   .flex-item {
     position: relative;
-    padding: 1em 0 0.2em 0;
+    padding-top: 1em;
     margin-bottom: 0.25rem;
     /* flex: 0 47%; */
   }
 
   .modal-input-container {
     overflow-y: auto;
-    max-height: calc(90vh - 210px);
+    /* max-height: calc(90vh - 210px); */
     display: flex;
     flex-basis: 100%;
-    padding: 1.25em 2.75em 2em 2.75em;
+    padding: 1em 2.5em 2.5em 2.5em;
   }
 
 
@@ -119,6 +120,8 @@ input:autofill {
   bottom: 1em;
 } */
 
+.field::placeholder { color: transparent; }
+
 /* start position */  
 .field + label {
     position: absolute;
@@ -130,7 +133,6 @@ input:autofill {
 
 
   /* end position */
-  .field::placeholder { color: transparent; }
   .field:not(:placeholder-shown) + label,
   .field:focus + label {
     position: absolute; 
@@ -139,6 +141,21 @@ input:autofill {
     transform: translateY(-1.75em);
     transition: all 0.05s;
     font-weight: 700;
+  }
+
+  @media (max-width: 600px) {
+    .field:not(:placeholder-shown) + label,
+    .field:focus + label {
+      font-size: 1em;
+      bottom: 0.5em;
+    }
+
+    #location-label { bottom: 0.5em; background: red; }
+
+    .flex-item {
+      margin-bottom: 1em;
+    }
+
   }
 
 
@@ -170,7 +187,7 @@ select {
   /* show label when selected option */
   select:valid + #location-label {
     visibility: visible;
-    bottom: 1.2rem;
+    bottom: 1.5em;
   }
   
 
