@@ -83,6 +83,10 @@
   margin-bottom: 0.2rem;
 }
 
+.signup input::placeholder {
+  color: var(--color-nav);
+}
+
 
 @media (max-width: 600px) {
   .hero__header { 
