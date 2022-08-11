@@ -12,33 +12,30 @@
         </p>
       </div> -->
       <div id="modal-body">
-        <div class="flex-col">
-          <div class="flex-item">
-            <input
-              id="email"
-              name="email"
-              class="field valid"
-              placeholder="example@domain.com"
-              type="text"
-              value=""
-            />
-            <label class="disabled" for="email">Email</label>
-          </div>
+        <div class="flex-item">
+          <input
+            id="email"
+            name="email"
+            class="field valid"
+            placeholder="example@domain.com"
+            type="text"
+            value=""
+          />
+          <label class="disabled" for="email">Email</label>
         </div>
 
-        <div class="flex-row">
-          <div class="flex-item">
-            <input
-              id="first-name"
-              name="first-name"
-              class="field"
-              placeholder="Something3"
-              type="text"
-              value=""
-            />
-            <label for="first-name">First name</label>
-          </div>
-          <!-- <div class="flex-item">
+        <div class="flex-item">
+          <input
+            id="first-name"
+            name="first-name"
+            class="field"
+            placeholder="Something3"
+            type="text"
+            value=""
+          />
+          <label for="first-name">First name</label>
+        </div>
+        <!-- <div class="flex-item">
             <input
               id="last-name"
               name="last-name"
@@ -49,27 +46,26 @@
             />
             <label for="last-name">Last Name</label>
           </div> -->
+
+        <div class="flex-item">
+          <select
+            class="field select"
+            id="location"
+            name="location"
+            class="field dropdown"
+            placeholder=""
+            value=""
+            required
+          >
+            <option value="">Select a country...</option>
+            <option value="GB">🇬🇧 United Kingdom</option>
+            <option value="US">🇺🇸 United States</option>
+            <option value="Looking for other">❓ Other...</option>
+          </select>
+          <label id="location-label" for="location">Country</label>
         </div>
 
-        <div class="flex-col select">
-          <div class="flex-item select">
-            <select
-              id="location"
-              name="location"
-              class="field dropdown"
-              placeholder=""
-              value=""
-              required
-            >
-              <option value="">Select a country...</option>
-              <option value="GB">🇬🇧 United Kingdom</option>
-              <option value="US">🇺🇸 United States</option>
-              <option value="Looking for other">❓ Other...</option>
-            </select>
-            <label id="location-label" for="location">Country</label>
-          </div>
-
-          <div style="display: none" class="flex-item other two">
+        <!-- <div style="display: none" class="flex-item other two">
             <input
               id="looking-for-other"
               class="field inactive"
@@ -77,8 +73,7 @@
               placeholder="Other"
               value=""
             />
-          </div>
-        </div>
+          </div> -->
       </div>
 
       <div id="modal-footer">

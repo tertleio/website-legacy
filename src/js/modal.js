@@ -26,6 +26,7 @@ async function submit(e) {
 const ctrler = () => {
   const elSign = document.querySelector('.signup');
   elSign.addEventListener('click', submit);
+  toggleModal();
 };
 
 export default ctrler;

@@ -14,7 +14,7 @@
     /* scrollable area */
     position: absolute;
     border-radius: 0rem 0 1.2rem 1.2rem;
-    max-width: 450px;
+    max-width: 400px;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -39,9 +39,9 @@
 
   .flex-item {
     position: relative;
-    padding: 1.1em 0 0.2em 0;
+    padding: 1em 0 0.2em 0;
     margin-bottom: 0.25rem;
-    flex: 0 47%;
+    /* flex: 0 47%; */
   }
 
   .modal-input-container {
@@ -73,7 +73,6 @@
 
 
 .field {
-  height: 2em;
   border: 0;
   border-bottom: 1px solid #d7d7d7;
   width: 100%;
@@ -83,7 +82,7 @@
 }
 .field:focus {
   outline: none;
-  /* background: url('../../assets/focused-anim.gif') no-repeat bottom 15px right; */
+  background: url('../../assets/focused-anim.gif') no-repeat bottom 15px right;
   background-size: 22px;
   border-bottom: 1px solid var(--color-orange);
 } 
@@ -101,21 +100,22 @@
   bottom: 1em;
 } */
 
-  .field + label {
-    /* start position */
+/* start position */  
+.field + label {
     position: absolute;
     left: 0;
-    bottom: 1.4em;
+    bottom: 1em;
     font-size: 1em;
     transition: all 0.05s;
   }
 
 
+  /* end position */
   .field::placeholder { color: transparent; }
   .field:not(:placeholder-shown) + label,
   .field:focus + label {
     position: absolute;
-    bottom: 1.6em;
+    bottom: 1.4em;
     font-size: 0.7em;
     transform: translateY(-1.75em);
     transition: all 0.05s;
@@ -127,25 +127,28 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-.select {
-  background: url('../../assets/dropdown.svg') no-repeat bottom 1em right;
+  border: none;
 }
 
-  option:first-child { color: red; }
+.flex-item .select {
+  padding-bottom: 0.7em;
+}
+.select {
+  background: url('../../assets/dropdown.svg') no-repeat center right;
+  background-size: 0.7em;
+  /* border: 1px solid red; */
+}
+
+/* option:first-child { color: red; background: red;} */
   select:invalid {
     color: var(--color-nav);
     font-family: 'Proxima Nova', sans-serif;
-    font-size: 1rem;
-  }
-  select:invalid::after {
-    content: 'Please select an option';
-    height: 3em;
-    background: red;
+    /* font-size: 1em; */
   }
   #location-label {
     visibility: hidden;
   }
+  /* show label when selected option */
   select:valid + #location-label {
     visibility: visible;
   }
