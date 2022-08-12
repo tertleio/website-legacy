@@ -20,6 +20,7 @@ async function handleModal(e, email) {
   // Open
   elModal.style = '';
   elModal.innerHTML = modalHtml;
+  // TODO: focus modal for tabs and disable bg interactions
 
   // Insert initial email if exists
   if (email) {
@@ -53,6 +54,8 @@ async function onSecondarySubmit(e) {
       const { status, payload } = res;
       if (status !== 'success') throw new Error('Problem submitting data');
 
+      const elSuccess = doc.querySelector('#modal-success');
+      elSuccess.style = '';
       // add id to local storage incase of error or resubmission
       // update db to delete old and add new/correct
     })
@@ -60,8 +63,6 @@ async function onSecondarySubmit(e) {
       console.log(err);
       // notify user there was a problem
     });
-
-  console.log('submitted two');
 
   return false;
 }
