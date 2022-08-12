@@ -17,7 +17,7 @@ const modal = () => {
   const elModal = doc.querySelector('#overlay-modal');
   const formOne = doc.querySelector('#formOne');
   const elNavCta = doc.querySelector('.ctaOne');
-  formOne.addEventListener('submit', handleSubmit);
+  formOne.addEventListener('submit', handleSubmits);
   elNavCta.addEventListener('click', toggleModal);
 
   let isOpen = false;
@@ -37,7 +37,7 @@ const modal = () => {
 
     // Listen for submit
     const formTwo = elModal.querySelector('#formTwo');
-    formTwo.addEventListener('submit', handleSubmit);
+    formTwo.addEventListener('submit', handleSubmits);
 
     // Close
     const elCloseBtn = doc.querySelector('.modal-close');
@@ -55,7 +55,6 @@ const modal = () => {
   function getFormData(e) {
     if (e.target.id === 'formOne') {
       const email = e.target.querySelector('input').value;
-      console.log(email);
       dataStruct.email = email;
     } else if (e.target.id === 'formTwo') {
       const fields = e.target.querySelectorAll('.field');
@@ -66,7 +65,7 @@ const modal = () => {
     return dataStruct;
   }
 
-  async function submitFormData(data) {
+  async function sendFormData(data) {
     return simFetch(data)
       .then((res) => {
         const { status, payload } = res;
@@ -80,13 +79,13 @@ const modal = () => {
       });
   }
 
-  async function handleSubmit(e) {
+  async function handleSubmits(e) {
     e.preventDefault();
     if (e.target.id === 'formOne') await toggleModal();
     const formData = getFormData(e);
-    const wasSuccess = await submitFormData(formData);
+    const wasSuccess = await sendFormData(formData);
 
-    // Ininitial email insertion to main form
+    // Initial email insertion to main form
     if (e.target.id === 'formOne') {
       const elEmail = elModal.querySelector('#email');
       elEmail.value = formData.email;
