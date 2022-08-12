@@ -106,7 +106,7 @@ input:autofill {
   /* background-size: 1.2em; */
   border-bottom: 1px solid var(--color-orange);
 } 
-.field.valid {
+.field.valid, input:valid, select:valid {
   /* border-bottom: 1px solid var(--color-primary); */
   background: url('../../assets/valid.svg') no-repeat center right 0.2rem;
   background-size: 0.8em;
