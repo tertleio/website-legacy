@@ -1,32 +1,39 @@
+'use strict';
+const doc = document;
 import loadHtml from './utils/loadHtml.js';
 
 async function toggleModal() {
   const modalHtml = await loadHtml('../components/modal.html', import.meta.url);
-  const elModal = document.querySelector('#overlay-modal');
+  const elModal = doc.querySelector('#overlay-modal');
   // Open
   elModal.style = '';
   elModal.innerHTML = modalHtml;
 
-  const elCloseBtn = document.querySelector('.modal-close');
+  const elCloseBtn = doc.querySelector('.modal-close');
   // Close
-  elCloseBtn.addEventListener(
-    'click',
-    () => {
-      elModal.style.display = 'none';
-    },
-    { once: true }
-  );
+  // elCloseBtn.addEventListener(
+  //   'click',
+  //   () => {
+  //     elModal.style.display = 'none';
+  //   },
+  //   { once: true }
+  // );
 }
 
-async function submit(e) {
+function onSubmit(e) {
   e.preventDefault();
-  toggleModal();
+  const email = e.target.querySelector('input').value;
+  console.log('email', email);
+
+  // toggleModal();
+  // const res = fetch('https://app.tertle.io/api/sign/')
+
+  return false;
 }
 
 const ctrler = () => {
-  const elSign = document.querySelector('.signup');
-  elSign.addEventListener('click', submit);
-  toggleModal();
+  const formOne = doc.querySelector('#formOne');
+  formOne.addEventListener('submit', onSubmit);
 };
 
 export default ctrler;
