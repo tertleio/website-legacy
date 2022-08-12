@@ -21,10 +21,10 @@
         <div class="flex-item">
           <input
             id="email"
-            name="email"
-            class="field valid"
+            class="field"
             placeholder="example@domain.com"
             type="email"
+            name="email"
             value=""
             required
           />
@@ -34,10 +34,10 @@
         <div class="flex-item">
           <input
             id="first-name"
-            name="first-name"
             class="field"
-            placeholder="Something3"
+            placeholder="Joe"
             type="text"
+            name="firstName"
             value=""
             required
           />
@@ -57,18 +57,16 @@
 
         <div class="flex-item">
           <select
-            class="field select"
             id="location"
-            name="location"
-            class="field dropdown"
-            placeholder=""
+            class="field select"
+            name="country"
             value=""
             required
           >
             <option value="">Select a country...</option>
             <option value="GB">🇬🇧 United Kingdom</option>
             <option value="US">🇺🇸 United States</option>
-            <option value="Looking for other">❓ Other...</option>
+            <option value="other">❓ Other</option>
           </select>
           <label id="location-label" for="location">Country</label>
         </div>
