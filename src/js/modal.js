@@ -99,10 +99,6 @@ const modal = () => {
     elNotify.style = '';
 
     // Hide submitted form
-    const elFormTwoBody = elModal.querySelector('#modal-body');
-    elFormTwoBody.style.display = 'none';
-
-    // Update form button
     const elFormTwo = elModal.querySelector('#formTwo');
     elFormTwo.style.display = 'none';
 
