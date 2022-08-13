@@ -20,7 +20,7 @@ function getVarsFor(page) {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'Join Waitlist',
-        primaryCtaLink: '',
+        primaryCtaLink: null,
         secondaryCtaTxt: 'For Founders',
         secondaryCtaLink: './founders.html',
       };
@@ -30,7 +30,7 @@ function getVarsFor(page) {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'Join Waitlist',
-        primaryCtaLink: '',
+        primaryCtaLink: null,
         secondaryCtaTxt: 'For Hirers',
         secondaryCtaLink: '',
       };
@@ -40,7 +40,7 @@ function getVarsFor(page) {
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'Join Waitlist',
-        primaryCtaLink: '',
+        primaryCtaLink: null,
         secondaryCtaTxt: 'For Contractors',
         secondaryCtaLink: '',
       };
@@ -55,7 +55,7 @@ function render(vars) {
   // const elLogo = doc.querySelector('');
 
   elsH2.forEach((h2, i) => {
-    // CONTENT MENU
+    // Content Menu
     if (i === 0) return; // skip first hero h2
 
     const hashTag = '#' + h2.innerText.split(' ').join('-').toLowerCase();
@@ -74,12 +74,15 @@ function render(vars) {
     elMenu.innerHTML += newLi;
   });
 
-  // CTA
-  elsPrimaryCta.forEach((pCta) => (pCta.innerText = vars.primaryCtaTxt));
+  // Cta
+  elsPrimaryCta.forEach((pCta) => {
+    pCta.innerText = vars.primaryCtaTxt;
+    if (vars.primaryCtaLink) pCta.href = vars.primaryCtaLink;
+  });
   elSecondaryCta.innerText = vars.secondaryCtaTxt;
   elSecondaryCta.href = vars.secondaryCtaLink;
 
-  // ACTIVE PRODUCT MENU
+  // Active Product Menu
   const elProductMenu = doc.getElementById('menu-products');
   const elPMenu = elProductMenu.querySelector(`li:nth-of-type(${vars.idx}) a`);
   elPMenu.classList.add('--active');
@@ -89,7 +92,7 @@ function render(vars) {
   // Footer Image
 }
 
-const compose = async () => {
+const compose = async (pagename) => {
   const path = '../components';
   const headerHtml = await loadHtml(`${path}/header.xml`, import.meta.url);
   const footerHtml = await loadHtml(`${path}/footer.xml`, import.meta.url);
@@ -97,9 +100,6 @@ const compose = async () => {
   const elHeader = doc.getElementById('header');
   const elFooter = doc.getElementById('footer');
 
-  const pathname = window.location.pathname.split('/');
-  const filename = pathname[pathname.length - 1];
-  const [pagename] = filename.split('.', [1]); // TODO: remove when ext is removed
   const vars = getVarsFor(pagename);
 
   elHeader.innerHTML = headerHtml;
