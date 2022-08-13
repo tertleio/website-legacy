@@ -58,15 +58,15 @@ input:autofill {
     position: relative;
     padding-top: 1em;
     margin-bottom: 0.25rem;
-    /* flex: 0 47%; */
   }
+  .flex-item:first-child { padding-top: 0.5em; }
 
   .modal-input-container {
     overflow-y: auto;
     /* max-height: calc(90vh - 210px); */
     display: flex;
     flex-basis: 100%;
-    padding: 2em;
+    padding: 1.75em 2.75em;
   }
 
 
@@ -230,7 +230,7 @@ select {
 }
 
 p.modal-info {
-  text-indent: 2em;
+  text-indent: 1.75em;
   background: url('../../assets/i.svg') no-repeat top 0.3em left;
   background-size: 1.1em;
   font-size: 1.2em;
