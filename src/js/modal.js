@@ -67,8 +67,7 @@ const modal = () => {
 
   async function sendFormData(data) {
     return simFetch(data)
-      .then((res) => {
-        const { status, payload } = res;
+      .then(({ status, payload }) => {
         if (status !== 'success') throw new Error('Problem submitting form');
 
         return true;
