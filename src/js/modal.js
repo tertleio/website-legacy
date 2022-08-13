@@ -98,8 +98,7 @@ const modal = () => {
     elNotify.style = '';
 
     // Hide submitted form
-    const elFormTwo = elModal.querySelector('#formTwo');
-    elFormTwo.style.display = 'none';
+    elModal.querySelector('#formTwo').style.display = 'none';
 
     // add id to local storage incase of error or resubmission
     // update db to delete old and add new/correct

@@ -3,23 +3,22 @@ import compose from './compose.js';
 import scroll from './scroll.js';
 import menu from './menu.js';
 import toggleTheme from './theme.js';
-import matrix from './matrix.js';
 import demos from './demo.js';
 import modal from './modal.js';
+import matrix from './matrix.js';
+import getPagename from './utils/getPagename.js';
 
-const pathname = window.location.pathname.split('/');
-const filename = pathname[pathname.length - 1];
-const [pagename] = filename.split('.', [1]); // TODO: remove when ext is removed
+const pagename = getPagename();
 
-function isModalInUse(page) {
+function isModalInUse() {
   // prettier-ignore
-  switch(page) {
+  switch(pagename) {
     case 'index': return false;
     case 'founders': return false;
     case 'investors': return true;
     case 'contractors': return true;
     case 'hirers': return true;
-    default: console.log(`Invalid arg: '${page}'`)
+    default: console.log(`Invalid arg: '${pagename}'`)
   }
 }
 
@@ -36,13 +35,12 @@ function initPrio2() {
 
 function initPrio3() {
   toggleTheme();
-  isModalInUse(pagename) && modal();
+  isModalInUse() && modal();
   // matrix();
 }
 
 // Init
 initPrio1()
-  // TODO: separate out init dependencies and non-dependencies and handle err
   .then((_) => {
     initPrio2();
     initPrio3();
