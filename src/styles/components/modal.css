@@ -106,20 +106,16 @@ input:autofill {
   /* background-size: 1.2em; */
   border-bottom: 1px solid var(--color-orange);
 } 
-.field.valid, input:valid, select:valid {
+.field:valid {
   /* border-bottom: 1px solid var(--color-primary); */
   background: url('../../assets/valid.svg') no-repeat center right 0.2rem;
   background-size: 0.8em;
 }
-.field.invalid {
+.field:not(:placeholder-shown):not(.select):invalid {
   /* border-bottom: 1px solid $color-red; */
   background: url('../../assets/invalid.svg') no-repeat center right 0.2rem;
   background-size: 1em;
 }
-/* .field.dropdown + label {
-  bottom: 1em;
-} */
-
 .field::placeholder { color: transparent; }
 
 /* start position */  
