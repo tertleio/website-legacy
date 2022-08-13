@@ -3,10 +3,10 @@ const doc = document;
 import loadHtml from './utils/loadHtml.js';
 
 function simFetch(vals) {
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      return resolve({
-        status: 'success',
+      return reject({
+        status: 'error',
         payload: vals,
       });
     }, 100);
