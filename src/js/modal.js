@@ -5,8 +5,8 @@ import loadHtml from './utils/loadHtml.js';
 function simFetch(vals) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      return reject({
-        status: 'error',
+      return resolve({
+        status: 'success',
         payload: vals,
       });
     }, 100);
