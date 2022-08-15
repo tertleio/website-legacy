@@ -29,7 +29,7 @@
 
     <div class="switch-wrapper dt" tabindex="0">
       <label title="Toggle theme" alt="Toggle theme" class="switch">
-        <input id="toggle-theme" type="checkbox" />
+        <input class="toggleTheme" type="checkbox" />
         <span class="slider round"></span>
       </label>
     </div>
@@ -151,23 +151,22 @@
 
           <!-- prettier-ignore -->
           <div class="menu menu-burger">
-          <li>
-            <a class="switch-wrapper fill">
-              <span>
-                <label class="switch">
-                  <input id="toggle-theme" type="checkbox" />
-                  <span class="slider round slider-cover"></span>
-                </label>
-              </span>
-              Switch Theme
-            </a>
-          </li>
-          <li><a href="#features"><span>📦</span>Features</a></li>
-          <li><a href="#why-tertle"><span>🐢</span>Why Tertle</a></li>
-          <li><a href="#faq"><span>❓</span>FAQ</a></li>
-          <li><a href="#"><span>📝</span>Blog</a></li>
-          <li><a href="/index.html"><span>🐣</span>For Founders</a></li>
-          <li><a href="#"><span>🐣</span>For Investors</a></li>
+            <li>
+              <a class="switch-wrapper fill">
+                <span>
+                  <label class="switch">
+                    <input class="toggleTheme" type="checkbox" />
+                    <span class="slider round slider-cover"></span>
+                  </label>
+                </span>
+                Switch Theme
+              </a>
+            </li>
+            <li><a href="./founders.html"><span>🐣</span>For Founders</a></li>
+            <li><a href="./investors.html"><span>🐣</span>For Investors</a></li>
+            <li><a href="./contractors.html"><span>💼</span>For Contractors</a></li>
+            <li><a href="./hirers.html"><span>💼</span>For Hirers</a></li>
+            <li><a href="./blog.html"><span>📝</span>Blog</a></li>
         </div>
         </ul>
       </nav>

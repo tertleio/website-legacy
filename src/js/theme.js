@@ -7,7 +7,7 @@ function toggleFooter() {
 }
 
 const toggleTheme = () => {
-  const elsToggle = doc.querySelectorAll('#toggle-theme');
+  const elsToggle = doc.querySelectorAll('.toggleTheme');
   const elRocket = doc.querySelector('.rocket');
 
   function changeTheme(theme) {

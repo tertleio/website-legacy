@@ -84,8 +84,14 @@ function render(vars) {
 
   // Active Product Menu
   const elProductMenu = doc.getElementById('menu-products');
+  const elBurgerMenu = doc.querySelector('.menu-burger');
+
   const elPMenu = elProductMenu.querySelector(`li:nth-of-type(${vars.idx}) a`);
+  const elBMenu = elBurgerMenu.querySelector(
+    `li:nth-of-type(${vars.idx + 1}) a`
+  );
   elPMenu.classList.add('--active');
+  elBMenu.classList.add('--active');
 
   // TODO:
   // Logo
