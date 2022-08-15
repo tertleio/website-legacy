@@ -93,12 +93,12 @@
 } 
 .field:valid {
   /* border-bottom: 1px solid var(--color-primary); */
-  background: url('../../assets/valid.svg') no-repeat center right 0.2rem;
+  background: url('../../assets/ico/valid.svg') no-repeat center right 0.2rem;
   background-size: 0.8em;
 }
 .field:not(:placeholder-shown):not(.select):invalid {
   /* border-bottom: 1px solid $color-red; */
-  background: url('../../assets/invalid.svg') no-repeat center right 0.2rem;
+  background: url('../../assets/ico/invalid.svg') no-repeat center right 0.2rem;
   background-size: 1em;
 }
 .field::placeholder { color: transparent; }
@@ -166,7 +166,7 @@ select {
   padding-bottom: 0.7em;
 }
 .select {
-  background: url('../../assets/dropdown.svg') no-repeat center right 0.2rem;
+  background: url('../../assets/ico/dropdown.svg') no-repeat center right 0.2rem;
   background-size: 0.65em;
   /* border: 1px solid red; */
 }
@@ -216,7 +216,7 @@ select {
 
 p.modal-info {
   text-indent: 1.75em;
-  background: url('../../assets/i.svg') no-repeat top 0.3em left;
+  background: url('../../assets/ico/i.svg') no-repeat top 0.3em left;
   background-size: 1.1em;
   font-size: 1.2em;
 }
