@@ -36,30 +36,30 @@
   <div class="footer__chunk">
     <h4>Tertle Shell</h4>
     <ul>
-      <a href="">Home</a>
-      <a href="">Blog</a>
-      <a href="">LinkedIn</a>
-      <a href="">Contact Us</a>
+      <li><a href="">Home</a></li>
+      <li><a href="">Blog</a></li>
+      <li><a href="">LinkedIn</a></li>
+      <li><a href="">Contact Us</a></li>
     </ul>
   </div>
 
   <div class="footer__chunk">
     <h4>Tertle Hatch</h4>
     <ul>
-      <a href="">For Founders</a>
-      <a href="">For Investors</a>
-      <a href="">Sign Up</a>
-      <a href="">Login</a>
-      <a href="">Privacy</a>
+      <li><a href="">For Founders</a></li>
+      <li><a href="">For Investors</a></li>
+      <li><a href="">Sign Up</a></li>
+      <li><a href="">Login</a></li>
+      <li><a href="">Privacy</a></li>
     </ul>
   </div>
 
   <div class="footer__chunk">
     <h4>Tertle Scale</h4>
     <ul>
-      <a href="">Join Waitlist</a>
-      <a href="">For Hirers</a>
-      <a href="">For Contractors</a>
+      <li><a href="">Join Waitlist</a></li>
+      <li><a href="">For Hirers</a></li>
+      <li><a href="">For Contractors</a></li>
     </ul>
   </div>
 </footer>

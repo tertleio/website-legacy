@@ -98,8 +98,8 @@
   </nav>
 
   <div class="header__right">
-    <ul class="list-x">
-      <li class="dt"><a class="ctaTwo" href="#">For Hirers</a></li>
+    <ul class="list-right">
+      <li class="dt"><a class="ctaTwo" href="./hirers.html">For Hirers</a></li>
       <li class="dt">
         <a
           class="btn btn--secondary ctaOne"
@@ -108,9 +108,8 @@
         </a>
       </li>
 
-      <nav>
         <ul id="burger-list" class="menu-list mb">
-          <li id="burger-ico" class="ico menu-root">
+          <li role="button" id="burger-ico" class="ico menu-root">
             <svg
               id="nav-open"
               viewBox="0 0 22 16"
@@ -150,7 +149,7 @@
           </li>
 
           <!-- prettier-ignore -->
-          <div class="menu menu-burger">
+          <nav class="menu menu-burger">
             <li>
               <a class="switch-wrapper fill">
                 <span>
@@ -167,9 +166,8 @@
             <li><a href="./contractors.html"><span>💼</span>For Contractors</a></li>
             <li><a href="./hirers.html"><span>💼</span>For Hirers</a></li>
             <li><a href="./blog.html"><span>📝</span>Blog</a></li>
-        </div>
+          </nav>
         </ul>
-      </nav>
     </ul>
   </div>
 </header>
