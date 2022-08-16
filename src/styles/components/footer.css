@@ -59,7 +59,7 @@
 
   #footer ul li {
     text-decoration: underline;
-    padding-top: 1em 0;
+    padding-top: 1em;
     /* text-decoration: underline; */
   }
 }
