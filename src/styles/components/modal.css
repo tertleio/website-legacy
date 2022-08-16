@@ -166,7 +166,7 @@ select {
   padding-bottom: 0.7em;
 }
 .select {
-  background: url('../../assets/ico/dropdown.svg') no-repeat center right 0.2rem;
+  background: url('../../assets/ico/arrow-thick.svg') no-repeat center right 0.35rem;
   background-size: 0.65em;
   /* border: 1px solid red; */
 }
