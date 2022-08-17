@@ -14,19 +14,19 @@ function getVarsFor(page) {
         secondaryCtaTxt: 'Login',
         secondaryCtaLink: 'https://app.tertle.io/login',
       };
-    case 'investors':
-      return {
-        idx: 2,
-        logoSrc: './assets/logo.svg',
-        showFooterVisual: false,
-        primaryCtaTxt: 'Join Waitlist',
-        primaryCtaLink: null,
-        secondaryCtaTxt: 'For Founders',
-        secondaryCtaLink: './founders.html',
-      };
+    // case 'investors':
+    //   return {
+    //     idx: 2,
+    //     logoSrc: './assets/logo.svg',
+    //     showFooterVisual: false,
+    //     primaryCtaTxt: 'Join Waitlist',
+    //     primaryCtaLink: null,
+    //     secondaryCtaTxt: 'For Founders',
+    //     secondaryCtaLink: './founders.html',
+    //   };
     case 'contractors':
       return {
-        idx: 3,
+        idx: 2,
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'Join Waitlist',
@@ -36,7 +36,7 @@ function getVarsFor(page) {
       };
     case 'hirers':
       return {
-        idx: 4,
+        idx: 3,
         logoSrc: './assets/logo.svg',
         showFooterVisual: false,
         primaryCtaTxt: 'Join Waitlist',
