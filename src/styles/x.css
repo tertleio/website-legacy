@@ -147,7 +147,12 @@
 }
 
 .content .__single {
-  max-width: 25rem;
   margin: 0 auto;
   padding-bottom: 2em;
+}
+
+@media screen and (min-width: 600px) {
+  .content .__single {
+    max-width: 25rem;
+  }
 }
