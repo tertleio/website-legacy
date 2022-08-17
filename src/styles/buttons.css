@@ -13,6 +13,7 @@ a {
 .btn { 
   font-family: 'Poppins', sans-serif;
   border-radius: 0.3em;
+  /* transition: all 0.5s; <- this is added in scroll.js for nav cta to have insta theme swap */
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.9em;
@@ -24,6 +25,7 @@ a {
   padding-right: 1.5em;
   padding-top: 0.9em;
   padding-bottom: 0.9em;
+  cursor: pointer;
 } 
 .btn:hover, .btn--primary {
     border: 1px solid var(--color-primary);
