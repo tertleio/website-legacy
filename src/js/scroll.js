@@ -35,6 +35,8 @@ const scroll = () => {
   }
 
   function showRabbitAndCta(shouldShow) {
+    elNavCta.style = 'transition: all 0.5s;';
+
     if (shouldShow) {
       elNavCta.className = 'btn btn--secondary';
       elOverlay.style['animation-name'] = 'show-rabbit';
