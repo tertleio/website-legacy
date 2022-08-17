@@ -2,51 +2,6 @@
 const doc = document;
 import loadHtml from './utils/loadHtml.js';
 
-function getVarsFor(page) {
-  switch (page) {
-    case 'founders':
-      return {
-        idx: 1,
-        logoSrc: './assets/logo.svg',
-        showFooterVisual: false,
-        primaryCtaTxt: 'Get Started',
-        primaryCtaLink: 'https://app.tertle.io/join',
-        secondaryCtaTxt: 'Login',
-        secondaryCtaLink: 'https://app.tertle.io/login',
-      };
-    // case 'investors':
-    //   return {
-    //     idx: 2,
-    //     logoSrc: './assets/logo.svg',
-    //     showFooterVisual: false,
-    //     primaryCtaTxt: 'Join Waitlist',
-    //     primaryCtaLink: null,
-    //     secondaryCtaTxt: 'For Founders',
-    //     secondaryCtaLink: './founders.html',
-    //   };
-    case 'contractors':
-      return {
-        idx: 2,
-        logoSrc: './assets/logo.svg',
-        showFooterVisual: false,
-        primaryCtaTxt: 'Join Waitlist',
-        primaryCtaLink: null,
-        secondaryCtaTxt: 'For Hirers',
-        secondaryCtaLink: '',
-      };
-    case 'hirers':
-      return {
-        idx: 3,
-        logoSrc: './assets/logo.svg',
-        showFooterVisual: false,
-        primaryCtaTxt: 'Join Waitlist',
-        primaryCtaLink: null,
-        secondaryCtaTxt: 'For Contractors',
-        secondaryCtaLink: '',
-      };
-  }
-}
-
 function render(vars) {
   const elsH2 = doc.querySelectorAll('h2');
   const elMenu = doc.getElementById('menu-content');
@@ -98,15 +53,13 @@ function render(vars) {
   // Footer Image
 }
 
-const compose = async (pagename) => {
+const compose = async (vars) => {
   const path = '../components';
   const headerHtml = await loadHtml(`${path}/header.xml`, import.meta.url);
   const footerHtml = await loadHtml(`${path}/footer.xml`, import.meta.url);
 
   const elHeader = doc.getElementById('header');
   const elFooter = doc.getElementById('footer');
-
-  const vars = getVarsFor(pagename);
 
   elHeader.innerHTML = headerHtml;
   elFooter.innerHTML = footerHtml;

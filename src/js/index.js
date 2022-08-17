@@ -5,26 +5,15 @@ import menu from './menu.js';
 import toggleTheme from './theme.js';
 import demos from './demo.js';
 import modal from './modal.js';
-import matrix from './matrix.js';
 import getPagename from './utils/getPagename.js';
+import getVarsFor from './getVars.js';
 
 const pagename = getPagename();
-
-function isModalInUse() {
-  // prettier-ignore
-  switch(pagename) {
-    case 'index': return false;
-    case 'founders': return false;
-    case 'investors': return true;
-    case 'contractors': return true;
-    case 'hirers': return true;
-    default: console.log(`Invalid arg: '${pagename}'`)
-  }
-}
+const vars = getVarsFor(pagename);
 
 // Initiators
 async function initPrio1() {
-  await compose(pagename);
+  await compose(vars);
 }
 
 function initPrio2() {
@@ -34,9 +23,8 @@ function initPrio2() {
 }
 
 function initPrio3() {
-  toggleTheme();
-  isModalInUse() && modal();
-  // matrix();
+  toggleTheme(vars.showFooterVisual);
+  vars.useModal && modal();
 }
 
 // Init

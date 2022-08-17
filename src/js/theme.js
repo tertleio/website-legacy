@@ -1,32 +1,32 @@
 'use strict';
 const doc = document;
+import matrix from './matrix.js';
 
-function toggleFooter() {
-  const elMatrix = doc.getElementById('matrix');
-  elMatrix.style = theme === 'dark' ? 'display: block;' : 'display: none;';
-}
-
-const toggleTheme = () => {
+const toggleTheme = (showFooterVisual) => {
   const elsToggle = doc.querySelectorAll('.toggleTheme');
   const elRocket = doc.querySelector('.rocket');
 
-  function changeTheme(theme) {
-    elRocket.src = `../assets/tertle_rocket-${theme}-sm.gif`;
-    doc.documentElement.setAttribute('theme', theme);
-    localStorage.setItem('theme', theme);
+  function toggleFooterVisual(t) {
+    const elMatrix = doc.getElementById('matrix');
+    elMatrix.style = t === 'dark' ? 'display: block;' : 'display: none;';
   }
 
-  const localTheme = localStorage.getItem('theme');
-  if (localTheme) changeTheme(localTheme);
+  function changeTheme() {
+    const currTheme = doc.documentElement.getAttribute('theme');
+    const localTheme = localStorage.getItem('theme');
 
-  elsToggle.forEach((elToggle) => {
-    elToggle.onclick = () => {
-      const fromTheme = doc.documentElement.getAttribute('theme');
-      const toTheme = fromTheme === 'dark' ? 'light' : 'dark';
+    const fromTheme = localTheme ? localTheme : currTheme;
+    const toTheme = fromTheme === 'dark' ? 'light' : 'dark';
 
-      changeTheme(toTheme);
-    };
-  });
+    elRocket.src = `../assets/tertle_rocket-${toTheme}-sm.gif`;
+    doc.documentElement.setAttribute('theme', toTheme);
+    localStorage.setItem('theme', toTheme);
+    showFooterVisual && toggleFooterVisual(toTheme);
+  }
+
+  if (showFooterVisual) matrix();
+  changeTheme();
+  elsToggle.forEach((elToggle) => (elToggle.onclick = () => changeTheme()));
 };
 
 export default toggleTheme;
