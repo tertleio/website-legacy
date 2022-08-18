@@ -84,7 +84,7 @@
 .menu-list .--active  .dropdown.--close { display: inline-flex; }
 .menu-list:hover .dropdown.--open svg > * { fill: var(--color-link); }
 
-/* how & hide menu & pointer (dt only so doesnt mess with mb js)  */
+/* show & hide menu & pointer (dt only so doesnt mess with mb js)  */
 @media screen and (min-width: 600px) { 
   .menu-list:hover .menu,
   .menu-list:hover .menu-root:after,
@@ -143,6 +143,9 @@
   }
 
   .header__mid .menu-root { font-size: 1.2rem; }
+  
+  /* arrow */
+  #burger-list .menu-root::after { top: 2.6rem;}
 }
 
 .menu a span { margin-right: auto; padding-right: 1rem; }
