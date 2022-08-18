@@ -102,6 +102,7 @@
       <li class="dt"><a class="ctaTwo" href="./hirers.html">For Hirers</a></li>
       <li class="dt">
         <a
+          tabindex="0"
           class="btn btn--secondary .btn__fade ctaOne"
         >
           Join Wailist
