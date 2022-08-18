@@ -6,12 +6,12 @@ const toggleTheme = (showFooterVisual) => {
   const elsToggle = doc.querySelectorAll('.toggleTheme');
   const elRocket = doc.querySelector('.rocket');
 
-  function updateFooter(t) {
-    elRocket.src = `../assets/tertle_rocket-${t}-sm.gif`;
+  function updateFooter(theme) {
+    elRocket.src = `../assets/tertle_rocket-${theme}-sm.gif`;
 
     if (!showFooterVisual) return;
     const elMatrix = doc.getElementById('matrix');
-    elMatrix.style = t === 'dark' ? 'display: block;' : 'display: none;';
+    elMatrix.style = theme === 'dark' ? 'display: block;' : 'display: none;';
   }
 
   function updateTheme() {

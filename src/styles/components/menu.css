@@ -160,7 +160,7 @@
   .header .menu a {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    /* width: 100%; */
     padding: 1em 1em;
     text-align: right;
   }
