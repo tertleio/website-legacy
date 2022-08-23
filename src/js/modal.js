@@ -2,17 +2,6 @@
 const doc = document;
 import loadHtml from './utils/loadHtml.js';
 
-function simFetch(vals) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      return resolve({
-        status: 'success',
-        payload: vals,
-      });
-    }, 100);
-  });
-}
-
 const modal = () => {
   const elModal = doc.querySelector('#overlay-modal');
   const formOne = doc.querySelector('#formOne');
@@ -59,22 +48,40 @@ const modal = () => {
     } else if (e.target.id === 'formTwo') {
       const fields = e.target.querySelectorAll('.field');
       const vals = [...fields].map((f) => ({ [f.name]: f.value }));
-      dataStruct = vals;
+
+      // TODO: return length agnostic data
+      dataStruct = {
+        email: vals[0].email,
+        firstName: vals[1].firstName,
+        country: vals[2].country,
+      };
     }
 
     return dataStruct;
   }
 
   async function sendFormData(data) {
-    return simFetch(data)
-      .then(({ status, payload }) => {
-        if (status !== 'success') throw new Error('Problem submitting form');
+    console.log('data', data);
+    const url = 'http://localhost:1337/api/sign/waitlist/contractor';
+    data.waitlistId = localStorage.getItem('waitlistId');
+    const method = data.waitlistId ? 'PUT' : 'POST';
 
-        return true;
+    console.log('method', method);
+
+    return fetch(url, {
+      method,
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.status !== 'success') throw new Error('Form submit problem');
+        console.log('in fetch res', json);
+        return { wasSuccess: true, json };
       })
       .catch((err) => {
         console.log(err);
-        // notify user there was a problem
+        return { wasSuccess: false, res: err.toString() };
       });
   }
 
@@ -82,7 +89,10 @@ const modal = () => {
     e.preventDefault();
     if (e.target.id === 'formOne') await toggleModal();
     const formData = getFormData(e);
-    const wasSuccess = await sendFormData(formData);
+    const { wasSuccess, json: res } = await sendFormData(formData);
+
+    // store row id
+    if (wasSuccess) localStorage.setItem('waitlistId', res.payload.id);
 
     // Initial email insertion to main form
     if (e.target.id === 'formOne') {
