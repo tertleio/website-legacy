@@ -66,6 +66,7 @@ const modal = () => {
     data.waitlistId = localStorage.getItem('waitlistId');
     const method = data.waitlistId ? 'PUT' : 'POST';
 
+    console.log(data.waitlistId ? 'exists' : 'not exists');
     console.log('method', method);
 
     return fetch(url, {
@@ -76,7 +77,6 @@ const modal = () => {
       .then((res) => res.json())
       .then((json) => {
         if (json.status !== 'success') throw new Error('Form submit problem');
-        console.log('in fetch res', json);
         return { wasSuccess: true, json };
       })
       .catch((err) => {
@@ -91,8 +91,13 @@ const modal = () => {
     const formData = getFormData(e);
     const { wasSuccess, json: res } = await sendFormData(formData);
 
-    // store row id
+    // Handle row id
+    console.log('isClearId', res);
     if (wasSuccess) localStorage.setItem('waitlistId', res.payload.id);
+    if (res.payload.clearId) {
+      console.log('clearning Id');
+      localStorage.removeItem('waitlistId');
+    }
 
     // Initial email insertion to main form
     if (e.target.id === 'formOne') {
