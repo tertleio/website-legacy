@@ -221,17 +221,18 @@ select {
   padding: 1em 2.75em;
 }
 
-#modal-info-container.success { background: var(--color-primary ) }
+#modal-info-container.success { background: var(--color-green ) }
 #modal-info-container.warn { background: var(--color-orange ) }
 #modal-info-container.error { background: var(--color-red ) }
 
 #modal-info-container p {
   /* text-indent: 1.75em; */
+  line-height: 1.4em;
   padding-left: 2.2em;
   background: url('../../assets/ico/info.svg') no-repeat top 0.3rem left;
   background-size: 1.4em;
   margin-bottom: 0;
-  color: var(--color-fg);
+  color: var(--color-light);
   /* font-size: 1.2em; */
 }
 

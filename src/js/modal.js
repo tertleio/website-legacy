@@ -104,8 +104,8 @@ const modal = () => {
     if (e.target.id === 'formOne') await toggleModal();
     const elInfoContainer = elModal.querySelector('#modal-info-container');
     const elInfo = elModal.querySelector('#modal-info');
+    const elFormTwo = elModal.querySelector('#formTwo');
 
-    // SUCCESS
     if (wasSuccess) {
       // handle row id
       localStorage.setItem('waitlistId', payload.id);
@@ -115,12 +115,12 @@ const modal = () => {
       if (e.target.id === 'formOne' && wasSuccess) {
         const elEmail = elModal.querySelector('#email');
         elEmail.value = formData.email;
+        console.log('RETURNING AS IS FORM ONE AND SUCCESS');
         return;
       }
 
       // hide submitted form
-      if (code === 200)
-        elModal.querySelector('#formTwo').style.display = 'none';
+      if (code === 200) elFormTwo.style.display = 'none';
     }
 
     // res feedback
@@ -138,6 +138,7 @@ const modal = () => {
     elInfoContainer.style = '';
     elInfoContainer.className = bgColor;
     elInfo.style = '';
+    console.log('__MSG__', res);
     elInfo.innerHTML = msg;
 
     return false;
