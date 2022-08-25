@@ -76,47 +76,61 @@ const modal = () => {
     })
       .then((res) => res.json())
       .then((json) => {
-        if (json.status !== 'success') throw new Error('Form submit problem');
-        return { wasSuccess: true, json };
+        // if (json.status !== 'success') throw new Error('Form submit problem');
+        let wasSuccess;
+        if (json.code === 409) wasSuccess = false;
+        else if (json.status === 'success') wasSuccess = true;
+        else throw new Error('Form submit problem');
+
+        return { wasSuccess, res: json };
       })
       .catch((err) => {
         console.log(err);
-        return { wasSuccess: false, res: err.toString() };
+        localStorage.removeItem('waitlistId');
+        return { wasSuccess: false, res: err };
       });
   }
 
   async function handleSubmits(e) {
     e.preventDefault();
-    if (e.target.id === 'formOne') await toggleModal();
     const formData = getFormData(e);
-    const { wasSuccess, json: res } = await sendFormData(formData);
+    const { wasSuccess, res } = await sendFormData(formData);
+    const { code, msg, payload } = res;
+    const elInfoContainer = elModal.querySelector('#modal-info-container');
+    const elInfo = elModal.querySelector('#modal-info');
+    // const elNotify = doc.querySelector(
+    //   `#modal-${wasSuccess ? 'success' : 'error'}`
 
-    // Handle row id
-    console.log('isClearId', res);
-    if (wasSuccess) localStorage.setItem('waitlistId', res.payload.id);
-    if (res.payload.clearId) {
-      console.log('clearning Id');
-      localStorage.removeItem('waitlistId');
+    if (e.target.id === 'formOne') await toggleModal();
+
+    // SUCCESS
+    if (wasSuccess) {
+      // handle row id
+      localStorage.setItem('waitlistId', payload.id);
+      if (payload?.clearId) localStorage.removeItem('waitlistId');
+
+      // initial email insertion to main form
+      if (e.target.id === 'formOne' && wasSuccess) {
+        const elEmail = elModal.querySelector('#email');
+        elEmail.value = formData.email;
+        return;
+      }
+
+      // hide submitted form
+      if (code === 200)
+        elModal.querySelector('#formTwo').style.display = 'none';
     }
 
-    // Initial email insertion to main form
-    if (e.target.id === 'formOne') {
-      const elEmail = elModal.querySelector('#email');
-      elEmail.value = formData.email;
-      return;
-    }
+    // res feedback
+    let bgColor;
+    if (code === 201 || code === 200) bgColor = 'success';
+    else if (code === 409) bgColor = 'warn';
+    else bgColor = 'error';
 
-    // User feedback
-    const elNotify = doc.querySelector(
-      `#modal-${wasSuccess ? 'success' : 'error'}`
-    );
-    elNotify.style = '';
-
-    // Hide submitted form
-    elModal.querySelector('#formTwo').style.display = 'none';
-
-    // add id to local storage incase of error or resubmission
-    // update db to delete old and add new/correct
+    elInfoContainer.style = '';
+    elInfoContainer.className = bgColor;
+    elInfo.style = '';
+    elInfo.textContent = msg;
 
     return false;
   }

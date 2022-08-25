@@ -49,8 +49,6 @@
   .modal-input-container {
     overflow-y: auto;
     /* max-height: calc(90vh - 210px); */
-    display: flex;
-    flex-basis: 100%;
     padding: 1.75em 2.75em;
   }
 
@@ -214,11 +212,24 @@ select {
   fill: var(--color-bg)
 }
 
-p.modal-info {
-  text-indent: 1.75em;
-  background: url('../../assets/ico/i.svg') no-repeat top 0.3em left;
-  background-size: 1.1em;
-  font-size: 1.2em;
+#modal-info-container {
+  /* border-radius: 0.5em; */
+  /* background: red; */
+  padding: 1em 2.75em;
+}
+
+#modal-info-container.success { background: var(--color-primary ) }
+#modal-info-container.warn { background: var(--color-orange ) }
+#modal-info-container.error { background: var(--color-red ) }
+
+#modal-info-container p {
+  /* text-indent: 1.75em; */
+  padding-left: 2.2em;
+  background: url('../../assets/ico/info.svg') no-repeat top 0.1rem left;
+  background-size: 1.4em;
+  margin-bottom: 0;
+  color: var(--color-bg);
+  /* font-size: 1.2em; */
 }
 
 /* scroll */
