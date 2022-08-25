@@ -50,6 +50,7 @@
     overflow-y: auto;
     /* max-height: calc(90vh - 210px); */
     padding: 1.75em 2.75em;
+    padding-bottom: 2em;
   }
 
 
@@ -123,6 +124,8 @@
   }
 
   @media (max-width: 600px) {
+    .modal-container { top: 50%;}
+
     .field + label, .select {
       font-size: 1.3em;
     }
@@ -225,10 +228,10 @@ select {
 #modal-info-container p {
   /* text-indent: 1.75em; */
   padding-left: 2.2em;
-  background: url('../../assets/ico/info.svg') no-repeat top 0.1rem left;
+  background: url('../../assets/ico/info.svg') no-repeat top 0.3rem left;
   background-size: 1.4em;
   margin-bottom: 0;
-  color: var(--color-bg);
+  color: var(--color-fg);
   /* font-size: 1.2em; */
 }
 

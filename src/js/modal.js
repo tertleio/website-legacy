@@ -95,13 +95,15 @@ const modal = () => {
     e.preventDefault();
     const formData = getFormData(e);
     const { wasSuccess, res } = await sendFormData(formData);
-    const { code, msg, payload } = res;
-    const elInfoContainer = elModal.querySelector('#modal-info-container');
-    const elInfo = elModal.querySelector('#modal-info');
-    // const elNotify = doc.querySelector(
-    //   `#modal-${wasSuccess ? 'success' : 'error'}`
+    let { code, msg, payload } = res;
+
+    const msgSuccess = `Thanks for signing up. We'll be in touch via email soon!`;
+    const msgError = `Something went wrong. Please try again or contact
+                      <a href="mailto: hello@tertle.io">hello@tertle.io</a>`;
 
     if (e.target.id === 'formOne') await toggleModal();
+    const elInfoContainer = elModal.querySelector('#modal-info-container');
+    const elInfo = elModal.querySelector('#modal-info');
 
     // SUCCESS
     if (wasSuccess) {
@@ -123,14 +125,20 @@ const modal = () => {
 
     // res feedback
     let bgColor;
-    if (code === 201 || code === 200) bgColor = 'success';
-    else if (code === 409) bgColor = 'warn';
-    else bgColor = 'error';
+    if (code === 201 || code === 200) {
+      bgColor = 'success';
+      msg = msgSuccess;
+    } else if (code === 409) {
+      bgColor = 'warn';
+    } else {
+      bgColor = 'error';
+      msg = msgError;
+    }
 
     elInfoContainer.style = '';
     elInfoContainer.className = bgColor;
     elInfo.style = '';
-    elInfo.textContent = msg;
+    elInfo.innerHTML = msg;
 
     return false;
   }
