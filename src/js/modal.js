@@ -61,13 +61,10 @@ const modal = () => {
   }
 
   async function sendFormData(data) {
-    console.log('data', data);
+    console.log('posting data', data);
     const url = 'http://localhost:1337/api/sign/waitlist/contractor';
     data.waitlistId = localStorage.getItem('waitlistId');
     const method = data.waitlistId ? 'PUT' : 'POST';
-
-    console.log(data.waitlistId ? 'exists' : 'not exists');
-    console.log('method', method);
 
     return fetch(url, {
       method,
@@ -135,10 +132,10 @@ const modal = () => {
       msg = msgError;
     }
 
+    // render feedback
     elInfoContainer.style = '';
     elInfoContainer.className = bgColor;
     elInfo.style = '';
-    console.log('__MSG__', res);
     elInfo.innerHTML = msg;
 
     return false;
