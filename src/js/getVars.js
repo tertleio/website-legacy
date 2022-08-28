@@ -45,7 +45,16 @@ function getVarsFor(page) {
         useModal: true,
       };
     default:
-      console.log(`Invalid pagename arg: '${page}'`);
+      return {
+        idx: null,
+        logoSrc: './assets/logo.svg',
+        primaryCtaTxt: 'Join Waitlist',
+        primaryCtaLink: null,
+        secondaryCtaTxt: '',
+        secondaryCtaLink: '',
+        showFooterVisual: false,
+        useModal: false,
+      };
   }
 }
 

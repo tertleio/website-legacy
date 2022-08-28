@@ -38,15 +38,18 @@ function render(vars) {
   elSecondaryCta.href = vars.secondaryCtaLink;
 
   // Active Product Menu
-  const elProductMenu = doc.getElementById('menu-products');
-  const elBurgerMenu = doc.querySelector('.menu-burger');
-
-  const elPMenu = elProductMenu.querySelector(`li:nth-of-type(${vars.idx}) a`);
-  const elBMenu = elBurgerMenu.querySelector(
-    `li:nth-of-type(${vars.idx + 1}) a`
-  );
-  elPMenu.classList.add('--active');
-  elBMenu.classList.add('--active');
+  if (vars.idx) {
+    const elProductMenu = doc.getElementById('menu-products');
+    const elBurgerMenu = doc.querySelector('.menu-burger');
+    const elProductMenuA = elProductMenu.querySelector(
+      `li:nth-of-type(${vars.idx}) a`
+    );
+    const elBurgerMenuA = elBurgerMenu.querySelector(
+      `li:nth-of-type(${vars.idx + 1}) a`
+    );
+    elProductMenuA.classList.add('--active');
+    elBurgerMenuA.classList.add('--active');
+  }
 
   // TODO:
   // Logo
