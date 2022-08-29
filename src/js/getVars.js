@@ -3,6 +3,7 @@ function getVarsFor(page) {
     case 'founders':
       return {
         idx: 1,
+        userType: 'founder',
         logoSrc: './assets/logo.svg',
         primaryCtaTxt: 'Get Started',
         primaryCtaLink: 'https://app.tertle.io/join',
@@ -25,6 +26,7 @@ function getVarsFor(page) {
     case 'contractors':
       return {
         idx: 2,
+        userType: 'contractor',
         logoSrc: './assets/logo.svg',
         primaryCtaTxt: 'Join Waitlist',
         primaryCtaLink: null,
@@ -36,6 +38,7 @@ function getVarsFor(page) {
     case 'hirers':
       return {
         idx: 3,
+        userType: 'hirer',
         logoSrc: './assets/logo.svg',
         primaryCtaTxt: 'Join Waitlist',
         primaryCtaLink: null,
@@ -47,6 +50,7 @@ function getVarsFor(page) {
     default:
       return {
         idx: null,
+        userType: '',
         logoSrc: './assets/logo.svg',
         primaryCtaTxt: 'Join Waitlist',
         primaryCtaLink: null,

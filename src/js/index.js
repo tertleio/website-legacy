@@ -24,7 +24,7 @@ function initPrio2() {
 
 function initPrio3() {
   toggleTheme(vars.showFooterVisual);
-  vars.useModal && modal();
+  vars.useModal && modal(vars.userType);
 }
 
 // Init

@@ -2,7 +2,7 @@
 const doc = document;
 import loadHtml from './utils/loadHtml.js';
 
-const modal = () => {
+const modal = (userType) => {
   const elModal = doc.querySelector('#overlay-modal');
   const formOne = doc.querySelector('#formOne');
   const elNavCta = doc.querySelector('.ctaOne');
@@ -61,8 +61,7 @@ const modal = () => {
   }
 
   async function sendFormData(data) {
-    console.log('posting data', data);
-    const url = 'http://localhost:1337/api/sign/waitlist/contractor';
+    const url = `http://localhost:1337/api/sign/waitlist/${userType}`;
     data.waitlistId = localStorage.getItem('waitlistId');
     const method = data.waitlistId ? 'PUT' : 'POST';
 
@@ -112,7 +111,6 @@ const modal = () => {
       if (e.target.id === 'formOne' && wasSuccess) {
         const elEmail = elModal.querySelector('#email');
         elEmail.value = formData.email;
-        console.log('RETURNING AS IS FORM ONE AND SUCCESS');
         return;
       }
 
