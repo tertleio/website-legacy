@@ -92,8 +92,10 @@ const modal = (userType) => {
     const formData = getFormData(e);
     const { wasSuccess, res } = await sendFormData(formData);
     let { code, msg, payload } = res;
+    console.log(payload);
 
-    const msgSuccess = `Thanks for signing up. We'll be in touch via email soon!`;
+    const msgSuccess = `We've just sent an email to your inbox.
+                        Please click the link in the email to confirm your address.`;
     const msgError = `Something went wrong. Please try again or contact
                       <a href="mailto: hello@tertle.io">hello@tertle.io</a>`;
 
