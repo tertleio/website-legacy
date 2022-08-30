@@ -20,15 +20,15 @@ const modal = (userType) => {
     const path = '../components/modal.html';
     const modalHtml = await loadHtml(path, import.meta.url);
 
-    // Open
+    // open
     elModal.style = '';
     elModal.innerHTML = modalHtml;
 
-    // Listen for submit
+    // listen for submit
     const formTwo = elModal.querySelector('#formTwo');
     formTwo.addEventListener('submit', handleSubmits);
 
-    // Close
+    // close
     const elCloseBtn = doc.querySelector('.modal-close');
     elCloseBtn.addEventListener(
       'click',
