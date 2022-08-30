@@ -166,11 +166,6 @@ select {
   border: none;
 }
 
-.flex-item .select {
-  /* padding-top: 0.5em;
-  padding-bottom: 0.5em; */
-  /* background: blue; */
-}
 .select {
   background: url('../../assets/ico/arrow-thick.svg') no-repeat center right 0.35rem;
   background-size: 0.65em;

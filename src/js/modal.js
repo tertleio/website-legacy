@@ -53,7 +53,8 @@ const modal = (userType) => {
       dataStruct = {
         email: vals[0].email,
         firstName: vals[1].firstName,
-        country: vals[2].country,
+        lastName: vals[2].lastName,
+        country: vals[3].country,
       };
     }
 
