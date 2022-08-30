@@ -31,7 +31,7 @@ function getVarsFor(page) {
         primaryCtaTxt: 'Join Waitlist',
         primaryCtaLink: null,
         secondaryCtaTxt: 'For Hirers',
-        secondaryCtaLink: '',
+        secondaryCtaLink: `${window.location.origin}/src/pages/hirers.html`,
         showFooterVisual: true,
         useModal: true,
       };
@@ -43,7 +43,7 @@ function getVarsFor(page) {
         primaryCtaTxt: 'Join Waitlist',
         primaryCtaLink: null,
         secondaryCtaTxt: 'For Contractors',
-        secondaryCtaLink: '',
+        secondaryCtaLink: `${window.location.origin}/src/pages/contractors.html`,
         showFooterVisual: false,
         useModal: true,
       };
