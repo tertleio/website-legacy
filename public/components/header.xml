@@ -81,16 +81,20 @@
         </div>
     </ul>
 
+    
+    <!-- prettier-ignore -->
+    <!-- 
     <ul class="menu-list dt tb">
       <li class="menu-root"><a href="#">Products</a></li>
-      <!-- prettier-ignore -->
+
       <div id="menu-products" class="menu">
         <li><a href="./founders.html"><span>🐣</span>For Founders</a></li>
-        <!-- <li><a href="./investors.html"><span>🐣</span>For Investors</a></li> -->
+        <li><a href="./investors.html"><span>🐣</span>For Investors</a></li>
         <li><a href="./contractors.html"><span>💼</span>For Contractors</a></li>
         <li><a href="./hirers.html"><span>💼</span>For Hirers</a></li>
       </div>
     </ul>
+    -->
 
     <ul class="menu-list dt tb">
       <li><a href="#">Blog</a></li>
@@ -162,10 +166,10 @@
                 Switch Theme
               </a>
             </li>
-            <li><a href="./founders.html"><span>🐣</span>For Founders</a></li>
+            <!-- <li><a href="./founders.html"><span>🐣</span>For Founders</a></li> -->
             <!-- <li><a href="./investors.html"><span>🐣</span>For Investors</a></li> -->
-            <li><a href="./contractors.html"><span>💼</span>For Contractors</a></li>
-            <li><a href="./hirers.html"><span>💼</span>For Hirers</a></li>
+            <!-- <li><a href="./contractors.html"><span>💼</span>For Contractors</a></li> -->
+            <!-- <li><a href="./hirers.html"><span>💼</span>For Hirers</a></li> -->
             <li><a href="./blog.html"><span>📝</span>Blog</a></li>
           </nav>
         </ul>

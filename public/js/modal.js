@@ -47,15 +47,24 @@ const modal = (userType) => {
       dataStruct.email = email;
     } else if (e.target.id === 'formTwo') {
       const fields = e.target.querySelectorAll('.field');
-      const vals = [...fields].map((f) => ({ [f.name]: f.value }));
+      console.log('fields', fields);
+      console.log('type', typeof fields);
+      // const vals = [...fields].map((f) => ({ [f.name]: f.value }));
+      const vals = [...fields].reduce((acc, f) => ({
+        ...acc,
+        [f.name]: f.value,
+      }));
 
-      // TODO: return length agnostic data
-      dataStruct = {
-        email: vals[0].email,
-        firstName: vals[1].firstName,
-        lastName: vals[2].lastName,
-        country: vals[3].country,
-      };
+      console.log('post reduce', vals);
+
+      dataStruct = vals;
+
+      // dataStruct = {
+      //   email: vals[0].email,
+      //   firstName: vals[1].firstName,
+      //   lastName: vals[2].lastName,
+      //   country: vals[3].country,
+      // };
     }
 
     return dataStruct;

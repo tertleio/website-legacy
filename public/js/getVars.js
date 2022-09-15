@@ -50,12 +50,12 @@ function getVarsFor(page) {
     default:
       return {
         idx: null,
-        userType: '',
+        userType: 'founder',
         logoSrc: './assets/logo.svg',
-        primaryCtaTxt: 'Join Waitlist',
-        primaryCtaLink: null,
-        secondaryCtaTxt: '',
-        secondaryCtaLink: '',
+        primaryCtaTxt: 'Get Started',
+        primaryCtaLink: 'https://app.tertle.io/join',
+        secondaryCtaTxt: 'Login',
+        secondaryCtaLink: 'https://app.tertle.io/login',
         showFooterVisual: false,
         useModal: false,
       };
