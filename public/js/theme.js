@@ -7,7 +7,7 @@ const toggleTheme = (showFooterVisual) => {
   const elRocket = doc.querySelector('.rocket');
 
   function updateFooter(theme) {
-    elRocket.src = `../assets/tertle_rocket-${theme}-sm.gif`;
+    elRocket.src = `./assets/tertle_rocket-${theme}-sm.gif`;
 
     if (!showFooterVisual) return;
     const elMatrix = doc.getElementById('matrix');
