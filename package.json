@@ -1,0 +1,22 @@
+{
+  "name": "tertle.io",
+  "version": "1.0.0",
+  "description": "Tertle website",
+  "main": "./public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/tertletech/website.git"
+  },
+  "author": "Ryan Connaughton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tertletech/website/issues"
+  },
+  "homepage": "https://github.com/tertletech/website#readme",
+  "devDependencies": {
+    "marked": "^4.1.0"
+  }
+}
