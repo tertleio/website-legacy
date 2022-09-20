@@ -1,5 +1,19 @@
 function getVarsFor(page) {
+  console.log(page);
   switch (page) {
+    // index.html
+    case '':
+      return {
+        idx: null,
+        userType: 'founder',
+        logoSrc: './assets/logo.svg',
+        primaryCtaTxt: 'Get Started',
+        primaryCtaLink: 'https://app.tertle.io/join',
+        secondaryCtaTxt: 'Login',
+        secondaryCtaLink: 'https://app.tertle.io/login',
+        showFooterVisual: false,
+        useModal: false,
+      };
     case 'founders':
       return {
         idx: 1,
@@ -52,7 +66,7 @@ function getVarsFor(page) {
         idx: null,
         userType: 'founder',
         logoSrc: './assets/logo.svg',
-        primaryCtaTxt: 'Get Started',
+        primaryCtaTxt: 'Find Co-Founders',
         primaryCtaLink: 'https://app.tertle.io/join',
         secondaryCtaTxt: 'Login',
         secondaryCtaLink: 'https://app.tertle.io/login',
