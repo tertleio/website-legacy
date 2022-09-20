@@ -1,3 +1,8 @@
+#post { max-width: 650px; }
+#post h2 { justify-content: flex-start; margin-top: 2em;}
+#post h1 { margin-bottom: 0.75em; font-size: 2.5em; }
+
+
 .post-container {
   /* cursor: pointer; */
   margin: 0 auto;
