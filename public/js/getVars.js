@@ -1,5 +1,4 @@
 function getVarsFor(page) {
-  console.log(page);
   switch (page) {
     // index.html
     case '':
@@ -66,7 +65,7 @@ function getVarsFor(page) {
         idx: null,
         userType: 'founder',
         logoSrc: './assets/logo.svg',
-        primaryCtaTxt: 'Find Co-Founders',
+        primaryCtaTxt: 'Find Co-founders',
         primaryCtaLink: 'https://app.tertle.io/join',
         secondaryCtaTxt: 'Login',
         secondaryCtaLink: 'https://app.tertle.io/login',
