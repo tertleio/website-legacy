@@ -19,7 +19,7 @@ function render(vars) {
     // Content Menu
     if (i === 0) return; // skip first hero h2
 
-    const hashTag = '#' + h2.innerText.split(' ').join('-').toLowerCase();
+    const hashTag = '#' + h2.innerText.split(' ').join('-');
     const h2D = h2.dataset;
     const newLi = `
                   <li class="closeOnE">
