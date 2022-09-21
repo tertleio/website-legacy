@@ -4,7 +4,7 @@ const doc = document;
 const menu = () => {
   const elBurger = doc.querySelector('#burger-ico');
   const elMenu = doc.querySelector('#burger-list');
-  const elDropdown = doc.querySelector('#dropdown');
+  const elDropdown = doc.querySelector('#menu-content-root');
   const elsItem = doc.querySelectorAll('.closeOnE');
 
   function toggleActive(argEl, e) {

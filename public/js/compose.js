@@ -9,6 +9,12 @@ function render(vars) {
   const elSecondaryCta = doc.querySelector('.ctaTwo');
   // const elLogo = doc.querySelector('');
 
+  // hide content menu if none
+  if (elsH2.length < 2) {
+    const elMenuContentRoot = doc.getElementById('menu-content-root');
+    return (elMenuContentRoot.style.display = 'none');
+  }
+
   elsH2.forEach((h2, i) => {
     // Content Menu
     if (i === 0) return; // skip first hero h2

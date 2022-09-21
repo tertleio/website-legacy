@@ -37,7 +37,7 @@
 
   <nav class="header__mid">
     <ul class="menu-list">
-      <li id="dropdown" class="menu-root">
+      <li id="menu-content-root" class="menu-root">
         <a tabindex="0">
           <span class="title">Content</span>
           <span class="dropdown --open">
@@ -97,7 +97,7 @@
     -->
 
     <ul class="menu-list dt tb">
-      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/blog">Blog</a></li>
     </ul>
   </nav>
 
@@ -170,7 +170,7 @@
             <!-- <li><a href="./investors.html"><span>🐣</span>For Investors</a></li> -->
             <!-- <li><a href="./contractors.html"><span>💼</span>For Contractors</a></li> -->
             <!-- <li><a href="./hirers.html"><span>💼</span>For Hirers</a></li> -->
-            <li><a href="./blog.html"><span>📝</span>Blog</a></li>
+            <li><a href="./blog"><span>📝</span>Blog</a></li>
           </nav>
         </ul>
     </ul>

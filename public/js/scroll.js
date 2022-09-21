@@ -27,7 +27,7 @@ const scroll = () => {
   function replaceTitle(at1BaseIdx) {
     const elCurrentActive = menuRoot.querySelector('.--active');
     const elItem = menuRoot.querySelector(`li:nth-of-type(${at1BaseIdx}) a`);
-    const elTitle = doc.querySelector('#dropdown a span');
+    const elTitle = doc.querySelector('#menu-content-root a span');
 
     elCurrentActive.className = '';
     elItem.className = '--active';
