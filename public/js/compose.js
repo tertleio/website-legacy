@@ -16,8 +16,8 @@ function render(vars) {
   }
 
   elsH2.forEach((h2, i) => {
-    // Content Menu
-    if (i === 0) return; // skip first hero h2
+    // Content menu
+    if (i === 0) return; // skip first h2 ('Top of Page' set by default)
 
     const hashTag = '#' + h2.innerText.split(' ').join('-');
     const h2D = h2.dataset;
