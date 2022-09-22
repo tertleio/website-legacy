@@ -12,7 +12,7 @@ ol li {
 #post h1 { margin-bottom: 0.75em; font-size: 2.5em; }
 
 .post-img { margin: 2.5em 0; } 
-.post-img img { width: 100%; }
+.post-thumbnail { width: 100%; height: 100%; border-radius: 0.1em; }
 .post-img i  { 
   display: flex;
   margin-top: 0.5em;
@@ -49,7 +49,6 @@ ol li {
 
 .post-aside {
   width: 12.5em;
-  height: 7.5em;
   margin-left: 1em;
   background: grey;
   border-radius: 0.25em;
