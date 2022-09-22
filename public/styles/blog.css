@@ -1,9 +1,10 @@
 ol {
   list-style: block;
+  line-height: 1.2;
 }
 
-li {
-  padding: 0.75em 0;
+ol li {
+  padding: 0.6em 0;
 }
 
 #post { max-width: 650px; }
