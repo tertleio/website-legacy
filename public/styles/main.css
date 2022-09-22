@@ -4,7 +4,7 @@
 @import './components/header.css';
 @import './components/footer.css';
 @import './components/feature.css';
-@import './components/post.css';
+@import './blog.css';
 @import 'responsive.css';
 @import 'buttons.css';
 @import 'x.css';
