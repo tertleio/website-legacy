@@ -4,7 +4,7 @@ ol {
 }
 
 ol li {
-  padding: 0.6em 0;
+  padding: 0.6em 0.25em;
 }
 
 #post { max-width: 650px; }
@@ -13,7 +13,8 @@ ol li {
 
 .post-thumbnail { width: 100%; height: 100%; border-radius: 0.1em; }
 .post-img-container { margin: 2.5em 0; } 
-.post-img-container img { width: 100%;}
+.post-img-container img { width: 100%; border: 1px solid var(--color-highlight);}
+.post-img-container a { padding: 0 0.6em; }
 .post-img-container i  { 
   display: flex;
   margin-top: 0.5em;
