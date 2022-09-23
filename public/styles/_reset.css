@@ -39,7 +39,9 @@ input, input:matches([type=password], [type=search]) {
 body {
 	line-height: 1;
 }
-ol, ul {
+
+/* ol,  */
+ul {
 	list-style: none;
 }
 blockquote, q {
