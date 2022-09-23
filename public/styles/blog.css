@@ -11,9 +11,10 @@ ol li {
 #post h2 { justify-content: flex-start; margin-top: 2em;}
 #post h1 { margin-bottom: 0.75em; font-size: 2.5em; }
 
-.post-img { margin: 2.5em 0; } 
 .post-thumbnail { width: 100%; height: 100%; border-radius: 0.1em; }
-.post-img i  { 
+.post-img-container { margin: 2.5em 0; } 
+.post-img-container img { width: 100%;}
+.post-img-container i  { 
   display: flex;
   margin-top: 0.5em;
   justify-content: center; 
