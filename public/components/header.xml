@@ -5,7 +5,7 @@
         class="logo__link"
         alt="Tertle logo"
         title="Tertle logo"
-        href="https://tertle.io"
+        href="/"
       >
         <svg
           class="logo-emblem"

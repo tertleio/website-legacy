@@ -36,10 +36,13 @@
   <div class="footer__chunk">
     <h4>Tertle Shell</h4>
     <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="">Blog</a></li>
-      <li><a href="">LinkedIn</a></li>
-      <li><a href="">Contact Us</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/blog/index.html">Blog</a></li>
+      <li><a href="https://linkedin.com/company/tertle">LinkedIn</a></li>
+      <li><a href="https://twitter.com/tertletech">Twitter</a></li>
+      <li><a href="https://instagram.com/tertle.io">Instagram</a></li>
+      <li><a href="https://github.com/tertletech">Github</a></li>
+      <li><a href="mailto: &#104;&#101;&#108;&#108;&#111;&#64;&#116;&#101;&#114;&#116;&#108;&#101;&#46;&#105;&#111;">Contact Us</a></li>
     </ul>
   </div>
 
@@ -48,16 +51,16 @@
     <ul>
       <li><a href="">For Founders</a></li>
       <!-- <li><a href="">For Investors</a></li> -->
-      <li><a href="">Sign Up</a></li>
-      <li><a href="">Login</a></li>
-      <li><a href="">Privacy</a></li>
+      <li><a href="https://app.tertle.io/join">Sign Up</a></li>
+      <li><a href="https://app.tertle.io/login">Login</a></li>
+      <li><a href="https://app.tertle.io/privacy">Privacy</a></li>
     </ul>
   </div>
 
   <div class="footer__chunk">
     <h4>Tertle Scale</h4>
     <ul>
-      <li><a href="">Coming Soon 🚀</a></li>
+      <li><a href="/">Coming Soon 🚀</a></li>
       <!-- <li><a href="">Join Waitlist</a></li>
       <li><a href="">For Hirers</a></li>
       <li><a href="">For Contractors</a></li> -->
