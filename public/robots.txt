@@ -4,3 +4,4 @@ Allow: /*
 
 Disallow: /pages/*
 Disallow: /blog/template.html
+Disallow: /content/*
