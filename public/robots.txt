@@ -1,7 +1,6 @@
 User-Agent: *
 
-Allow: /index.html
-Allow: /blog/*
+Allow: /*
 
-Disallow: /*
+Disallow: /pages/*
 Disallow: /blog/template.html
