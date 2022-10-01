@@ -19,7 +19,7 @@ function render(vars) {
     // Content menu
     if (i === 0) return; // skip first h2 ('Top of Page' set by default)
 
-    const hashTag = '#' + h2.innerText.split(' ').join('-');
+    const hashTag = '#' + h2.innerText.split(' ').join('-').toLowerCase();
     const h2D = h2.dataset;
     const newLi = `
                   <li class="closeOnE">
