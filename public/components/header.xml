@@ -38,7 +38,7 @@
   <nav class="header__mid">
     <ul class="menu-list">
       <li id="menu-content-root" class="menu-root">
-        <a tabindex="0">
+        <a name="content-menu" tabindex="0">
           <span class="title">Content</span>
           <span class="dropdown --open">
             <svg width="19" height="13" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,7 +156,7 @@
           <!-- prettier-ignore -->
           <nav class="menu menu-burger">
             <li>
-              <a class="switch-wrapper fill">
+              <a name="switch-theme" class="switch-wrapper fill">
                 <span>
                   <label class="switch">
                     <input class="toggleTheme" type="checkbox" />
