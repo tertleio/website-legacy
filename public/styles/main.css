@@ -24,6 +24,7 @@
   --splitter: url('../../assets/splitter-dark.svg');
   --bg-pattern: url('../assets/bg-pattern-dark.svg');
   --color-highlight: var(--color-grey5);
+  --color-highlight2: var(--color-grey7);
   --logo-letters: url('../assets/logo-letters-dark.svg');
   /* colors */
   --color-primary-light: #60964f;
@@ -37,6 +38,7 @@
   --color-grey4: #7B7B7B;
   --color-grey5: #383838;
   --color-grey6: #212121;
+  --color-grey7: #111111;
   --color-orange: #ff9b00;
   --color-green: #94bb77;
   --color-red: #eb3333;
@@ -51,6 +53,7 @@
   --color-nav: var(--color-grey3);
   --color-link: var(--color-blue);
   --color-highlight: #E5E5E5;
+  --color-highlight2: #E5E5E5;
   --bg-pattern: url('../assets/bg-pattern-light.svg');
   --separator: url('../assets/separator-light.svg');
   --splitter: url('../../assets/splitter-light.svg');
