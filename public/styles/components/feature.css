@@ -73,6 +73,10 @@
   /* max-width: 40em; */
 }
 
+.demo-mb {
+  display: none;
+}
+
 .demo {
   display: none;
 }
@@ -204,10 +208,9 @@
     /* background: var(--color-highlight); */
     /* border-bottom: 1px solid var(--color-grey1); */
     /* height: 50vh; */
-    /* background: red; */
     border-radius: 0.75em 0.75em 0 0;
     width: 100%;
-    padding-bottom: 1em;
+    padding-bottom: 1.5em;
   }
   .demo-mb img {
     width: 100%;
