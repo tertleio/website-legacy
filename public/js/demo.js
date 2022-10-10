@@ -12,9 +12,10 @@ function demo() {
       elCurrentActive.classList.remove('--active');
 
       const targetId = e.target.id.split('-')[1];
-      const targetEl = elsDemo[targetId - 1];
+      const targetEl = elsDemo[targetId];
 
       elsDemo.forEach((demo) => demo.classList.remove('--active'));
+      console.log(targetEl);
       targetEl.classList.add('--active');
     });
   });
