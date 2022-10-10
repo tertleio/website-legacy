@@ -9,12 +9,16 @@ const toggleTheme = (showFooterVisual) => {
   // rewrite all src's to selected theme
 
   function updateFeatures(theme) {
-    const elsFeature = doc.querySelectorAll('.demo img');
+    const elsFeatureDt = doc.querySelectorAll('.demo__dt img');
+    const elsFeatureMb = doc.querySelectorAll('.demo__mb img');
 
-    elsFeature.forEach((el, i) => {
-      if (i === 0 || i === elsFeature.length) return;
-      el.src = `/assets/feature${i}-${theme}.png`;
-    });
+    elsFeatureDt.forEach(
+      (el, i) => (el.src = `/assets/feature${i + 1}-${theme}.png`)
+    );
+
+    elsFeatureMb.forEach(
+      (el, i) => (el.src = `/assets/feature${i + 1}-${theme}.png`)
+    );
   }
 
   function updateFooter(theme) {

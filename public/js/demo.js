@@ -2,20 +2,20 @@
 const doc = document;
 
 function demo() {
-  const elContent = document.querySelector('.content-container');
-  const elsDemo = document.querySelectorAll('.demo');
+  const elContent = doc.querySelector('.content-container');
+  const elsDemo = doc.querySelectorAll('.demo__dt');
 
   doc.querySelectorAll('.content-btn').forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      const elCurrentActive = elContent.querySelector('.--active');
+      const elCurrActive = elContent.querySelector('.--active');
+      elCurrActive.classList.remove('--active');
+
       btn.classList.add('--active');
-      elCurrentActive.classList.remove('--active');
 
       const targetId = e.target.id.split('-')[1];
-      const targetEl = elsDemo[targetId];
+      const targetEl = elsDemo[targetId - 1];
 
       elsDemo.forEach((demo) => demo.classList.remove('--active'));
-      console.log(targetEl);
       targetEl.classList.add('--active');
     });
   });
