@@ -75,11 +75,13 @@
 
 .demo {
   display: none;
-  justify-content: center;
 }
 
 .demo.--active { 
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   border-radius: 0.75rem;
   visibility: visible;
 }

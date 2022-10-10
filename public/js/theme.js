@@ -12,8 +12,8 @@ const toggleTheme = (showFooterVisual) => {
     const elsFeature = doc.querySelectorAll('.demo img');
 
     elsFeature.forEach((el, i) => {
-      if (i === elsFeature.length - 1) return;
-      el.src = `/assets/feature${i + 1}-${theme}.png`;
+      if (i === 0 || i === elsFeature.length) return;
+      el.src = `/assets/feature${i}-${theme}.png`;
     });
   }
 
