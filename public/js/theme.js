@@ -36,15 +36,18 @@ const toggleTheme = (showFooterVisual) => {
   }
 
   function onMount() {
-    // update to local theme if exists
+    // update global colors to  local theme if exists
     const localTheme = localStorage.getItem('theme');
     if (localTheme) doc.documentElement.setAttribute('theme', localTheme);
 
-    // update rocket and footer
+    // getters
     const currTheme = doc.documentElement.getAttribute('theme');
+    const toTheme = localTheme ? localTheme : currTheme;
+
+    // setters
     showFooterVisual && matrix();
-    updateFooter(localTheme ? localTheme : currTheme);
-    updateFeatures(localTheme ? localTheme : currTheme);
+    updateFooter(toTheme);
+    updateFeatures(toTheme);
   }
 
   // listen for user change
