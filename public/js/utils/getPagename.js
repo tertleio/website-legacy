@@ -1,9 +1,9 @@
 function getPagename() {
-  const pathname = window.location.pathname.split('/');
-  const filename = pathname[pathname.length - 1];
-  const [pagename] = filename.split('.', [1]); // TODO: remove when ext is removed
+  const hasTrailingSlash = window.location.pathname.endsWith('/');
+  const pathsArr = window.location.pathname.split('/');
+  const pagename = pathsArr[pathsArr.length - (hasTrailingSlash ? 2 : 1)];
 
-  return pagename;
+  return pagename ? pagename : 'home';
 }
 
 export default getPagename;
