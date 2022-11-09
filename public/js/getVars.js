@@ -1,12 +1,12 @@
 function getVarsFor(page) {
+  console.log('page', page);
   switch (page) {
-    // index.html
-    case '':
+    case 'home':
       return {
         idx: null,
         userType: 'founder',
         logoSrc: './assets/logo.svg',
-        primaryCtaTxt: 'Get Started',
+        primaryCtaTxt: 'Sign Up',
         primaryCtaLink: 'https://app.tertle.io/join',
         secondaryCtaTxt: 'Login',
         secondaryCtaLink: 'https://app.tertle.io/login',

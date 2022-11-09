@@ -103,13 +103,14 @@
 
   <div class="header__right">
     <ul class="list-right">
-      <li class="dt"><a class="ctaTwo" href="./hirers.html">For Hirers</a></li>
+      <li class="dt"><a class="ctaTwo" href="https://app.tertle.io/login">Login</a></li>
       <li class="dt">
         <a
           tabindex="0"
           class="btn btn--secondary .btn__fade ctaOne"
+          hread="https://app.tertle.io/join"
         >
-          Join Wailist
+          Sign Up
         </a>
       </li>
 
@@ -170,7 +171,7 @@
             <!-- <li><a href="./investors.html"><span>🐣</span>For Investors</a></li> -->
             <!-- <li><a href="./contractors.html"><span>💼</span>For Contractors</a></li> -->
             <!-- <li><a href="./hirers.html"><span>💼</span>For Hirers</a></li> -->
-            <li><a href="/blog/index.html"><span>📝</span>Blog</a></li>
+            <li><a href="/blog"><span>📝</span>Blog</a></li>
           </nav>
         </ul>
     </ul>
