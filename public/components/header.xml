@@ -108,7 +108,7 @@
         <a
           tabindex="0"
           class="btn btn--secondary .btn__fade ctaOne"
-          hread="https://app.tertle.io/join"
+          href="https://app.tertle.io/join"
         >
           Sign Up
         </a>
