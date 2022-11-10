@@ -7,9 +7,10 @@ ol li {
   padding: 0.6em 0.25em;
 }
 
-#post { max-width: 650px; }
+#posts .content-wrapper { margin-top: 2em; }
+#posts h1 { text-align: center; } 
+#post { max-width: 650px; margin-top: 0.75em; }
 #post h2 { justify-content: flex-start; margin-top: 2em;}
-#post h1 { margin-bottom: 0.75em; font-size: 2.5em; }
 
 .post-thumbnail { width: 100%; height: 100%; border-radius: 0.1em; }
 .post-img-container { margin: 2.5em 0; } 
