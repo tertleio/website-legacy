@@ -4,7 +4,6 @@ const config = require('./config');
 const builder = new Builder(config);
 
 (() => {
-  const prebuilt = builder.prebuild(0);
-  const built = builder.build(0, prebuilt);
+  const built = builder.run(0);
   console.log(built);
 })();
