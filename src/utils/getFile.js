@@ -7,4 +7,4 @@ function getFile(filepath) {
   );
 }
 
-module.exports = getHtmlFile;
+module.exports = getFile;
