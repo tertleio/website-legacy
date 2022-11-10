@@ -7,7 +7,7 @@ const config = [
       './components/footer.hbs',
     ],
     layout: './layouts/default.hbs',
-    write: './somePath',
+    write: '../public/index.html',
     vars: {
       userType: 'founder',
       logoSrc: './assets/logo.svg',
@@ -27,7 +27,7 @@ const config = [
       './components/footer.hbs',
     ],
     layout: './layouts/default.hbs',
-    write: './somePath',
+    write: '../public/blog/index.html',
     vars: {
       userType: 'founder',
       logoSrc: './assets/logo.svg',

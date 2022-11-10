@@ -30,12 +30,15 @@ module.exports = class sBuilder {
     return htmlFiles;
   }
 
-  // write file
+  writeFile(writepath, file) {
+    fs.writeFileSync(path.resolve(__dirname, writepath), file.toString());
+  }
 
   run(idx) {
+    // TODO: error handling
     const files = this.getFiles(this.config[idx].read);
     const prebuilt = this.compose(files, this.config[idx].vars);
     const built = this.compose(prebuilt, this.config[idx].vars);
-    return built;
+    this.writeFile(this.config[idx].write, built);
   }
 };
