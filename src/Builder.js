@@ -32,10 +32,14 @@ module.exports = class sBuilder {
 
   // write file
 
-  run(idx) {
-    console.log(this.config);
+  prebuild(idx) {
     const files = this.getFiles(this.config[idx].read);
-    const composed = this.compose(files, this.config[idx].vars);
-    console.log(composed);
+    const prebuilt = this.compose(files, this.config[idx].vars);
+    return prebuilt;
+  }
+
+  build(idx, prebuilts) {
+    const built = this.compose(prebuilts, this.config[idx].vars);
+    return built;
   }
 };

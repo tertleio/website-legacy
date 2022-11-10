@@ -6,6 +6,7 @@ const config = [
       './pages/index.hbs',
       './components/footer.hbs',
     ],
+    layout: './layouts/default.hbs',
     write: './somePath',
     vars: {
       userType: 'founder',
