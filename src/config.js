@@ -19,6 +19,26 @@ const config = [
       useModal: false,
     },
   },
+  {
+    page: 'blog',
+    read: [
+      './components/header.hbs',
+      './pages/blog/blog.hbs',
+      './components/footer.hbs',
+    ],
+    layout: './layouts/default.hbs',
+    write: './somePath',
+    vars: {
+      userType: 'founder',
+      logoSrc: './assets/logo.svg',
+      primaryCtaTxt: 'Get Started',
+      primaryCtaLink: 'https://app.tertle.io/join',
+      secondaryCtaTxt: 'Login',
+      secondaryCtaLink: 'https://app.tertle.io/login',
+      showFooterVisual: false,
+      useModal: false,
+    },
+  },
 ];
 
 module.exports = config;
