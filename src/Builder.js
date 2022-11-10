@@ -3,7 +3,7 @@ const handlebars = require('handlebars');
 const fs = require('fs');
 const path = require('path');
 
-class Builder {
+module.exports = class sBuilder {
   constructor(config) {
     this.config = config;
   }
@@ -12,22 +12,30 @@ class Builder {
     return fs.readFileSync(path.resolve(__dirname, pathname), 'utf-8');
   }
 
-  compose(component, vars) {
-    console.log(vars);
-    const template = handlebars.compile(component);
-    const htmlFile = template({ ...vars });
+  getFiles(filepaths = []) {
+    const files = filepaths.map((fp) => this.getFile(fp));
+    return files;
+  }
 
-    return htmlFile;
+  compose(components = [], vars) {
+    const htmlFiles = [];
+
+    while (components.length) {
+      const current = components.shift();
+      const template = handlebars.compile(current);
+      const compiledHtml = template({ ...vars });
+      htmlFiles.push(compiledHtml);
+    }
+
+    return htmlFiles;
   }
 
   // write file
 
-  run() {
-    const file = this.getFile(this.config[0].read);
-    const composed = this.compose(file, this.config[0].vars);
+  run(idx) {
+    console.log(this.config);
+    const files = this.getFiles(this.config[idx].read);
+    const composed = this.compose(files, this.config[idx].vars);
     console.log(composed);
   }
-}
-
-const builder = new Builder(config);
-builder.run();
+};

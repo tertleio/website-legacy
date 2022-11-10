@@ -1,7 +1,11 @@
 const config = [
   {
     page: 'home',
-    read: './components/header.hbs',
+    read: [
+      './components/header.hbs',
+      './pages/index.hbs',
+      './components/footer.hbs',
+    ],
     write: './somePath',
     vars: {
       userType: 'founder',
