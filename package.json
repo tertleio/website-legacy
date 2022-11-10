@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://@github.com/tertletech/website.git"
+    "url": "git+https://@github.com/tertleio/website.git"
   },
   "author": "Ryan Connaughton",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tertletech/website/issues"
+    "url": "https://github.com/tertleio/website/issues"
   },
-  "homepage": "https://github.com/tertletech/website#readme",
+  "homepage": "https://github.com/tertleio/website#readme",
   "devDependencies": {
     "marked": "^4.1.0"
   }
