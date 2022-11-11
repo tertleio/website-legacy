@@ -1,13 +1,9 @@
 'use strict';
 const doc = document;
-import loadHtml from './utils/loadHtml.js';
 
 function render(vars) {
   const elsH2 = doc.querySelectorAll('h2');
   const elMenu = doc.getElementById('menu-content');
-  const elsPrimaryCta = doc.querySelectorAll('.ctaOne');
-  const elSecondaryCta = doc.querySelector('.ctaTwo');
-  // const elLogo = doc.querySelector('');
 
   // hide content menu if none
   if (elsH2.length < 2) {
@@ -16,7 +12,7 @@ function render(vars) {
   }
 
   elsH2.forEach((h2, i) => {
-    // Content menu
+    // content menu
     if (i === 0) return; // skip first h2 ('Top of Page' set by default)
 
     const hashTag = '#' + h2.innerText.split(' ').join('-').toLowerCase();
@@ -35,15 +31,7 @@ function render(vars) {
     elMenu.innerHTML += newLi;
   });
 
-  // Cta
-  elsPrimaryCta.forEach((pCta) => {
-    pCta.innerText = vars.primaryCtaTxt;
-    if (vars.primaryCtaLink) pCta.href = vars.primaryCtaLink;
-  });
-  elSecondaryCta.innerText = vars.secondaryCtaTxt;
-  elSecondaryCta.href = vars.secondaryCtaLink;
-
-  // Active Product Menu
+  // active product menu
   if (vars.idx) {
     const elProductMenu = doc.getElementById('menu-products');
     const elBurgerMenu = doc.querySelector('.menu-burger');
@@ -58,46 +46,9 @@ function render(vars) {
   }
 
   // TODO:
-  // Logo
   // Footer Image
 }
 
-const compose = async (vars) => {
-  const path = '../components';
-  const headerHtml = await loadHtml(`${path}/header.xml`, import.meta.url);
-  const footerHtml = await loadHtml(`${path}/footer.xml`, import.meta.url);
-
-  const elHeader = doc.getElementById('header');
-  const elFooter = doc.getElementById('footer');
-
-  elHeader.innerHTML = headerHtml;
-  elFooter.innerHTML = footerHtml;
-  render(vars);
-};
-
-// class Header extends HTMLElement {
-//   constructor() {
-//     super();
-//   }
-
-//   connectedCallback() {
-//     this.innerHTML = headerHtml;
-//   }
-// }
-
-// class Footer extends HTMLElement {
-//   constructor() {
-//     super();
-//   }
-
-//   connectedCallback() {
-//     this.innerHTML = footerHtml;
-//   }
-// }
-
-// const components = () => {
-//   customElements.define(`component-header`, Header);
-//   customElements.define(`component-footer`, Footer);
-// };
+const compose = (vars) => render(vars);
 
 export default compose;
