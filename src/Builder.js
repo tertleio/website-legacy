@@ -12,7 +12,6 @@ module.exports = class Builder {
   }
 
   getStruct({ read, vars }, newVars = false) {
-    console.log(vars);
     if (newVars) {
       let i = 0;
       for (const key in vars) {
