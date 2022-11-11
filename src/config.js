@@ -22,6 +22,7 @@ const config = [
       read: ['./layouts/default.hbs'],
       vars: {
         title: 'Tertle - Co-Founder Matching',
+        canonical: 'https://tertle.io',
         header: '',
         page: '',
         footer: '',
@@ -43,6 +44,7 @@ const config = [
       read: ['./layouts/default.hbs'],
       vars: {
         title: 'Tertle Blog | Co-Founder Matching',
+        canonical: 'https://tertle.io/blog',
         header: '',
         page: '',
         footer: '',
@@ -65,6 +67,8 @@ const config = [
       vars: {
         title:
           'Tertle - Top 15 Questions to Ask a Potential Co-founder | Co-Founder Matching',
+        canonical:
+          'https://tertle.io/top-15-questions-to-ask-a-potential-co-founder',
         header: '',
         page: '',
         footer: '',
