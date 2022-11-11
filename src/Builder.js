@@ -43,6 +43,7 @@ module.exports = class Builder {
 
   run(idx) {
     // TODO: error handling
+    console.log(`⏳ Running build for '${this.config[idx].page}'`);
     const readPrebuild = this.getStruct(this.config[idx].prebuild);
     const prebuilt = this.compose(readPrebuild, this.config[idx].build.vars);
 
@@ -50,5 +51,6 @@ module.exports = class Builder {
     const built = this.compose(readBuild);
 
     this.writeFile(this.config[idx].write, built[0].vars);
+    console.log(`✅ File written to: '${this.config[idx].write}'`);
   }
 };
