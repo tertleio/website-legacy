@@ -4,6 +4,7 @@
   "description": "Tertle website",
   "main": "./src/build.js",
   "scripts": {
+    "dev": "nodemon",
     "build": "node ./src/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

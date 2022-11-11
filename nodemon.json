@@ -1,0 +1,9 @@
+{
+  "verbose": false,
+  "watch": ["./src/*"],
+  "ignore": [".src/content/*"],
+  "ext": "hbs",
+  "events": {
+    "restart": "npm run build"
+  }
+}
