@@ -4,7 +4,8 @@ const config = require('./config');
 const builder = new Builder(config);
 
 (() => {
-  for (let i = 0; i < config.length; i++) {
+  const len = config.length;
+  for (let i = 0; i < len; i++) {
     builder.run(i);
   }
 })();
