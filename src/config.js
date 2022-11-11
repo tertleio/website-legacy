@@ -26,23 +26,28 @@ const config = [
   },
   {
     page: 'blog',
-    read: [
-      './components/header.hbs',
-      './pages/blog/blog.hbs',
-      './components/footer.hbs',
-    ],
-    layout: './layouts/default.hbs',
-    write: '../public/blog/index.html',
-    vars: {
-      userType: 'founder',
-      logoSrc: './assets/logo.svg',
-      primaryCtaTxt: 'Get Started',
-      primaryCtaLink: 'https://app.tertle.io/join',
-      secondaryCtaTxt: 'Login',
-      secondaryCtaLink: 'https://app.tertle.io/login',
-      showFooterVisual: false,
-      useModal: false,
+    prebuild: {
+      read: [
+        './components/header.hbs',
+        './pages/blog/blog.hbs',
+        './components/footer.hbs',
+      ],
+      vars: {
+        userType: 'founder',
+        logoSrc: './assets/logo.svg',
+        primaryCtaTxt: 'Sign Up',
+        primaryCtaLink: 'https://app.tertle.io/join',
+        secondaryCtaTxt: 'Login',
+        secondaryCtaLink: 'https://app.tertle.io/login',
+        showFooterVisual: false,
+        useModal: false,
+      },
     },
+    build: {
+      read: ['./layouts/default.hbs'],
+      vars: { header: '', page: '', footer: '' },
+    },
+    write: '../public/blog/index.html',
   },
 ];
 
