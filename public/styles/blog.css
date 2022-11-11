@@ -9,7 +9,7 @@ ol li {
 
 #posts .content-wrapper { margin-top: 2em; }
 #posts h1 { text-align: center; } 
-#post { max-width: 650px; margin-top: 0.75em; }
+#post { max-width: 650px;  }
 #post h2 { justify-content: flex-start; margin-top: 2em;}
 
 .post-thumbnail { width: 100%; height: 100%; border-radius: 0.1em; }
