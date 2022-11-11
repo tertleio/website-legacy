@@ -44,7 +44,7 @@ module.exports = class Builder {
 
   run(idx) {
     // TODO: error handling
-    console.log(`⏳ Running build for`, ylw(this.config[idx].page));
+    console.log(`⏳ Running build for:`, ylw(this.config[idx].page));
     const readPrebuild = this.getStruct(this.config[idx].prebuild);
     const prebuilt = this.compose(readPrebuild, this.config[idx].build.vars);
 
