@@ -1,3 +1,12 @@
+defaultVars = {
+  userType: 'founder',
+  logoSrc: './assets/logo.svg',
+  primaryCtaTxt: 'Sign Up',
+  primaryCtaLink: 'https://app.tertle.io/join',
+  secondaryCtaTxt: 'Login',
+  secondaryCtaLink: 'https://app.tertle.io/login',
+};
+
 const config = [
   {
     page: 'home',
@@ -7,16 +16,7 @@ const config = [
         './pages/index.hbs',
         './components/footer.hbs',
       ],
-      vars: {
-        userType: 'founder',
-        logoSrc: './assets/logo.svg',
-        primaryCtaTxt: 'Sign Up',
-        primaryCtaLink: 'https://app.tertle.io/join',
-        secondaryCtaTxt: 'Login',
-        secondaryCtaLink: 'https://app.tertle.io/login',
-        showFooterVisual: false,
-        useModal: false,
-      },
+      vars: { ...defaultVars },
     },
     build: {
       read: ['./layouts/default.hbs'],
@@ -32,22 +32,30 @@ const config = [
         './pages/blog/blog.hbs',
         './components/footer.hbs',
       ],
-      vars: {
-        userType: 'founder',
-        logoSrc: './assets/logo.svg',
-        primaryCtaTxt: 'Sign Up',
-        primaryCtaLink: 'https://app.tertle.io/join',
-        secondaryCtaTxt: 'Login',
-        secondaryCtaLink: 'https://app.tertle.io/login',
-        showFooterVisual: false,
-        useModal: false,
-      },
+      vars: { ...defaultVars },
     },
     build: {
       read: ['./layouts/default.hbs'],
       vars: { header: '', page: '', footer: '' },
     },
     write: '../public/blog/index.html',
+  },
+  {
+    page: 'post',
+    prebuild: {
+      read: [
+        './components/header.hbs',
+        './pages/blog/1.hbs',
+        './components/footer.hbs',
+      ],
+      vars: { ...defaultVars },
+    },
+    build: {
+      read: ['./layouts/default.hbs'],
+      vars: { header: '', page: '', footer: '' },
+    },
+    write:
+      '../public/blog/top-15-questions-to-ask-a-potential-co-founder/index.html',
   },
 ];
 
