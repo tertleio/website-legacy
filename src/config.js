@@ -23,6 +23,7 @@ const config = [
       vars: {
         title: 'Tertle - Co-Founder Matching',
         canonical: 'https://tertle.io',
+        descrip: 'Meet like-minded co-founders and hatch a startup.',
         header: '',
         page: '',
         footer: '',
@@ -45,6 +46,7 @@ const config = [
       vars: {
         title: 'Tertle Blog | Co-Founder Matching',
         canonical: 'https://tertle.io/blog',
+        descrip: 'Hear ye, tech founders - a blog about startup stuff!',
         header: '',
         page: '',
         footer: '',
@@ -69,6 +71,8 @@ const config = [
           'Tertle - Top 15 Questions to Ask a Potential Co-founder | Co-Founder Matching',
         canonical:
           'https://tertle.io/blog/top-15-questions-to-ask-a-potential-co-founder',
+        descrip:
+          'The best questions to ask when searching for a potential co-founder.',
         header: '',
         page: '',
         footer: '',
