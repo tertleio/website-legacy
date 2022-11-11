@@ -20,7 +20,7 @@ const config = [
     },
     build: {
       read: ['./layouts/default.hbs'],
-      vars: { header: null, page: null, footer: null },
+      vars: { header: '', page: '', footer: '' },
     },
     write: '../public/index.html',
   },

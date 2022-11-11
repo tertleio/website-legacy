@@ -1,4 +1,3 @@
-// store the components
 const handlebars = require('handlebars');
 const fs = require('fs');
 const path = require('path');
@@ -12,13 +11,20 @@ module.exports = class Builder {
     return fs.readFileSync(path.resolve(__dirname, pathname), 'utf-8');
   }
 
-  getStruct({ read, vars }) {
+  getStruct({ read, vars }, newVars = false) {
+    if (newVars) {
+      let i = 0;
+      for (const key in vars) {
+        vars[key] += newVars[i].vars;
+        i++;
+      }
+    }
     const files = read.map((path) => this.getFile(path));
     return { content: files, vars };
   }
 
   compose({ content, vars }) {
-    const compiled = [];
+    let compiled = [];
 
     while (content.length) {
       const currContent = content.shift();
@@ -37,21 +43,10 @@ module.exports = class Builder {
   run(idx) {
     // TODO: error handling
     const readPrebuild = this.getStruct(this.config[idx].prebuild);
-    const prebuilt = this.compose(readPrebuild);
+    const prebuilt = this.compose(readPrebuild, this.config[idx].build.vars);
 
-    // map prebuilt onto next step
-    const readBuild = this.getStruct({
-      read: this.config[idx].build.read,
-      vars: {
-        header: prebuilt[0].vars,
-        page: prebuilt[1].vars,
-        footer: prebuilt[2].vars,
-      },
-    });
-
-    // prebuilt needs to have the right keys here
+    const readBuild = this.getStruct(this.config[idx].build, prebuilt);
     const built = this.compose(readBuild);
-    console.log(built);
 
     this.writeFile(this.config[idx].write, built[0].vars);
   }
