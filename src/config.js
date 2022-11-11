@@ -20,7 +20,12 @@ const config = [
     },
     build: {
       read: ['./layouts/default.hbs'],
-      vars: { header: '', page: '', footer: '' },
+      vars: {
+        title: 'Tertle - Co-Founder Matching',
+        header: '',
+        page: '',
+        footer: '',
+      },
     },
     write: '../public/index.html',
   },
@@ -36,7 +41,12 @@ const config = [
     },
     build: {
       read: ['./layouts/default.hbs'],
-      vars: { header: '', page: '', footer: '' },
+      vars: {
+        title: 'Tertle Blog | Co-Founder Matching',
+        header: '',
+        page: '',
+        footer: '',
+      },
     },
     write: '../public/blog/index.html',
   },
@@ -52,7 +62,13 @@ const config = [
     },
     build: {
       read: ['./layouts/default.hbs'],
-      vars: { header: '', page: '', footer: '' },
+      vars: {
+        title:
+          'Tertle - Top 15 Questions to Ask a Potential Co-founder | Co-Founder Matching',
+        header: '',
+        page: '',
+        footer: '',
+      },
     },
     write:
       '../public/blog/top-15-questions-to-ask-a-potential-co-founder/index.html',
