@@ -24,7 +24,7 @@ module.exports = class Builder {
   }
 
   compose({ content, vars }) {
-    let compiled = [];
+    const compiled = [];
 
     while (content.length) {
       const currContent = content.shift();
