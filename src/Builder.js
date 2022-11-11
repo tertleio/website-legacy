@@ -12,9 +12,11 @@ module.exports = class Builder {
   }
 
   getStruct({ read, vars }, newVars = false) {
+    console.log(vars);
     if (newVars) {
       let i = 0;
       for (const key in vars) {
+        if (vars[key]) continue; // has a value to be used from config
         vars[key] += newVars[i].vars;
         i++;
       }
