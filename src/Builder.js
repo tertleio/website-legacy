@@ -53,16 +53,17 @@ module.exports = class Builder {
 
   run(idx) {
     if (this.count === 0) console.log(`⏳ Builder ${this.count} starting...`);
+    const { name, build, prebuild, write } = this.config[idx];
     this.count++;
 
-    console.log(`🟧 i:`, ylw(this.config[idx].name));
-    const readPrebuild = this.getStruct(this.config[idx].prebuild);
+    console.log(`🟧 i:`, ylw(name));
+    const readPrebuild = this.getStruct(prebuild);
     const prebuilt = this.compose(readPrebuild);
 
-    const readBuild = this.getStruct(this.config[idx].build, prebuilt);
+    const readBuild = this.getStruct(build, prebuilt);
     const built = this.compose(readBuild);
 
-    this.writeFile(this.config[idx].write, built[0].vars);
-    console.log('✅ o:', grn(this.config[idx].write));
+    this.writeFile(write, built[0].vars);
+    console.log('✅ o:', grn(write));
   }
 };
