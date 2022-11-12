@@ -53,7 +53,7 @@ module.exports = class Builder {
 
   run(idx) {
     if (this.count === 0) console.log(`⏳ Builder ${this.count} starting...`);
-    const { name, build, prebuild, write } = this.config[idx];
+    const { name, prebuild, build, write } = this.config[idx];
     this.count++;
 
     console.log(`🟧 i:`, ylw(name));
