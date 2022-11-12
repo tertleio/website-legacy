@@ -63,7 +63,7 @@ const config = [
     prebuild: {
       read: [
         './components/header.hbs',
-        './sections/blog/blog.hbs',
+        './sections/blog.hbs',
         './components/footer.hbs',
       ],
       vars: { ...defaultVars },
