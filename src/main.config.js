@@ -36,7 +36,7 @@ const config = [
     prebuild: {
       read: [
         './components/header.hbs',
-        './pages/index.hbs',
+        './sections/index.hbs',
         './components/footer.hbs',
       ],
       vars: { ...defaultVars },
@@ -59,7 +59,7 @@ const config = [
     prebuild: {
       read: [
         './components/header.hbs',
-        './pages/blog/blog.hbs',
+        './sections/blog/blog.hbs',
         './components/footer.hbs',
       ],
       vars: { ...defaultVars },
@@ -82,7 +82,7 @@ const config = [
     prebuild: {
       read: [
         './components/header.hbs',
-        './pages/blog/1.hbs',
+        './sections/blog/1.hbs',
         './components/footer.hbs',
       ],
       vars: { ...defaultVars },
@@ -154,7 +154,7 @@ module.exports = config;
 //         primaryCtaTxt: 'Join Waitlist',
 //         primaryCtaLink: null,
 //         secondaryCtaTxt: 'For Hirers',
-//         secondaryCtaLink: `${window.location.origin}/src/pages/hirers.html`,
+//         secondaryCtaLink: `${window.location.origin}/src/sections/hirers.html`,
 //         showFooterVisual: true,
 //         useModal: true,
 //       };
@@ -166,7 +166,7 @@ module.exports = config;
 //         primaryCtaTxt: 'Join Waitlist',
 //         primaryCtaLink: null,
 //         secondaryCtaTxt: 'For Contractors',
-//         secondaryCtaLink: `${window.location.origin}/src/pages/contractors.html`,
+//         secondaryCtaLink: `${window.location.origin}/src/sections/contractors.html`,
 //         showFooterVisual: false,
 //         useModal: true,
 //       };

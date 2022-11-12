@@ -12,7 +12,7 @@ module.exports = class Builder {
 
   getFile(pathname) {
     // return ext type
-    // console.log(pathname);
+    console.log(pathname);
     return fs.readFileSync(path.resolve(__dirname, pathname), 'utf-8');
   }
 

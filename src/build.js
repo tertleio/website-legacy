@@ -15,9 +15,7 @@ const builder = new Builder(config, handlebars.compile, marked.parse);
   // for (let i = 0; i < len; i++) {
   //   builder.run(i);
   // }
-
   builder.run(0);
-
   // const mdToHtml = mdBuilder.runMd();
   // console.log(mdToHtml);
 })();
