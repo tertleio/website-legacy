@@ -9,7 +9,30 @@ defaultVars = {
 
 const config = [
   {
-    page: 'home',
+    name: 'test',
+    prebuild: {
+      read: [
+        './components/header.hbs',
+        './content/1/index.md',
+        './components/footer.hbs',
+      ],
+      vars: { ...defaultVars },
+    },
+    build: {
+      read: ['./layouts/default.hbs'],
+      vars: {
+        title: 'Tertle - Co-Founder Matching',
+        canonical: 'https://tertle.io',
+        descrip: 'Meet like-minded co-founders and hatch a startup.',
+        header: '',
+        name: '',
+        footer: '',
+      },
+    },
+    write: '../public/blog/test/index.html',
+  },
+  {
+    name: 'home',
     prebuild: {
       read: [
         './components/header.hbs',
@@ -25,14 +48,14 @@ const config = [
         canonical: 'https://tertle.io',
         descrip: 'Meet like-minded co-founders and hatch a startup.',
         header: '',
-        page: '',
+        name: '',
         footer: '',
       },
     },
     write: '../public/index.html',
   },
   {
-    page: 'blog',
+    name: 'blog',
     prebuild: {
       read: [
         './components/header.hbs',
@@ -48,14 +71,14 @@ const config = [
         canonical: 'https://tertle.io/blog',
         descrip: 'Hear ye, tech founders - a blog about startup stuff!',
         header: '',
-        page: '',
+        name: '',
         footer: '',
       },
     },
     write: '../public/blog/index.html',
   },
   {
-    page: 'post',
+    name: 'post',
     prebuild: {
       read: [
         './components/header.hbs',
@@ -74,7 +97,7 @@ const config = [
         descrip:
           'The best questions to ask when searching for a potential co-founder.',
         header: '',
-        page: '',
+        name: '',
         footer: '',
       },
     },
@@ -85,9 +108,9 @@ const config = [
 
 module.exports = config;
 
-// function getVarsFor(page) {
-//   console.log('page', page);
-//   switch (page) {
+// function getVarsFor(name) {
+//   console.log('name', name);
+//   switch (name) {
 //     case 'home':
 //       return {
 //         idx: null,

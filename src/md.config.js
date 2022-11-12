@@ -1,8 +1,6 @@
 const marked = require('marked');
 
 function heading(txt, lv) {
-  console.log(lv);
-  console.log(txt);
   const escTxt = txt.toLowerCase().replace(/[^\w]+/g, '-');
   switch (lv) {
     case 1:
@@ -27,9 +25,16 @@ function heading(txt, lv) {
 
 // overrrides
 const renderer = { heading };
-marked.use({ renderer });
+marked.use(renderer, {
+  pedantic: false,
+  gfm: true,
+  breaks: false,
+  sanitize: false,
+  smartypants: false,
+  xhtml: false,
+});
 
 // test
-console.log(marked.parse('## Some heading here'));
+// console.log(marked.parse('## Some heading here'));
 
 module.exports = marked;

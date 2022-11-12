@@ -3,13 +3,16 @@ const path = require('path');
 const { ylw, grn } = require('./utils/logs');
 
 module.exports = class Builder {
-  constructor(config, helper) {
+  constructor(config, hbs, md) {
     this.runCount = 0;
     this.config = config;
-    this.helper = helper;
+    this.hbs = hbs;
+    this.md = md;
   }
 
   getFile(pathname) {
+    // return ext type
+    // console.log(pathname);
     return fs.readFileSync(path.resolve(__dirname, pathname), 'utf-8');
   }
 
@@ -26,12 +29,12 @@ module.exports = class Builder {
     return { content: files, vars };
   }
 
-  compose({ content, vars }) {
+  compose({ content, vars }, helper) {
     const compiled = [];
 
     while (content.length) {
       const currContent = content.shift();
-      const template = helper.compile(currContent);
+      const template = helper(currContent);
       const compiledHtml = template(vars);
       compiled.push({ vars: compiledHtml });
     }
@@ -47,18 +50,22 @@ module.exports = class Builder {
     if (this.runCount === 0) console.log('⏳ Builder starting...');
     this.runCount++;
 
-    console.log(`🟧 i:`, ylw(this.config[idx].page));
+    console.log(`🟧 i:`, ylw(this.config[idx].name));
     const readPrebuild = this.getStruct(this.config[idx].prebuild);
-    const prebuilt = this.compose(readPrebuild, this.config[idx].build.vars);
+    const prebuilt = this.compose(readPrebuild, this.hbs);
 
     const readBuild = this.getStruct(this.config[idx].build, prebuilt);
-    const built = this.compose(readBuild);
+    const built = this.compose(readBuild, this.hbs);
 
     this.writeFile(this.config[idx].write, built[0].vars);
     console.log('✅ o:', grn(this.config[idx].write));
   }
 
-  testRun() {
+  runMd() {
+    const file = this.getFile('./content/1/index.md');
+    // console.log(file);
+    const result = this.helper(file);
+    return result;
     // render the file
   }
 };
