@@ -9,7 +9,7 @@ defaultVars = {
 
 const config = [
   {
-    name: 'test',
+    name: 'post1',
     prebuild: {
       read: [
         './components/header.hbs',
@@ -19,17 +19,21 @@ const config = [
       vars: { ...defaultVars },
     },
     build: {
-      read: ['./layouts/post.hbs'],
+      read: ['./layouts/default.hbs'],
       vars: {
-        title: 'Tertle - Co-Founder Matching',
-        canonical: 'https://tertle.io',
-        descrip: 'Meet like-minded co-founders and hatch a startup.',
+        title:
+          'Tertle - Top 15 Questions to Ask a Potential Co-founder | Co-Founder Matching',
+        canonical:
+          'https://tertle.io/blog/top-15-questions-to-ask-a-potential-co-founder',
+        descrip:
+          'The best questions to ask when searching for a potential co-founder.',
         header: '',
         sections: '',
         footer: '',
       },
     },
-    write: '../public/blog/test/index.html',
+    write:
+      '../public/blog//top-15-questions-to-ask-a-potential-co-founder/test/index.html',
   },
   {
     name: 'home',
@@ -76,33 +80,6 @@ const config = [
       },
     },
     write: '../public/blog/index.html',
-  },
-  {
-    name: 'post',
-    prebuild: {
-      read: [
-        './components/header.hbs',
-        './sections/blog/1.hbs',
-        './components/footer.hbs',
-      ],
-      vars: { ...defaultVars },
-    },
-    build: {
-      read: ['./layouts/default.hbs'],
-      vars: {
-        title:
-          'Tertle - Top 15 Questions to Ask a Potential Co-founder | Co-Founder Matching',
-        canonical:
-          'https://tertle.io/blog/top-15-questions-to-ask-a-potential-co-founder',
-        descrip:
-          'The best questions to ask when searching for a potential co-founder.',
-        header: '',
-        sections: '',
-        footer: '',
-      },
-    },
-    write:
-      '../public/blog/top-15-questions-to-ask-a-potential-co-founder/index.html',
   },
 ];
 
