@@ -5,6 +5,7 @@ const { ylw, grn } = require('./utils/logs');
 
 module.exports = class Builder {
   constructor(config) {
+    this.runCount = 0;
     this.config = config;
   }
 
@@ -43,8 +44,10 @@ module.exports = class Builder {
   }
 
   run(idx) {
-    // TODO: error handling
-    console.log(`⏳ Running build for:`, ylw(this.config[idx].page));
+    if (this.runCount === 0) console.log('⏳ Builder starting...');
+    this.runCount++;
+
+    console.log(`🟧 i:`, ylw(this.config[idx].page));
     const readPrebuild = this.getStruct(this.config[idx].prebuild);
     const prebuilt = this.compose(readPrebuild, this.config[idx].build.vars);
 
@@ -52,6 +55,6 @@ module.exports = class Builder {
     const built = this.compose(readBuild);
 
     this.writeFile(this.config[idx].write, built[0].vars);
-    console.log('✅ File written to:', grn(this.config[idx].write));
+    console.log('✅ o:', grn(this.config[idx].write));
   }
 };
