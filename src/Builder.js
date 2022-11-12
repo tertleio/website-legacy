@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { template } = require('handlebars');
 const path = require('path');
 const { ylw, grn } = require('./utils/logs');
 
