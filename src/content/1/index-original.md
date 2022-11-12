@@ -1,5 +1,12 @@
 # Top 15 Questions to Ask a Potential Co-Founder
 
+<!-- src="../../assets/blog/ryan-xs.jpg"
+alt="Ryan Connaughton"
+title="Ryan Connaughton - Founder"
+Ryan
+📆 Sep 2022
+⏱ 3 min read -->
+
 ## Finding the Right Co-Founder is Hard
 
 There are many reasons why startups might fail. One of those reasons
@@ -20,6 +27,17 @@ questions as you see fit.
 You'll notice there is no skills section as I'll be following up with
 a blog post dedicated to just that - and its also something we can
 help you with by using Tertle co-founder matching. ;)
+
+<!-- src="../../assets/blog/1/co-founder*coffee-sq.jpg"
+alt="3 Co-founders coffee cheers"
+title="Co-founder coffee" -->
+<!-- _Cheers_ -->
+
+<!-- id="prerequisites"
+class="h3"
+data-short="Prerequisites"
+data-long="Prerequisites"
+data-emoji="" -->
 
 ## Prerequisites
 
@@ -56,6 +74,16 @@ answers. Share your answers with your partner(s) in turn.
 1. What is your personal financial runway and burn rate?
 1. What is your minimum salary expectations pre product-market fit?
 1. What would it take for you to feel truly partnered in this venture?
+
+<!-- src="../../assets/blog/1/co-founder_questions-excel-m.png"
+alt="Google sheets co-founder questions template"
+title="Google sheets co-founder questions template"
+
+Co-founder questions template:
+href="https://docs.google.com/spreadsheets/d/1HSkSQr46yV36uMU2iJVmuwtyRkIBvocjeLkC0fODqr0/edit?usp=sharing"
+target="\_blank"
+view
+"../../assets/blog/1/[Template] Co-Founder Questions.xlsx" -->
 
 ## Evaluating the Answers
 
