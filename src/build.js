@@ -11,11 +11,10 @@ const builder = new Builder(config, handlebars.compile, marked.parse);
 // https://www.codingninjas.com/codestudio/library/nodemon
 
 (() => {
-  // const len = config.length;
-  // for (let i = 0; i < len; i++) {
-  //   builder.run(i);
-  // }
-  builder.run(0);
-  // const mdToHtml = mdBuilder.runMd();
-  // console.log(mdToHtml);
+  const len = config.length;
+  for (let i = 0; i < len; i++) {
+    builder.run(i);
+  }
+  //test
+  // builder.run(0);
 })();
