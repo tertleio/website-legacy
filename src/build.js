@@ -1,7 +1,11 @@
 const Builder = require('./Builder');
+const handlebars = require('handlebars');
+const marked = require('./md.config');
 
 const hbsConfig = require('./hbs.config');
-const builder = new Builder(hbsConfig);
+const mdConfig = require('./md.config');
+const hbsBuilder = new Builder(hbsConfig, handlebars);
+const mdBuilder = new Builder(mdConfig, marked);
 
 // TODO:
 // only run build on files that have changed
@@ -9,7 +13,9 @@ const builder = new Builder(hbsConfig);
 
 (() => {
   const len = hbsConfig.length;
-  for (let i = 0; i < len; i++) {
-    builder.run(i);
-  }
+  // for (let i = 0; i < len; i++) {
+  //   hbsBuilder.run(i);
+  // }
+
+  // mdBuilder.testRun();
 })();

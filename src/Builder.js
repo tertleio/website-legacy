@@ -1,13 +1,12 @@
-const handlebars = require('handlebars');
-const marked = require('./md.config');
 const fs = require('fs');
 const path = require('path');
 const { ylw, grn } = require('./utils/logs');
 
 module.exports = class Builder {
-  constructor(config) {
+  constructor(config, helper) {
     this.runCount = 0;
     this.config = config;
+    this.helper = helper;
   }
 
   getFile(pathname) {
@@ -32,7 +31,7 @@ module.exports = class Builder {
 
     while (content.length) {
       const currContent = content.shift();
-      const template = handlebars.compile(currContent);
+      const template = helper.compile(currContent);
       const compiledHtml = template(vars);
       compiled.push({ vars: compiledHtml });
     }
@@ -57,5 +56,9 @@ module.exports = class Builder {
 
     this.writeFile(this.config[idx].write, built[0].vars);
     console.log('✅ o:', grn(this.config[idx].write));
+  }
+
+  testRun() {
+    // render the file
   }
 };
