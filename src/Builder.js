@@ -11,8 +11,6 @@ module.exports = class Builder {
   }
 
   getFile(pathname) {
-    // return ext type
-    console.log(pathname);
     return fs.readFileSync(path.resolve(__dirname, pathname), 'utf-8');
   }
 
@@ -25,18 +23,31 @@ module.exports = class Builder {
         i++;
       }
     }
-    const files = read.map((path) => this.getFile(path));
-    return { content: files, vars };
+    const filesWithExt = read.map((path) => {
+      const split = path.split('.');
+      const ext = split[split.length - 1];
+      return { ext, content: this.getFile(path) };
+    });
+    return { files: filesWithExt, vars };
   }
 
-  compose({ content, vars }, helper) {
+  compose({ files, vars }) {
     const compiled = [];
 
-    while (content.length) {
-      const currContent = content.shift();
-      const template = helper(currContent);
-      const compiledHtml = template(vars);
-      compiled.push({ vars: compiledHtml });
+    while (files.length) {
+      const currFile = files.shift();
+      console.log(currFile.ext);
+
+      let html;
+      if (currFile.ext === 'hbs') {
+        const template = this.hbs(currFile.content);
+        html = template(vars);
+      } else {
+        html = this.md(currFile.content);
+        console.log(html);
+      }
+
+      compiled.push({ vars: html });
     }
 
     return compiled;
@@ -52,10 +63,10 @@ module.exports = class Builder {
 
     console.log(`🟧 i:`, ylw(this.config[idx].name));
     const readPrebuild = this.getStruct(this.config[idx].prebuild);
-    const prebuilt = this.compose(readPrebuild, this.hbs);
+    const prebuilt = this.compose(readPrebuild);
 
     const readBuild = this.getStruct(this.config[idx].build, prebuilt);
-    const built = this.compose(readBuild, this.hbs);
+    const built = this.compose(readBuild);
 
     this.writeFile(this.config[idx].write, built[0].vars);
     console.log('✅ o:', grn(this.config[idx].write));
