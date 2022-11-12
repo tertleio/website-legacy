@@ -67,12 +67,4 @@ module.exports = class Builder {
     this.writeFile(this.config[idx].write, built[0].vars);
     console.log('✅ o:', grn(this.config[idx].write));
   }
-
-  runMd() {
-    const file = this.getFile('./content/1/index.md');
-    // console.log(file);
-    const result = this.helper(file);
-    return result;
-    // render the file
-  }
 };
