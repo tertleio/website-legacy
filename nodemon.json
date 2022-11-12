@@ -1,8 +1,8 @@
 {
   "verbose": false,
-  "watch": ["./src/*"],
+  "watch": ["./src/**"],
   "ignore": ["./src/content/*"],
-  "ext": "hbs",
+  "ext": "hbs js",
   "events": {
     "restart": "npm run build"
   }
