@@ -19,7 +19,7 @@ const config = [
       vars: { ...defaultVars },
     },
     build: {
-      read: ['./layouts/default.hbs'],
+      read: ['./layouts/post.hbs'],
       vars: {
         title:
           'Tertle - Top 15 Questions to Ask a Potential Co-founder | Co-Founder Matching',
@@ -33,7 +33,7 @@ const config = [
       },
     },
     write:
-      '../public/blog//top-15-questions-to-ask-a-potential-co-founder/test/index.html',
+      '../public/blog/top-15-questions-to-ask-a-potential-co-founder/index.html',
   },
   {
     name: 'home',
