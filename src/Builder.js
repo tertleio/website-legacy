@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { template } = require('handlebars');
 const path = require('path');
 const { ylw, grn } = require('./utils/logs');
 
@@ -37,12 +38,10 @@ module.exports = class Builder {
     while (files.length) {
       let html;
       const currFile = files.shift();
-      if (currFile.ext === 'hbs') {
-        const template = this.hbs(currFile.content);
-        html = template(vars);
-      } else {
-        html = this.md(currFile.content);
-      }
+      const withVars = currFile.ext === 'hbs';
+      const helper = withVars ? this.hbs : this.md;
+      const template = helper(currFile.content);
+      html = withVars ? template(vars) : template;
       compiled.push({ vars: html });
     }
 
