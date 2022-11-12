@@ -5,7 +5,7 @@ function heading(txt, lv) {
   switch (lv) {
     case 1:
       return `
-        <h${lv} class="h2>
+        <h${lv} class="h2">
           ${txt}
         </h${lv}>`;
     case 2:
