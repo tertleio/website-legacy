@@ -35,18 +35,14 @@ module.exports = class Builder {
     const compiled = [];
 
     while (files.length) {
-      const currFile = files.shift();
-      console.log(currFile.ext);
-
       let html;
+      const currFile = files.shift();
       if (currFile.ext === 'hbs') {
         const template = this.hbs(currFile.content);
         html = template(vars);
       } else {
         html = this.md(currFile.content);
-        console.log(html);
       }
-
       compiled.push({ vars: html });
     }
 
@@ -54,7 +50,7 @@ module.exports = class Builder {
   }
 
   writeFile(writepath, file) {
-    fs.writeFileSync(path.resolve(__dirname, writepath), file.toString());
+    fs.writeFileSync(path.resolve(__dirname, writepath), file);
   }
 
   run(idx) {
