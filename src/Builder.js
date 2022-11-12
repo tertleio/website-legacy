@@ -1,4 +1,5 @@
 const handlebars = require('handlebars');
+const marked = require('./md.config');
 const fs = require('fs');
 const path = require('path');
 const { ylw, grn } = require('./utils/logs');
