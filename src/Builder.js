@@ -4,7 +4,7 @@ const { ylw, grn } = require('./utils/logs');
 
 module.exports = class Builder {
   constructor(config, hbs, md) {
-    this.runCount = 0;
+    this.count = 0;
     this.config = config;
     this.hbs = hbs;
     this.md = md;
@@ -52,8 +52,8 @@ module.exports = class Builder {
   }
 
   run(idx) {
-    if (this.runCount === 0) console.log('⏳ Builder starting...');
-    this.runCount++;
+    if (this.count === 0) console.log(`⏳ Builder ${this.count} starting...`);
+    this.count++;
 
     console.log(`🟧 i:`, ylw(this.config[idx].name));
     const readPrebuild = this.getStruct(this.config[idx].prebuild);
