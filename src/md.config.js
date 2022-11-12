@@ -25,14 +25,15 @@ function heading(txt, lv) {
 
 // overrrides
 const renderer = { heading };
-marked.use(renderer, {
-  pedantic: false,
+const opts = {
+  pedantic: true,
   gfm: true,
-  breaks: false,
+  breaks: true,
   sanitize: false,
-  smartypants: false,
+  smartypants: true,
   xhtml: false,
-});
+};
+marked.use({ renderer }, { ...opts });
 
 // test
 // console.log(marked.parse('## Some heading here'));
