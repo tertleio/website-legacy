@@ -19,7 +19,7 @@ const config = [
       vars: { ...defaultVars },
     },
     build: {
-      read: ['./layouts/default.hbs'],
+      read: ['./layouts/post.hbs'],
       vars: {
         title: 'Tertle - Co-Founder Matching',
         canonical: 'https://tertle.io',
