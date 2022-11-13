@@ -61,10 +61,11 @@ ol li {
   justify-content: space-between;
   /* border: 1px solid blue; */
 }
-.post-item__info > * {
+.post-item__info .avatar {
+  display: flex;
   align-items: center;
 }
-.post-item__info img {
+.post-item__info .avatar img {
   width: 1.5em;
   height: 1.5em;
   margin-right: 0.5em;
