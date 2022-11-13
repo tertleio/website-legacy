@@ -44,7 +44,7 @@ ol li {
 }
 
 
-.post-item_-aside { max-width: 3em; }
+.post-item__aside { min-width: 9em; }
 .post-item__aside img { width: 100%; height: 100%;  border-radius: 0.1em; }
 .post-item__aside {
   width: 12.5em;
