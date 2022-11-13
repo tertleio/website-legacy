@@ -24,6 +24,11 @@ function heading(txt, lv) {
   }
 }
 
+function image(href, title, alt) {
+  console.log(href, title, alt);
+  return `<img class="post-img" src="${href}" title="${alt}" alt="${alt}" />`;
+}
+
 // let gotMeta = false;
 // const walkTokens = (token) => {
 //   console.log(token);
@@ -51,7 +56,7 @@ function heading(txt, lv) {
 // };
 
 // overrrides
-const renderer = { heading };
+const renderer = { heading, image };
 const opts = {
   pedantic: true,
   gfm: true,
