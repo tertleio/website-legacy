@@ -1,3 +1,4 @@
+// const { match } = require('assert');
 const marked = require('marked');
 
 function heading(txt, lv) {
@@ -19,27 +20,35 @@ function heading(txt, lv) {
           ${txt}
         </h${lv}>`;
     default:
-      throw Error(`Invalid level '${lv}' in heading fn`);
+      return `</h${lv}>${txt}</h${lv}>`;
   }
 }
 
-const tokenizer = {
-  codespan(src) {
-    console.log('tokenizer:', src);
-    console.log('ran');
-    const match = src.match(/^\$+([^\$\n]+?)\$+/);
-    if (match) {
-      return {
-        type: 'codespan',
-        raw: match[0],
-        text: match[1].trim(),
-      };
-    }
+// let gotMeta = false;
+// const walkTokens = (token) => {
+//   console.log(token);
+//   if (token.type === 'hr') {
+//     // console.log(token);
+//     // token.depth += 1;
+//   }
+// };
 
-    // return false to use original codespan tokenizer
-    return false;
-  },
-};
+// const tokenizer = {
+//   codespan(src) {
+//     // console.log(src);
+//     const match = src.match(/^\$+([^\$\n]+?)\$+/);
+//     if (match) {
+//       return {
+//         type: 'codespan',
+//         raw: match[0],
+//         text: match[1].trim(),
+//       };
+//     }
+
+//     // return false to use original codespan tokenizer
+//     return false;
+//   },
+// };
 
 // overrrides
 const renderer = { heading };
@@ -52,8 +61,8 @@ const opts = {
   xhtml: false,
 };
 
-// overide
-marked.use(renderer, opts, tokenizer);
+// override
+marked.use({ renderer }, opts);
 
 // test
 // console.log(marked.parse('## Some heading here'));
