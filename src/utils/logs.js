@@ -5,5 +5,6 @@ const Yellow = '\x1b[33m';
 
 const ylw = (str) => Yellow + str + Reset;
 const grn = (str) => Green + str + Reset;
+const red = (str) => Red + str + Reset;
 
-module.exports = { ylw, grn };
+module.exports = { ylw, grn, red };
