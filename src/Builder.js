@@ -66,17 +66,21 @@ module.exports = class Builder {
     fs.writeFileSync(path.resolve(__dirname, writepath), file);
   }
 
-  run(idx) {
+  run(idx, debug = false, verbose = false) {
     if (this.count === 0) console.log(`⏳ Builder ${this.count} starting...`);
     const { name, prebuild, build, write } = this.config[idx];
     this.count++;
 
     console.log(`🟧 i:`, ylw(name));
     const readPrebuild = this.getStruct(prebuild);
+    debug && console.log(readPreBuild);
     const prebuilt = this.compose(readPrebuild);
+    debug && verbose && console.log(readPreBuild);
 
     const readBuild = this.getStruct(build, prebuilt);
+    debug && console.log(readPreBuild);
     const built = this.compose(readBuild);
+    debug && verbose && console.log(readPreBuild);
 
     this.writeFile(write, built[0].vars);
     console.log('✅ o:', grn(write));
