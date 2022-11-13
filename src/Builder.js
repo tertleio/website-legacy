@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const { ylw, grn } = require('./utils/logs');
+const { ylw, grn, red } = require('./utils/logs');
+const parseMeta = require('./utils/parseMeta');
 
 module.exports = class Builder {
   constructor(config, hbs, md) {
@@ -14,7 +15,35 @@ module.exports = class Builder {
     return fs.readFileSync(path.resolve(__dirname, pathname), 'utf-8');
   }
 
+  // parseMeta(mdFile) {
+  //   const tokens = ['---', '---'];
+  //   // let parsedMdFile;
+
+  //   var strReg = '^' + tokens[0] + '([\\s|\\S]*?)' + tokens[1],
+  //     reg = new RegExp(strReg),
+  //     parsedMdFile = reg.exec(mdFile);
+  //   console.log(parsedMdFile);
+  // }
+
   getStruct({ read, vars }, newVars = false) {
+    const files = read.map((path) => {
+      let file = this.getFile(path);
+
+      const split = path.split('.');
+      const ext = split[split.length - 1];
+      let meta;
+
+      if (ext === 'md' && file.startsWith('---')) {
+        const { meta: m, content: c } = parseMeta(file);
+        meta = m;
+        file = c;
+      } else {
+        console.log(`⚠️  '${red(path)}' should contain a meta header'`);
+      }
+
+      return { ext, meta, content: file };
+    });
+
     if (newVars) {
       let i = 0;
       for (const key in vars) {
@@ -23,12 +52,8 @@ module.exports = class Builder {
         i++;
       }
     }
-    const filesWithExt = read.map((path) => {
-      const split = path.split('.');
-      const ext = split[split.length - 1];
-      return { ext, content: this.getFile(path) };
-    });
-    return { files: filesWithExt, vars };
+
+    return { files, vars };
   }
 
   compose({ files, vars }) {
