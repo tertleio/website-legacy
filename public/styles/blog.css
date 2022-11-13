@@ -1,3 +1,4 @@
+
 ol {
   /* list-style: list-item; */
   line-height: 1.2;
@@ -7,77 +8,61 @@ ol li {
   padding: 0.6em 0.25em;
 }
 
-#posts .content-wrapper { margin-top: 2em; }
-#posts h1 { text-align: center; } 
-
-#post img { width: 100%; height: 100%; margin-top: 1em; border: 1px solid var(--color-highlight);}
-#post { max-width: 650px;}
-#post h2 { justify-content: flex-start; margin-top: 2em; margin-bottom: 1em; }
-
-.post-thumbnail { width: 100%; height: 100%; border-radius: 0.1em; }
-.post-img-container { margin: 2.5em 0; } 
-.post-img-container img { width: 100%; border: 1px solid var(--color-highlight);}
-.post-img-container a { padding: 0 0.6em; }
-.post-img-container i  { 
+/* i, em  { 
   display: flex;
   margin-top: 0.5em;
   justify-content: center; 
-}
+} */
 
+#posts h1 { text-align: center; } 
 
-.post-container {
+.post img { width: 100%; height: 100%; margin-top: 1em; border: 1px solid var(--color-highlight);}
+.post { max-width: 650px;}
+.post h2 { justify-content: flex-start; margin-top: 2em; margin-bottom: 1em; }
+
+/* end coontent styling, begin post items styling */ 
+
+.post-list-container {
   /* cursor: pointer; */
   margin: 0 auto;
   max-width: 600px;
+}
+
+.post-item {
   border: 1px solid var(--color-highlight);
-  /* border: 1px solid var(--color-bg); */
   padding: 1.75em;
-  padding-top: calc(1.75em + 3px);
   border-radius: 0.75em;
+  padding-top: calc(1.75em + 3px);
+}
+.post-item:hover { border-color: var(--color-primary); }
+.post-item a:hover { text-decoration: none; }
+
+.post-item__main {
+  display: flex;
+  cursor: pointer;
   margin-bottom: 1em;
 }
 
-
-.post-container:hover { border-color: var(--color-primary); }
-.post-container a:hover { text-decoration: none; }
-
-.post-body {
-  display: flex;
-  cursor: pointer;
-  
-  /* background: blue; */
-}
-
-/* .post-content {
-  border: 1px solid green;
-} */
-
-.post-aside {
+.post-item__aside img { width: 3em; height: 100%; border-radius: 0.1em; }
+.post-item__aside {
   width: 12.5em;
   margin-left: 1em;
-  background: grey;
+  background: var(--color-highlight);
   border-radius: 0.25em;
   border: 1px solid var(--color-highlight);
 }
 
-.post-info {
+.post-item__info {
   display: flex;
-  margin-top: 1em;
+  margin-top: 1.5em;
   align-items: center;
   justify-content: space-between;
   /* border: 1px solid blue; */
 }
-
-.post-info > * {
+.post-item__info > * {
   align-items: center;
 }
-
-
-.post-author {
-  display: flex;
-}
-
-.post-info img {
+.post-item__info img {
   width: 1.5em;
   height: 1.5em;
   margin-right: 0.5em;
