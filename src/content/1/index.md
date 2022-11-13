@@ -1,3 +1,9 @@
+---
+Author: Ryan
+Date: Sep 2022
+Read Time: 3 min
+---
+
 # Top 15 Questions to Ask a Potential Co-Founder
 
 ## Finding the Right Co-Founder is Hard
@@ -20,6 +26,9 @@ questions as you see fit.
 You'll notice there is no skills section as I'll be following up with
 a blog post dedicated to just that - and its also something we can
 help you with by using Tertle co-founder matching. ;)
+
+![Co-founder coffee meetup](./co-founder_coffee-sq.jpg)
+_Cofee meetup_
 
 ## Prerequisites
 
@@ -56,6 +65,10 @@ answers. Share your answers with your partner(s) in turn.
 1. What is your personal financial runway and burn rate?
 1. What is your minimum salary expectations pre product-market fit?
 1. What would it take for you to feel truly partnered in this venture?
+
+![Co-founder questions template](./co-founder_questions-excel-m.png)
+[view](https://docs.google.com/spreadsheets/d/1HSkSQr46yV36uMU2iJVmuwtyRkIBvocjeLkC0fODqr0/edit?usp=sharing") |
+[download](./Co-Founder-Questions-Template.xlsx)
 
 ## Evaluating the Answers
 
