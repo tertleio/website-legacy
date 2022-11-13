@@ -23,6 +23,24 @@ function heading(txt, lv) {
   }
 }
 
+const tokenizer = {
+  codespan(src) {
+    console.log('tokenizer:', src);
+    console.log('ran');
+    const match = src.match(/^\$+([^\$\n]+?)\$+/);
+    if (match) {
+      return {
+        type: 'codespan',
+        raw: match[0],
+        text: match[1].trim(),
+      };
+    }
+
+    // return false to use original codespan tokenizer
+    return false;
+  },
+};
+
 // overrrides
 const renderer = { heading };
 const opts = {
@@ -33,7 +51,9 @@ const opts = {
   smartypants: true,
   xhtml: false,
 };
-marked.use({ renderer }, { ...opts });
+
+// overide
+marked.use(renderer, opts, tokenizer);
 
 // test
 // console.log(marked.parse('## Some heading here'));
