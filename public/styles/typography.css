@@ -65,7 +65,7 @@ p, .p {
   font-size: 1.1rem;
   line-height: 1.6em;
   color: var(--color-text);
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 
 .bold {
