@@ -73,14 +73,14 @@ module.exports = class Builder {
 
     console.log(`🟧 i:`, ylw(name));
     const readPrebuild = this.getStruct(prebuild);
-    debug && console.log(readPreBuild);
+    debug && console.log(readPrebuild);
     const prebuilt = this.compose(readPrebuild);
-    debug && verbose && console.log(readPreBuild);
+    debug && verbose && console.log(prebuilt);
 
     const readBuild = this.getStruct(build, prebuilt);
-    debug && console.log(readPreBuild);
+    debug && console.log(readBuild);
     const built = this.compose(readBuild);
-    debug && verbose && console.log(readPreBuild);
+    debug && verbose && console.log(built);
 
     this.writeFile(write, built[0].vars);
     console.log('✅ o:', grn(write));
