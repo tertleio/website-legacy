@@ -30,6 +30,9 @@ const config = [
         header: '',
         sections: '',
         footer: '',
+        author: '',
+        est: '',
+        date: '',
       },
     },
     write:

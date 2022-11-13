@@ -1,6 +1,6 @@
 ---
 Author: Ryan
-Read Time: 3 min
+Est: 3 min
 Date: Nov 2022
 ---
 

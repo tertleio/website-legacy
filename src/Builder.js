@@ -16,22 +16,30 @@ module.exports = class Builder {
   }
 
   getStruct({ read, vars }, newVars = false) {
+    let nextVars;
+
+    // console.log('NEW VARS', newVars);
+
     const files = read.map((path) => {
       let file = this.getFile(path);
-
       const split = path.split('.');
       const ext = split[split.length - 1];
-      let meta;
 
-      if (ext === 'md' && file.startsWith('---')) {
-        const { meta: m, content: c } = parseMeta(file);
-        meta = m;
-        file = c;
-      } else {
-        console.log(`⚠️  '${red(path)}' should contain a meta header'`);
+      if (ext === 'md') {
+        if (file.startsWith('---')) {
+          const { content: c, meta: m } = parseMeta(file);
+          file = c;
+          nextVars = {
+            author: m.Author,
+            est: m.Est,
+            date: m.Date,
+          };
+        } else {
+          console.log(`⚠️  '${red(path)}' should contain a meta header'`);
+        }
       }
 
-      return { ext, meta, content: file };
+      return { ext, content: file };
     });
 
     if (newVars) {
@@ -43,11 +51,12 @@ module.exports = class Builder {
       }
     }
 
-    return { files, vars };
+    return { files, vars, nextVars };
   }
 
   compose({ files, vars }) {
     const compiled = [];
+    console.log('COMPOSE', vars);
 
     while (files.length) {
       let html;
@@ -77,7 +86,17 @@ module.exports = class Builder {
     const prebuilt = this.compose(readPrebuild);
     debug && verbose && console.log(prebuilt);
 
-    const readBuild = this.getStruct(build, prebuilt);
+    // console.log('nextVars', readPrebuild.nextVars);
+    // console.log(typeof prebuilt);
+    // console.log(readPrebuild.nextVars);
+    // console.log(prebuilt);
+
+    if (readPrebuild.nextVars) {
+      prebuilt.push({ vars: readPrebuild.nextVars.author });
+      prebuilt.push({ vars: readPrebuild.nextVars.est });
+      prebuilt.push({ vars: readPrebuild.nextVars.date });
+    }
+    let readBuild = this.getStruct(build, prebuilt);
     debug && console.log(readBuild);
     const built = this.compose(readBuild);
     debug && verbose && console.log(built);
