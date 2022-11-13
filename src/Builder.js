@@ -15,16 +15,6 @@ module.exports = class Builder {
     return fs.readFileSync(path.resolve(__dirname, pathname), 'utf-8');
   }
 
-  // parseMeta(mdFile) {
-  //   const tokens = ['---', '---'];
-  //   // let parsedMdFile;
-
-  //   var strReg = '^' + tokens[0] + '([\\s|\\S]*?)' + tokens[1],
-  //     reg = new RegExp(strReg),
-  //     parsedMdFile = reg.exec(mdFile);
-  //   console.log(parsedMdFile);
-  // }
-
   getStruct({ read, vars }, newVars = false) {
     const files = read.map((path) => {
       let file = this.getFile(path);
