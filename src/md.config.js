@@ -13,8 +13,8 @@ function heading(txt, lv) {
       return `
         <h${lv} id=${escTxt}
           class="h3"
-          data-short="Somethig short"
-          data-long="Somthing a bit longer lulz like this"
+          data-short="${txt}"
+          data-long="${txt}"
           data-emoji=""
         >
           ${txt}
@@ -25,7 +25,7 @@ function heading(txt, lv) {
 }
 
 function image(href, title, alt) {
-  console.log(href, title, alt);
+  // console.log(href, title, alt);
   const fullPath = '/blog/top-15-questions-to-ask-a-potential-co-founder';
   return `<img class="post-img" src="${fullPath}${href}" title="${alt}" alt="${alt}" />`;
 }
@@ -63,7 +63,7 @@ const opts = {
   gfm: true,
   breaks: true,
   sanitize: false,
-  smartypants: true,
+  smartypants: false,
   xhtml: false,
 };
 

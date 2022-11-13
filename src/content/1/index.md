@@ -41,7 +41,7 @@ your own version of these questions yourself first. Again, this will
 help with being methodical when it comes to cross evaluating the
 answers. Share your answers with your partner(s) in turn.
 
-## Goals & Motivations
+## Goals and Motivations
 
 1. Why do you want to start a company? Why now?
 1. What gets you up in the morning?
@@ -49,7 +49,7 @@ answers. Share your answers with your partner(s) in turn.
 1. What does an ideal exit look like to you and in what time frame?
 1. What are some founders, products or companies you admire and why?
 
-## Culture & Ways of Working
+## Culture and Ways of Working
 
 1. Where should our start up be based? Why?
 1. If your dream company was operational today and one of the employees was asked to describe the culture, what would they say?
@@ -57,7 +57,7 @@ answers. Share your answers with your partner(s) in turn.
 1. What would your approach be to resolving co-founder conflicts?
 1. What is your take on what sets successful and unsuccessful startups apart?
 
-## Commitment & Funding
+## Commitment and Funding
 
 1. Would working on a new venture be your primary activity? Will that change over the next year? 5 years?
 1. How should founder equity be split? Why?
