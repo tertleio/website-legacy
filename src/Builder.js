@@ -56,7 +56,6 @@ module.exports = class Builder {
 
   compose({ files, vars }) {
     const compiled = [];
-    console.log('COMPOSE', vars);
 
     while (files.length) {
       let html;

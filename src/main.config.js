@@ -21,6 +21,7 @@ const config = [
     build: {
       read: ['./layouts/post.hbs'],
       vars: {
+        h1: 'Top 15 Questions to Ask a Potential Co-founder',
         title:
           'Tertle - Top 15 Questions to Ask a Potential Co-founder | Co-Founder Matching',
         canonical:
@@ -46,7 +47,9 @@ const config = [
         './sections/index.hbs',
         './components/footer.hbs',
       ],
-      vars: { ...defaultVars },
+      vars: {
+        ...defaultVars,
+      },
     },
     build: {
       read: ['./layouts/default.hbs'],
