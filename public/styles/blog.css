@@ -17,13 +17,34 @@ ol li {
 #posts h1 { text-align: center; } 
 
 .post-container { margin: 0 auto; max-width: 600px; }
-.post-container img { width: 100%;  height: 100%; margin-top: 1em; border: 1px solid var(--color-highlight);}
+.post-container img { width: 100%;  height: 100%; border: 1px solid var(--color-highlight);}
 
-/* END: post content styling *
-/  BEGIN: post list styling: */ 
+/* END: post  *
+
+/* used in multiple */
+.post-info {
+  display: flex;
+  margin-top: 1.5em;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid blue; */
+}
+.post-info .avatar {
+  display: flex;
+  align-items: center;
+}
+.post-info .avatar img {
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 0.5em;
+  border-radius: 5em;
+}
+/* ///////////////////////// */
+
+
+/* BEGIN: post list */
 
 .post-list-container {
-  /* cursor: pointer; */
   margin: 0 auto;
   max-width: 600px;
 }
@@ -43,7 +64,6 @@ ol li {
   margin-bottom: 1em;
 }
 
-
 .post-item__aside { min-width: 9em; }
 .post-item__aside img { width: 100%; height: 100%;  border-radius: 0.1em; }
 .post-item__aside {
@@ -52,22 +72,4 @@ ol li {
   background: var(--color-highlight);
   border-radius: 0.25em;
   border: 1px solid var(--color-highlight);
-}
-
-.post-item__info {
-  display: flex;
-  margin-top: 1.5em;
-  align-items: center;
-  justify-content: space-between;
-  /* border: 1px solid blue; */
-}
-.post-item__info .avatar {
-  display: flex;
-  align-items: center;
-}
-.post-item__info .avatar img {
-  width: 1.5em;
-  height: 1.5em;
-  margin-right: 0.5em;
-  border-radius: 5em;
 }
