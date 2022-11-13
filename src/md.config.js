@@ -26,7 +26,8 @@ function heading(txt, lv) {
 
 function image(href, title, alt) {
   console.log(href, title, alt);
-  return `<img class="post-img" src="${href}" title="${alt}" alt="${alt}" />`;
+  const fullPath = '/blog/top-15-questions-to-ask-a-potential-co-founder';
+  return `<img class="post-img" src="${fullPath}${href}" title="${alt}" alt="${alt}" />`;
 }
 
 // let gotMeta = false;
