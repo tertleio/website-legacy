@@ -14,6 +14,7 @@ ol li {
   justify-content: center; 
 } */
 
+#posts h1 { text-align: center;  margin-top: 0.5em;}
 .post-container { margin: 0 auto; max-width: 575px; }
 .post-container h2 { margin-top: 2em; }
 .post-container p {
