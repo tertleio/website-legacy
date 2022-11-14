@@ -41,26 +41,33 @@
 
   <body>
     {{{header}}}
-    <div class="container">
-      <main class="post-container">
-        <h1 class="h2">{{h1}}</h1>
+      <div class="container">
+        <main>
+          <div class="post-container">
+          <h1 class="h2">{{h1}}</h1>
 
-        <div class="post-info">
-          <div class="avatar">
-            <img
-              src="../../assets/avatars/ryan-xs.jpg"
-              alt="Ryan"
-              title="Founder"
-            />
-            {{author}}
+          <div class="post-info">
+            <div class="avatar">
+              <img
+                src="../../assets/avatars/ryan-xs.jpg"
+                alt="Ryan"
+                title="Founder"
+              />
+              {{author}}
+            </div>
+            <div>📆 {{date}}</div>
+            <div>⏱ {{est}}</div>
           </div>
-          <div>📆 {{date}}</div>
-          <div>⏱ {{est}}</div>
+          </div>
+          
+          <div class="wrapper">
+            <div class="post-container">
+            {{{sections}}}
+            </div>
+          </div>
+        </main>
         </div>
-
-        {{{sections}}}
-      </main>
-    </div>
+      </div>
     
     {{{footer}}}
   </body>
