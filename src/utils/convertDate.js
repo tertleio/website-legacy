@@ -19,3 +19,5 @@ function convertDate(timestamp) {
 
   return `${monthStrs[d.getMonth()]} ${d.getDate()}`;
 }
+
+module.exports = convertDate;

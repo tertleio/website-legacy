@@ -1,7 +1,7 @@
 ---
 Author: Ryan
 Est: 3 min read
-Date: Nov 2022
+Created: 2022/11/14
 ---
 
 <!-- # Top 15 Questions to Ask a Potential Co-Founder -->

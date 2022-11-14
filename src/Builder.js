@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const parseMeta = require('./utils/parseMeta');
 const parseExt = require('./utils/parseExt');
+const convertDate = require('./utils/convertDate');
 const { ylw, grn, red } = require('./utils/logs');
 
 module.exports = class Builder {
@@ -33,8 +34,8 @@ module.exports = class Builder {
             file = c;
             nextVars = {
               author: m.Author,
-              est: m.Est,
-              date: m.Date,
+              est: m.Est, // TODO: auto estimate based on wordcount
+              date: convertDate(Date.now()),
             };
           } else {
             console.log(`⚠️  '${red(path)}' should contain a meta header'`);
