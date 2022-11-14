@@ -5,6 +5,8 @@ function getVarsFor(page) {
         idx: null,
         userType: 'founder',
         showFooterVisual: false,
+        usePeekaboo: true,
+        usePopCta: true,
         useModal: false,
       };
     default:
@@ -12,6 +14,8 @@ function getVarsFor(page) {
         idx: null,
         userType: 'founder',
         showFooterVisual: false,
+        usePeekaboo: false,
+        usePopCta: true,
         useModal: false,
       };
   }

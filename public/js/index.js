@@ -8,8 +8,8 @@ import modal from './modal.js';
 import getPagename from './utils/getPagename.js';
 import getVarsFor from './vars.js';
 
-const pagename = getPagename();
-const vars = getVarsFor(pagename);
+const page = getPagename();
+const vars = getVarsFor(page);
 
 // Initiators
 async function initPrio1() {
@@ -19,7 +19,7 @@ async function initPrio1() {
 function initPrio2() {
   menu();
   demos();
-  scroll();
+  scroll(page, vars.usePopCta, vars.usePeekaboo);
   toggleTheme(vars.showFooterVisual);
   vars.useModal && modal(vars.userType);
 }

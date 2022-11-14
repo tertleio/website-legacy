@@ -1,7 +1,7 @@
 'use strict';
 const doc = document;
 
-const scroll = () => {
+const scroll = (page, useCta = true, usePeekaboo = false) => {
   const elNavCta = doc.querySelector('.header .ctaOne');
   const elOverlay = doc.getElementById('overlay-peekaboo');
   const menuRoot = doc.querySelector('#menu-content');
@@ -34,15 +34,25 @@ const scroll = () => {
     elTitle.innerText = elItem.dataset.short;
   }
 
-  function showRabbitAndCta(shouldShow) {
+  function showRabbit(shouldShow) {
+    if (shouldShow) {
+      elOverlay.style['animation-name'] = 'show-rabbit';
+      return true;
+    } else {
+      elOverlay.style['animation-name'] = 'hide-rabbit';
+      return false;
+    }
+  }
+
+  function showPrimaryCta(shouldShow) {
     elNavCta.style = 'transition: all 0.5s;';
 
     if (shouldShow) {
-      elNavCta.className = 'btn btn--secondary';
-      elOverlay.style['animation-name'] = 'show-rabbit';
-    } else {
       elNavCta.className = 'btn btn--primary';
-      elOverlay.style['animation-name'] = 'hide-rabbit';
+      return true;
+    } else {
+      elNavCta.className = 'btn btn--secondary';
+      return false;
     }
   }
 
@@ -51,22 +61,32 @@ const scroll = () => {
     const sectionCount = sections.length;
     let activeIdx = 0;
     let isRabbitShowing = true;
+    let isCtaShowing = false;
+    let triggerPos = page === 'home' ? sectionSums[0] - 450 : 400;
 
     function handler(yPos) {
       for (let i = 0; i < sectionCount; i++) {
         if (i === activeIdx) continue;
 
-        // Hero Handler
-        const isHeroVis = yPos > sectionSums[0] - 400 ? false : true;
-        if (!isHeroVis && isRabbitShowing) {
-          showRabbitAndCta(isHeroVis);
-          isRabbitShowing = false;
-        } else if (isHeroVis && !isRabbitShowing) {
-          showRabbitAndCta(isHeroVis);
-          isRabbitShowing = true;
+        // page fold in view
+        const isAboveFold = yPos < triggerPos;
+        if (isAboveFold) {
+          if (usePeekaboo) {
+            if (!isRabbitShowing) isRabbitShowing = showRabbit(true);
+          }
+          if (useCta) {
+            if (!!isCtaShowing) isCtaShowing = showPrimaryCta(false);
+          }
+        } else {
+          if (usePeekaboo) {
+            if (!!isRabbitShowing) isRabbitShowing = showRabbit(false);
+          }
+          if (useCta) {
+            if (!isCtaShowing) isCtaShowing = showPrimaryCta(true);
+          }
         }
 
-        // Title handler
+        // content menu titles
         const min = sectionSums[i - 1] - 1;
         const isAfterMinPos = i === 0 ? true : yPos > min;
         if (!isAfterMinPos) continue;
