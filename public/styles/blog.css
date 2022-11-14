@@ -1,22 +1,23 @@
-
+/* POST ONLY  */
 .post-container ol {
   list-style: list-item;
   line-height: 1.3;
 }
 
 .post-container li {
-  /* background: red; */
-  /* padding-left: 1em; */
   margin-bottom: 1em;
   margin-left: 1em;
   padding-left: 0.3em;
 }
 
-/* i, em  { 
-  display: flex;
-  margin-top: 0.5em;
-  justify-content: center; 
-} */
+.post-container em {
+  font-style: italic;
+}
+
+.post-container a {
+  margin-right: 0.25em;
+  margin-left: 0.25em;
+}
 
 #posts h1 { text-align: center;  margin-top: 0.5em;}
 .post-container {
@@ -25,8 +26,8 @@
   padding-bottom: 2em; 
   max-width: 600px; 
 }
-.post-container h2 { margin-top: 2em; }
-.post-container p {
+.post-container h2 { margin-top: 2.25em; margin-bottom: 1em; }
+.post-container p, .post-container ol, .post-container ul {
   margin-bottom: 1.5em;
 }
 .post-container img { 
@@ -35,10 +36,8 @@
    margin-top: 1em;
    border: 1px solid var(--color-highlight);
   }
-  
-/* END: post  */
-
-/* used in multiple */
+/* /POST ONLY  */
+/* COMMON */
 .post-info {
   display: flex;
   margin-top: 1.25em;
@@ -57,11 +56,9 @@
   margin-right: 0.5em;
   border-radius: 5em;
 }
-/* ///////////////////////// */
+/* /COMMON */
 
-
-/* BEGIN: post list */
-
+/* LIST ONLY */
 .post-list-container {
   margin: 0 auto;
   max-width: 600px;
@@ -91,3 +88,4 @@
   border-radius: 0.25em;
   border: 1px solid var(--color-highlight);
 }
+/* /LIST ONLY */
