@@ -37,23 +37,20 @@ const config = [
     name: 'home',
     prebuild: {
       read: [
-        './components/header.hbs',
-        './sections/index.hbs',
-        './components/footer.hbs',
+        { header: './components/header.hbs' },
+        { sections: './sections/index.hbs' },
+        { header: './components/footer.hbs' },
       ],
       vars: {
         ...defaultVars,
       },
     },
     build: {
-      read: ['./layouts/default.hbs'],
+      read: [{ layout: './layouts/default.hbs' }],
       vars: {
         title: 'Tertle - Co-Founder Matching',
         canonical: 'https://tertle.io',
         description: 'Meet like-minded co-founders and hatch a startup.',
-        header: '',
-        sections: '',
-        footer: '',
       },
     },
     write: '../public/index.html',
@@ -62,21 +59,18 @@ const config = [
     name: 'blog',
     prebuild: {
       read: [
-        './components/header.hbs',
-        './sections/blog.hbs',
-        './components/footer.hbs',
+        { header: './components/header.hbs' },
+        { sections: './sections/blog.hbs' },
+        { footer: './components/footer.hbs' },
       ],
       vars: { ...defaultVars },
     },
     build: {
-      read: ['./layouts/default.hbs'],
+      read: [{ layout: './layouts/default.hbs' }],
       vars: {
         title: 'Tertle Blog | Co-Founder Matching',
         canonical: 'https://tertle.io/blog',
         description: 'Hear ye, tech founders - a blog about startup stuff!',
-        header: '',
-        sections: '',
-        footer: '',
       },
     },
     write: '../public/blog/index.html',

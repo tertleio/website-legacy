@@ -49,7 +49,6 @@ module.exports = class Builder {
 
   construct({ data, vars, nextVars }) {
     const constructed = {};
-    console.log(nextVars);
 
     while (data.length) {
       let html;
