@@ -25,41 +25,6 @@ function heading(txt, lv) {
   }
 }
 
-// function image(href, title, alt) {
-//   // console.log(href, title, alt);
-//   const fullPath = '/blog/top-15-questions-to-ask-a-potential-co-founder';
-//   return `<img class="post-img" src="${fullPath}${href}" title="${alt}" alt="${alt}" />`;
-// }
-
-// let gotMeta = false;
-// const walkTokens = (token, lol) => {
-//   console.log(lol);
-//   // console.log(token);
-//   if (token.type === 'hr') {
-//     // console.log(token);
-//     // console.log(token.depth);
-//     // token.depth += 1;
-//   }
-// };
-
-// const tokenizer = {
-//   codespan(src) {
-//     console.log(src);
-//     const match = src.match(/^\$+([^\$\n]+?)\$+/);
-//     console.log(match);
-//     if (match) {
-//       return {
-//         type: 'codespan',
-//         raw: match[0],
-//         text: match[1].trim(),
-//       };
-//     }
-
-//     // return false to use original codespan tokenizer
-//     return false;
-//   },
-// };
-
 // overrrides
 const renderer = { heading };
 const opts = {
