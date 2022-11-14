@@ -7,6 +7,7 @@ const scroll = (page, useCta = true, usePeekaboo = false) => {
   const menuRoot = doc.querySelector('#menu-content');
 
   function getHeights() {
+    // TODO: pass in arg to query selector e.g trigger on h2 px pos
     const els = doc.querySelectorAll('.container');
     const allHeights = [...els].map((el) => el.offsetHeight);
 
@@ -62,7 +63,8 @@ const scroll = (page, useCta = true, usePeekaboo = false) => {
     let activeIdx = 0;
     let isRabbitShowing = true;
     let isCtaShowing = false;
-    let triggerPos = page === 'home' ? sectionSums[0] - 450 : 400;
+    let triggerPos = page === 'home' ? sectionSums[0] - 450 : 400; // tmp / TODO
+    const useTitle = page === 'home'; // tmp / TODO
 
     function handler(yPos) {
       for (let i = 0; i < sectionCount; i++) {
@@ -87,15 +89,17 @@ const scroll = (page, useCta = true, usePeekaboo = false) => {
         }
 
         // content menu titles
-        const min = sectionSums[i - 1] - 1;
-        const isAfterMinPos = i === 0 ? true : yPos > min;
-        if (!isAfterMinPos) continue;
+        if (useTitle) {
+          const min = sectionSums[i - 1] - 1;
+          const isAfterMinPos = i === 0 ? true : yPos > min;
+          if (!isAfterMinPos) continue;
 
-        const max = sectionSums[i] + header;
-        const isBeforeMaxPos = i === sectionCount ? true : yPos < max;
-        if (!isBeforeMaxPos) continue;
+          const max = sectionSums[i] + header;
+          const isBeforeMaxPos = i === sectionCount ? true : yPos < max;
+          if (!isBeforeMaxPos) continue;
 
-        replaceTitle(i + 1);
+          replaceTitle(i + 1);
+        }
         activeIdx = i;
       }
     }
