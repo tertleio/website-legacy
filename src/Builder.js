@@ -11,96 +11,112 @@ module.exports = class Builder {
     this.md = md;
   }
 
+  // if (read.hasOwnProperty(key)) {
+  //   if (i === 0) {
+  //     nextVars = vars;
+  //   }
+
+  //   if (key ==='meta') {
+  //     nextVars = parseMeta(read[key]);
+  //   } else {
+
   getFile(pathname) {
     return fs.readFileSync(path.resolve(__dirname, pathname), 'utf-8');
   }
 
-  getStruct({ read, vars }, newVars = false) {
-    let nextVars;
+  getStruct({ read, vars }, passVars = false) {
+    let data = [];
+    let nextVars = {};
+    // console.log('passVars', passVars);
+    if (passVars) vars = { ...vars, ...passVars };
 
-    // console.log('NEW VARS', newVars);
-
-    const files = read.map((path) => {
-      let file = this.getFile(path);
-      const split = path.split('.');
-      const ext = split[split.length - 1];
-
-      if (ext === 'md') {
-        if (file.startsWith('---')) {
-          const { content: c, meta: m } = parseMeta(file);
-          file = c;
-          nextVars = {
-            author: m.Author,
-            est: m.Est,
-            date: m.Date,
-          };
-        } else {
-          console.log(`⚠️  '${red(path)}' should contain a meta header'`);
+    for (const i of read) {
+      for (const key in i) {
+        const path = i[key];
+        let file = this.getFile(path);
+        const split = path.split('.');
+        const ext = split[split.length - 1];
+        if (ext === 'md') {
+          if (file.startsWith('---')) {
+            const { content: c, meta: m } = parseMeta(file);
+            file = c;
+            nextVars = {
+              author: m.Author,
+              est: m.Est,
+              date: m.Date,
+            };
+          } else {
+            console.log(`⚠️  '${red(path)}' should contain a meta header'`);
+          }
         }
-      }
-
-      return { ext, content: file };
-    });
-
-    if (newVars) {
-      let i = 0;
-      for (const key in vars) {
-        if (vars[key]) continue; // has a value to be used from config
-        vars[key] += newVars[i].vars;
-        i++;
+        data.push({ key, ext, content: file });
+        // nextVars[key] += file;
       }
     }
 
-    return { files, vars, nextVars };
+    // console.log(data);
+
+    //   return { ext, content: file };
+    // });
+
+    // if (newVars) {
+    //   let i = 0;
+    //   for (const key in vars) {
+    //     if (vars[key]) continue; // has a value to be used from config
+    //     vars[key] += newVars[i].vars;
+    //     i++;
+    //   }
+    // }
+
+    // console.log(data);s
+    return { data, vars, nextVars };
   }
 
-  compose({ files, vars }) {
-    const compiled = [];
+  construct({ data, vars, nextVars }) {
+    const constructed = {};
+    console.log(nextVars);
 
-    while (files.length) {
+    while (data.length) {
       let html;
-      const currFile = files.shift();
-      const withVars = currFile.ext === 'hbs';
+      const curr = data.shift();
+      const withVars = curr.ext === 'hbs';
       const helper = withVars ? this.hbs : this.md;
-      const template = helper(currFile.content);
+      const template = helper(curr.content);
       html = withVars ? template(vars) : template;
-      compiled.push({ vars: html });
+      // console.log('data', data);
+      constructed[curr.key] = html;
     }
 
-    return compiled;
+    return { ...nextVars, ...constructed };
   }
 
   writeFile(writepath, file) {
     fs.writeFileSync(path.resolve(__dirname, writepath), file);
   }
 
-  run(idx, debug = false, verbose = false) {
+  run(idx) {
     if (this.count === 0) console.log(`⏳ Builder ${this.count} starting...`);
     const { name, prebuild, build, write } = this.config[idx];
     this.count++;
 
-    console.log(`🟧 i:`, ylw(name));
-    const readPrebuild = this.getStruct(prebuild);
-    debug && console.log(readPrebuild);
-    const prebuilt = this.compose(readPrebuild);
-    debug && verbose && console.log(prebuilt);
+    // 1. read prebuild files, with keys
+    // 2. somplify vars and pass them around to all steps? or optionally pass them per step
 
-    // console.log('nextVars', readPrebuild.nextVars);
-    // console.log(typeof prebuilt);
-    // console.log(readPrebuild.nextVars);
+    console.log(`🟧 i:`, ylw(name));
+    const prebuildStruct = this.getStruct(prebuild);
+    // console.log(prebuildStruct);
+
+    // 1. construct prebuild
+    // 2. return the construction as nextVars
+    const prebuilt = this.construct(prebuildStruct);
     // console.log(prebuilt);
 
-    if (readPrebuild.nextVars) {
-      prebuilt.push({ vars: readPrebuild.nextVars.author });
-      prebuilt.push({ vars: readPrebuild.nextVars.est });
-      prebuilt.push({ vars: readPrebuild.nextVars.date });
-    }
-    let readBuild = this.getStruct(build, prebuilt);
-    debug && console.log(readBuild);
-    const built = this.compose(readBuild);
-    debug && verbose && console.log(built);
+    const buildStruct = this.getStruct(build, prebuilt);
+    console.log('BUILD STRUCT', buildStruct);
+    const built = this.construct(buildStruct);
+    // console.log(built.layout);
 
-    this.writeFile(write, built[0].vars);
+    this.writeFile(write, built.layout);
     console.log('✅ o:', grn(write));
   }
 };

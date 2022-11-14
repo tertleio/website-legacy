@@ -63,7 +63,7 @@ const opts = {
   gfm: true,
   breaks: true,
   sanitize: false,
-  smartypants: false,
+  smartypants: true,
   xhtml: false,
 };
 

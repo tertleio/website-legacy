@@ -12,14 +12,14 @@ const config = [
     name: 'post1',
     prebuild: {
       read: [
-        './components/header.hbs',
-        './content/1/index.md',
-        './components/footer.hbs',
+        { header: './components/header.hbs' },
+        { sections: './content/1/index.md' },
+        { footer: './components/footer.hbs' },
       ],
       vars: { ...defaultVars },
     },
     build: {
-      read: ['./layouts/post.hbs'],
+      read: [{ layout: './layouts/post.hbs' }],
       vars: {
         h1: 'Top 15 Questions to Ask a Potential Co-founder',
         title:
@@ -28,12 +28,6 @@ const config = [
           'https://tertle.io/blog/top-15-questions-to-ask-a-potential-co-founder',
         description:
           'The best questions to ask when searching for a potential co-founder.',
-        header: '',
-        sections: '',
-        footer: '',
-        author: '',
-        est: '',
-        date: '',
       },
     },
     write:
