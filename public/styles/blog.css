@@ -15,7 +15,7 @@ ol li {
 } */
 
 #posts h1 { text-align: center;  margin-top: 0.5em;}
-.post-container { margin: 0 auto; padding-top: 0.2em;  padding-bottom: 2em;  max-width: 550px; }
+.post-container { margin: 0 auto; padding-top: 0.2em;  padding-bottom: 2em;  max-width: 600px; }
 .post-container h2 { margin-top: 2em; }
 .post-container p {
   margin-bottom: 1.5em;
