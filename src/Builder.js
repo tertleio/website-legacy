@@ -72,7 +72,7 @@ module.exports = class Builder {
     const { name, prebuild, build, write } = this.config[idx];
     this.count++;
 
-    console.log(`🟧 i:`, ylw(name));
+    console.log(`🔶 i:`, ylw(name));
     const prebuildStruct = this.getStruct(prebuild);
     const prebuilt = this.construct(prebuildStruct);
 

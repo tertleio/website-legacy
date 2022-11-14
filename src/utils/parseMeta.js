@@ -1,6 +1,5 @@
 const parseMeta = (file, tokens = ['---', '---']) => {
   function toJson(data) {
-    console.log(data);
     const tmpObj = {},
       lines = data.trim().split('\n');
 
