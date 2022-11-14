@@ -11,15 +11,6 @@ module.exports = class Builder {
     this.md = md;
   }
 
-  // if (read.hasOwnProperty(key)) {
-  //   if (i === 0) {
-  //     nextVars = vars;
-  //   }
-
-  //   if (key ==='meta') {
-  //     nextVars = parseMeta(read[key]);
-  //   } else {
-
   getFile(pathname) {
     return fs.readFileSync(path.resolve(__dirname, pathname), 'utf-8');
   }
@@ -27,7 +18,6 @@ module.exports = class Builder {
   getStruct({ read, vars }, passVars = false) {
     let data = [];
     let nextVars = {};
-    // console.log('passVars', passVars);
     if (passVars) vars = { ...vars, ...passVars };
 
     for (const i of read) {
@@ -50,25 +40,9 @@ module.exports = class Builder {
           }
         }
         data.push({ key, ext, content: file });
-        // nextVars[key] += file;
       }
     }
 
-    // console.log(data);
-
-    //   return { ext, content: file };
-    // });
-
-    // if (newVars) {
-    //   let i = 0;
-    //   for (const key in vars) {
-    //     if (vars[key]) continue; // has a value to be used from config
-    //     vars[key] += newVars[i].vars;
-    //     i++;
-    //   }
-    // }
-
-    // console.log(data);s
     return { data, vars, nextVars };
   }
 
@@ -95,26 +69,16 @@ module.exports = class Builder {
   }
 
   run(idx) {
-    if (this.count === 0) console.log(`⏳ Builder ${this.count} starting...`);
+    if (this.count === 0) console.log(`⏳ Builder starting at idx '${idx}'...`);
     const { name, prebuild, build, write } = this.config[idx];
     this.count++;
 
-    // 1. read prebuild files, with keys
-    // 2. somplify vars and pass them around to all steps? or optionally pass them per step
-
     console.log(`🟧 i:`, ylw(name));
     const prebuildStruct = this.getStruct(prebuild);
-    // console.log(prebuildStruct);
-
-    // 1. construct prebuild
-    // 2. return the construction as nextVars
     const prebuilt = this.construct(prebuildStruct);
-    // console.log(prebuilt);
 
     const buildStruct = this.getStruct(build, prebuilt);
-    console.log('BUILD STRUCT', buildStruct);
     const built = this.construct(buildStruct);
-    // console.log(built.layout);
 
     this.writeFile(write, built.layout);
     console.log('✅ o:', grn(write));
