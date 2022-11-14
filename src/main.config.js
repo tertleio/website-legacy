@@ -39,7 +39,7 @@ const config = [
       read: [
         { header: './components/header.hbs' },
         { sections: './sections/index.hbs' },
-        { header: './components/footer.hbs' },
+        { footer: './components/footer.hbs' },
       ],
       vars: {
         ...defaultVars,
