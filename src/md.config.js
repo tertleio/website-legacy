@@ -2,7 +2,6 @@
 const marked = require('marked');
 
 function heading(txt, lv) {
-  console.log(txt);
   let escTxt = txt.toLowerCase().replace(/[^\w]+/g, '-');
   escTxt = escTxt.replace(/amp/, '&'); // &amp; -> & for id anchors
   switch (lv) {
