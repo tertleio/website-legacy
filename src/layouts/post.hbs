@@ -41,36 +41,31 @@
 
   <body>
     {{{header}}}
-      <div class="container" style="padding-bottom: 0;">
-        <main>
-          <div class="post-container">
-          <h1 class="h2">{{h1}}</h1>
+    <div class="container" style="padding-bottom: 0">
+      <div class="post-container">
+        <h1 class="h2">{{h1}}</h1>
 
-          <div class="post-info">
-            <div class="avatar">
-              <img
-                src="../../assets/avatars/ryan-xs.jpg"
-                alt="Ryan"
-                title="Founder"
-              />
-              {{author}}
-            </div>
-            <div>📆 {{date}}</div>
-            <div>⏱ {{est}}</div>
+        <div class="post-info">
+          <div class="avatar">
+            <img
+              src="../../assets/avatars/ryan-xs.jpg"
+              alt="Ryan"
+              title="Founder"
+            />
+            {{author}}
           </div>
-          </div>
+          <div>📆 {{date}}</div>
+          <div>⏱ {{est}}</div>
         </div>
-          
-          <div class="wrapper">
-          <div class="container" style="padding-top: 0;">
-            <div class="post-container">
-            {{{sections}}}
-            </div>
-          </div>
-          </div>
-        </main>
-        </div>
-    
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="container" style="padding-top: 0">
+          <div class="post-container">{{{sections}}}</div>
+      </div>
+    </div>
+
     {{{footer}}}
   </body>
 </html>

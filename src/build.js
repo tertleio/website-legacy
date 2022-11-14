@@ -17,5 +17,5 @@ const builder = new Builder(config, handlebars.compile, marked.parse);
   // }
 
   //test
-  // builder.run(0);
+  builder.run(0);
 })();
