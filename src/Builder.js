@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const prettier = require('prettier');
 const parseMeta = require('./utils/parseMeta');
 const parseExt = require('./utils/parseExt');
 const convertDate = require('./utils/convertDate');
@@ -80,7 +81,8 @@ module.exports = class Builder {
     const builtStruct = this.getStruct(build, prebuilt);
     const built = this.construct(builtStruct);
 
-    this.writeFile(write, built.layout);
+    const prettified = prettier.format(built.layout, { parser: 'html' });
+    this.writeFile(write, prettified);
     console.log('✅ o:', grn(write));
   }
 };
