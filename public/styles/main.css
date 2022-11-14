@@ -75,18 +75,20 @@ html, body {
   position: relative;
 }
 
-.container {
-  padding: 5vh 2rem;
-  padding: 5rem 2rem;
-  max-width: 1150px;
-  margin-inline: auto;
-}
-
 .wrapper {
   background: var(--separator) no-repeat center top;
   background-size: clamp(23em, 90vw, 80rem);
   margin: 0 auto;
+  padding: 0 0.5em;
 }
+
+.container {
+  /* padding: 5vh 2rem; */
+  padding: 4rem 1rem;
+  max-width: 1150px;
+  margin-inline: auto;
+}
+
 
 /*
 #matrix::before {

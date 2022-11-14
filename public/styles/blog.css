@@ -15,7 +15,7 @@ ol li {
 } */
 
 #posts h1 { text-align: center;  margin-top: 0.5em;}
-.post-container { margin: 0 auto; max-width: 575px; }
+.post-container { margin: 0 auto; padding: 1em 0 0 0;  margin-bottom: 2em;  max-width: 550px; }
 .post-container h2 { margin-top: 2em; }
 .post-container p {
   margin-bottom: 1.5em;
@@ -31,7 +31,7 @@ ol li {
 /* used in multiple */
 .post-info {
   display: flex;
-  margin-top: 1.5em;
+  margin-top: 1.25em;
   align-items: center;
   justify-content: space-between;
   /* border: 1px solid blue; */

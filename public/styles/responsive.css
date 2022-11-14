@@ -12,6 +12,10 @@
 
 /* mobile */
 @media screen and (max-width: 600px) {
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
   :root { font-size: 15px; }
   .mb { display: block; visibility: visible;}
   .dt { display: none !important; }
