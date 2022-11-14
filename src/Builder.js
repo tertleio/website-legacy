@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const { ylw, grn, red } = require('./utils/logs');
 const parseMeta = require('./utils/parseMeta');
+const parseExt = require('./utils/parseExt');
+const { ylw, grn, red } = require('./utils/logs');
 
 module.exports = class Builder {
   constructor(config, hbs, md) {
@@ -23,9 +24,9 @@ module.exports = class Builder {
     for (const i of read) {
       for (const key in i) {
         const path = i[key];
+        const ext = parseExt(path);
         let file = this.getFile(path);
-        const split = path.split('.');
-        const ext = split[split.length - 1];
+
         if (ext === 'md') {
           if (file.startsWith('---')) {
             const { content: c, meta: m } = parseMeta(file);
@@ -57,7 +58,6 @@ module.exports = class Builder {
       const helper = withVars ? this.hbs : this.md;
       const template = helper(curr.content);
       html = withVars ? template(vars) : template;
-      // console.log('data', data);
       constructed[curr.key] = html;
     }
 
