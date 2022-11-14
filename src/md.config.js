@@ -25,25 +25,28 @@ function heading(txt, lv) {
   }
 }
 
-function image(href, title, alt) {
-  // console.log(href, title, alt);
-  const fullPath = '/blog/top-15-questions-to-ask-a-potential-co-founder';
-  return `<img class="post-img" src="${fullPath}${href}" title="${alt}" alt="${alt}" />`;
-}
+// function image(href, title, alt) {
+//   // console.log(href, title, alt);
+//   const fullPath = '/blog/top-15-questions-to-ask-a-potential-co-founder';
+//   return `<img class="post-img" src="${fullPath}${href}" title="${alt}" alt="${alt}" />`;
+// }
 
 // let gotMeta = false;
-// const walkTokens = (token) => {
-//   console.log(token);
+// const walkTokens = (token, lol) => {
+//   console.log(lol);
+//   // console.log(token);
 //   if (token.type === 'hr') {
 //     // console.log(token);
+//     // console.log(token.depth);
 //     // token.depth += 1;
 //   }
 // };
 
 // const tokenizer = {
 //   codespan(src) {
-//     // console.log(src);
+//     console.log(src);
 //     const match = src.match(/^\$+([^\$\n]+?)\$+/);
+//     console.log(match);
 //     if (match) {
 //       return {
 //         type: 'codespan',
@@ -58,8 +61,9 @@ function image(href, title, alt) {
 // };
 
 // overrrides
-const renderer = { heading, image };
+const renderer = { heading };
 const opts = {
+  baseUrl: '/assets/blog/',
   pedantic: true,
   gfm: true,
   breaks: true,

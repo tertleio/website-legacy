@@ -12,10 +12,10 @@ const builder = new Builder(config, handlebars.compile, marked.parse);
 
 (() => {
   const len = config.length;
-  // for (let i = 0; i < len; i++) {
-  //   builder.run(i);
-  // }
+  for (let i = 0; i < len; i++) {
+    builder.run(i);
+  }
 
   //test
-  builder.run(0);
+  // builder.run(0);
 })();

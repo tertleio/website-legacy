@@ -13,7 +13,7 @@ const config = [
     prebuild: {
       read: [
         { header: './components/header.hbs' },
-        { sections: './content/1/index.md' },
+        { sections: './content/1.md' },
         { footer: './components/footer.hbs' },
       ],
       vars: { ...defaultVars },
