@@ -74,11 +74,11 @@ module.exports = class Builder {
     this.count++;
 
     console.log(`🔶 i:`, ylw(name));
-    const prebuildStruct = this.getStruct(prebuild);
-    const prebuilt = this.construct(prebuildStruct);
+    const prebuiltStruct = this.getStruct(prebuild);
+    const prebuilt = this.construct(prebuiltStruct);
 
-    const buildStruct = this.getStruct(build, prebuilt);
-    const built = this.construct(buildStruct);
+    const builtStruct = this.getStruct(build, prebuilt);
+    const built = this.construct(builtStruct);
 
     this.writeFile(write, built.layout);
     console.log('✅ o:', grn(write));
