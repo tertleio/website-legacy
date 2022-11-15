@@ -81,7 +81,11 @@ module.exports = class Builder {
     const builtStruct = this.getStruct(build, prebuilt);
     const built = this.construct(builtStruct);
 
-    const prettified = prettier.format(built.layout, { parser: 'html' });
+    const prettified = prettier.format(built.layout, {
+      ...this.getFile('../.prettierrc'),
+      parser: 'html',
+    });
+
     this.writeFile(write, prettified);
     console.log('✅ o:', grn(write));
   }
