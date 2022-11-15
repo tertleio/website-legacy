@@ -81,8 +81,9 @@ module.exports = class Builder {
     const builtStruct = this.getStruct(build, prebuilt);
     const built = this.construct(builtStruct);
 
+    const prettierConfig = JSON.parse(this.getFile('../.prettierrc'));
     const prettified = prettier.format(built.layout, {
-      ...this.getFile('../.prettierrc'),
+      ...prettierConfig,
       parser: 'html',
     });
 
