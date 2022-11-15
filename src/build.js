@@ -1,10 +1,16 @@
 const Builder = require('./Builder');
-const handlebars = require('handlebars');
+const { getFile } = new Builder();
 
+const handlebars = require('handlebars');
 const config = require('./main.config');
 const marked = require('./md.config');
-const builder = new Builder(config, handlebars.compile, marked.parse);
-// const mdBuilder = new Builder(mdConfig, marked.parse);
+const prettierConfig = JSON.parse(getFile('../.prettierrc'));
+const builder = new Builder(
+  config,
+  handlebars.compile,
+  marked.parse,
+  prettierConfig
+);
 
 // TODO:
 // only run build on files that have changed

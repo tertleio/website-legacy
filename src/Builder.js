@@ -7,11 +7,12 @@ const convertDate = require('./utils/convertDate');
 const { ylw, grn, red } = require('./utils/logs');
 
 module.exports = class Builder {
-  constructor(config, hbs, md) {
+  constructor(config, hbs, md, prettierConfig) {
     this.count = 0;
     this.config = config;
     this.hbs = hbs;
     this.md = md;
+    this.prettierConfig = prettierConfig;
   }
 
   getFile(pathname) {
@@ -81,9 +82,8 @@ module.exports = class Builder {
     const builtStruct = this.getStruct(build, prebuilt);
     const built = this.construct(builtStruct);
 
-    const prettierConfig = JSON.parse(this.getFile('../.prettierrc'));
     const prettified = prettier.format(built.layout, {
-      ...prettierConfig,
+      ...this.prettierConfig,
       parser: 'html',
     });
 
