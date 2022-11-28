@@ -31,14 +31,14 @@
   --color-primary-dark:  #00FF00;
   --color-dark: #000;
   --color-light: #fff;
-  --color-third: #37352e;
-  --color-grey1: #eeeeee;
-  --color-grey2: #b2b2b2;
-  --color-grey3: #ADADAD;
-  --color-grey4: #7B7B7B;
-  --color-grey5: #383838;
-  --color-grey6: #212121;
-  --color-grey7: #111111;
+  --color-third: #37352e; /* unused */
+  --color-grey1: #eeeeee; /* bg2 light, used in one place */
+  --color-grey2: #b2b2b2; /* unused */
+  --color-grey3: #ADADAD; /* text */
+  --color-grey4: #7B7B7B; /* unused */
+  --color-grey5: #383838; /* color-highlight */
+  --color-grey6: #212121; /* shadow */
+  --color-grey7: #111111; /* unused */
   --color-orange: #ff9b00;
   --color-green: #94bb77;
   --color-red: #eb3333;
