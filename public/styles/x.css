@@ -140,9 +140,22 @@
   margin: 0 auto;
 }
 
-.content h2 {
-  margin-bottom: 1.25em;
+.section-header {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3em;
 }
+.section-header h2 { 
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+.section-header span {
+  font-size: 3.5em;
+}
+
 
 .content .__single {
   margin: 0 auto;
