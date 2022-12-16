@@ -51,7 +51,7 @@ const config = [
         title: 'Tertle - Co-Founder Matching',
         canonical: 'https://tertle.io',
         description:
-          'The place where founders and indie hackers meet for real conversations.',
+          'The place where solo startup founders and indie hackers meet their duo match.',
       },
     },
     write: '../public/index.html',
