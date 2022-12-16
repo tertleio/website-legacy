@@ -50,7 +50,8 @@ const config = [
       vars: {
         title: 'Tertle - Co-Founder Matching',
         canonical: 'https://tertle.io',
-        description: 'Meet like-minded co-founders and hatch a startup.',
+        description:
+          'The place where founders and indie hackers meet for real conversations.',
       },
     },
     write: '../public/index.html',
