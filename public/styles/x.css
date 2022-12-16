@@ -44,7 +44,13 @@
 
 .hero__header {
   margin-bottom: 1em;
-} 
+}
+
+.hero__header p {
+  margin-top: 0.5em;
+  max-width: 22em;
+  line-height: 1.4;
+}
 
 .hero__body {
   height: 40vh;
@@ -58,7 +64,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   border-radius: 0.4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5vh;
   max-width: 80vw;
 }
 
@@ -107,10 +113,11 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: 29ch;
+  width: 31ch;
 }
 
 .typer p {
+  animation-delay: 3s;
   font-family: 'Ubuntu-Mono', monospace;
   overflow: hidden; 
   border-right: 1px solid; 
@@ -118,7 +125,7 @@
   margin: 0 auto;
   letter-spacing: .1em; 
   animation: 
-    typing 3.5s steps(40, end),
+    typing 2s steps(40, end),
     blink-caret 2s step-end infinite;
     color: var(--color-primary);
     font-size: 1.1rem;
