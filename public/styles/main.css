@@ -16,7 +16,7 @@
   /* theme */
   --color-primary: var(--color-primary-dark);
   --color-bg: var(--color-dark);
-  --color-bg2: var(--color-grey7);
+  --color-bg2: var(--color-grey8);
   --color-fg: var(--color-light);
   --color-link: var(--color-primary-dark);
   --color-text: var(--color-grey3);
@@ -25,10 +25,12 @@
   --splitter: url('../../assets/splitter-dark.svg');
   --bg-pattern: url('../assets/bg-pattern-dark.svg');
   --color-highlight: var(--color-grey5);
+  --color-highlight2: var(--color-grey7);
   --logo-letters: url('../assets/logo-letters-dark.svg');
   /* colors */
   --color-primary-light: #60964f;
   --color-primary-dark:  #00FF00;
+  --color-rgb-fg: 255, 255, 255; 
   --color-dark: #000;
   --color-light: #fff;
   --color-third: #37352e; /* unused */
@@ -38,7 +40,8 @@
   --color-grey4: #7B7B7B; /* unused */
   --color-grey5: #383838; /* color-highlight */
   --color-grey6: #212121; /* shadow */
-  --color-grey7: #111111; /* unused */
+  --color-grey7: #181818;
+  --color-grey8: #111111;
   --color-orange: #ff9b00;
   --color-green: #94bb77;
   --color-red: #eb3333;
@@ -46,6 +49,7 @@
 }
 
 [theme="light"] {
+  --color-rgb-fg: 0, 0, 0;
   --color-primary: var(--color-primary-light);
   --color-bg: var(--color-light);
   --color-bg2: var(--color-grey1);
@@ -54,6 +58,7 @@
   --color-nav: var(--color-grey3);
   --color-link: var(--color-blue);
   --color-highlight: #E5E5E5;
+  --color-highlight2: #dadada;
   --bg-pattern: url('../assets/bg-pattern-light.svg');
   --separator: url('../assets/separator-light.svg');
   --splitter: url('../../assets/splitter-light.svg');
