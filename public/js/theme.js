@@ -1,6 +1,7 @@
 'use strict';
 const doc = document;
 import matrix from './matrix.js';
+import parseFileAndExt from './utils//parseFileAndExt.js';
 
 const toggleTheme = (showFooterVisual) => {
   const elsToggle = doc.querySelectorAll('.toggleTheme');
@@ -12,13 +13,16 @@ const toggleTheme = (showFooterVisual) => {
     const elsFeatureDt = doc.querySelectorAll('.demo__dt img');
     const elsFeatureMb = doc.querySelectorAll('.demo__mb img');
 
-    elsFeatureDt.forEach(
-      (el, i) => (el.src = `/assets/feature${i + 1}-${theme}.png`)
-    );
+    elsFeatureDt.forEach((el, i) => {
+      const { filename, ext } = parseFileAndExt(el.src);
+      console.log('fn', filename, ext);
+      el.src = `/assets/features/${filename}[${theme}].${ext}`;
+    });
 
-    elsFeatureMb.forEach(
-      (el, i) => (el.src = `/assets/feature${i + 1}-${theme}.png`)
-    );
+    elsFeatureMb.forEach((el, i) => {
+      const { filename, ext } = parseFileAndExt(el.src);
+      el.src = `/assets/features/${filename}[${theme}].${ext}`;
+    });
   }
 
   function updateFooter(theme) {
