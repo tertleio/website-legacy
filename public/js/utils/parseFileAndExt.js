@@ -1,5 +1,4 @@
 function parseFileAndExt(path) {
-  console.log('path', path);
   const splitPath = path.split('/');
   const fileExt = splitPath[splitPath.length - 1];
   const splitFile = fileExt.split('[');

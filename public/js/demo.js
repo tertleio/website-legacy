@@ -4,6 +4,7 @@ const doc = document;
 function demo() {
   const elContent = doc.querySelector('.content-container');
   const elsDemo = doc.querySelectorAll('.demo__dt');
+  console.log(elsDemo);
 
   doc.querySelectorAll('.content-btn').forEach((btn) => {
     btn.addEventListener('click', (e) => {

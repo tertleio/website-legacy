@@ -35,6 +35,10 @@
   margin: 0 0.75em 0.75em 0; /* wider width */
 }
 
+.content-btn:not(.--active) h3 {
+  text-decoration: underline;
+}
+
 .break {
   flex-basis: 100%;
   width: 0;
