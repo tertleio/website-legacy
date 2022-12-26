@@ -15,7 +15,6 @@ const toggleTheme = (showFooterVisual) => {
 
     elsFeatureDt.forEach((el, i) => {
       const { filename, ext } = parseFileAndExt(el.src);
-      console.log('fn', filename, ext);
       el.src = `/assets/features/${filename}[${theme}].${ext}`;
     });
 

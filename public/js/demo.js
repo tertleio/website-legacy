@@ -2,22 +2,26 @@
 const doc = document;
 
 function demo() {
-  const elContent = doc.querySelector('.content-container');
-  const elsDemo = doc.querySelectorAll('.demo__dt');
-  console.log(elsDemo);
+  // get all the features
+  const elContent = doc.querySelectorAll('.feature');
+  // console.log(elsDemo);
 
-  doc.querySelectorAll('.content-btn').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      const elCurrActive = elContent.querySelector('.--active');
-      elCurrActive.classList.remove('--active');
+  elContent.forEach((c) => {
+    const elsDemo = c.querySelectorAll('.demo__dt');
 
-      btn.classList.add('--active');
+    c.querySelectorAll('.content-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const elCurrActive = c.querySelector('.--active');
+        elCurrActive.classList.remove('--active');
 
-      const targetId = e.target.id.split('-')[1];
-      const targetEl = elsDemo[targetId - 1];
+        btn.classList.add('--active');
 
-      elsDemo.forEach((demo) => demo.classList.remove('--active'));
-      targetEl.classList.add('--active');
+        const targetId = e.target.id.split('-')[1];
+        const targetEl = elsDemo[targetId - 1];
+
+        elsDemo.forEach((demo) => demo.classList.remove('--active'));
+        targetEl.classList.add('--active');
+      });
     });
   });
 }
