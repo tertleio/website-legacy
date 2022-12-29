@@ -1,13 +1,13 @@
 function resizeMatrix() {
-  const canvas = document.getElementById('canvas');
+  const canvas = document.getElementById('matrix');
   const context = canvas.getContext('2d');
 
   // resize the canvas to fill browser window dynamically
   window.addEventListener('resize', resizeCanvas, false);
 
   function resizeCanvas() {
+    canvas.height = 400;
     canvas.width = window.innerWidth;
-    // canvas.height = window.innerHeight;
 
     /**
      * Your drawings need to be inside this function otherwise they will be reset when
@@ -19,7 +19,6 @@ function resizeMatrix() {
   resizeCanvas();
 
   function drawStuff() {
-    2;
     // do your drawing stuff here
   }
 }
@@ -36,7 +35,8 @@ var columns = [];
 var maxStackHeight;
 
 function initMatrix() {
-  canvas = document.getElementById('canvas');
+  canvas = document.getElementById('matrix');
+  console.log(canvas);
   ctx = canvas.getContext('2d');
 
   resizeMatrix();

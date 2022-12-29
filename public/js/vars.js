@@ -4,7 +4,7 @@ function getVarsFor(page) {
       return {
         idx: null,
         userType: 'founder',
-        showFooterVisual: false,
+        showFooterVisual: true,
         usePeekaboo: true,
         usePopCta: true,
         useModal: false,
@@ -13,7 +13,7 @@ function getVarsFor(page) {
       return {
         idx: null,
         userType: 'founder',
-        showFooterVisual: false,
+        showFooterVisual: true,
         usePeekaboo: false,
         usePopCta: true,
         useModal: false,

@@ -6,8 +6,6 @@ import parseFileAndExt from './utils//parseFileAndExt.js';
 const toggleTheme = (showFooterVisual) => {
   const elsToggle = doc.querySelectorAll('.toggleTheme');
   const elRocket = doc.querySelector('.rocket');
-  // get all image srcs from demo
-  // rewrite all src's to selected theme
 
   function updateFeatures(theme) {
     const elsFeatureDt = doc.querySelectorAll('.demo__dt img');
@@ -28,7 +26,7 @@ const toggleTheme = (showFooterVisual) => {
     elRocket.src = `/assets/tertle_rocket-${theme}-sm.gif`;
 
     if (!showFooterVisual) return;
-    const elMatrix = doc.getElementById('matrix');
+    const elMatrix = doc.querySelector('#matrix');
     elMatrix.style = theme === 'dark' ? 'display: block;' : 'display: none;';
   }
 
