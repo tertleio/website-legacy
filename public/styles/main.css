@@ -76,12 +76,6 @@ html, body {
   background-color: var(--color-bg);
 }
 
-#matrix {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-
 .wrapper {
   background: var(--separator) no-repeat center top;
   background-size: clamp(23em, 90vw, 80rem);
@@ -94,27 +88,4 @@ html, body {
   padding: 4rem 1rem;
   max-width: 1150px;
   margin-inline: auto;
-}
-
-#matrix::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.0) 0%,
-      rgba(0, 0, 0, 0.0) 10%,
-      rgb(0, 0, 0) 100%
-    );
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 100;
-}
-
-#matrix canvas {
-  margin: 0 auto;
-  display: block; 
 }
