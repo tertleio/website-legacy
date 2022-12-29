@@ -115,9 +115,9 @@
   color: rgba(var(--color-rgb-fg), 0.2);
   background: rgba(var(--color-rgb-fg), 0.05);
 }
-.demo-head__btns span.red { background: red; }
-.demo-head__btns span.orange { background: orange; }
-.demo-head__btns span.green { background: green; }
+.demo-head__btns span.red { background: var(--color-red); }
+.demo-head__btns span.orange { background: var(--color-orange); }
+.demo-head__btns span.green { background: var(--color-green); }
 .demo-head__bar span { color: var(--color-primary); }
 
 
