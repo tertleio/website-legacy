@@ -12,9 +12,7 @@ function demo() {
 
   elsContent.forEach((c) => {
     const barArr = barTxt[c.id];
-    console.log(barTxt);
     const elsDemo = c.querySelectorAll('.demo__dt');
-    console.log('elsDemo', elsDemo);
 
     c.querySelectorAll('.content-btn').forEach((btn) => {
       btn.addEventListener('click', (e) => {
