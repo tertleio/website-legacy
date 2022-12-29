@@ -11,9 +11,9 @@ function render(vars) {
     return (elMenuContentRoot.style.display = 'none');
   }
 
+  // content menu
   elsH2.forEach((h2, i) => {
-    // content menu
-    if (i === 0) return; // skip first h2 ('Top of Page' set by default)
+    // if (i === 0) return; // skip first h2 ('Top of Page' set by default)
 
     const hashTag = '#' + h2.innerText.split(' ').join('-').toLowerCase();
     const h2D = h2.dataset;
