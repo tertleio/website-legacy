@@ -1,13 +1,13 @@
 @import '_reset.css';
+@import 'x.css';
 @import 'typography.css';
+@import 'buttons.css';
 @import './components/menu.css';
 @import './components/header.css';
 @import './components/footer.css';
 @import './components/feature.css';
-@import './blog.css';
 @import 'responsive.css';
-@import 'buttons.css';
-@import 'x.css';
+@import './blog.css';
 @import './components/modal.css';
 
 :root {
