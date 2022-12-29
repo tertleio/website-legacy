@@ -78,15 +78,22 @@
   border-radius: 0.75rem;
   flex: 1.75;
   flex-shrink: 2;
-  /* width: 37.5em; */
-  height: 100%;
+  overflow: hidden; 
+  height:  37.5em;
 }
 .demo { display: none; }
 .demo__dt.--active { 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
-.demo-aside img { height: stretch; width: 100%; }
+
+.demo__dt img {
+  height: 100%;
+}
+
 .demo-head {
   display: flex;
   height: 2em;
