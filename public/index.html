@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<script>
+  const isSysDark = window.matchMedia('(prefers-color-scheme: dark)');
+  if (isSysDark.matches) document.documentElement.setAttribute('theme', 'dark');
+  else document.documentElement.setAttribute('theme', 'light');
+</script>
+
 <html lang="en" theme="light">
   <head>
     <meta charset="UTF-8" />
@@ -259,7 +265,7 @@
     </section>
 
     <main>
-      <section id="s1" class="wrapper feature">
+      <section id="quality-over-quantity" class="wrapper feature">
         <div class="content container">
           <div class="section-header">
             <span>🥇</span>
@@ -270,7 +276,6 @@
             >
               Quality over quantity
             </h2>
-            <div class="break"></div>
             <p class="fs-lg">
               Find a co-founder that is as talented as you are
             </p>
@@ -290,6 +295,7 @@
 
                 <div class="demo demo__mb">
                   <img
+                    loading="lazy"
                     src="/assets/features/vetted-founders[light].jpg"
                     alt="Vetted high quality co-founder community"
                     title="Vetted high quality founders and indie hackers"
@@ -311,6 +317,7 @@
 
                 <div class="demo demo__mb">
                   <img
+                    loading="lazy"
                     src="/assets/features/layered-profiles[light].png"
                     alt="Decide on which co-founders to meet"
                     title="Decide on which co-founders to meet"
@@ -329,19 +336,21 @@
                   <span class="green"></span>
                 </div>
                 <div class="demo-head__bar">
-                  app.tertle.io<span>/match</span>
+                  app.tertle.io/<span>match</span>
                 </div>
               </div>
               <div id="d-1" class="demo demo__dt --active">
                 <img
-                  src="./assets/features/vetted-founders[light].jpg"
+                  loading="lazy"
+                  src="/assets/features/vetted-founders[light].jpg"
                   alt="Vetted high quality co-founder and indie hacker community"
                   title="Vetted high quality founders and indie hackers"
                 />
               </div>
               <div id="d-2" class="demo demo__dt">
                 <img
-                  src="./assets/features/layered-profiles[light].png"
+                  loading="lazy"
+                  src="/assets/features/layered-profiles[light].png"
                   alt="Decide on which co-founders to meet"
                   title="Decide on which co-founders to meet"
                 />
@@ -351,7 +360,7 @@
         </div>
       </section>
 
-      <section id="s2" class="wrapper feature">
+      <section id="smart-matching" class="wrapper feature">
         <div class="content container">
           <div class="section-header">
             <span>🧠</span>
@@ -384,6 +393,7 @@
                 </p>
                 <div class="demo demo__mb">
                   <img
+                    loading="lazy"
                     src="/assets/features/cofounder-matching-algorithm[light].png"
                     alt="Find a co-founder or indie hacker"
                     title="Find a talented co-founder or indie hacker"
@@ -405,6 +415,7 @@
 
                 <div class="demo demo__mb">
                   <img
+                    loading="lazy"
                     src="/assets/features/cofounder-preferences[light].png"
                     alt="Filter co-founder matches"
                     title="Filter co-founder matches"
@@ -423,11 +434,12 @@
                   <span class="green"></span>
                 </div>
                 <div class="demo-head__bar">
-                  app.tertle.io<span>/introduction</span>
+                  app.tertle.io/<span>introduction</span>
                 </div>
               </div>
               <div id="d-1" class="demo demo__dt --active">
                 <img
+                  loading="lazy"
                   src="/assets/features/cofounder-match-profile[light].png"
                   alt="Filter co-founder matches"
                   title="Filter co-founder matches"
@@ -435,6 +447,7 @@
               </div>
               <div id="d-2" class="demo demo__dt">
                 <img
+                  loading="lazy"
                   src="/assets/features/cofounder-preferences[light].png"
                   alt="Find a co-founder or indie hacker"
                   title="Find a co-founder or indie hacker"
@@ -445,7 +458,7 @@
         </div>
       </section>
 
-      <section id="s3" class="wrapper feature">
+      <section id="real-conversations" class="wrapper feature">
         <div class="content container">
           <div class="section-header">
             <span>📅</span>
@@ -461,7 +474,7 @@
 
           <div class="content-wrapper">
             <div class="content-container">
-              <div id="c-1" class="content-btn --active" tabindex="0">
+              <div id="b-1" class="content-btn --active" tabindex="0">
                 <h3 class="fs-sm">Meeting scheduler</h3>
                 <p class="fs-sm">
                   Waste less time with dead-end messaging, schedule a meeting
@@ -473,14 +486,15 @@
 
                 <div class="demo demo__mb">
                   <img
-                    src="./assets/features/cofounder-meeting-scheduler[light].png"
+                    loading="lazy"
+                    src="/assets/features/cofounder-meeting-scheduler[light].png"
                     alt="Waste less time with dead-end messaging, schedule a co-founder meeting with ease"
                     title="Waste less time with dead-end messaging"
                   />
                 </div>
               </div>
 
-              <div id="c-2" class="content-btn" tabindex="0">
+              <div id="b-2" class="content-btn" tabindex="0">
                 <h3 class="fs-sm">
                   Break the ice
                   <span class="next"></span>
@@ -495,14 +509,15 @@
                 </p>
                 <div class="demo demo__mb">
                   <img
-                    src="./assets/cofounder-meeting-scheduler[light].png"
+                    loading="lazy"
+                    src="/assets/features/cofounder-meeting-scheduler[light].png"
                     alt="Co-founder intro messages"
                     title="Co-founder intro messages"
                   />
                 </div>
               </div>
 
-              <div id="c-3" class="content-btn" tabindex="0">
+              <div id="b-3" class="content-btn" tabindex="0">
                 <h3 class="fs-sm">
                   Dashboard tracking <span class="next"></span>
                 </h3>
@@ -513,6 +528,15 @@
                 <p class="card-cta">
                   expand <span class="arrow arrow__down"> »</span>
                 </p>
+
+                <div class="demo demo__mb">
+                  <img
+                    loading="lazy"
+                    src="/assets/features/cofounder-meeting-scheduler[light].png"
+                    alt="Track co-founder matches"
+                    title="Track co-founder matches"
+                  />
+                </div>
               </div>
             </div>
 
@@ -526,14 +550,31 @@
                   <span class="green"></span>
                 </div>
                 <div class="demo-head__bar">
-                  app.tertle.io<span>/schedule</span>
+                  app.tertle.io/<span>schedule</span>
                 </div>
               </div>
               <div id="d-1" class="demo demo__dt --active">
                 <img
+                  loading="lazy"
                   src="/assets/features/cofounder-meeting-scheduler[light].png"
                   alt="Waste less time with dead-end messaging, schedule a co-founder meeting with ease"
                   title="Waste less time with dead-end messaging"
+                />
+              </div>
+              <div id="d-2" class="demo demo__dt">
+                <img
+                  loading="lazy"
+                  src="/assets/features/cofounder-meeting-scheduler[light].png"
+                  alt="Co-founder intro messages"
+                  title="Co-founder intro messages"
+                />
+              </div>
+              <div id="d-3" class="demo demo__dt">
+                <img
+                  loading="lazy"
+                  src="/assets/features/cofounder-meeting-scheduler[light].png"
+                  alt="Co-founder matching history tracking"
+                  title="Co-founder matching history tracking"
                 />
               </div>
             </aside>
@@ -712,6 +753,8 @@
           </ul>
         </div>
       </div>
+
+      <canvas id="matrix" width="100%"></canvas>
     </footer>
   </body>
 </html>

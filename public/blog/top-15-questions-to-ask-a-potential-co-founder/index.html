@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<script>
+  const isSysDark = window.matchMedia('(prefers-color-scheme: dark)');
+  if (isSysDark.matches) document.documentElement.setAttribute('theme', 'dark');
+  else document.documentElement.setAttribute('theme', 'light');
+</script>
+
 <html lang="en" theme="light">
   <head>
     <meta charset="UTF-8" />
@@ -246,7 +252,7 @@
             />
             Ryan
           </div>
-          <div>📆 Dec 26</div>
+          <div>📆 Dec 29</div>
           <div>⏱ 3 min read</div>
         </div>
       </div>
@@ -520,6 +526,8 @@
           </ul>
         </div>
       </div>
+
+      <canvas id="matrix" width="100%"></canvas>
     </footer>
   </body>
 </html>
