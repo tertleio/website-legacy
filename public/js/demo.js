@@ -2,9 +2,9 @@
 const doc = document;
 
 const barTxt = {
-  s1: ['match', 'profiles'],
-  s2: ['introductions', 'filter'],
-  s3: ['schedule', 'message', 'dashboard'],
+  'quality-over-quantity': ['match', 'profiles'],
+  'smart-matching': ['introductions', 'filter'],
+  'real-conversations': ['schedule', 'message', 'dashboard'],
 };
 
 function demo() {
