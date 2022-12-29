@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<script>
+  const isSysDark = window.matchMedia('(prefers-color-scheme: dark)');
+  if (isSysDark.matches) document.documentElement.setAttribute('theme', 'dark');
+  else document.documentElement.setAttribute('theme', 'light');
+</script>
+
 <html lang="en" theme="light">
   <head>
     <meta charset="UTF-8" />
