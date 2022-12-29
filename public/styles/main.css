@@ -34,7 +34,7 @@
   --color-dark: #000;
   --color-light: #fff;
   --color-third: #37352e; /* unused */
-  --color-grey1: #eeeeee; /* bg2 light, used in one place */
+  --color-grey1: #FAFAFA; /* bg2 light, used in one place */
   --color-grey2: #b2b2b2; /* unused */
   --color-grey3: #ADADAD; /* text */
   --color-grey4: #7B7B7B; /* unused */
@@ -52,7 +52,7 @@
   --color-rgb-fg: 0, 0, 0;
   --color-primary: var(--color-primary-light);
   --color-bg: var(--color-light);
-  --color-bg2: var(--color-grey1);
+  --color-bg2: #F6F8FA; 
   --color-fg: var(--color-dark);
   --color-text: #7B7B7B;
   --color-nav: var(--color-grey3);
