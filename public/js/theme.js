@@ -1,7 +1,7 @@
 'use strict';
 const doc = document;
 import matrix from './matrix.js';
-import parseFileAndExt from './utils//parseFileAndExt.js';
+import parseFileAndExt from './utils/parseFileAndExt.js';
 
 const toggleTheme = (showFooterVisual) => {
   const elsToggle = doc.querySelectorAll('.toggleTheme');
