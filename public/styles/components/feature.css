@@ -90,6 +90,10 @@
   width: 100%;
 }
 
+#quality-over-quantity img  {
+  height: 90%;
+}
+
 .demo__dt img {
   height: 100%;
 }
