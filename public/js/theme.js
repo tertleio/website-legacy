@@ -11,12 +11,12 @@ const toggleTheme = (showFooterVisual) => {
     const elsFeatureDt = doc.querySelectorAll('.demo__dt img');
     const elsFeatureMb = doc.querySelectorAll('.demo__mb img');
 
-    elsFeatureDt.forEach((el, i) => {
+    elsFeatureDt.forEach((el) => {
       const { filename, ext } = parseFileAndExt(el.src);
       el.src = `/assets/features/${filename}[${theme}].${ext}`;
     });
 
-    elsFeatureMb.forEach((el, i) => {
+    elsFeatureMb.forEach((el) => {
       const { filename, ext } = parseFileAndExt(el.src);
       el.src = `/assets/features/${filename}[${theme}].${ext}`;
     });
