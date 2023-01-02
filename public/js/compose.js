@@ -44,9 +44,6 @@ function render(vars) {
     elProductMenuA.classList.add('--active');
     elBurgerMenuA.classList.add('--active');
   }
-
-  // TODO:
-  // Footer Image
 }
 
 const compose = (vars) => render(vars);
