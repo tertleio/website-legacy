@@ -36,7 +36,6 @@ var maxStackHeight;
 
 function initMatrix() {
   canvas = document.getElementById('matrix');
-  console.log(canvas);
   ctx = canvas.getContext('2d');
 
   resizeMatrix();
