@@ -93,6 +93,15 @@
 #quality-over-quantity img  {
   height: 90%;
 }
+#real-conversations img {
+  max-width: 40em;
+  height: auto;
+}
+#smart-matching #d-2 img {
+  width: 90%;
+  height: auto;
+  align-self: flex-end;
+}
 
 .demo__dt img {
   height: 100%;
