@@ -103,6 +103,9 @@
   align-self: flex-end;
 }
 
+#real-conversations .content-btn { pointer-events: none; }
+#real-conversations h3 { text-decoration: none; }
+
 .demo__dt img {
   height: 100%;
 }
