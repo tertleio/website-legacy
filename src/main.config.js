@@ -22,12 +22,11 @@ const config = [
       read: [{ layout: './layouts/post.hbs' }],
       vars: {
         h1: 'Top 15 Questions to Ask a Potential Co-founder',
-        title:
-          'Tertle - Top 15 Questions to Ask a Potential Co-founder | Co-Founder Matching',
+        title: 'Top 15 Questions to Ask a Potential Co-founder - Tertle Blog',
         canonical:
           'https://tertle.io/blog/top-15-questions-to-ask-a-potential-co-founder',
         description:
-          'The best questions to ask when searching for a potential co-founder.',
+          'The best questions to ask when searching for a  co-founder.',
       },
     },
     write:
