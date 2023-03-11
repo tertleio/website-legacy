@@ -71,6 +71,7 @@ const config = [
         title: 'Tertle Blog - Co-Founder Matching',
         canonical: 'https://tertle.io/blog',
         description: 'Hear ye, tech founders - a blog about startup stuff!',
+        ogImg: '/assets/blog/co-founder_coffee-sq.jpg',
       },
     },
     write: '../public/blog/index.html',
