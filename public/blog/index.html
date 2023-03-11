@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <script>
   const isSysDark = window.matchMedia('(prefers-color-scheme: dark)');
   if (isSysDark.matches) document.documentElement.setAttribute('theme', 'dark');
@@ -8,7 +7,7 @@
 <html lang="en" theme="light">
   <head>
     <meta charset="UTF-8" />
-    <title>Tertle Blog | Co-Founder Matching</title>
+    <title>Tertle Blog - Co-Founder Matching</title>
     <meta
       name="description"
       content="Hear ye, tech founders - a blog about startup stuff!"
@@ -16,9 +15,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://tertle.io/blog" />
 
+    <!-- socials -->
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tertle Blog - Co-Founder Matching" />
+    <meta
+      property="og:description"
+      content="Hear ye, tech founders - a blog about startup stuff!"
+    />
+    <meta property="og:url" content="https://tertle.io/blog" />
+
+    <meta property="og:site_name" content="Tertle Blog - Co-Founder Matching" />
+    <meta property="og:image" content="/assets/blog/co-founder_coffee-sq.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tertleio" />
+    <meta name="twitter:creator" content="@ryanconnaughton" />
+    <meta name="twitter:title" content="Tertle Blog - Co-Founder Matching" />
+    <meta
+      name="twitter:description"
+      content="Hear ye, tech founders - a blog about startup stuff!"
+    />
+    <meta
+      name="twitter:image"
+      content="/assets/blog/co-founder_coffee-sq.jpg"
+    />
+
     <!-- google analytics -->
     <script
-      async
+      async="true"
       src="https://www.googletagmanager.com/gtag/js?id=G-15RGG8250F"
     ></script>
     <script>
@@ -46,19 +71,6 @@
 
     <link rel="stylesheet" href="/styles/main.css" />
     <script src="/js/index.js" type="module" defer></script>
-
-    <!-- socials -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@tertleio" />
-    <meta name="twitter:title" content="Tertle - Co-founder Matching" />
-    <meta
-      name="twitter:description"
-      content="The place where solo founders and indie hackers meet their co-founder"
-    />
-    <meta
-      name="twitter:image"
-      content="https://tertle.io/assets/features/vetted-founders[dark].jpg"
-    />
   </head>
 
   <body>
