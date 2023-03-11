@@ -21,18 +21,18 @@ const config = [
     build: {
       read: [{ layout: './layouts/post.hbs' }],
       vars: {
-        h1: 'Top 15 Questions to Ask a Potential Co-founder',
-        title: 'Top 15 Questions to Ask a Potential Co-founder - Tertle Blog',
+        h1: '15 Questions to Ask a Potential Co-Founder',
+        title: '15 Questions to Ask a Potential Co-Founder - Tertle Blog',
         canonical:
-          'https://tertle.io/blog/top-15-questions-to-ask-a-potential-co-founder',
+          'https://tertle.io/blog/15-questions-to-ask-a-potential-co-founder',
         description:
-          'The best questions to ask when searching for a co-founder.',
+          'Some of my favourite questions to ask when searching for a co-founder.',
         ogType: 'article',
         ogImg: 'https://tertle.io/assets/blog/co-founder_coffee-sq.jpg',
       },
     },
     write:
-      '../public/blog/top-15-questions-to-ask-a-potential-co-founder/index.html',
+      '../public/blog/15-questions-to-ask-a-potential-co-founder/index.html',
   },
   {
     name: 'home',
