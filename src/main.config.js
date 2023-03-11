@@ -28,7 +28,7 @@ const config = [
         description:
           'The best questions to ask when searching for a co-founder.',
         ogType: 'article',
-        ogImg: '/assets/features/vetted-founders[dark].jpg',
+        ogImg: '/assets/blog/co-founder_coffee-sq.jpg',
       },
     },
     write:
@@ -50,7 +50,8 @@ const config = [
         title: 'Tertle - Co-Founder Matching',
         canonical: 'https://tertle.io',
         description:
-          'The place where solo startup founders and indie hackers meet their duo match.',
+          'Where solo startup founders come to meet their co-founder',
+        ogImg: '/assets/features/vetted-founders[dark].jpg',
       },
     },
     write: '../public/index.html',
@@ -68,10 +69,10 @@ const config = [
     build: {
       read: [{ layout: './layouts/default.hbs' }],
       vars: {
-        title: 'Tertle Blog - Co-Founder Matching',
+        title: 'Tertle Blog',
         canonical: 'https://tertle.io/blog',
         description: 'Hear ye, tech founders - a blog about startup stuff!',
-        ogImg: '/assets/blog/co-founder_coffee-sq.jpg',
+        ogImg: '/assets/features/vetted-founders[dark].jpg',
       },
     },
     write: '../public/blog/index.html',
