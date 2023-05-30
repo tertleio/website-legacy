@@ -2,9 +2,9 @@ defaultVars = {
   userType: 'founder',
   logoSrc: './assets/logo.svg',
   primaryCtaTxt: 'Sign Up',
-  primaryCtaLink: 'https://app.tertle.io/join',
+  primaryCtaLink: 'https://app.tertle.io/sign/in',
   secondaryCtaTxt: 'Login',
-  secondaryCtaLink: 'https://app.tertle.io/login',
+  secondaryCtaLink: 'https://app.tertle.io/sign/up',
 };
 
 const config = [
